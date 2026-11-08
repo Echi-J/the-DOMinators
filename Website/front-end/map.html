@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Explore London · Access London</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;display=swap">
+<style>
+body{margin:0;background:#F2F3DC}
+a{color:inherit}
+.ma *:focus-visible{outline:3px solid #233A6B;outline-offset:3px}
+.ma button{font-family:'Outfit',Arial,sans-serif;color:#26261F}
+.ma-stage{position:relative;flex:1;min-height:0;overflow:hidden;container-type:size;container-name:stage}
+.ma-panel{position:absolute;left:20px;top:20px;bottom:20px;width:400px;z-index:5;overflow-y:auto;box-sizing:border-box;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:16px;box-shadow:0 20px 50px rgba(31,48,24,.18);transition:background .5s,max-height .35s ease}
+.ma-handle{display:none}
+.ma-tilewrap{position:absolute;left:440px;right:24px;top:0;bottom:0;display:flex;align-items:center;justify-content:center;padding:24px 0}
+.ma-world{position:absolute;left:calc(50% + 210px);top:50%;width:max(calc(100cqw - 440px),131.6cqh);height:max(calc((100cqw - 440px) * 0.76),100cqh);transform-origin:50% 50%;transition:transform .35s ease}
+.ma-crumb{position:absolute;left:440px;top:20px;z-index:4}
+.ma-legend{position:absolute;right:20px;bottom:20px;z-index:4}
+.ma-ctrl{position:absolute;right:20px;top:20px;z-index:4}
+.ma-navlink{display:inline-block}
+@keyframes mazoom{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:none}}
+@keyframes matoast{from{opacity:0;transform:translate(-50%,-8px)}to{opacity:1;transform:translate(-50%,0)}}
+.ma-enter{animation:mazoom .45s ease both}
+@media (prefers-reduced-motion: reduce){.ma-enter{animation:none}.ma-world{transition:none}}
+@container app (max-width: 760px){
+.ma-panel{left:0;right:0;top:auto;bottom:0;width:auto;max-height:52%;border-radius:26px 26px 0 0;padding:10px 16px 18px}
+.ma-panel.ma-peek{max-height:118px;overflow:hidden}
+.ma-handle{display:flex}
+.ma-tilewrap{left:10px;right:10px;top:8px;bottom:auto;height:47%;padding:0;align-items:flex-start}
+.ma-tilecard{padding:12px !important;gap:8px !important;border-radius:22px !important}
+.ma-tilelegend{display:none !important}
+.ma-world{left:50%;top:28%;width:max(100cqw,131.6cqh);height:max(76cqw,100cqh)}
+.ma-crumb{left:12px;top:12px}
+.ma-legend{display:none}
+.ma-ctrl{right:12px;top:12px}
+.ma-navlink{display:none}
+.ma-switchlabel{display:none}
+}
+</style>
+<script src="js/dc-runtime.js"></script>
+<link rel="stylesheet" href="css/data-integration.css">
+<script src="js/access-data.js"></script>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/access-map.js"></script>
+<script src="js/access-evidence.js"></script><link rel="stylesheet" href="css/access-tools.css">
+<script src="js/map-page.js"></script>
+<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js" defer></script></head>
+<body data-page="map">
+<a class="site-skip" href="#page-content">Skip to content</a>
+<header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
+<div id="page-content"></div>
+<section class="explore-bar" aria-label="Explore London"><div class="explore-heading"><h1>Explore London</h1><p id="explore-context">Choose a borough or explore the whole city.</p></div><div class="explore-tabs" role="tablist" aria-label="Explore by"><button id="view-places" role="tab" aria-controls="places-workspace" aria-selected="true" data-view="places">Places<span>Where to go</span></button><button id="view-stations" role="tab" aria-controls="tools-workspace" aria-selected="false" tabindex="-1" data-view="stations">Stations<span>Getting there</span></button><button id="view-facilities" role="tab" aria-controls="tools-workspace" aria-selected="false" tabindex="-1" data-view="facilities">Facilities<span>Access details</span></button></div></section>
+<template id="dc-template">
+<div class="ma" style="container-type: inline-size; container-name: app; height: 100vh; min-height: 600px; display: flex; flex-direction: column; background: {{bg}}; transition: background .5s; color: #26261F; font-family: 'Outfit', Arial, sans-serif;">
+
+<div class="place-mode-row"><span>Places in this area</span><div role="group" aria-label="Use the map as" style="display: flex; gap: 4px; background: {{switchBg}}; border-radius: 18px; padding: 4px;">
+<sc-for list="{{modes}}" as="m" hint-placeholder-count="2">
+<button type="button" onClick="{{m.pick}}" aria-pressed="{{m.pressed}}" aria-label="{{m.label}}" style="min-height: 46px; min-width: 52px; border: none; border-radius: 14px; padding: 0 16px; display: flex; align-items: center; gap: 8px; background: {{m.bg}}; color: {{m.fg}}; font-size: 16px; font-weight: 500; cursor: pointer; transition: background .4s;">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg><span class="ma-switchlabel">{{m.label}}</span>
+</button>
+</sc-for>
+</div></div>
+
+<div class="al-data-banner" role="status" aria-live="polite">
+<sc-if value="{{dataLoading}}">Loading the real London dataset…</sc-if>
+<sc-if value="{{dataError}}"><span>{{dataError}}</span> <button type="button" onClick="{{retryData}}">Retry loading</button></sc-if>
+<sc-if value="{{dataReady}}">{{dataSummary}}</sc-if>
+</div>
+<main class="ma-stage">
+
+<sc-if value="{{isCity}}" hint-placeholder-val="{{true}}">
+<div class="ma-enter" style="position: absolute; inset: 0;">
+<svg aria-hidden="true" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+<defs><pattern id="maLawn" width="150" height="150" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)"><rect width="150" height="150" style="fill: {{lawnA}}"></rect><rect width="75" height="150" style="fill: {{lawnB}}"></rect></pattern></defs>
+<rect width="1600" height="900" fill="url(#maLawn)"></rect>
+<path d="M1000 40 C1240 0 1560 80 1600 300 C1640 520 1460 700 1180 690 C960 680 900 540 910 400 C920 260 820 70 1000 40 Z" style="fill: {{lawnC}}"></path>
+<path d="M-40 640 C240 580 460 520 700 470 S1160 340 1660 270" style="stroke: {{path}}" stroke-width="80" fill="none" stroke-linecap="round"></path>
+<path d="M-40 640 C240 580 460 520 700 470 S1160 340 1660 270" style="stroke: {{pathLine}}" stroke-width="3" fill="none" stroke-dasharray="20 18"></path>
+<g style="fill: {{treeA}}"><circle cx="1480" cy="780" r="62"></circle><circle cx="300" cy="140" r="50"></circle><circle cx="860" cy="820" r="40"></circle></g>
+<g style="fill: {{treeB}}"><circle cx="1462" cy="762" r="28"></circle><circle cx="286" cy="128" r="22"></circle><circle cx="850" cy="810" r="16"></circle></g>
+</svg>
+<div class="ma-tilewrap">
+<div class="ma-tilecard" style="width: min(620px, 100%); max-height: 100%; background: rgba(242,243,220,0.96); border-radius: 30px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 20px 50px rgba(20,35,15,0.25);">
+<div aria-live="polite" style="min-height: 26px; font-size: 18px; font-weight: 600;">{{hoverText}}</div>
+<div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 7px;">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="56">
+<sc-if value="{{t.isTile}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{t.pick}}" onMouseEnter="{{t.enter}}" onMouseLeave="{{t.leave}}" onFocus="{{t.enter}}" aria-label="{{t.label}}" aria-pressed="{{t.pressed}}" style="aspect-ratio: 1; min-width: 0; padding: 0; border-radius: 12px; border: {{t.border}}; box-sizing: border-box; background: {{t.bg}}; color: {{t.fg}}; font-size: clamp(10px, 1.1cqw, 14px); font-weight: 600; cursor: pointer; transition: background .4s, transform .15s; transform: {{t.tf}};">{{t.code}}</button>
+</sc-if>
+<sc-if value="{{t.isEmpty}}" hint-placeholder-val="{{false}}"><span aria-hidden="true"></span></sc-if>
+</sc-for>
+</div>
+<div class="ma-tilelegend" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; color: #4B4C3D;">
+<span>{{legendLow}}</span>
+<sc-for list="{{legend}}" as="lg" hint-placeholder-count="5"><span style="width: 26px; height: 16px; border-radius: 5px; background: {{lg}};"></span></sc-for>
+<span>{{legendHigh}}</span>
+<sc-if value="{{isVisit}}" hint-placeholder-val="{{true}}"><span style="display: flex; align-items: center; gap: 6px; margin-left: 8px;"><span style="width: 16px; height: 16px; border-radius: 5px; border: 2px dashed #8E8F78; background: #DCDAC8; box-sizing: border-box;"></span>Low tag coverage</span></sc-if>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isArea}}" hint-placeholder-val="{{false}}">
+<div class="ma-enter" style="position: absolute; inset: 0; background: {{streetLand}};">
+<div id="al-map" data-dc-preserve="true" role="region" aria-label="Geographic map of places. Use the place list for keyboard access."></div>
+
+<div class="ma-crumb">
+<button type="button" onClick="{{toCity}}" style="min-height: 48px; display: flex; align-items: center; gap: 8px; border: none; border-radius: 16px; background: #FBFBF2; padding: 0 16px; font-size: 16px; cursor: pointer; box-shadow: 0 8px 20px rgba(31,48,24,0.16);">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>London <span style="color: #5C5D4C;">/</span> <b>{{areaName}}</b>
+</button>
+</div>
+
+<div class="ma-ctrl" style="display: flex; flex-direction: column; gap: 8px;">
+<button type="button" onClick="{{zoomIn}}" aria-label="Zoom in" style="width: 52px; height: 52px; border-radius: 16px; border: none; background: #FBFBF2; box-shadow: 0 8px 20px rgba(31,48,24,0.16); font-size: 26px; cursor: pointer;">+</button>
+<button type="button" onClick="{{zoomOut}}" aria-label="Zoom out" style="width: 52px; height: 52px; border-radius: 16px; border: none; background: #FBFBF2; box-shadow: 0 8px 20px rgba(31,48,24,0.16); font-size: 26px; cursor: pointer;">−</button>
+<button type="button" onClick="{{locate}}" aria-label="Back to where I am" style="width: 52px; height: 52px; border-radius: 16px; border: none; background: #FBFBF2; box-shadow: 0 8px 20px rgba(31,48,24,0.16); cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#233A6B" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></button>
+</div>
+
+<div class="ma-legend" style="background: rgba(251,251,242,0.95); border-radius: 18px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; box-shadow: 0 8px 20px rgba(31,48,24,0.12);">
+<span style="font-weight: 600;">{{legendTitle}}</span>
+<sc-for list="{{pinLegend}}" as="l" hint-placeholder-count="3"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 18px; height: 18px; border-radius: 50%; background: {{l.bg}}; border: {{l.border}}; box-sizing: border-box;"></span>{{l.text}}</span></sc-for>
+<span style="font-size: 12px; color: #5C5D4C;">OSM source tags · 18 Oct 2026</span>
+</div>
+</div>
+</sc-if>
+
+<aside class="{{panelClass}}" aria-label="{{panelLabel}}" style="background: {{panelBg}};">
+<sc-if value="{{isArea}}"><sc-if value="{{placesLoading}}"><p role="status">Loading this borough…</p></sc-if><sc-if value="{{placeError}}"><p role="alert">{{placeError}}</p><button type="button" onClick="{{retryPlaces}}">Retry borough</button></sc-if></sc-if>
+<button type="button" class="ma-handle" onClick="{{toggleSheet}}" aria-label="{{sheetLabel}}" aria-expanded="{{sheetOpen}}" style="flex: none; align-self: stretch; min-height: 32px; border: none; background: transparent; cursor: pointer; align-items: center; justify-content: center;"><span style="width: 44px; height: 5px; border-radius: 3px; background: #B9B9A0;"></span></button>
+
+<sc-if value="{{pCity}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<h1 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; color: {{accentText}};">{{cityTitle}}</h1>
+<label style="display: flex; align-items: center; gap: 10px; background: #FBFBF2; border: 2px solid {{line}}; border-radius: 16px; padding: 2px 14px;">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C5D4C" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search for a borough</span>
+<input type="search" value="{{q}}" onInput="{{onSearch}}" placeholder="Search a borough" style="flex: 1; min-width: 0; border: none; background: transparent; font-family: 'Outfit', Arial, sans-serif; font-size: 17px; padding: 12px 0; color: #26261F;">
+</label>
+<sc-if value="{{hasBoroResults}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<sc-for list="{{boroResults}}" as="r" hint-placeholder-count="3"><button type="button" onClick="{{r.pick}}" style="min-height: 48px; text-align: left; border: none; border-radius: 14px; background: {{cardBg}}; padding: 0 14px; font-size: 16px; cursor: pointer;">{{r.name}}</button></sc-for>
+</div>
+</sc-if>
+<sc-if value="{{noBoroResults}}" hint-placeholder-val="{{false}}"><p style="margin: 0; font-size: 15px; color: #4B4C3D;">No borough matches that. Try Hackney or Camden.</p></sc-if>
+<button type="button" onClick="{{useLocation}}" style="min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 10px; border: none; border-radius: 18px; background: {{ctaBg}}; color: {{ctaFg}}; font-size: 17px; font-weight: 500; cursor: pointer;">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg><span style="color: {{ctaFg}};">Use my location</span></button>
+<sc-if value="{{hasBoro}}" hint-placeholder-val="{{true}}">
+<div style="background: {{cardBg}}; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+<div style="display: flex; flex-direction: column; gap: 3px;"><span style="font-size: 26px; font-weight: 600; line-height: 1.1;">{{bo.name}}</span><span style="font-size: 15px; color: #4B4C3D;">{{bo.tagline}}</span></div>
+<span style="flex: none; width: 82px; height: 82px; border-radius: 50%; background: {{bo.ringBg}}; color: {{bo.ringFg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1;"><span style="font-size: 28px; font-weight: 600;">{{bo.big}}</span><span style="font-size: 12px; padding-top: 3px;">{{bo.unit}}</span></span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px;"><span style="flex: 1; height: 10px; border-radius: 5px; background: rgba(38,38,31,0.1); overflow: hidden;"><span style="display: block; height: 10px; width: {{bo.barW}}; background: {{accent}};"></span></span><span style="font-size: 14px; color: #4B4C3D; white-space: nowrap;">{{bo.barText}}</span></div>
+<button type="button" onClick="{{openBoro}}" style="min-height: 54px; border: none; border-radius: 16px; background: #26261F; color: #F2F3DC; font-size: 17px; font-weight: 500; cursor: pointer;"><span style="color: #F2F3DC;">{{bo.cta}}</span></button>
+<span style="font-size: 13px; color: #5C5D4C;">Overall wheelchair-tag metrics; not verified step-free scores</span>
+</div>
+</sc-if>
+<sc-if value="{{noBoro}}" hint-placeholder-val="{{false}}"><p style="margin: 0; font-size: 16px; line-height: 1.45; color: #4B4C3D;">{{cityHint}}</p></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{pVList}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+<h1 style="margin: 0; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; color: #2F6B3C;">{{areaName}}</h1>
+<button type="button" onClick="{{toCity}}" style="min-height: 44px; border: 2px solid {{line}}; border-radius: 14px; background: transparent; padding: 0 14px; font-size: 15px; cursor: pointer;">Change area</button>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; background: #FBFBF2; border: 2px solid {{line}}; border-radius: 16px; padding: 2px 14px;">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5C5D4C" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search places</span>
+<input type="search" value="{{q}}" onInput="{{onSearch}}" placeholder="Search cafés, parks, museums" style="flex: 1; min-width: 0; border: none; background: transparent; font-family: 'Outfit', Arial, sans-serif; font-size: 17px; padding: 12px 0; color: #26261F;">
+</label>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 17px; font-weight: 600;">What do you need?</span>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+<sc-for list="{{needs}}" as="n" hint-placeholder-count="4">
+<button type="button" onClick="{{n.toggle}}" aria-pressed="{{n.pressed}}" style="min-height: 62px; display: flex; align-items: center; gap: 10px; text-align: left; border-radius: 16px; border: {{n.border}}; background: {{n.bg}}; padding: 8px 10px; font-size: 15px; font-weight: 500; cursor: pointer;">
+<span style="flex: none; width: 36px; height: 36px; border-radius: 11px; background: {{n.iconBg}}; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{n.iconFg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{n.icon}}"></path></svg></span>{{n.label}}</button>
+</sc-for>
+</div>
+</div>
+<div role="group" aria-label="Type of place" style="display: flex; flex-wrap: wrap; gap: 6px;">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="6"><button type="button" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}" style="min-height: 44px; border-radius: 22px; border: {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; padding: 0 14px; font-size: 15px; cursor: pointer;"><span style="color: {{c.fg}};">{{c.label}}</span></button></sc-for>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 17px; font-weight: 600;">{{countText}}</p>
+<sc-if value="{{noMatch}}" hint-placeholder-val="{{false}}">
+<div style="background: #FBFBF2; border: 2px dashed #8E8F78; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 17px; font-weight: 600;">Nothing nearby has all of this yet.</span>
+<span style="font-size: 15px; color: #4B4C3D;">Places that might are listed below.</span>
+<button type="button" onClick="{{dropNeed}}" style="min-height: 48px; border: none; border-radius: 14px; background: #26261F; color: #F2F3DC; font-size: 15px; cursor: pointer;"><span style="color: #F2F3DC;">{{dropText}}</span></button>
+<button type="button" onClick="{{lookFurther}}" style="min-height: 48px; border: 2px solid #9A9B82; border-radius: 14px; background: transparent; font-size: 15px; cursor: pointer;">Choose another borough</button>
+</div>
+</sc-if>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<sc-for list="{{results}}" as="r" hint-placeholder-count="5">
+<button type="button" onClick="{{r.open}}" aria-label="{{r.aria}}" style="display: flex; align-items: center; gap: 12px; text-align: left; width: 100%; border-radius: 18px; border: 2px solid transparent; background: {{r.bg}}; padding: 12px; cursor: pointer; opacity: {{r.op}};">
+<span style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: {{r.pinBg}}; border: {{r.pinBorder}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{r.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{r.icon}}"></path></svg></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 17px; font-weight: 600;">{{r.name}}</span><span style="display: flex; gap: 5px; flex-wrap: wrap;"><sc-for list="{{r.marks}}" as="m" hint-placeholder-count="2"><span style="font-size: 12px; border-radius: 8px; padding: 3px 7px; background: {{m.bg}}; color: {{m.fg}}; border: {{m.border}};">{{m.text}}</span></sc-for></span></span>
+<sc-if value="{{r.showDistance}}"><span style="flex: none; display: flex; flex-direction: column; align-items: flex-end;"><span style="font-size: 18px; font-weight: 600;">{{r.min}}</span><span style="font-size: 12px; color: #5C5D4C;">approximate distance</span></span></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pVPlace}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<button type="button" onClick="{{backToList}}" style="align-self: flex-start; min-height: 44px; display: flex; align-items: center; gap: 6px; border: none; background: transparent; padding: 0; font-size: 16px; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>All places</button>
+<div style="display: flex; align-items: center; gap: 14px;">
+<span style="flex: none; width: 60px; height: 60px; border-radius: 50%; background: {{pl.pinBg}}; border: {{pl.pinBorder}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{pl.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{pl.icon}}"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 2px;"><h1 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.1;">{{pl.name}}</h1><span style="font-size: 15px; color: #4B4C3D;">{{pl.meta}}</span></div>
+</div>
+<span style="align-self: flex-start; font-size: 15px; border-radius: 10px; padding: 6px 11px; background: {{pl.vBg}}; color: {{pl.vFg}};">{{pl.verdict}}</span>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<sc-for list="{{pl.rows}}" as="row" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 10px; background: {{row.bg}}; border-radius: 14px; padding: 11px 12px;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4B4C3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{row.icon}}"></path></svg>
+<span style="flex: 1; display: flex; flex-direction: column;"><span style="font-size: 15px;">{{row.label}}</span><sc-if value="{{row.mine}}" hint-placeholder-val="{{false}}"><span style="font-size: 12px; color: #2A5E35;">You need this</span></sc-if></span>
+<span style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 600; color: {{row.fg}}; text-align: right;"><span aria-hidden="true" style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: {{row.dot}}; color: #F2F3DC; font-size: 13px; display: flex; align-items: center; justify-content: center; border: {{row.dotBorder}}; box-sizing: border-box;">{{row.mark}}</span>{{row.value}}</span>
+</div>
+</sc-for>
+</div>
+<span style="font-size: 14px; color: #5C5D4C;">{{pl.confirm}}</span>
+<div class="al-source-details"><p>{{pl.address}}</p><p>Access restrictions: {{pl.access}}</p><p>Opening hours (source): {{pl.hours}}</p><sc-if value="{{pl.hasRawName}}"><p>Original name: {{pl.rawName}}</p></sc-if><a href="{{pl.sourceURL}}" target="_blank" rel="noopener noreferrer">View original OSM object</a><sc-if value="{{pl.hasWebsite}}"> · <a href="{{pl.website}}" target="_blank" rel="noopener noreferrer">Venue website</a></sc-if><p>OSM object last edited: {{pl.sourceDate}}</p></div>
+<section class="al-evidence-section"><h2>Facility source evidence</h2><sc-if value="{{pl.evidenceError}}"><p>{{pl.evidenceError}}</p></sc-if><sc-if value="{{pl.hasEvidence}}"><p>OSM snapshot {{pl.evidenceDate}} · same OSM object, not a new site survey.</p><sc-for list="{{pl.evidenceRows}}" as="e"><div class="al-evidence-row"><span>{{e.label}}</span><span>{{e.value}}</span></div></sc-for><sc-if value="{{pl.isChangingCandidate}}"><p>Changing Places candidate only. Official registration has not been verified.</p></sc-if></sc-if><a href="{{pl.evidenceURL}}">Explore facility evidence and sources</a></section>
+<sc-if value="{{pl.hasOperator}}"><section class="al-evidence-section"><h2>Venue operator information</h2><p>Published by the venue, checked online on the date below. These are not independent field observations and do not overwrite OSM tags.</p><sc-for list="{{pl.operatorClaims}}" as="o"><div><b>{{o.label}} · {{o.value}}</b><p>{{o.scope}}: {{o.summary}}</p><a href="{{o.sourceURL}}" target="_blank" rel="noopener noreferrer">Operator source · checked {{o.checkedDate}}</a></div></sc-for></section></sc-if>
+<section class="al-evidence-section"><h2>Nearby stations</h2><p>Straight-line distance from the venue point. This is not an accessible walking route. TfL static access source: May 2025.</p><sc-for list="{{pl.nearbyStations}}" as="st"><a class="al-related-link" href="{{st.url}}">{{st.name}} · {{st.distance}} · source access: {{st.access}}</a></sc-for><a href="map.html?view=stations">All stations and latest lift reports</a></section>
+<section class="al-evidence-section"><h2>Reviewed observations</h2><sc-if value="{{pl.reviewedLoading}}"><p>Loading reviewed observations…</p></sc-if><sc-if value="{{pl.reviewedError}}"><p>{{pl.reviewedError}}</p></sc-if><sc-for list="{{pl.reviewed}}" as="o"><div><b>{{o.label}}: {{o.value}}</b><p>{{o.scope}} · observed {{o.observed_at}}</p><p>{{o.notes}}</p><a href="{{o.evidence_url}}" target="_blank" rel="noopener noreferrer">View evidence</a></div></sc-for><p>Only approved, dated submissions are shown. They do not overwrite source tags.</p><a class="al-related-link" href="{{pl.observationURL}}">Submit a dated observation for review</a></section>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px;">
+<button type="button" onClick="{{act.dir}}" style="min-height: 54px; border: none; border-radius: 16px; background: #26261F; font-size: 16px; cursor: pointer;"><span style="color: #F2F3DC;">View on OSM</span></button>
+<button type="button" onClick="{{act.save}}" style="min-height: 54px; border: 2px solid #9A9B82; border-radius: 16px; background: transparent; font-size: 16px; cursor: pointer;">{{pl.saved}}</button>
+<button type="button" onClick="{{act.share}}" style="min-height: 54px; border: 2px solid #9A9B82; border-radius: 16px; background: transparent; font-size: 16px; cursor: pointer;">Share</button>
+</div>
+<sc-if value="{{pl.hasGap}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{fillGap}}" style="display: flex; align-items: center; gap: 12px; text-align: left; border: 2px dashed #C2602A; border-radius: 18px; background: #F6EDDC; padding: 14px; cursor: pointer;">
+<span style="flex: none; width: 40px; height: 40px; border-radius: 12px; background: #E8873A; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px;"><b style="font-size: 16px;">Been here?</b><span style="font-size: 14px; color: #4B4C3D;">Fill in what’s missing</span></span></button>
+</sc-if>
+<div style="border-top: 1px solid {{line}}; padding-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 16px; font-weight: 600;">Been here? Was this right?</span>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+<button type="button" onClick="{{confirmRight}}" style="min-height: 50px; border: 2px solid #9A9B82; border-radius: 14px; background: transparent; font-size: 15px; cursor: pointer;">Yes, it was</button>
+<button type="button" onClick="{{startReport}}" style="min-height: 50px; border: 2px solid #9A9B82; border-radius: 14px; background: transparent; font-size: 15px; cursor: pointer;">Something was different</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pVReport}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<button type="button" onClick="{{backToPlace}}" style="align-self: flex-start; min-height: 44px; display: flex; align-items: center; gap: 6px; border: none; background: transparent; padding: 0; font-size: 16px; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{pl.name}}</button>
+<h1 style="margin: 0; font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1;">What was different?</h1>
+<p style="margin: 0; font-size: 15px; color: #4B4C3D;">Pick everything that applies.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{reportChips}}" as="c" hint-placeholder-count="5"><button type="button" onClick="{{c.toggle}}" aria-pressed="{{c.pressed}}" style="min-height: 48px; border-radius: 16px; border: {{c.border}}; background: {{c.bg}}; padding: 0 14px; font-size: 15px; cursor: pointer;">{{c.label}}</button></sc-for>
+</div>
+<button type="button" onClick="{{sendReport}}" aria-disabled="{{reportDisabled}}" style="min-height: 56px; border: none; border-radius: 18px; background: {{reportBg}}; font-size: 17px; font-weight: 500; cursor: pointer;">Save report locally</button>
+<sc-if value="{{reportErr}}" hint-placeholder-val="{{false}}"><p role="alert" style="margin: 0; font-size: 15px; color: #8A3B1C;">Pick at least one thing that was different.</p></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{pVReported}}" hint-placeholder-val="{{false}}">
+<div role="status" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #2F6B3C; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F2F3DC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h1 style="margin: 0; font-size: 30px; font-weight: 600; line-height: 1.1;">Report saved on this device.</h1>
+<p style="margin: 0; font-size: 16px; color: #4B4C3D;">Your note about {{pl.name}} stays in this browser. Export it to share for review; public source information has not changed.</p>
+<button type="button" onClick="{{backToList}}" style="min-height: 54px; border: none; border-radius: 16px; background: #26261F; font-size: 17px; cursor: pointer;"><span style="color: #F2F3DC;">Back to places</span></button>
+</div>
+</sc-if>
+
+<sc-if value="{{pMList}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+<span style="font-size: 16px; color: #4B4C3D;">{{areaName}}</span>
+<button type="button" onClick="{{toCity}}" style="min-height: 44px; border: 2px solid {{line}}; border-radius: 14px; background: transparent; padding: 0 14px; font-size: 15px; cursor: pointer;">Change area</button>
+</div>
+<h1 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; color: #B4562A;">Which of these have you been to?</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 14px; background: #F6E3CC; border-radius: 10px; padding: 6px 10px;">4 access questions</span>
+<span style="font-size: 14px; background: #F6E3CC; border-radius: 10px; padding: 6px 10px;">About 30 seconds</span>
+<span style="font-size: 14px; background: #F6E3CC; border-radius: 10px; padding: 6px 10px;">No sign-up</span>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 16px; font-weight: 600;">{{gapCount}}</p>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<sc-for list="{{gaps}}" as="g" hint-placeholder-count="5">
+<button type="button" onClick="{{g.start}}" aria-label="{{g.aria}}" style="display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; border-radius: 18px; border: 2px solid {{g.edge}}; background: {{g.bg}}; padding: 12px; cursor: pointer;">
+<span style="flex: none; width: 44px; height: 44px; border-radius: 50%; background: {{g.pinBg}}; border: {{g.pinBorder}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{g.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{g.icon}}"></path></svg></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 17px; font-weight: 600;">{{g.name}}</span><span style="font-size: 14px; color: #5C5D4C;">{{g.addr}}</span></span>
+<span style="flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 2px;"><span style="font-size: 15px; font-weight: 600; color: {{g.ctaFg}};">{{g.cta}}</span><span style="font-size: 13px; color: #5C5D4C;">{{g.dist}}</span></span>
+</button>
+</sc-for>
+</div>
+<div style="background: #FBF6EC; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 16px; font-weight: 600;">Your local contribution</span>
+<div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px; text-align: center;">
+<span style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px;"><span style="width: 36px; height: 36px; border-radius: 50%; border: 3px dashed #B4562A; box-sizing: border-box;"></span>Unknown</span>
+<span aria-hidden="true" style="padding-top: 8px; color: #8A3B1C;">›</span>
+<span style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px;"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F2C994;"></span>Your note</span>
+<span aria-hidden="true" style="padding-top: 8px; color: #8A3B1C;">›</span>
+<span style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px;"><span style="width: 36px; height: 36px; border-radius: 50%; background: #2F6B3C;"></span>Needs review</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pMConfirm}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<button type="button" onClick="{{backToGaps}}" style="align-self: flex-start; min-height: 44px; display: flex; align-items: center; gap: 6px; border: none; background: transparent; padding: 0; font-size: 16px; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>All places</button>
+<span style="font-size: 16px; color: #4B4C3D;">Is this the place you went to?</span><p style="font-size:13px">Generic illustration below; it does not show the real entrance.</p>
+<svg role="img" aria-label="{{cur.facadeLabel}}" viewBox="0 0 340 170" style="width: 100%; height: auto; border-radius: 18px; background: #DCE3E6;">
+<rect x="0" y="130" width="340" height="40" fill="#C9C6B2"></rect>
+<rect x="50" y="22" width="240" height="112" rx="4" fill="#E9DCC4"></rect>
+<rect x="50" y="22" width="240" height="18" fill="#D6C7AB"></rect>
+<g><rect x="60" y="46" width="220" height="24" fill="{{cur.awning}}"></rect><g fill="#FBFAF0" opacity="0.85"><rect x="82" y="46" width="22" height="24"></rect><rect x="126" y="46" width="22" height="24"></rect><rect x="170" y="46" width="22" height="24"></rect><rect x="214" y="46" width="22" height="24"></rect><rect x="258" y="46" width="22" height="24"></rect></g></g>
+<rect x="72" y="80" width="80" height="50" rx="3" fill="#9CB9C0"></rect><rect x="188" y="80" width="80" height="50" rx="3" fill="#9CB9C0"></rect>
+<rect x="156" y="78" width="28" height="56" rx="3" fill="#5B4636"></rect>
+<rect x="150" y="134" width="40" height="7" fill="{{cur.step}}"></rect>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 2px;"><h1 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.1;">{{cur.name}}</h1><span style="font-size: 15px; color: #4B4C3D;">{{cur.addr}}</span></div>
+<button type="button" onClick="{{confirmPlace}}" style="min-height: 56px; border: none; border-radius: 18px; background: #26261F; font-size: 17px; font-weight: 500; cursor: pointer;"><span style="color: #F2F3DC;">Yes, that’s it</span></button>
+<button type="button" onClick="{{backToGaps}}" style="min-height: 52px; border: 2px solid #B9A88C; border-radius: 18px; background: transparent; font-size: 16px; cursor: pointer;">No, go back</button>
+<button type="button" onClick="{{flagClosed}}" style="align-self: flex-start; min-height: 44px; border: none; background: transparent; padding: 0; font-size: 15px; text-decoration: underline; cursor: pointer;">It has closed</button>
+</div>
+</sc-if>
+
+<sc-if value="{{pMQ}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<button type="button" onClick="{{qBack}}" aria-label="Back" style="flex: none; width: 48px; height: 48px; border-radius: 24px; border: 2px solid #B9A88C; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div role="progressbar" aria-label="Question progress" aria-valuemin="1" aria-valuemax="{{qTotal}}" aria-valuenow="{{qNum}}" style="flex: 1; display: flex; gap: 5px;"><sc-for list="{{segs}}" as="s" hint-placeholder-count="3"><span style="flex: 1; height: 8px; border-radius: 4px; background: {{s}};"></span></sc-for></div>
+</div>
+<span style="font-size: 15px; color: #5C5D4C;">{{cur.name}}, question {{qNum}} of {{qTotal}}</span>
+<span style="width: 84px; height: 84px; border-radius: 26px; background: #E8873A; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{qIcon}}"></path></svg></span>
+<h1 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1;">{{qText}}</h1>
+<p style="margin: 0; font-size: 16px; color: #4B4C3D;">{{qHint}}</p>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{o.pick}}" style="min-height: 58px; border-radius: 18px; border: {{o.border}}; background: {{o.bg}}; font-size: 18px; font-weight: 500; cursor: pointer;"><span style="color: {{o.fg}};">{{o.label}}</span></button></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pMDone}}" hint-placeholder-val="{{false}}">
+<div role="status" style="display: flex; flex-direction: column; gap: 14px;">
+<span style="width: 72px; height: 72px; border-radius: 50%; background: #2F6B3C; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F2F3DC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h1 style="margin: 0; font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.08;">Your observations are saved.</h1>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+<div style="background: #FBF6EC; border-radius: 18px; padding: 14px; display: flex; flex-direction: column;"><span style="font-size: 32px; font-weight: 600;">{{doneCount}}</span><span style="font-size: 14px; color: #4B4C3D;">{{doneLabel}}</span></div>
+<div style="background: #FBF6EC; border-radius: 18px; padding: 14px; display: flex; flex-direction: column;"><span style="font-size: 32px; font-weight: 600;">Local only</span><span style="font-size: 14px; color: #4B4C3D;">Export to share for review</span></div>
+</div>
+<sc-if value="{{hasNext}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{startNext}}" style="display: flex; align-items: center; gap: 12px; text-align: left; border: 2px dashed #C2602A; border-radius: 18px; background: #F6EDDC; padding: 14px; cursor: pointer;">
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 14px; color: #5C5D4C;">Next nearest</span><span style="font-size: 18px; font-weight: 600;">{{next.name}}</span><span style="font-size: 14px; color: #5C5D4C;">{{next.addr}}</span></span>
+<span style="font-size: 16px; font-weight: 600; color: #8A3B1C;">Answer</span></button>
+</sc-if>
+<button type="button" onClick="{{backToGaps}}" style="min-height: 54px; border: 2px solid #26261F; border-radius: 18px; background: transparent; font-size: 17px; cursor: pointer;">I’m done for now</button>
+</div>
+</sc-if>
+<sc-if value="{{pVList}}"><button class="al-button" type="button" onClick="{{toggleSaved}}">{{savedLabel}}</button><sc-if value="{{emptyResults}}"><p>No places match this search. Clear the search or select another category.</p></sc-if></sc-if>
+<sc-if value="{{pVList}}"><sc-if value="{{hasMore}}"><button class="al-button" type="button" onClick="{{moreResults}}">Show 40 more places</button></sc-if></sc-if>
+<sc-if value="{{pMList}}"><sc-if value="{{hasMore}}"><button class="al-button" type="button" onClick="{{moreResults}}">Show 40 more places</button></sc-if></sc-if>
+<sc-if value="{{isArea}}"><div class="al-local-note">Local survey notes stay on this device. To send evidence for review, use <a href="observations.html">Contribute</a>. Unreviewed notes do not change source tags. <button type="button" onClick="{{exportLocal}}">Export local contributions ({{localCount}})</button></div></sc-if>
+</aside>
+
+<sc-if value="{{hasToast}}" hint-placeholder-val="{{false}}">
+<div role="status" style="position: absolute; left: 50%; top: 18px; z-index: 9; transform: translateX(-50%); animation: matoast .25s ease both; background: #26261F; color: #F2F3DC; border-radius: 14px; padding: 12px 18px; font-size: 15px; box-shadow: 0 10px 24px rgba(0,0,0,0.2); max-width: 80%;">{{toast}}</div>
+</sc-if>
+</main>
+</div>
+</template>
+<section id="places-workspace" role="tabpanel" aria-labelledby="view-places"><div id="dc-root"></div></section>
+<section id="tools-workspace" role="tabpanel" aria-labelledby="view-stations" hidden>
+<aside class="explore-sidebar"><div class="explore-sidebar-intro"><h2 id="tool-title">Find a station</h2><p id="tool-intro">Check station access and current lift reports.</p></div>
+<div class="tool-controls"><label>Search<input id="search" type="search" placeholder="Search station names" autocomplete="off"></label><div class="explore-filters"><label>Area<select id="borough"><option value="london">All London boroughs</option><option value="all">Whole TfL source network</option></select></label><label><span id="filter-label">Station access</span><select id="kind"></select></label></div></div>
+<div id="facility-filters" class="explore-filters" hidden><label>Facility source<select id="facility-source"><option value="all">All sources</option><option value="osm">OpenStreetMap</option><option value="toiletmap">Toilet Map</option></select></label><label>Toilet wheelchair access<select id="toilet-access"><option value="all">All source answers</option><option value="yes">Yes (source)</option><option value="partial">Partial (source)</option><option value="no">No (source)</option><option value="unknown">Unknown</option></select></label></div>
+<div id="lift-status" class="explore-feed" aria-label="TfL lift disruptions"><details><summary>Live lift reports <span id="feed-count"></span></summary><p id="feed-summary" class="tool-status" role="status">Loading the latest TfL feed…</p><button type="button" class="tool-button" id="refresh-feed">Refresh reports</button><div id="feed-records"></div></details></div>
+<p id="result-summary" role="status" class="tool-status">Loading records…</p><p id="load-error" role="alert" class="tool-error" hidden></p><button id="retry-data" type="button" class="tool-button" hidden>Retry loading data</button><div id="results" class="tool-list" aria-label="Search results"></div><button id="more" class="tool-button" type="button" hidden>Show 40 more</button>
+<details class="source-disclosure"><summary>Source dates &amp; coverage</summary><div id="source-note" class="tool-note"></div><p class="tool-status">Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016. Geomni UK Map data © and database rights 2019. Facility data © OpenStreetMap contributors, ODbL. Contains data from the Toilet Map © 2025 – CC BY 4.0; filtered and normalized for this project.</p><a href="about.html">Read the data notes</a></details></aside>
+<div class="explore-map-column"><div id="evidence-map" class="tool-map" role="region" aria-label="Map of the displayed station or facility results"></div><div class="map-reading-note">Select a map point or a result to read its details. Map points do not establish an accessible route.</div><section id="details" class="tool-details" aria-live="polite"><h2>Choose a result</h2><p>Station and facility details will appear here.</p></section></div></section>
+<noscript>Access London needs JavaScript to show the map.</noscript>
+<script type="text/x-dc">class Component extends AccessMapPage {}</script>
+</body>
+</html>

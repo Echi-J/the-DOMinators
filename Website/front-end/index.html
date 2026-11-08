@@ -1,8 +1,143 @@
-<html>
-    <head>
-        <title>Website Title</title>
-    </head>
-    <body>
-        <h1> This is where your website html will go.</h1>
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Access London</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;display=swap">
+<style>
+body{margin:0;background:#E8EBD2}
+a{color:inherit}
+.hm *:focus-visible{outline:3px solid #233A6B;outline-offset:3px;border-radius:12px}
+.hm-skip{position:absolute;left:16px;top:-80px;z-index:20;background:#26261F;color:#F2F3DC;padding:12px 18px;border-radius:12px;text-decoration:none;font-size:16px}
+.hm-skip:focus{top:16px}
+.hm-world{position:absolute;left:50%;top:50%;width:max(100cqw,177.78cqh);height:max(56.25cqw,100cqh);transform:translate(-50%,-50%)}
+.hm-card{position:absolute;width:236px;transform-origin:50% 100%;transition:opacity .35s ease,transform .35s ease}
+.hm-pin{transition:background .6s ease,border-color .6s ease,opacity .6s ease,width .3s ease,height .3s ease,margin .3s ease}
+.hm-fill{transition:fill .8s ease,stroke .8s ease,opacity .8s ease}
+.hm-switchrow{position:absolute;left:50%;top:22px;transform:translateX(-50%)}
+.hm-tiles{display:flex}
+@keyframes hmprogA{from{width:0}to{width:100%}}
+@keyframes hmprogB{from{width:0}to{width:100%}}
+@keyframes hmrise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hm-rise{animation:hmrise .55s ease both}
+@media (prefers-reduced-motion: reduce){.hm-card,.hm-pin,.hm-fill{transition:none}.hm-rise{animation:none}}
+@container hm (max-width: 760px){
+.hm-switchrow{top:86px;left:16px;right:16px;transform:none}
+.hm-switch{width:100%}
+.hm-switch button{flex:1}
+.hm-tiles{display:none}
+.hm-navlink{display:none}
+.hm-bottom{left:20px !important;right:20px !important;bottom:28px !important}
+.hm-card{width:200px}
+}
+</style>
+<script src="js/dc-runtime.js"></script>
+<link rel="stylesheet" href="css/data-integration.css">
+<script src="js/access-data.js"></script>
+<script src="js/home-page.js"></script>
+<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js" defer></script></head>
+<body data-page="home">
+<a class="site-skip" href="#page-content">Skip to content</a>
+<header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
+<div id="page-content"></div>
+<template id="dc-template">
+<div class="al-data-banner" role="status" aria-live="polite">
+<sc-if value="{{dataLoading}}">Loading the real London dataset…</sc-if>
+<sc-if value="{{dataError}}"><span>{{dataError}}</span> <button type="button" onClick="{{retryData}}">Retry loading</button></sc-if>
+<sc-if value="{{dataReady}}">{{dataSummary}}</sc-if>
+</div>
+<div class="hm" style="container-type: size; container-name: hm; position: relative; height: 100vh; min-height: 560px; overflow: hidden; background: {{land}}; transition: background .8s ease; color: #26261F; font-family: 'Outfit', Arial, sans-serif;">
+<a class="hm-skip" href="map.html" onClick="{{goVisit}}">Go straight to the map</a>
+
+<div class="hm-world" aria-hidden="true">
+<svg viewBox="0 0 1600 900" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+<defs>
+<pattern id="hmLawn" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)"><rect class="hm-fill" width="64" height="64" style="fill: {{parkA}}"></rect><rect class="hm-fill" width="32" height="64" style="fill: {{parkB}}"></rect></pattern>
+</defs>
+<rect class="hm-fill" width="1600" height="900" style="fill: {{land}}"></rect>
+<g fill="url(#hmLawn)">
+<path d="M60 40 C260 0 420 60 400 190 C380 300 200 300 120 260 C30 210 0 90 60 40 Z"></path>
+<path d="M1180 140 C1380 90 1560 160 1560 300 C1560 420 1420 460 1300 430 C1180 400 1100 220 1180 140 Z"></path>
+<path d="M1240 640 C1400 600 1580 660 1570 780 C1560 880 1380 900 1290 860 C1200 820 1150 680 1240 640 Z"></path>
+<path d="M760 640 C860 600 1000 640 990 720 C980 800 860 820 790 790 C720 760 690 670 760 640 Z"></path>
+</g>
+<path class="hm-fill" d="M-60 330 C260 400 460 260 780 340 S1220 520 1660 420" fill="none" style="stroke: {{river}}" stroke-width="70" stroke-linecap="round"></path>
+<g fill="none" stroke-linecap="round">
+<g class="hm-fill" style="stroke: {{roadEdge}}" stroke-width="30"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
+<g stroke="#FBFAF0" stroke-width="24"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
+<g class="hm-fill" style="stroke: {{roadEdge}}" stroke-width="2.5" stroke-dasharray="16 14"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
+<g stroke="#FBFAF0" stroke-width="9" opacity="0.9"><path d="M0 180 L1600 150"></path><path d="M0 470 C400 455 1200 490 1600 455"></path><path d="M300 -20 L260 920"></path><path d="M860 -20 L900 920"></path><path d="M1400 -20 L1380 920"></path></g>
+</g>
+<g class="hm-fill" style="fill: {{treeA}}"><circle cx="150" cy="110" r="34"></circle><circle cx="230" cy="190" r="26"></circle><circle cx="320" cy="120" r="22"></circle><circle cx="1260" cy="230" r="40"></circle><circle cx="1360" cy="330" r="30"></circle><circle cx="1470" cy="230" r="24"></circle><circle cx="1330" cy="720" r="36"></circle><circle cx="1460" cy="790" r="26"></circle><circle cx="860" cy="700" r="28"></circle></g>
+<g class="hm-fill" style="fill: {{treeB}}"><circle cx="138" cy="98" r="15"></circle><circle cx="1246" cy="216" r="18"></circle><circle cx="1318" cy="706" r="16"></circle><circle cx="850" cy="690" r="12"></circle></g>
+<g class="hm-fill" style="opacity: {{visitFig}}" transform="translate(1075,775) rotate(80) scale(1.3)"><ellipse cx="10" cy="12" rx="40" ry="30" fill="#1F4A2A" opacity="0.2"></ellipse><rect x="-36" y="-26" width="11" height="54" rx="5" fill="#26261F"></rect><rect x="25" y="-26" width="11" height="54" rx="5" fill="#26261F"></rect><rect x="-25" y="-20" width="50" height="44" rx="12" fill="#ECEBD2"></rect><rect x="-16" y="-46" width="32" height="30" rx="9" fill="#233A6B"></rect><ellipse cx="0" cy="4" rx="22" ry="15" fill="#2F6B3C"></ellipse><circle cx="0" cy="7" r="11" fill="#2B211C"></circle></g>
+<g class="hm-fill" style="opacity: {{mapFig}}" transform="translate(1075,775) rotate(80) scale(1.3)"><ellipse cx="8" cy="10" rx="34" ry="24" fill="#6B4320" opacity="0.18"></ellipse><ellipse cx="0" cy="0" rx="28" ry="17" fill="#E8873A"></ellipse><circle cx="0" cy="2" r="12" fill="#2B211C"></circle><rect x="12" y="-26" width="14" height="22" rx="3" fill="#26261F"></rect><rect x="14.5" y="-23.5" width="9" height="16" rx="1.5" fill="#F2C994"></rect></g>
+</svg>
+
+<sc-for list="{{pins}}" as="p" hint-placeholder-count="13">
+<div class="hm-pin" style="position: absolute; left: {{p.x}}; top: {{p.y}}; width: {{p.size}}; height: {{p.size}}; margin: {{p.margin}}; border-radius: 50%; box-sizing: border-box; background: {{p.bg}}; border: {{p.border}}; opacity: {{p.op}}; box-shadow: {{p.shadow}}; display: flex; align-items: center; justify-content: center;">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{p.fg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="opacity: {{p.iconOp}}"><path d="{{p.icon}}"></path></svg>
+</div>
+</sc-for>
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="3">
+<div class="hm-card" style="left: {{c.x}}; top: {{c.y}}; opacity: {{c.op}}; transform: {{c.tf}};">
+<div style="background: #FBFBF2; border-radius: 18px; padding: 14px 16px; box-shadow: 0 18px 40px rgba(31,48,24,0.22); display: flex; flex-direction: column; gap: 8px;">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;"><span style="font-size: 17px; font-weight: 600;">{{c.name}}</span><span style="font-size: 14px; color: #5C5D4C; white-space: nowrap;">{{c.meta}}</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px;"><sc-for list="{{c.tags}}" as="t" hint-placeholder-count="2"><span style="display: flex; align-items: center; gap: 5px; font-size: 13px; border-radius: 9px; padding: 4px 9px; background: {{t.bg}}; color: {{t.fg}}; border: {{t.border}};">{{t.text}}</span></sc-for></div>
+</div>
+<div style="width: 16px; height: 16px; background: #FBFBF2; transform: rotate(45deg); margin: -9px auto 0;"></div>
+</div>
+</sc-for>
+</div>
+
+<div style="position: absolute; inset: 0; pointer-events: none; background: {{fade}}; transition: background .8s ease;"></div>
+
+
+
+<div class="hm-switchrow" style="display: flex; align-items: center; gap: 8px;">
+<div class="hm-switch" role="group" aria-label="Show the site for" style="display: flex; gap: 4px; background: rgba(251,251,242,0.92); border-radius: 20px; padding: 5px; box-shadow: 0 10px 30px rgba(31,48,24,0.14);">
+<sc-for list="{{modes}}" as="m" hint-placeholder-count="2">
+<button type="button" onClick="{{m.pick}}" aria-pressed="{{m.pressed}}" style="position: relative; overflow: hidden; min-height: 50px; min-width: 132px; border: none; border-radius: 15px; padding: 0 18px; display: flex; align-items: center; justify-content: center; gap: 9px; background: {{m.bg}}; color: {{m.fg}}; font-family: 'Outfit', Arial, sans-serif; font-size: 17px; font-weight: 500; cursor: pointer; transition: background .5s, color .5s;">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg>{{m.label}}
+<span aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; background: {{m.barColor}}; width: {{m.barW}}; animation: {{m.anim}};"></span>
+</button>
+</sc-for>
+</div>
+
+</div>
+
+<div class="hm-bottom" style="position: absolute; left: 48px; bottom: 48px; right: 40%; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+<sc-if value="{{isVisit}}" hint-placeholder-val="{{true}}">
+<h1 class="hm-rise" style="margin: 0; font-size: clamp(50px, 7.6cqw, 132px); font-weight: 600; line-height: 0.94; letter-spacing: -0.045em; color: #2F6B3C; max-width: 8.5ch;">Find places. Know the gaps.</h1>
+</sc-if>
+<sc-if value="{{isMap}}" hint-placeholder-val="{{false}}">
+<h1 class="hm-rise" style="margin: 0; font-size: clamp(50px, 7.6cqw, 132px); font-weight: 600; line-height: 0.94; letter-spacing: -0.045em; color: #B4562A; max-width: 8.5ch;">Help someone get in.</h1>
+</sc-if>
+<p style="margin: 0; font-size: clamp(17px, 1.5cqw, 21px); line-height: 1.4; color: #3E3F32; max-width: 30ch;">{{sub}}</p>
+<a href="{{homeDestination}}" onClick="{{goCurrent}}" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px; background: {{ctaBg}}; color: {{ctaFg}}; border-radius: 20px; padding: 18px 28px; font-size: 20px; font-weight: 500; box-shadow: 0 14px 30px rgba(31,48,24,0.2); transition: background .6s, color .6s;">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ctaIcon}}"></path></svg>{{cta}}</a><a class="home-help" href="how-to-use.html">First visit? See how it works →</a>
+</div>
+
+<div class="hm-tiles" style="position: absolute; right: 28px; bottom: 28px; background: rgba(251,251,242,0.94); border-radius: 24px; padding: 16px; flex-direction: column; gap: 10px; box-shadow: 0 16px 40px rgba(31,48,24,0.16);">
+<div style="display: grid; grid-template-columns: repeat(8, 26px); gap: 4px;">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="56">
+<sc-if value="{{t.isTile}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{t.pick}}" aria-label="{{t.label}}" aria-pressed="{{t.pressed}}" style="width: 26px; height: 26px; padding: 0; border-radius: 7px; border: {{t.border}}; box-sizing: border-box; background: {{t.bg}}; cursor: pointer; transition: background .6s;"></button>
+</sc-if>
+<sc-if value="{{t.isEmpty}}" hint-placeholder-val="{{false}}"><span></span></sc-if>
+</sc-for>
+</div>
+<div aria-live="polite" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 26px; width: 236px;">
+<span style="font-size: 14px; color: #3E3F32;">{{tileText}}</span>
+<sc-if value="{{hasTile}}" hint-placeholder-val="{{false}}"><a href="map.html" onClick="{{goTile}}" style="font-size: 14px; font-weight: 600; white-space: nowrap;">Open map</a></sc-if>
+</div>
+</div>
+</div>
+<div class="al-home-note">Illustrated background · Open the map for geographic place positions. © OpenStreetMap contributors.</div>
+</template>
+<div id="dc-root"></div>
+<section class="home-journey" aria-labelledby="journey-title"><div class="journey-intro"><p class="section-kicker">ONE MAP. THREE WAYS TO EXPLORE.</p><h2 id="journey-title">Your place. Your journey. The details.</h2><p>Start with a destination, check a station, then look at the facilities. Switch views inside the same map.</p></div><div class="journey-cards"><a href="map.html"><span class="journey-number">01 / PLACES</span><h3>Find somewhere to go</h3><p>Browse cafés, parks, shops and cultural places by borough and access needs.</p><span>Explore places ↗</span></a><a href="map.html?view=stations"><span class="journey-number">02 / STATIONS</span><h3>Check your arrival</h3><p>Read step-free access details and the latest reported lift disruptions.</p><span>Explore stations ↗</span></a><a href="map.html?view=facilities"><span class="journey-number">03 / FACILITIES</span><h3>Look more closely</h3><p>Find mapped entrances, lifts, ramps and toilets, with their original evidence.</p><span>Explore facilities ↗</span></a></div><p class="journey-note">Missing information means unknown. Check the source, date and exact entrance before travelling.</p></section><noscript>Access London needs JavaScript to show the map.</noscript>
+<script type="text/x-dc">class Component extends AccessHomePage {}</script>
+</body>
 </html>

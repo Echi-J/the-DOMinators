@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Access London — about</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F2F3DC}
+a{color:inherit}
+@container dtroot (max-width: 760px){.dt-hide-sm{display:none !important}}
+</style>
+<script src="js/dc-runtime.js"></script>
+<link rel="stylesheet" href="css/data-integration.css">
+<script src="js/access-data.js"></script>
+<script src="js/about-page.js"></script>
+<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js" defer></script></head>
+<body data-page="about">
+<a class="site-skip" href="#page-content">Skip to content</a>
+<header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
+<div id="page-content"></div>
+<template id="dc-template">
+<div class="al-data-banner" role="status" aria-live="polite">
+<sc-if value="{{dataLoading}}">Loading the real London dataset…</sc-if>
+<sc-if value="{{dataError}}"><span>{{dataError}}</span> <button type="button" onClick="{{retryData}}">Retry loading</button></sc-if>
+<sc-if value="{{dataReady}}">{{dataSummary}}</sc-if>
+</div>
+<div style="container-type: inline-size; container-name: dtroot; min-height: 100vh; background: #F2F3DC; color: #26261F; font-family: 'Outfit', Arial, sans-serif;">
+
+
+
+<main style="max-width: 1280px; margin: 0 auto; padding: 24px 28px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px;">
+
+<section aria-label="What this is" style="display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end;">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
+<h1 style="margin: 0; font-size: clamp(44px, 5.4vw, 76px); font-weight: 600; letter-spacing: -0.04em; line-height: 0.98;">Places, journeys and access details.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.45; color: #4B4C3D; max-width: 34ch;">Explore places, stations and facility evidence in one map. Read the sources, check what is missing, and share dated observations.</p>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px;">
+<a href="map.html" onClick="{{goVisit}}" style="text-decoration: none; background: #2F6B3C; color: #F2F3DC; border-radius: 28px; padding: 24px; min-height: 230px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 56px; height: 56px; border-radius: 18px; background: #F2F3DC; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2F6B3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11zM12 10h.01"></path></svg></span>
+<span style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em;">Explore</span>
+<span style="font-size: 17px; line-height: 1.4;">Find places, check station access and read the details about nearby facilities.</span>
+<span style="flex: 1;"></span><span style="font-size: 16px; font-weight: 600; text-decoration: underline;">Open the map</span>
+</a>
+<a href="observations.html" style="text-decoration: none; background: #E8873A; color: #26261F; border-radius: 28px; padding: 24px; min-height: 230px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 56px; height: 56px; border-radius: 18px; background: #F7EEDD; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8A3B1C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></span>
+<span style="font-size: 30px; font-weight: 600; letter-spacing: -0.02em;">Contribute</span>
+<span style="font-size: 17px; line-height: 1.4;">Submit dated evidence for review. Approved observations are shared separately from the source tags.</span>
+<span style="flex: 1;"></span><span style="font-size: 16px; font-weight: 600; text-decoration: underline;">Share an observation</span>
+</a>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<div style="flex: 2 1 520px; background: #26261F; color: #F2F3DC; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 16px; color: #C2D69E;">The question behind it</span>
+<span style="font-size: clamp(24px, 2.6vw, 34px); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em;">Is accessibility information missing where disabled Londoners live?</span>
+</div>
+<div style="flex: 1 1 300px; background: #E3E6C4; border-radius: 26px; padding: 24px; display: flex; align-items: center; gap: 16px;">
+<span style="flex: none; width: 54px; height: 54px; border-radius: 50%; border: 4px dashed #8E8F78; box-sizing: border-box;"></span>
+<span style="font-size: 18px; line-height: 1.35;">A dashed ring always means <b>not known</b>. We never show “not known” as “no”.</span>
+</div>
+</div>
+</section>
+
+<section aria-label="The score" style="display: flex; flex-direction: column; gap: 20px;">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; letter-spacing: -0.03em;">How the overall OSM tag score is calculated</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 20px;">
+<span style="background: #2F6B3C; color: #F2F3DC; border-radius: 16px; padding: 14px 18px;">Yes × 1</span><span>+</span>
+<span style="background: #C2D69E; border-radius: 16px; padding: 14px 18px;">Partly × ½</span><span>+</span>
+<span style="background: #F6DDBF; border-radius: 16px; padding: 14px 18px;">No × 0</span><span>÷</span>
+<span style="border: 2px solid #26261F; border-radius: 16px; padding: 12px 18px;">places tagged yes, limited or no</span><span>× 100</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch;">
+<div style="flex: 1 1 460px; min-width: 0; background: #E3E6C4; border-radius: 28px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 18px; font-weight: 600;">Try it: change the places in a pretend borough</span>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="flex: none; width: 30px; height: 30px; border-radius: 50%; background: {{r.dot}}; border: {{r.border}}; box-sizing: border-box;"></span>
+<span style="flex: 1; font-size: 17px;">{{r.label}}</span>
+<button type="button" onClick="{{r.dec}}" aria-label="{{r.decLabel}}" style="width: 48px; height: 48px; border-radius: 14px; border: 2px solid #9A9B82; background: #F2F3DC; font-size: 22px; cursor: pointer; font-family: 'Outfit', Arial, sans-serif;">−</button>
+<span aria-live="polite" style="width: 40px; text-align: center; font-size: 22px; font-weight: 600;">{{r.n}}</span>
+<button type="button" onClick="{{r.inc}}" aria-label="{{r.incLabel}}" style="width: 48px; height: 48px; border-radius: 14px; border: 2px solid #9A9B82; background: #F2F3DC; font-size: 22px; cursor: pointer; font-family: 'Outfit', Arial, sans-serif;">+</button>
+</div>
+</sc-for>
+<div aria-hidden="true" style="display: flex; flex-wrap: wrap; gap: 4px; padding-top: 6px;">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="20"><span style="width: 18px; height: 18px; border-radius: 50%; background: {{d.bg}}; border: {{d.border}}; box-sizing: border-box;"></span></sc-for>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+<div style="grid-column: span 2; background: {{scoreBg}}; color: {{scoreFg}}; border-radius: 28px; padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background 0.4s;">
+<span style="font-size: 18px;">Illustrative tag score</span>
+<span aria-live="polite" style="font-size: 64px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;">{{score}}</span>
+</div>
+<div style="background: #F6EDDC; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 15px; color: #4B4C3D;">Coverage</span>
+<span style="font-size: 36px; font-weight: 600;">{{coverage}}%</span>
+<span style="height: 10px; border-radius: 5px; background: #E3D3BC; overflow: hidden;"><span style="display: block; height: 10px; width: {{coverage}}%; background: #E8873A;"></span></span>
+<span style="font-size: 13px; color: #5C5D4C;">places with a recognised wheelchair tag</span>
+</div>
+<div style="background: #F2F3DC; border: 2px solid #D3D4B8; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 15px; color: #4B4C3D;">Coverage band</span>
+<span style="align-self: flex-start; font-size: 20px; font-weight: 600; border-radius: 12px; padding: 6px 12px; background: {{confBg}}; color: {{confFg}};">{{conf}}</span>
+<span style="font-size: 13px; color: #5C5D4C;">Display heuristic, not statistical confidence. Low below 15%; high from 35%.</span>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Where are the gaps" style="display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; letter-spacing: -0.03em;">Where are the gaps?</h2>
+<p style="margin: 0; font-size: 18px; color: #4B4C3D; max-width: 60ch;">Each dot is a borough. Further right: a higher disability rate. Lower down: lower OSM wheelchair-tag coverage.</p>
+</div>
+<span style="font-size: 14px; background: #F6E3CC; color: #7A3A12; border-radius: 10px; padding: 6px 10px;">Actual ONS 2021 rates and OSM snapshot coverage. Different reference dates; descriptive comparison only.</span>
+</div>
+<div style="background: #FBFBF2; border-radius: 28px; padding: 20px; box-sizing: border-box;">
+<svg role="img" aria-label="Scatter chart of 33 boroughs: Census 2021 disability rate against OSM wheelchair-tag coverage. The full data is in the table below." viewBox="0 0 900 420" style="width: 100%; height: auto;">
+<rect x="70" y="20" width="800" height="340" fill="#F2F3DC" rx="10"></rect>
+<rect x="470" y="190" width="400" height="170" fill="#F6E3CC" rx="10"></rect>
+<text x="860" y="346" text-anchor="end" font-size="15" fill="#8A3B1C" font-weight="600">Higher disability rate, lower tag coverage</text>
+<g stroke="#D3D4B8" stroke-width="1"><line x1="70" y1="105" x2="870" y2="105"></line><line x1="70" y1="190" x2="870" y2="190"></line><line x1="70" y1="275" x2="870" y2="275"></line><line x1="270" y1="20" x2="270" y2="360"></line><line x1="470" y1="20" x2="470" y2="360"></line><line x1="670" y1="20" x2="670" y2="360"></line></g>
+<g font-size="14" fill="#4B4C3D"><text x="60" y="25" text-anchor="end">{{y0}}</text><text x="60" y="110" text-anchor="end">{{y1}}</text><text x="60" y="195" text-anchor="end">{{y2}}</text><text x="60" y="280" text-anchor="end">{{y3}}</text><text x="60" y="364" text-anchor="end">{{y4}}</text>
+<text x="70" y="384" text-anchor="middle">{{x0}}</text><text x="270" y="384" text-anchor="middle">{{x1}}</text><text x="470" y="384" text-anchor="middle">{{x2}}</text><text x="670" y="384" text-anchor="middle">{{x3}}</text><text x="870" y="384" text-anchor="middle">{{x4}}</text></g>
+<text x="470" y="412" text-anchor="middle" font-size="15" fill="#26261F">Residents who are disabled under the Equality Act</text>
+<text x="18" y="190" text-anchor="middle" font-size="15" fill="#26261F" transform="rotate(-90 18 190)">OSM wheelchair-tag coverage</text>
+<sc-for list="{{pts}}" as="pt" hint-placeholder-count="33">
+<circle cx="{{pt.cx}}" cy="{{pt.cy}}" r="9" fill="{{pt.fill}}" stroke="#FBFBF2" stroke-width="2.5"><title>{{pt.title}}</title></circle>
+</sc-for>
+<sc-for list="{{ptLabels}}" as="pl" hint-placeholder-count="4">
+<text x="{{pl.x}}" y="{{pl.y}}" font-size="14" font-weight="600" fill="#26261F">{{pl.name}}</text>
+</sc-for>
+</svg>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5C5D4C;">Sources: ONS Census 2021 TS038 and OSM snapshot 18 October 2026. Overall tags do not verify the four detailed needs. Designated tags count toward coverage but are excluded from the score.</p>
+</section>
+
+<section id="connected-data" aria-label="Connected datasets" style="background:#FBFBF2;border-radius:24px;padding:24px;display:grid;gap:14px;">
+<h2 style="margin:0;font-size:30px;">Real datasets connected to this website</h2>
+<p style="margin:0;line-height:1.5;">The places map covers all 33 London boroughs, including the City of London. Hackney is one example, not the whole dataset. Source files are loaded from this website as versioned snapshots; a live API is not required to display real records.</p>
+<ul style="margin:0;line-height:1.8;">
+<li><a href="map.html">OpenStreetMap places</a>: 74,500 source objects, split into 33 borough files. Snapshot: 18 October 2026.</li>
+<li><a href="../data/borough_boundaries.geojson">London borough boundaries</a>: 33 areas for maps and spatial assignment.</li>
+<li><a href="../data/boroughs.json">ONS Census 2021 TS038 and IMD 2025</a>: 33 borough profiles powering the chart and table below.</li>
+<li><a href="map.html?view=facilities">Toilet Map</a>: 1,921 London records from the 8 November 2026 export. Includes source claims for wheelchair access, RADAR keys, payment and opening times. Sources may overlap with OSM; records have not been merged.</li>
+<li><a href="../data/venue_evidence/operator_statements.json">Venue operator statements</a>: nine scoped claims for the Science Museum and V&amp;A, checked online on 8 November 2026. This is a two-venue pilot, not a field survey or official Changing Places register.</li>
+</ul>
+<p style="margin:0;line-height:1.5;">Connected: 468 TfL station access records, a separately refreshed lift-disruption feed, and 4,514 OSM facility evidence objects. The static TfL snapshot was re-fetched on 8 November 2026; its publisher modification date remains 23 May 2025. Dated observations can be submitted online and appear publicly after review. No project field surveys have been preloaded. Official Changing Places registration remains unverified; no registry has been imported.</p>
+<p style="margin:0;line-height:1.5;">Contains data from the <a href="https://www.toiletmap.org.uk/dataset">Toilet Map © 2025</a> – <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Changes: London boundary filter, field normalization, stable source IDs and explicit unknown values. Source verification timestamps do not establish an Access London inspection. This additional source does not change the OSM-only coverage statistics above.</p>
+<p style="margin:0;line-height:1.5;">Real source records do not guarantee present-day accessibility. Missing fields stay unknown. An overall wheelchair tag does not verify an accessible toilet, step-free entrance or lift.</p>
+<a href="../data/catalog.json">Download the website data catalogue</a>
+</section>
+
+<section aria-label="Where the data comes from" style="display: flex; flex-direction: column; gap: 20px;">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; letter-spacing: -0.03em;">Where the data comes from</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+<sc-for list="{{pipe}}" as="p" hint-placeholder-count="5">
+<div style="flex: 1 1 170px; min-width: 0; background: {{p.bg}}; color: {{p.fg}}; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 6px; min-height: 120px; box-sizing: border-box;">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; opacity: 0.8;">{{p.step}}</span>
+<span style="font-size: 19px; font-weight: 600;">{{p.title}}</span>
+<span style="font-size: 14px; line-height: 1.4; opacity: 0.85;">{{p.text}}</span>
+</div>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
+<sc-for list="{{sources}}" as="s" hint-placeholder-count="5">
+<div style="background: #E3E6C4; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 18px; font-weight: 600;">{{s.name}}</span>
+<span style="font-size: 15px; line-height: 1.45; color: #4B4C3D;">{{s.use}}</span>
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; color: #5C5D4C;">{{s.licence}}</span>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section aria-label="Limits" style="display: flex; flex-wrap: wrap; gap: 20px;">
+<div style="flex: 1 1 520px; min-width: 0; background: #26261F; color: #F2F3DC; border-radius: 28px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+<h2 style="margin: 0; font-size: 30px; font-weight: 600;">What this can’t tell you</h2>
+<sc-for list="{{limits}}" as="l" hint-placeholder-count="4">
+<div style="display: flex; gap: 12px; align-items: flex-start;"><span aria-hidden="true" style="flex: none; width: 26px; height: 26px; border-radius: 50%; border: 3px dashed #C2D69E; box-sizing: border-box; margin-top: 2px;"></span><span style="font-size: 17px; line-height: 1.45;">{{l}}</span></div>
+</sc-for>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; background: #E3E6C4; border-radius: 28px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<h2 id="accessibility" style="margin: 0; font-size: 30px; font-weight: 600;">Accessibility statement</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.45; color: #4B4C3D;">We aim to meet WCAG 2.2 level AA.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{a11y}}" as="a" hint-placeholder-count="6"><span style="font-size: 15px; background: #F2F3DC; border-radius: 12px; padding: 8px 12px;">{{a}}</span></sc-for>
+</div>
+<a href="contact.html" style="font-size: 16px; padding-top: 4px;">Found a barrier on this site? Tell us</a>
+</div>
+</section>
+
+<section aria-label="Questions" style="display: flex; flex-direction: column; gap: 12px;">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 600; letter-spacing: -0.03em;">Questions</h2>
+<sc-for list="{{faq}}" as="f" hint-placeholder-count="4">
+<div style="background: #E3E6C4; border-radius: 20px; overflow: hidden;">
+<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: none; background: transparent; padding: 16px 20px; text-align: left; font-family: 'Outfit', Arial, sans-serif; font-size: 19px; font-weight: 500; color: #26261F; cursor: pointer;"><span>{{f.q}}</span><span aria-hidden="true" style="font-size: 24px;">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{false}}"><p style="margin: 0; padding: 0 20px 18px; font-size: 17px; line-height: 1.5; color: #4B4C3D;">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</section>
+<section class="al-context-table"><h2>All 33 boroughs</h2><p>IMD average score describes deprivation, not venue accessibility.</p><div style="overflow-x:auto"><table><thead><tr><th scope="col">Borough</th><th scope="col">OSM objects</th><th scope="col">Disability %</th><th scope="col">Tag coverage %</th><th scope="col">IMD average score</th></tr></thead><tbody id="al-borough-table-body" data-dc-preserve="true"></tbody></table></div></section>
+</main>
+
+<footer style="max-width: 1280px; margin: 0 auto; padding: 0 28px 36px; box-sizing: border-box;">
+<div style="border-top: 1px solid #C9C9AE; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-size: 15px; color: #4B4C3D;">
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 18px;"><a href="index.html">Home</a><a href="map.html">Map</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<span>Made by The DOMinators · UCL CASA0017 Web Architecture</span>
+</div>
+</footer>
+</div>
+</template>
+<div id="dc-root"></div>
+<noscript>Access London needs JavaScript to show the map.</noscript>
+<script type="text/x-dc">class Component extends AccessAboutPage {}</script>
+</body>
+</html>
