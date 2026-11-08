@@ -1,0 +1,96 @@
+{
+  "schema_version": "access-london-operator-statements-1",
+  "venue_count": 2,
+  "claim_count": 9,
+  "checked_at": "2026-11-08T23:00:32.989436+00:00",
+  "coverage": "Two-venue pilot; not a London-wide venue audit.",
+  "reuse_note": "Project-authored factual summaries linked to the operator pages; no full guide or third-party access database reproduced.",
+  "statements": [
+    {
+      "place_id": "osm:way/27765411",
+      "venue_name": "Science Museum",
+      "borough_code": "E09000020",
+      "source_url": "https://www.sciencemuseum.org.uk/visit/accessibility",
+      "source_domain": "sciencemuseum.org.uk",
+      "claims": [
+        {
+          "attribute": "lift_present",
+          "value": "yes",
+          "scope": "Museum circulation",
+          "summary": "The operator describes passenger lifts; the statement does not establish their current operating status."
+        },
+        {
+          "attribute": "toilet_wheelchair_accessible",
+          "value": "yes",
+          "scope": "Museum levels",
+          "summary": "The operator reports accessible toilets on every level; consult its map for locations."
+        },
+        {
+          "attribute": "step_free_limitation",
+          "value": "no_step_free_access",
+          "scope": "Making the Modern World and Flight mezzanines",
+          "summary": "The operator states that these mezzanines currently have no step-free access."
+        },
+        {
+          "attribute": "adult_changing_equipment_present",
+          "value": "yes",
+          "scope": "Level 0, beside the Hans Rausing Lecture Theatre",
+          "summary": "The operator lists a hoist, changing bench and RADAR access. Its page also carries a 14–25 September closure notice without a year; confirm current availability. This is not registry verification."
+        }
+      ],
+      "source_type": "venue_operator",
+      "checked_at": "2026-11-08T23:00:32.989436+00:00",
+      "source_publication_date": null,
+      "survey_observed_at": null,
+      "review_status": "operator_claim_not_independently_verified",
+      "identity_match_method": "manual_name_official_domain_and_venue_address",
+      "official_changing_places_registration": "not_verified"
+    },
+    {
+      "place_id": "osm:relation/29795",
+      "venue_name": "Victoria and Albert Museum",
+      "borough_code": "E09000020",
+      "source_url": "https://www.vam.ac.uk/info/disability-access",
+      "source_domain": "vam.ac.uk",
+      "claims": [
+        {
+          "attribute": "entrance_step_free",
+          "value": "yes",
+          "scope": "Cromwell Road entrance",
+          "summary": "The operator describes a step-free entrance with a wheelchair-accessible door."
+        },
+        {
+          "attribute": "entrance_step_free",
+          "value": "yes",
+          "scope": "Exhibition Road entrance",
+          "summary": "The operator describes step-free entry and an automatic door at the lower end of the walkway."
+        },
+        {
+          "attribute": "entrance_step_free",
+          "value": "no",
+          "scope": "Tunnel entrance",
+          "summary": "The operator states that this entrance is not wheelchair accessible."
+        },
+        {
+          "attribute": "lift_present",
+          "value": "yes",
+          "scope": "Museum circulation",
+          "summary": "The operator describes signposted lifts; check its map or ask staff for a suitable route."
+        },
+        {
+          "attribute": "toilet_wheelchair_accessible",
+          "value": "yes",
+          "scope": "Museum-wide provision",
+          "summary": "The operator lists 13 accessible toilets. This does not establish Changing Places provision."
+        }
+      ],
+      "source_type": "venue_operator",
+      "checked_at": "2026-11-08T23:00:32.989436+00:00",
+      "source_publication_date": null,
+      "survey_observed_at": null,
+      "review_status": "operator_claim_not_independently_verified",
+      "identity_match_method": "manual_name_official_domain_and_venue_address",
+      "official_changing_places_registration": "not_verified"
+    }
+  ]
+}
