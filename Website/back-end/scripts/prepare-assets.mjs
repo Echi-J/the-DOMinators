@@ -1,7 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { buildNeedEvidence } from './build-need-evidence.mjs';
 const root=path.resolve(import.meta.dirname,'..');
 const front=path.resolve(root,'../front-end'),data=path.resolve(root,'../data');
+await buildNeedEvidence(path.resolve(root,'..'));
 const read=async file=>JSON.parse(await fs.readFile(path.join(data,file),'utf8'));
 const features=(await read('venue_evidence/source_features.geojson')).features;
 const grouped={};

@@ -161,13 +161,17 @@
     const changed=state.tab!==tab||!$('kind').options.length;
     if(changed)setTab(tab);
     $('borough').value=[...$('borough').options].some(o=>o.value===borough)?borough:'london';
+    const filters=new URLSearchParams(location.search);
+    for(const [name,control] of [['kind','kind'],['source','facility-source'],['toilet_access','toilet-access']]){
+      const requested=filters.get(name)||'all';$(control).value=[...$(control).options].some(o=>o.value===requested)?requested:'all';
+    }
     map.invalidateSize();render();if(tab==='stations'&&!freshFeed())refreshFeed();
     if(selectedId){const r=(tab==='stations'?state.stations:state.facilities).find(r=>id(r)===selectedId);if(r){if(borough!=='all'&&r.within_london!==true)$('borough').value='all';selection(r);}}
   }
   window.AccessTools={activate,setBorough(borough){if(loaded){$('borough').value=borough;render();}}};
   new ResizeObserver(()=>map.invalidateSize()).observe($('evidence-map'));
   $('borough').addEventListener('change',()=>window.AccessWorkspace?.setBorough($('borough').value,'tools'));
-  ['search','borough','kind','facility-source','toilet-access'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{state.limit=40;render();}));
+  ['search','borough','kind','facility-source','toilet-access'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',()=>{state.limit=40;const u=new URL(location.href);for(const [name,control] of [['kind','kind'],['source','facility-source'],['toilet_access','toilet-access']]){const v=$(control).value;if(v==='all')u.searchParams.delete(name);else u.searchParams.set(name,v);}history.replaceState({},'',u);render();}));
   $('more').onclick=()=>{state.limit+=40;render(false);};$('refresh-feed').onclick=refreshFeed;$('retry-data').onclick=load;
   load();refreshFeed();setInterval(()=>{if(document.visibilityState==='visible'&&window.AccessWorkspace?.currentView==='stations')refreshFeed();},120000);setInterval(()=>{if(state.feed?.status==='fresh'&&!freshFeed())renderFeed();},30000);
 })();

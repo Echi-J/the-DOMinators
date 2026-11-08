@@ -12,7 +12,7 @@ const context = {
   URL, console, crypto: webcrypto, Map, Set, Blob,
   setTimeout: () => 1, clearTimeout: () => {},
   document: { currentScript: { src: 'http://access.test/js/access-data.js' }, getElementById: () => null, addEventListener: () => {} },
-  location: { href: 'http://access.test/map.html?noTiles=1' },
+  location: new URL('http://access.test/map.html?noTiles=1'),
   history: { replaceState: (_a, _b, url) => { context.location.href = String(url); } },
   navigator: {}, URLSearchParams,
   localStorage: { getItem: key => store.get(key) ?? null, setItem: (key, value) => store.set(key, value), removeItem: key => store.delete(key) },
@@ -31,8 +31,8 @@ for (const file of ['access-data.js','access-evidence.js','map-page.js','home-pa
 const data = await context.AccessData.metadata();
 assert.equal(data.catalog.record_count, 74500);
 assert.equal(data.boroughs.length, 33);
-assert.equal(fetches.length, 4);
-await context.AccessData.metadata(); assert.equal(fetches.length, 4, 'metadata cache');
+assert.equal(fetches.length, 5);
+await context.AccessData.metadata(); assert.equal(fetches.length, 5, 'metadata cache');
 const hackney = await context.AccessData.places('E09000012');
 const camden = await context.AccessData.places('E09000007');
 assert.equal(hackney.length, 2530);
@@ -58,10 +58,10 @@ assert.equal(page.mapView.rows.length,31);
 page.setState({need:{ent:true,toilet:false,lift:false,cp:false}}); view=page.renderVals();
 assert.equal(view.noMatch,true);
 assert.equal(view.results.length,31,'unknowns remain visible');
-assert.ok(view.countText.startsWith('0 source-tag matches'));
+assert.ok(view.countText.startsWith('0 source-supported matches'));
 page.setState({need:{ent:false,toilet:true,lift:false,cp:false}}); view=page.renderVals();
 const knownToilets = hackney.filter(f=>f.properties.ui_category==='toilet' && f.properties.toilet==='yes').length;
-assert.ok(view.countText.startsWith(knownToilets+' source-tag matches'));
+assert.ok(view.countText.startsWith(knownToilets+' source-supported matches'));
 assert.equal(page.mapView.rows.length,31);
 
 page.setState({cat:'all',need:{},q:'acme fire cult'}); view=page.renderVals();
@@ -118,7 +118,33 @@ await page.openArea('E09000020','osm:relation/29795');
 await page.loadAdditional('E09000020',page.request);
 assert.equal(page.renderVals().pl.operatorClaims.length,5);
 assert.equal(page.state.features.find(f=>f.properties.id==='osm:relation/29795').properties.ent,'unknown','Operator claims must not silently overwrite source tags');
+// Regression for the three formerly empty access-need buttons.
+page.setState({mode:'visit',sel:null,vstep:'list',cat:'all',q:'',need:{ent:true,toilet:false,lift:false,cp:false}});
+view=page.renderVals();
+assert.ok(view.countText.startsWith('1 source-supported match'));
+assert.equal(view.results[0].name,'Victoria and Albert Museum');
+assert.ok(view.results[0].marks.some(m=>m.text==='Step-free: Yes (operator)'));
+assert.equal(data.needEvidence.coverage.ent.positive_places,1);
+assert.deepEqual(Array.from(data.needEvidence.resolutions['osm:relation/29795'].ent.positive_scopes),['Cromwell Road entrance','Exhibition Road entrance']);
+assert.equal(data.needEvidence.resolutions['osm:relation/29795'].ent.other_scopes[0].value,'no');
+for(const key of ['lift','cp']){
+ const option=view.needs.find(n=>n.id===key);assert.equal(option.available,false);assert.equal(option.unavailable,true);
+ const before=JSON.stringify(page.state.need);option.toggle();assert.equal(JSON.stringify(page.state.need),before,'Unavailable need must not trap the visitor in zero matches');
+ assert.equal(data.needEvidence.coverage[key].positive_places,0);
+ assert.equal(data.needEvidence.resolutions['osm:way/27765411'][key],undefined,'Lift/equipment presence must not infer all-floor access or registration');
+}
+view.needs.find(n=>n.id==='ent').toggle();assert.equal(new URL(context.location.href).searchParams.has('needs'),false);
+page.renderVals().needs.find(n=>n.id==='ent').toggle();assert.equal(new URL(context.location.href).searchParams.get('needs'),'ent');
+await page.openArea('HCK');view=page.renderVals();
+assert.equal(view.noMatch,true);assert.equal(view.hasEntranceExample,true);assert.equal(view.results.length,40);
+assert.ok(view.liftRecordsURL.includes('kind=lift'));assert.ok(view.entranceRecordsURL.includes('kind=entrance'));
+await view.openEntranceExample();view=page.renderVals();
+assert.equal(view.pl.name,'Victoria and Albert Museum');assert.equal(view.pl.entranceSupported,true);
+assert.ok(view.pl.rows.find(r=>r.label==='Step-free entrance').value.includes('operator statement'));
+assert.equal(page.state.features.find(f=>f.properties.id==='osm:relation/29795').properties.ent,'unknown');
+page.setState({sel:null,vstep:'list',q:'no-such-venue-unique-test'});view=page.renderVals();assert.equal(view.noPlaceResults,true);assert.equal(view.noMatch,false,'An empty text search is different from missing access evidence');
+const deepLinkPage=new context.AccessMapPage();context.location.href='http://access.test/map.html?borough=E09000020&needs=ent';await deepLinkPage.componentDidMount();assert.equal(deepLinkPage.state.need.ent,true);assert.ok(deepLinkPage.renderVals().countText.startsWith('1 source-supported match'));
 await fs.mkdir(path.join(root,'docs'),{recursive:true});
-const result={status:'passed',places:total,boroughs:33,checks:['metadata cache','borough switching','category and need filters','unknown visibility','pagination','search','source provenance','bookmarks','four mapper questions','local persistence','source data unchanged by contributions','last-request race handling','actual ONS scatter bounds','all 33 data files'],browser_qa:'Recorded separately in VALIDATION.md'};
+const result={status:'passed',places:total,boroughs:33,checks:['metadata cache','borough switching','category and need filters','unknown visibility','pagination','search','source provenance','bookmarks','four mapper questions','local persistence','source data unchanged by contributions','last-request race handling','actual ONS scatter bounds','all 33 data files','scoped operator entrance matching','unavailable floor and registry filters','no lift or equipment inference','entrance evidence example navigation','need deep links','empty text search versus unknown evidence'],browser_qa:'Recorded separately in VALIDATION.md'};
 await fs.writeFile(path.join(root,'docs/automated-validation.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result,null,2));

@@ -11,10 +11,10 @@ a{color:inherit}
 @container dtroot (max-width: 760px){.dt-hide-sm{display:none !important}}
 </style>
 <script src="js/dc-runtime.js"></script>
-<link rel="stylesheet" href="css/data-integration.css">
-<script src="js/access-data.js"></script>
+<link rel="stylesheet" href="css/data-integration.css?v=20261108-needs">
+<script src="js/access-data.js?v=20261108-needs"></script>
 <script src="js/about-page.js"></script>
-<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js" defer></script></head>
+<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js?v=20261108-needs" defer></script></head>
 <body data-page="about">
 <a class="site-skip" href="#page-content">Skip to content</a>
 <header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
@@ -145,7 +145,7 @@ a{color:inherit}
 <li><a href="../data/borough_boundaries.geojson">London borough boundaries</a>: 33 areas for maps and spatial assignment.</li>
 <li><a href="../data/boroughs.json">ONS Census 2021 TS038 and IMD 2025</a>: 33 borough profiles powering the chart and table below.</li>
 <li><a href="map.html?view=facilities">Toilet Map</a>: 1,921 London records from the 8 November 2026 export. Includes source claims for wheelchair access, RADAR keys, payment and opening times. Sources may overlap with OSM; records have not been merged.</li>
-<li><a href="../data/venue_evidence/operator_statements.json">Venue operator statements</a>: nine scoped claims for the Science Museum and V&amp;A, checked online on 8 November 2026. This is a two-venue pilot, not a field survey or official Changing Places register.</li>
+<li><a href="../data/venue_evidence/operator_statements.json">Venue operator statements</a>: nine scoped claims for the Science Museum and V&amp;A, checked online on 8 November 2026. This is a two-venue pilot, not a field survey or official Changing Places register. A separate <a href="../data/need_evidence.json">filter evidence index</a> supports the V&amp;A step-free-entrance match using two named entrances. OSM source fields and borough statistics remain unchanged. Mapped lifts do not establish access to every public floor.</li>
 </ul>
 <p style="margin:0;line-height:1.5;">Connected: 468 TfL station access records, a separately refreshed lift-disruption feed, and 4,514 OSM facility evidence objects. The static TfL snapshot was re-fetched on 8 November 2026; its publisher modification date remains 23 May 2025. Dated observations can be submitted online and appear publicly after review. No project field surveys have been preloaded. Official Changing Places registration remains unverified; no registry has been imported.</p>
 <p style="margin:0;line-height:1.5;">Contains data from the <a href="https://www.toiletmap.org.uk/dataset">Toilet Map © 2025</a> – <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Changes: London boundary filter, field normalization, stable source IDs and explicit unknown values. Source verification timestamps do not establish an Access London inspection. This additional source does not change the OSM-only coverage statistics above.</p>
