@@ -1,0 +1,24 @@
+TfL station access and lift-disruption data
+
+Powered by TfL Open Data
+Contains OS data © Crown copyright and database rights 2016
+Geomni UK Map data © and database rights 2019
+
+Sources:
+https://content.tfl.gov.uk/lrad-v2.xml
+https://api.tfl.gov.uk/StopPoint/Mode/tube,dlr,overground,elizabeth-line,tram,cable-car,river-bus
+https://api.tfl.gov.uk/Disruptions/Lifts/
+Specification: https://content.tfl.gov.uk/step-free-data-specification-for-lrad-v2.pdf
+Terms: https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service
+
+Register for TfL's data service and follow the terms before publishing or operating a data service. The terms state that the licence applies from registration. This delivery does not register an account on your behalf. Keep the attribution above when publishing. Any API key belongs in an environment variable, never in the repository.
+
+LRAD describes typical access, not current operating conditions. Its HTTP Last-Modified date is 23 May 2025. Retrieval in November 2026 does not make every claim current. Legacy line names remain in source fields. Full means street-to-platform access in the source, not necessarily level boarding. Partial and Interchange must be read with the platform details. Step and gap dimensions are millimetres. Missing values remain unknown. Some station records are outside Greater London; filter within_london when needed.
+
+station_access.json preserves the source structure, including interchange and lift-route details. CSV platform IDs refer to row order within this source, not permanent platform asset IDs. A route contains required lifts; multiple routes are alternatives. Do not use these files as a complete journey-routing graph.
+
+Coordinates are station/hub display points, not verified accessible entrances. Unresolved coordinates are retained in stations.csv and station_match_review.csv and omitted from the map layer. Source anomalies are retained in source_issues.csv. The official XML does not validate cleanly against its accompanying XSD; metadata.json records this separately from the normalization checks.
+
+Lift disruptions are dated snapshots. The 15-minute expiry is an application policy, not a TfL guarantee. A website must compare expires_at with the current time, display stale/unavailable status when expired or loading fails, and show the retrieval time. No listed disruption does not establish that a lift is working. No outage start date is supplied by this feed. Matching a station does not establish which venue route or lift asset is affected.
+
+Files are prepared for integration; the existing website does not load them automatically.

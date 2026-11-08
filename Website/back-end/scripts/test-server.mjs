@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import { validateObservation,validateLiftFeed,feedState } from '../lib/access-validation.mjs';
+import { fetchLiftFeed,nextRetryAt } from '../lib/tfl-feed.mjs';
+import { browserLiftFeed } from '../../front-end/js/tfl-feed.mjs';
+const now=Date.parse('2026-11-05T12:00:00Z');
+const index={'osm:node/1':['E09000001','Synthetic test place']};
+const record={place_id:'osm:node/1',borough_code:'E09000001',attribute:'entrance_step_free',value:'yes',scope:'Main entrance',observed_at:'2026-11-04',evidence_url:'https://example.org/evidence',notes:''};
+assert.equal(validateObservation(record,index,now).place_name,'Synthetic test place');
+for(const change of [{place_id:'bad'},{borough_code:'E09000002'},{observed_at:'2026-02-30'},{observed_at:'2027-01-01'},{scope:''},{value:'probably'},{evidence_url:'javascript:alert(1)'},{attribute:'registered_changing_places'}])assert.throws(()=>validateObservation({...record,...change},index,now));
+assert.equal(feedState('2026-11-05T11:59:00Z',now),'fresh');
+assert.equal(feedState('2026-11-05T11:45:00Z',now),'stale');
+assert.equal(feedState('2026-11-04T12:00:00Z',now),'stale');
+assert.equal(feedState('invalid',now),'unavailable');
+assert.equal(feedState('2026-11-06T12:00:00Z',now),'unavailable');
+assert.deepEqual(validateLiftFeed([]),[]);
+assert.throws(()=>validateLiftFeed({error:'unavailable'}));
+assert.throws(()=>validateLiftFeed([{message:'broken'}]));
+const rows=validateLiftFeed([{naptanCode:'test',stopPointName:'Test station',message:'Test only',outageStartArea:'A',outageEndArea:'B'}]);
+assert.equal(rows[0].outage_started_at,null);
+// Regression: the public upstream can reject a request with no identifying header.
+const upstreamFixture=[{naptanCode:'910GWBRMPTN',stopPointName:'West Brompton Station',message:'Test fixture: no step-free access',outageStartArea:'RPL S',outageEndArea:'RLY'}];
+const fresh=await fetchLiftFeed({fetchImpl:async(url,options)=>{
+  assert.equal(url.hostname,'api.tfl.gov.uk');
+  assert.equal(options.headers['User-Agent'],'AccessLondonData/1.0');
+  assert.equal(options.cache,'no-store');
+  return {ok:true,json:async()=>upstreamFixture};
+}});
+assert.equal(fresh[0].naptan_id,'910GWBRMPTN');
+await assert.rejects(fetchLiftFeed({fetchImpl:async()=>({ok:false,status:403})}),/HTTP 403/);
+await assert.rejects(fetchLiftFeed({fetchImpl:async()=>({ok:true,json:async()=>({error:'unavailable'})})}),/Unexpected TfL response/);
+const direct=await browserLiftFeed(async(url,options)=>{
+ assert.equal(url,'https://api.tfl.gov.uk/Disruptions/Lifts/');assert.equal(options.mode,'cors');assert.equal(options.credentials,'omit');
+ return {ok:true,json:async()=>upstreamFixture};
+},()=>now);
+assert.equal(direct.transport,'official_browser');assert.equal(direct.records[0].naptan_id,'910GWBRMPTN');
+assert.equal(direct.retrieved_at,new Date(now).toISOString());
+await assert.rejects(browserLiftFeed(async()=>({ok:false,status:429})),/HTTP 429/);
+assert.equal(Date.parse(nextRetryAt({status:429},now))-now,120000);
+assert.equal(Date.parse(nextRetryAt({status:429,retryAfter:'300'},now))-now,300000);
+assert.equal(Date.parse(nextRetryAt({status:429,retryAfter:'99999999'},now))-now,900000);
+console.log('Passed: observation validation, source identity, real dates, evidence URLs, registry separation, feed freshness and feed schema.');

@@ -1,0 +1,3 @@
+station_id,station_name,reason,candidate_naptan_ids,review_status
+tfl:lrad:8e707ab2c2ae44e9,Bethnal Green,ambiguous,"[""910GBTHNLGR"",""940GZZLUBLG""]",pending
+tfl:lrad:67dfff1e60a96160,Heathrow Terminal 4,ambiguous,"[""910GHTRWTM4"",""940GZZLUHR4""]",pending

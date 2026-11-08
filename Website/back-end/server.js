@@ -1,16 +1,8 @@
 #!/usr/bin/env node
-
-//  SERVER TITLE
-//  Author:  AUTHORS NAMES
-//  Description:  WHAT DOES THIS PACKAGE DO
-//  Version: 0.0.1
-//
-//  Notes:   Any notes we need to know about the server     
-
-//  Install Instructions
-//      npm install moment mysql express ejs ....  
-//         OR Groups will get more credit if they use
-//      npm install and npm start shortcuts and include a package.json file
-//          - See https://docs.npmjs.com/creating-a-package-json-file
-
-console.log("Hello World I'm the backend server")
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+const root=fileURLToPath(new URL('./',import.meta.url));
+const child=spawn(process.execPath,['scripts/run-framework.mjs','dev'],{cwd:root,stdio:'inherit',env:process.env});
+child.on('error',error=>{console.error(error.message);process.exitCode=1;});
+child.on('exit',code=>{process.exitCode=code??1;});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));

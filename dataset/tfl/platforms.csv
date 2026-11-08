@@ -1,0 +1,820 @@
+platform_record_id,station_id,source_platform_record,duplicate_source_record,line_name_raw,platform_raw,direction_raw,direction_towards_raw,accessibility_type_raw,specific_entrance_raw,additional_information_raw,level_access_location_raw,step_min_mm,step_max_mm,step_average_mm,gap_min_mm,gap_max_mm,gap_average_mm,manual_ramp_raw,manual_ramp,designated_level_access_point_raw,designated_level_access_point,lift_route_alternatives
+tfl:lrad:e22ea13fac5fbaf7:platform:1,tfl:lrad:e22ea13fac5fbaf7,1,False,DLR,1,Southbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:e22ea13fac5fbaf7:platform:2,tfl:lrad:e22ea13fac5fbaf7,2,False,DLR,2,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:4f65b821d8f01846:platform:1,tfl:lrad:4f65b821d8f01846,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:4f65b821d8f01846:platform:2,tfl:lrad:4f65b821d8f01846,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:43710f616327f76e:platform:1,tfl:lrad:43710f616327f76e,1,False,London Overground,1,Westbound,Richmond,,East Churchfield Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:43710f616327f76e:platform:2,tfl:lrad:43710f616327f76e,2,False,London Overground,2,Eastbound,Stratford,,Churchfield Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:89dffdd9f7dd0e6b:platform:1,tfl:lrad:89dffdd9f7dd0e6b,1,False,TfL Rail,3,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:89dffdd9f7dd0e6b:platform:2,tfl:lrad:89dffdd9f7dd0e6b,2,False,TfL Rail,4,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:811198dea9a45ff1:platform:1,tfl:lrad:811198dea9a45ff1,1,False,District,4,Eastbound,Upminster,,,,,,,217.0,,,80.0,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:811198dea9a45ff1:platform:2,tfl:lrad:811198dea9a45ff1,2,False,District,1,Westbound,Ealing Broadway,,,,,,,300.0,,,103.0,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:811198dea9a45ff1:platform:3,tfl:lrad:811198dea9a45ff1,3,False,Piccadilly,4,Eastbound,Oakwood,,,,,143.0,197.0,,125.0,156.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:811198dea9a45ff1:platform:4,tfl:lrad:811198dea9a45ff1,4,False,Piccadilly,3,Eastbound,Oakwood,,,,,143.0,197.0,,125.0,156.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:811198dea9a45ff1:platform:5,tfl:lrad:811198dea9a45ff1,5,False,Piccadilly,1,Westbound,Uxbridge or Heathrow,,,,,127.0,141.0,,76.0,168.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:811198dea9a45ff1:platform:6,tfl:lrad:811198dea9a45ff1,6,False,Piccadilly,2,Westbound,Uxbridge or Heathrow,,,,,127.0,141.0,,76.0,168.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:2d002028ef063c58:platform:1,tfl:lrad:2d002028ef063c58,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:2d002028ef063c58:platform:2,tfl:lrad:2d002028ef063c58,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5dd1a2717a82fe74:platform:1,tfl:lrad:5dd1a2717a82fe74,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5dd1a2717a82fe74:platform:2,tfl:lrad:5dd1a2717a82fe74,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8bf1b2e831d061f6:platform:1,tfl:lrad:8bf1b2e831d061f6,1,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:8bf1b2e831d061f6:platform:2,tfl:lrad:8bf1b2e831d061f6,2,False,District,1,Westbound,Earl's Court,,,,,,,153.0,,,47.0,Yes,yes,,unknown,[]
+tfl:lrad:8bf1b2e831d061f6:platform:3,tfl:lrad:8bf1b2e831d061f6,3,False,Hammersmith & City,2,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:8bf1b2e831d061f6:platform:4,tfl:lrad:8bf1b2e831d061f6,4,False,Hammersmith & City,1,Westbound,Hammersmith,,,,,,,153.0,,,47.0,Yes,yes,,unknown,[]
+tfl:lrad:57a1c641f54687e4:platform:1,tfl:lrad:57a1c641f54687e4,1,False,DLR,1,Northbound,Stratford,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:57a1c641f54687e4:platform:2,tfl:lrad:57a1c641f54687e4,2,False,DLR,2,Southbound,Poplar,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:e90dc159960f4657:platform:1,tfl:lrad:e90dc159960f4657,1,False,Metropolitan,1,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:e90dc159960f4657:platform:2,tfl:lrad:e90dc159960f4657,2,False,Metropolitan,2,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:e90dc159960f4657:platform:3,tfl:lrad:e90dc159960f4657,3,False,Metropolitan,3,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,[]
+tfl:lrad:5950e6b7314de999:platform:1,tfl:lrad:5950e6b7314de999,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5950e6b7314de999:platform:2,tfl:lrad:5950e6b7314de999,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8ccebd128dedfd34:platform:1,tfl:lrad:8ccebd128dedfd34,1,False,London Overground,1,Northbound,Dalston Junction,,Ridslade Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8ccebd128dedfd34:platform:2,tfl:lrad:8ccebd128dedfd34,2,False,London Overground,2,Southbound,West Croydon,,Anerley Station Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:92dae47641108513:platform:1,tfl:lrad:92dae47641108513,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:92dae47641108513:platform:2,tfl:lrad:92dae47641108513,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:c59403244dc4c883:platform:1,tfl:lrad:c59403244dc4c883,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:c59403244dc4c883:platform:2,tfl:lrad:c59403244dc4c883,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8935a2d1661c7e27:platform:1,tfl:lrad:8935a2d1661c7e27,1,False,Bakerloo,9,Northbound,Harrow & Wealdstone,,,,,,,147.0,,,43.0,,unknown,,unknown,[]
+tfl:lrad:8935a2d1661c7e27:platform:2,tfl:lrad:8935a2d1661c7e27,2,False,Bakerloo,8,Southbound,Oxford Circus,,,,,,,150.0,,,40.0,Yes,yes,,unknown,[]
+tfl:lrad:8935a2d1661c7e27:platform:3,tfl:lrad:8935a2d1661c7e27,3,False,Jubilee,10,Northbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8935a2d1661c7e27:platform:4,tfl:lrad:8935a2d1661c7e27,4,False,Jubilee,7,Southbound,Westminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:11eca05ac7b6088f:platform:1,tfl:lrad:11eca05ac7b6088f,1,False,DLR,9,Eastbound,,,,,,0.0,50.0,,86.0,180.0,,Yes,yes,,unknown,"[[""2"",""6"",""7""],[""3"",""6"",""7""],[""4"",""6"",""7""],[""5"",""6"",""7""]]"
+tfl:lrad:11eca05ac7b6088f:platform:2,tfl:lrad:11eca05ac7b6088f,2,False,DLR,10,Eastbound,,,,,,0.0,50.0,,86.0,180.0,,Yes,yes,,unknown,"[[""2"",""6"",""7""],[""3"",""6"",""7""],[""4"",""6"",""7""],[""5"",""6"",""7""]]"
+tfl:lrad:459778aa3f0ad11e:platform:1,tfl:lrad:459778aa3f0ad11e,1,False,London Overground,1,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:2,tfl:lrad:459778aa3f0ad11e,2,False,London Overground,7,Eastbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:3,tfl:lrad:459778aa3f0ad11e,3,False,London Overground,8,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:4,tfl:lrad:459778aa3f0ad11e,4,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:5,tfl:lrad:459778aa3f0ad11e,5,False,Hammersmith & City,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:6,tfl:lrad:459778aa3f0ad11e,6,False,District,6,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:7,tfl:lrad:459778aa3f0ad11e,7,False,Hammersmith & City,3,Westbound,Gospel Oak,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:459778aa3f0ad11e:platform:8,tfl:lrad:459778aa3f0ad11e,8,False,District,3,Westbound,Gospel Oak,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:852a17c59eaba180:platform:1,tfl:lrad:852a17c59eaba180,1,False,Central,2,Eastbound,Woodford,,,,,,,37.0,,,213.0,Yes,yes,,unknown,[]
+tfl:lrad:3654607a59add2ba:platform:1,tfl:lrad:3654607a59add2ba,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3654607a59add2ba:platform:2,tfl:lrad:3654607a59add2ba,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:686fad51e2bc3c26:platform:1,tfl:lrad:686fad51e2bc3c26,1,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:7af310d37a1789f0:platform:1,tfl:lrad:7af310d37a1789f0,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:7af310d37a1789f0:platform:2,tfl:lrad:7af310d37a1789f0,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:124ece8c4874daa8:platform:1,tfl:lrad:124ece8c4874daa8,1,False,DLR,1,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:124ece8c4874daa8:platform:2,tfl:lrad:124ece8c4874daa8,2,False,DLR,2,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:2d72865bbc95aa2b:platform:1,tfl:lrad:2d72865bbc95aa2b,1,False,DLR,1,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:2d72865bbc95aa2b:platform:2,tfl:lrad:2d72865bbc95aa2b,2,False,DLR,2,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:d0529c2f625ede88:platform:1,tfl:lrad:d0529c2f625ede88,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d0529c2f625ede88:platform:2,tfl:lrad:d0529c2f625ede88,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:566afe25e3bc39d6:platform:1,tfl:lrad:566afe25e3bc39d6,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:566afe25e3bc39d6:platform:2,tfl:lrad:566afe25e3bc39d6,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:c422808987aeb082:platform:1,tfl:lrad:c422808987aeb082,1,False,Jubilee,1,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:c422808987aeb082:platform:2,tfl:lrad:c422808987aeb082,2,False,Jubilee,2,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:11881046b59cd9bd:platform:1,tfl:lrad:11881046b59cd9bd,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:11881046b59cd9bd:platform:2,tfl:lrad:11881046b59cd9bd,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:04cff30b698ab9ac:platform:1,tfl:lrad:04cff30b698ab9ac,1,False,Circle,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""6""]]"
+tfl:lrad:04cff30b698ab9ac:platform:2,tfl:lrad:04cff30b698ab9ac,2,False,Circle,1,Westbound,Westminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""8""]]"
+tfl:lrad:04cff30b698ab9ac:platform:3,tfl:lrad:04cff30b698ab9ac,3,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""6""]]"
+tfl:lrad:04cff30b698ab9ac:platform:4,tfl:lrad:04cff30b698ab9ac,4,False,District,1,Westbound,Westminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""8""]]"
+tfl:lrad:04cff30b698ab9ac:platform:5,tfl:lrad:04cff30b698ab9ac,5,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:04cff30b698ab9ac:platform:6,tfl:lrad:04cff30b698ab9ac,6,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:04cff30b698ab9ac:platform:7,tfl:lrad:04cff30b698ab9ac,7,False,Thameslink,3,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:04cff30b698ab9ac:platform:8,tfl:lrad:04cff30b698ab9ac,8,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:91f8162a33f867d2:platform:1,tfl:lrad:91f8162a33f867d2,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:91f8162a33f867d2:platform:2,tfl:lrad:91f8162a33f867d2,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:868f1ddbb7cb7c45:platform:1,tfl:lrad:868f1ddbb7cb7c45,1,False,London Overground,1,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:868f1ddbb7cb7c45:platform:2,tfl:lrad:868f1ddbb7cb7c45,2,False,London Overground,2,Eastbound,Barking,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:0a55c7a757203307:platform:1,tfl:lrad:0a55c7a757203307,1,False,DLR,1,Eastbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:0a55c7a757203307:platform:2,tfl:lrad:0a55c7a757203307,2,False,DLR,2,Westbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:bb6e60c2450c1e7d:platform:1,tfl:lrad:bb6e60c2450c1e7d,1,False,Central,1,Westbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""4"",""1"",""2""]]"
+tfl:lrad:bb6e60c2450c1e7d:platform:2,tfl:lrad:bb6e60c2450c1e7d,2,False,Central,2,Eastbound,Ealing Broadway,,,,,,,,,,,Yes,yes,,unknown,"[[""4"",""1"",""2""]]"
+tfl:lrad:bb6e60c2450c1e7d:platform:3,tfl:lrad:bb6e60c2450c1e7d,3,False,Jubilee,3,Northbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""1"",""3""]]"
+tfl:lrad:bb6e60c2450c1e7d:platform:4,tfl:lrad:bb6e60c2450c1e7d,4,False,Jubilee,4,Southbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""4"",""1"",""3""]]"
+tfl:lrad:989dba577ea6e9a2:platform:1,tfl:lrad:989dba577ea6e9a2,1,False,Northern,1,Northbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""],[""2""]]"
+tfl:lrad:6922fa2eb6da4a3f:platform:1,tfl:lrad:6922fa2eb6da4a3f,1,False,DLR,2,Southbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:6922fa2eb6da4a3f:platform:2,tfl:lrad:6922fa2eb6da4a3f,2,False,DLR,1,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:49d824c5c40beb04:platform:1,tfl:lrad:49d824c5c40beb04,1,False,TfL Rail,3,Westbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:49d824c5c40beb04:platform:2,tfl:lrad:49d824c5c40beb04,2,False,TfL Rail,4,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:db6124beb630caf0:platform:1,tfl:lrad:db6124beb630caf0,1,False,Victoria,1,Northbound,Walthamstow Central,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:db6124beb630caf0:platform:2,tfl:lrad:db6124beb630caf0,2,False,Victoria,2,Northbound,Walthamstow Central,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:205c75bb07618dc5:platform:1,tfl:lrad:205c75bb07618dc5,1,False,London Overground,1,Northbound,Dalston Junction and Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:205c75bb07618dc5:platform:2,tfl:lrad:205c75bb07618dc5,2,False,London Overground,2,Southbound,Crystal Palace and West Croydon,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:4ccdd73fcd5a0b07:platform:1,tfl:lrad:4ccdd73fcd5a0b07,1,False,District,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:4ccdd73fcd5a0b07:platform:2,tfl:lrad:4ccdd73fcd5a0b07,2,False,District,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:4ccdd73fcd5a0b07:platform:3,tfl:lrad:4ccdd73fcd5a0b07,3,False,Hammersmith & City,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:4ccdd73fcd5a0b07:platform:4,tfl:lrad:4ccdd73fcd5a0b07,4,False,Hammersmith & City,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:4dcf3dd55ce5e333:platform:1,tfl:lrad:4dcf3dd55ce5e333,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:4dcf3dd55ce5e333:platform:2,tfl:lrad:4dcf3dd55ce5e333,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:d794ebb5a5e9ad94:platform:1,tfl:lrad:d794ebb5a5e9ad94,1,False,Central,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:d794ebb5a5e9ad94:platform:2,tfl:lrad:d794ebb5a5e9ad94,2,False,Central,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5894d577ecab6f1f:platform:1,tfl:lrad:5894d577ecab6f1f,1,False,TfL Rail,1,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5894d577ecab6f1f:platform:2,tfl:lrad:5894d577ecab6f1f,2,False,TfL Rail,2,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:590230a547d18e04:platform:1,tfl:lrad:590230a547d18e04,1,False,London Overground,1,Southbound,,,St Mark's Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:590230a547d18e04:platform:2,tfl:lrad:590230a547d18e04,2,False,London Overground,2,Northbound,,,Queen Anne's Place,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:49fff2191246ce79:platform:1,tfl:lrad:49fff2191246ce79,1,False,Piccadilly,1,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""],[""4""]]"
+tfl:lrad:49fff2191246ce79:platform:2,tfl:lrad:49fff2191246ce79,2,False,Piccadilly,2,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""],[""4""]]"
+tfl:lrad:1581b3b273b14542:platform:1,tfl:lrad:1581b3b273b14542,1,False,London Overground,2,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1581b3b273b14542:platform:2,tfl:lrad:1581b3b273b14542,2,False,London Overground,3,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:e811710e11a4c8a8:platform:1,tfl:lrad:e811710e11a4c8a8,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:e811710e11a4c8a8:platform:2,tfl:lrad:e811710e11a4c8a8,2,False,London Overground,2,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:a7c59a7ec9f2a264:platform:1,tfl:lrad:a7c59a7ec9f2a264,1,False,Northern,1,Northbound,Edgware,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:a7c59a7ec9f2a264:platform:2,tfl:lrad:a7c59a7ec9f2a264,2,False,Northern,3,Northbound,High Barnet,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:e3e237fd15595459:platform:1,tfl:lrad:e3e237fd15595459,1,False,Jubilee,1,Westbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""1""]]"
+tfl:lrad:e3e237fd15595459:platform:2,tfl:lrad:e3e237fd15595459,2,False,Jubilee,2,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""1""]]"
+tfl:lrad:e3e237fd15595459:platform:3,tfl:lrad:e3e237fd15595459,3,False,London Overground,3,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""1""]]"
+tfl:lrad:e3e237fd15595459:platform:4,tfl:lrad:e3e237fd15595459,4,False,London Overground,4,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""2""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:1,tfl:lrad:c4e9782ae0afd89d,1,False,Jubilee,1,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""LU 1"",""LU 2""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:2,tfl:lrad:c4e9782ae0afd89d,2,False,Jubilee,2,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""LU 1"",""LU 2""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:3,tfl:lrad:c4e9782ae0afd89d,3,False,DLR,1,Southbound,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR S3""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:4,tfl:lrad:c4e9782ae0afd89d,4,False,DLR,2,Southbound,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR 1""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:5,tfl:lrad:c4e9782ae0afd89d,5,False,DLR,3,,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR 1""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:6,tfl:lrad:c4e9782ae0afd89d,6,False,DLR,4,,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR 2""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:7,tfl:lrad:c4e9782ae0afd89d,7,False,DLR,5,Northbound,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR 2""]]"
+tfl:lrad:c4e9782ae0afd89d:platform:8,tfl:lrad:c4e9782ae0afd89d,8,False,DLR,6,Northbound,,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""DLR S2""]]"
+tfl:lrad:78fb6442124655cc:platform:1,tfl:lrad:78fb6442124655cc,1,False,Jubilee,5,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:78fb6442124655cc:platform:2,tfl:lrad:78fb6442124655cc,2,False,Jubilee,6,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:78fb6442124655cc:platform:3,tfl:lrad:78fb6442124655cc,3,False,DLR,4,Westbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:78fb6442124655cc:platform:4,tfl:lrad:78fb6442124655cc,4,False,DLR,3,Eastbound,Beckton and Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:78fb6442124655cc:platform:5,tfl:lrad:78fb6442124655cc,5,False,DLR,2,Northbound,Stratford International,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:78fb6442124655cc:platform:6,tfl:lrad:78fb6442124655cc,6,False,DLR,1,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:9b9cb45b7b7eb624:platform:1,tfl:lrad:9b9cb45b7b7eb624,1,False,Circle,1,Westbound,Westminster,,,,,0.0,174.0,,0.0,95.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:9b9cb45b7b7eb624:platform:2,tfl:lrad:9b9cb45b7b7eb624,2,False,District,1,Westbound,Westminster,,,,,0.0,174.0,,0.0,95.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:67c08a87e7adb2fd:platform:1,tfl:lrad:67c08a87e7adb2fd,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:67c08a87e7adb2fd:platform:2,tfl:lrad:67c08a87e7adb2fd,2,False,London Overground,2,Southbound,Crystal Palace and Clapham Junction via Canada Water,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:67c08a87e7adb2fd:platform:3,tfl:lrad:67c08a87e7adb2fd,3,False,London Overground,3,Westbound,Richmond and Clapham Junction via Willesden Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:67c08a87e7adb2fd:platform:4,tfl:lrad:67c08a87e7adb2fd,4,False,London Overground,4,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""3""]]"
+tfl:lrad:a56e8abe9766762a:platform:1,tfl:lrad:a56e8abe9766762a,1,False,London Overground,1,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a56e8abe9766762a:platform:2,tfl:lrad:a56e8abe9766762a,2,False,London Overground,2,Northbound,Watford Junction,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:405efcffd083aee2:platform:1,tfl:lrad:405efcffd083aee2,1,False,Thameslink,1,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:405efcffd083aee2:platform:2,tfl:lrad:405efcffd083aee2,2,False,Thameslink,2,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:18878cc544240d87:platform:1,tfl:lrad:18878cc544240d87,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:3d11fd4d048bfe32:platform:1,tfl:lrad:3d11fd4d048bfe32,1,False,TfL Rail,3,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:3d11fd4d048bfe32:platform:2,tfl:lrad:3d11fd4d048bfe32,2,False,TfL Rail,4,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:d9546424779cce46:platform:1,tfl:lrad:d9546424779cce46,1,False,Metropolitan,1,Westbound,Chesham,,Station Approach,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,[]
+tfl:lrad:d9546424779cce46:platform:2,tfl:lrad:d9546424779cce46,2,False,Metropolitan,2,Eastbound,Aldgate,,Bedford Avenue,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,[]
+tfl:lrad:17d96bec494d26a9:platform:1,tfl:lrad:17d96bec494d26a9,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:17d96bec494d26a9:platform:2,tfl:lrad:17d96bec494d26a9,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:fa7df5043eb574b0:platform:1,tfl:lrad:fa7df5043eb574b0,1,False,Metropolitan,1,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:de97145d06b57bfc:platform:1,tfl:lrad:de97145d06b57bfc,1,False,London Overground,3,Southbound,Edmonton Green,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:cda2d469f67e8b74:platform:1,tfl:lrad:cda2d469f67e8b74,1,False,London Overground,1,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:cda2d469f67e8b74:platform:2,tfl:lrad:cda2d469f67e8b74,2,False,London Overground,2,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:cda2d469f67e8b74:platform:3,tfl:lrad:cda2d469f67e8b74,3,False,London Overground,3,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5741c946c99a4a19:platform:1,tfl:lrad:5741c946c99a4a19,1,False,Metropolitan,1,Northbound,Amersham and Chesham,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,[]
+tfl:lrad:5741c946c99a4a19:platform:2,tfl:lrad:5741c946c99a4a19,2,False,Metropolitan,2,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),,,,,,,Yes,yes,Yes,yes,[]
+tfl:lrad:a237c08aea3f0bc3:platform:1,tfl:lrad:a237c08aea3f0bc3,1,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:24489f5da80666c6:platform:1,tfl:lrad:24489f5da80666c6,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:24489f5da80666c6:platform:2,tfl:lrad:24489f5da80666c6,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:7d857ca9880734ea:platform:1,tfl:lrad:7d857ca9880734ea,1,False,London Overground,1,Eastbound,Stratford via Willesden Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:7d857ca9880734ea:platform:2,tfl:lrad:7d857ca9880734ea,2,False,London Overground,2,Eastbound,Highbury & Islington via Canada Water,,,,,,,,,,,Yes,yes,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:41499e397261aea3:platform:1,tfl:lrad:41499e397261aea3,1,False,Piccadilly,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:41499e397261aea3:platform:2,tfl:lrad:41499e397261aea3,2,False,Piccadilly,2,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:41499e397261aea3:platform:3,tfl:lrad:41499e397261aea3,3,False,Piccadilly,4,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:4dd774f33afadb37:platform:1,tfl:lrad:4dd774f33afadb37,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:4dd774f33afadb37:platform:2,tfl:lrad:4dd774f33afadb37,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:e3f6a0f0bde97374:platform:1,tfl:lrad:e3f6a0f0bde97374,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:e3f6a0f0bde97374:platform:2,tfl:lrad:e3f6a0f0bde97374,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:1b60a245e2c4a0dd:platform:1,tfl:lrad:1b60a245e2c4a0dd,1,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:1463ec9bacd416ac:platform:1,tfl:lrad:1463ec9bacd416ac,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:1463ec9bacd416ac:platform:2,tfl:lrad:1463ec9bacd416ac,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:24d8977b16aecaa0:platform:1,tfl:lrad:24d8977b16aecaa0,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:24d8977b16aecaa0:platform:2,tfl:lrad:24d8977b16aecaa0,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:dd16153eb820db79:platform:1,tfl:lrad:dd16153eb820db79,1,False,London Overground,3,Northbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:dd16153eb820db79:platform:2,tfl:lrad:dd16153eb820db79,2,False,London Overground,5,Northbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:2d454dd37854b98d:platform:1,tfl:lrad:2d454dd37854b98d,1,False,DLR,3,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""]]"
+tfl:lrad:2d454dd37854b98d:platform:2,tfl:lrad:2d454dd37854b98d,2,False,DLR,4,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""]]"
+tfl:lrad:16350fdfa1e43531:platform:1,tfl:lrad:16350fdfa1e43531,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:16350fdfa1e43531:platform:2,tfl:lrad:16350fdfa1e43531,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:5b56ad95f1d655a4:platform:1,tfl:lrad:5b56ad95f1d655a4,1,False,DLR,1,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:5b56ad95f1d655a4:platform:2,tfl:lrad:5b56ad95f1d655a4,2,False,DLR,2,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:87918011d8bcd5d1:platform:1,tfl:lrad:87918011d8bcd5d1,1,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:87918011d8bcd5d1:platform:2,tfl:lrad:87918011d8bcd5d1,2,False,District,1,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:e95096d1f97e7aeb:platform:1,tfl:lrad:e95096d1f97e7aeb,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:e95096d1f97e7aeb:platform:2,tfl:lrad:e95096d1f97e7aeb,2,False,London Overground,2,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:e95096d1f97e7aeb:platform:3,tfl:lrad:e95096d1f97e7aeb,3,False,London Overground,3,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:e95096d1f97e7aeb:platform:4,tfl:lrad:e95096d1f97e7aeb,4,False,London Overground,4,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:a4cbcd404417cec7:platform:1,tfl:lrad:a4cbcd404417cec7,1,False,Central,2,Eastbound,Epping,,,,,0.0,30.0,,0.0,173.0,,Yes,yes,,unknown,[]
+tfl:lrad:a4cbcd404417cec7:platform:2,tfl:lrad:a4cbcd404417cec7,2,False,Central,1,Westbound,,,,,,0.0,30.0,,0.0,173.0,,Yes,yes,,unknown,"[[""1"",""2""]]"
+tfl:lrad:18664eec64903ef9:platform:1,tfl:lrad:18664eec64903ef9,1,False,Thameslink,1,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:18664eec64903ef9:platform:2,tfl:lrad:18664eec64903ef9,2,False,Thameslink,2,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:18664eec64903ef9:platform:3,tfl:lrad:18664eec64903ef9,3,False,Thameslink,3,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:18664eec64903ef9:platform:4,tfl:lrad:18664eec64903ef9,4,False,Thameslink,4,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3c4ccdb551f8396f:platform:1,tfl:lrad:3c4ccdb551f8396f,1,False,London Overground,1,Southbound,Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:3c4ccdb551f8396f:platform:2,tfl:lrad:3c4ccdb551f8396f,2,False,London Overground,2,Northbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:3c4ccdb551f8396f:platform:3,tfl:lrad:3c4ccdb551f8396f,3,False,Thameslink,3,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3c4ccdb551f8396f:platform:4,tfl:lrad:3c4ccdb551f8396f,4,False,Thameslink,4,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3e76ebe8a0f26c74:platform:1,tfl:lrad:3e76ebe8a0f26c74,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3e76ebe8a0f26c74:platform:2,tfl:lrad:3e76ebe8a0f26c74,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:79376a74f95dcbbc:platform:1,tfl:lrad:79376a74f95dcbbc,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:79376a74f95dcbbc:platform:2,tfl:lrad:79376a74f95dcbbc,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:2d28984d658aaab9:platform:1,tfl:lrad:2d28984d658aaab9,1,False,DLR,1,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:2d28984d658aaab9:platform:2,tfl:lrad:2d28984d658aaab9,2,False,DLR,2,Southbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:4b276725f1327c3a:platform:1,tfl:lrad:4b276725f1327c3a,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:4b276725f1327c3a:platform:2,tfl:lrad:4b276725f1327c3a,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d7d1b7afd1427603:platform:1,tfl:lrad:d7d1b7afd1427603,1,False,TfL Rail,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:d7d1b7afd1427603:platform:2,tfl:lrad:d7d1b7afd1427603,2,False,TfL Rail,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:d7d1b7afd1427603:platform:3,tfl:lrad:d7d1b7afd1427603,3,False,TfL Rail,3,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:d7d1b7afd1427603:platform:4,tfl:lrad:d7d1b7afd1427603,4,False,TfL Rail,4,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:d7d1b7afd1427603:platform:5,tfl:lrad:d7d1b7afd1427603,5,False,Central,5,Eastbound,Epping,,,,,213.0,240.0,,97.0,113.0,,Yes,yes,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:d7d1b7afd1427603:platform:6,tfl:lrad:d7d1b7afd1427603,6,False,Central,6,Eastbound,Epping,,,,,213.0,240.0,,97.0,113.0,,Yes,yes,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:d7d1b7afd1427603:platform:7,tfl:lrad:d7d1b7afd1427603,7,False,District,7,Eastbound,,,,,,0.0,50.0,,86.0,130.0,,,unknown,Yes,yes,"[[""3""],[""4""]]"
+tfl:lrad:d7d1b7afd1427603:platform:8,tfl:lrad:d7d1b7afd1427603,8,False,District,8,Eastbound,,,,,,0.0,50.0,,86.0,130.0,,,unknown,Yes,yes,"[[""3""],[""4""]]"
+tfl:lrad:d7d1b7afd1427603:platform:9,tfl:lrad:d7d1b7afd1427603,9,False,District,9,Eastbound,,,,,,0.0,50.0,,86.0,130.0,,,unknown,Yes,yes,"[[""3""],[""4""]]"
+tfl:lrad:5dae7316843f5e31:platform:1,tfl:lrad:5dae7316843f5e31,1,False,District,1,Westbound,Ealing Broadway,,,,,0.0,323.0,,0.0,143.0,,Yes,yes,,unknown,[]
+tfl:lrad:5dae7316843f5e31:platform:2,tfl:lrad:5dae7316843f5e31,2,False,Piccadilly,2,Eastbound,Oakwood,,,,,0.0,136.0,,0.0,122.0,,Yes,yes,,unknown,[]
+tfl:lrad:5dae7316843f5e31:platform:3,tfl:lrad:5dae7316843f5e31,3,False,Piccadilly,1,Westbound,Uxbridge,,,,,0.0,178.0,,0.0,161.0,,Yes,yes,,unknown,[]
+tfl:lrad:b02165638c3dba98:platform:1,tfl:lrad:b02165638c3dba98,1,False,District,1,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""5""]]"
+tfl:lrad:b02165638c3dba98:platform:2,tfl:lrad:b02165638c3dba98,2,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""5""]]"
+tfl:lrad:b02165638c3dba98:platform:3,tfl:lrad:b02165638c3dba98,3,False,District,3,Westbound,"Kensington (Olympia), Wimbledon or Hammersmith",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""6""]]"
+tfl:lrad:b02165638c3dba98:platform:4,tfl:lrad:b02165638c3dba98,4,False,District,4,Westbound,"Kensington (Olympia), Wimbledon or Hammersmith",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""6""]]"
+tfl:lrad:b02165638c3dba98:platform:5,tfl:lrad:b02165638c3dba98,5,False,Piccadilly,5,Eastbound,Oakwood,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:b02165638c3dba98:platform:6,tfl:lrad:b02165638c3dba98,6,False,Piccadilly,6,Westbound,Heathrow,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:f009025ae89536b1:platform:1,tfl:lrad:f009025ae89536b1,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f009025ae89536b1:platform:2,tfl:lrad:f009025ae89536b1,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f009025ae89536b1:platform:3,tfl:lrad:f009025ae89536b1,3,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f009025ae89536b1:platform:4,tfl:lrad:f009025ae89536b1,4,True,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:c3ee230868104abe:platform:1,tfl:lrad:c3ee230868104abe,1,False,District,2,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:c3ee230868104abe:platform:2,tfl:lrad:c3ee230868104abe,2,False,District,1,Westbound,Aldgate East,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:c3ee230868104abe:platform:3,tfl:lrad:c3ee230868104abe,3,False,Hammersmith & City,2,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:c3ee230868104abe:platform:4,tfl:lrad:c3ee230868104abe,4,False,Hammersmith & City,1,Westbound,Aldgate East,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:a152f0203eaa7f7d:platform:1,tfl:lrad:a152f0203eaa7f7d,1,False,DLR,1,Eastbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3"",""2""]]"
+tfl:lrad:a152f0203eaa7f7d:platform:2,tfl:lrad:a152f0203eaa7f7d,2,False,DLR,2,Westbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3"",""2""]]"
+tfl:lrad:9b45bf78ef4a13cc:platform:1,tfl:lrad:9b45bf78ef4a13cc,1,False,Northern,1,Southbound,Camden Town,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""],[""2""]]"
+tfl:lrad:9b45bf78ef4a13cc:platform:2,tfl:lrad:9b45bf78ef4a13cc,2,False,Northern,2,Southbound,Camden Town,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""],[""2""]]"
+tfl:lrad:9b45bf78ef4a13cc:platform:3,tfl:lrad:9b45bf78ef4a13cc,3,False,Northern,3,Southbound,Camden Town,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""],[""2""]]"
+tfl:lrad:131d198c189ff7cd:platform:1,tfl:lrad:131d198c189ff7cd,1,False,District,3,Westbound,Earl's Court,,,,,,,157.0,,,23.0,Yes,yes,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:2,tfl:lrad:131d198c189ff7cd,2,False,Circle,3,Westbound,Earl's Court,,,,,,,157.0,,,23.0,Yes,yes,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:3,tfl:lrad:131d198c189ff7cd,3,False,District,2,Westbound,Earl's Court,,,,,,,157.0,,,23.0,Yes,yes,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:4,tfl:lrad:131d198c189ff7cd,4,False,Circle,2,Westbound,Earl's Court,,,,,,,157.0,,,23.0,Yes,yes,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:5,tfl:lrad:131d198c189ff7cd,5,False,Circle,1,Eastbound,Liverpool Street,,,,,,,8.0,,,145.0,,unknown,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:6,tfl:lrad:131d198c189ff7cd,6,False,Circle,4,Westbound,Hammersmith,,,,,,,8.0,,,145.0,,unknown,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:7,tfl:lrad:131d198c189ff7cd,7,False,Hammersmith & City,1,Eastbound,Barking,,,,,,,18.0,,,118.0,,unknown,,unknown,[]
+tfl:lrad:131d198c189ff7cd:platform:8,tfl:lrad:131d198c189ff7cd,8,False,Hammersmith & City,4,Westbound,Hammersmith,,,,,,,18.0,,,118.0,,unknown,,unknown,[]
+tfl:lrad:e4539b9500c6faa0:platform:1,tfl:lrad:e4539b9500c6faa0,1,False,London Overground,1,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:e4539b9500c6faa0:platform:2,tfl:lrad:e4539b9500c6faa0,2,False,London Overground,2,Northbound,Enfield Town and Cheshunt,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:5fd3e9790861dd21:platform:1,tfl:lrad:5fd3e9790861dd21,1,False,Northern,2,Southbound,Morden,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""5""],[""6""]]"
+tfl:lrad:cd3bebe8da58e04a:platform:1,tfl:lrad:cd3bebe8da58e04a,1,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:18e79ee84e22f258:platform:1,tfl:lrad:18e79ee84e22f258,1,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:18e79ee84e22f258:platform:2,tfl:lrad:18e79ee84e22f258,2,False,District,1,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:8c5bec6ee6509694:platform:1,tfl:lrad:8c5bec6ee6509694,1,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8c5bec6ee6509694:platform:2,tfl:lrad:8c5bec6ee6509694,2,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8d1dd86d81d1667f:platform:1,tfl:lrad:8d1dd86d81d1667f,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:8d1dd86d81d1667f:platform:2,tfl:lrad:8d1dd86d81d1667f,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:4241c749da3587b2:platform:1,tfl:lrad:4241c749da3587b2,1,False,London Overground,1,Westbound,Romford,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:4241c749da3587b2:platform:2,tfl:lrad:4241c749da3587b2,2,False,London Overground,1,Eastbound,Upminster,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:68bf5af3deb87abc:platform:1,tfl:lrad:68bf5af3deb87abc,1,False,Emirates Air Line,,Northbound,Emirates Royal Docks,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:32ca715cfb6ef8b2:platform:1,tfl:lrad:32ca715cfb6ef8b2,1,False,Emirates Air Line,,Southbound,Emirates Greenwich Peninsula,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:2f678eb63a7a2f6b:platform:1,tfl:lrad:2f678eb63a7a2f6b,1,False,London Overground,2,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:fd75cb637d45827b:platform:1,tfl:lrad:fd75cb637d45827b,1,False,Central,1,Westbound,Stratford,,Hillcrest Way,,,0.0,25.0,,0.0,212.0,,Yes,yes,,unknown,[]
+tfl:lrad:fd75cb637d45827b:platform:2,tfl:lrad:fd75cb637d45827b,2,False,Central,2,Westbound,Stratford,,Station Road,"When travelling to Epping, ask staff at your starting station if your train can arrive at platform 2. If you arrive at platform 1, use Help Point to ask staff to open exit if necessary.",,0.0,25.0,,0.0,212.0,,Yes,yes,,unknown,[]
+tfl:lrad:eaed5eab15f8f006:platform:1,tfl:lrad:eaed5eab15f8f006,1,False,London Overground,9,Northbound,Watford Junction,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:eaed5eab15f8f006:platform:2,tfl:lrad:eaed5eab15f8f006,2,False,London Overground,10,Northbound,Watford Junction,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:eaed5eab15f8f006:platform:3,tfl:lrad:eaed5eab15f8f006,3,False,Northern,3,Northbound,Camden Town,Interchange,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:eaed5eab15f8f006:platform:4,tfl:lrad:eaed5eab15f8f006,4,False,Northern,6,Southbound,Morden via London Bridge,Interchange,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:eaed5eab15f8f006:platform:5,tfl:lrad:eaed5eab15f8f006,5,False,Victoria,4,Northbound,Tottenham Hale,Interchange,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join).",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:eaed5eab15f8f006:platform:6,tfl:lrad:eaed5eab15f8f006,6,False,Victoria,5,Southbound,Brixton,Interchange,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join).",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d2388a6de55f5104:platform:1,tfl:lrad:d2388a6de55f5104,1,False,Circle,1,Westbound,Edgware Road,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:d2388a6de55f5104:platform:2,tfl:lrad:d2388a6de55f5104,2,False,Hammersmith & City,1,Westbound,Edgware Road,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:d2388a6de55f5104:platform:3,tfl:lrad:d2388a6de55f5104,3,False,Metropolitan,1,Westbound,Harrow-on-the-Hill,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:c885d5c21541996c:platform:1,tfl:lrad:c885d5c21541996c,1,False,Circle,1,Eastbound,Monument,,,,,0.0,150.0,,0.0,77.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:c885d5c21541996c:platform:2,tfl:lrad:c885d5c21541996c,2,False,Circle,2,Westbound,Edgware Road,,,,,0.0,163.0,,0.0,60.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:c885d5c21541996c:platform:3,tfl:lrad:c885d5c21541996c,3,False,Hammersmith & City,1,Eastbound,Liverpool Street,,,,,0.0,150.0,,0.0,77.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:c885d5c21541996c:platform:4,tfl:lrad:c885d5c21541996c,4,False,Hammersmith & City,2,Westbound,Edgware Road,,,,,0.0,163.0,,0.0,60.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:c885d5c21541996c:platform:5,tfl:lrad:c885d5c21541996c,5,False,Metropolitan,1,Eastbound,Liverpool Street,,,,,0.0,0.0,,0.0,188.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:c885d5c21541996c:platform:6,tfl:lrad:c885d5c21541996c,6,False,Metropolitan,2,Westbound,Harrow-on-the-Hill,,,,,0.0,1.0,,0.0,180.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:c885d5c21541996c:platform:7,tfl:lrad:c885d5c21541996c,7,False,Thameslink,3,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:c885d5c21541996c:platform:8,tfl:lrad:c885d5c21541996c,8,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:2de92e4602947469:platform:1,tfl:lrad:2de92e4602947469,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:2de92e4602947469:platform:2,tfl:lrad:2de92e4602947469,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:6003d884dcd4e9eb:platform:1,tfl:lrad:6003d884dcd4e9eb,1,False,Northern,1,Northbound,High Barnet,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:6003d884dcd4e9eb:platform:2,tfl:lrad:6003d884dcd4e9eb,2,False,Northern,2,Northbound,High Barnet,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:6003d884dcd4e9eb:platform:3,tfl:lrad:6003d884dcd4e9eb,3,False,Northern,3,Southbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:cf8004acae8df520:platform:1,tfl:lrad:cf8004acae8df520,1,False,Jubilee,2,Northbound,Stanmore,,,,,0.0,140.0,,0.0,100.0,,Yes,yes,,unknown,[]
+tfl:lrad:cf8004acae8df520:platform:2,tfl:lrad:cf8004acae8df520,2,False,Jubilee,3,Southbound,Stratford,,,,,0.0,163.0,,0.0,120.0,,Yes,yes,,unknown,[]
+tfl:lrad:cf8004acae8df520:platform:3,tfl:lrad:cf8004acae8df520,3,False,Metropolitan,1,Northbound,"Amersham, Chesham and Uxbridge",,,,,,,5.0,,,199.0,,unknown,,unknown,[]
+tfl:lrad:cf8004acae8df520:platform:4,tfl:lrad:cf8004acae8df520,4,False,Metropolitan,4,Southbound,Liverpool Street,,,,,0.0,1.0,,0.0,116.0,,Yes,yes,,unknown,[]
+tfl:lrad:b8dc9668ceba901f:platform:1,tfl:lrad:b8dc9668ceba901f,1,False,Piccadilly,1,Eastbound,Oakwood,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:b8dc9668ceba901f:platform:2,tfl:lrad:b8dc9668ceba901f,2,False,Piccadilly,3,Westbound,Acton Town,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""]]"
+tfl:lrad:b8dc9668ceba901f:platform:3,tfl:lrad:b8dc9668ceba901f,3,False,Victoria,2,Northbound,Tottenham Hale,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:b8dc9668ceba901f:platform:4,tfl:lrad:b8dc9668ceba901f,4,False,Victoria,4,Southbound,Brixton,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""]]"
+tfl:lrad:9ab3f8e7b45d83be:platform:1,tfl:lrad:9ab3f8e7b45d83be,1,False,TfL Rail,1,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:9ab3f8e7b45d83be:platform:2,tfl:lrad:9ab3f8e7b45d83be,2,False,TfL Rail,2,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:77f83fb3203cd8b2:platform:1,tfl:lrad:77f83fb3203cd8b2,1,False,London Overground,1,Northbound,Highbury & Islington,,Devonshire Road,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:77f83fb3203cd8b2:platform:2,tfl:lrad:77f83fb3203cd8b2,2,False,London Overground,2,Southbound,Crystal Palace and West Croydon,,Devonshire Road,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:44eefaa2f6e41b9a:platform:1,tfl:lrad:44eefaa2f6e41b9a,1,False,District,2,Eastbound,Earl's Court,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:44eefaa2f6e41b9a:platform:2,tfl:lrad:44eefaa2f6e41b9a,2,False,District,1,Westbound,Wimbledon,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:24b20c1862cdba37:platform:1,tfl:lrad:24b20c1862cdba37,1,False,DLR,1,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:24b20c1862cdba37:platform:2,tfl:lrad:24b20c1862cdba37,2,False,DLR,2,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:81d30bb57f8fb10a:platform:1,tfl:lrad:81d30bb57f8fb10a,1,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:bfea50d1a536e291:platform:1,tfl:lrad:bfea50d1a536e291,1,False,Northern,1,Northbound,Hendon Central,,,,,113.0,150.0,,5.0,37.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:bfea50d1a536e291:platform:2,tfl:lrad:bfea50d1a536e291,2,False,Northern,2,Northbound,Hendon Central,,,,,113.0,150.0,,5.0,37.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:bfea50d1a536e291:platform:3,tfl:lrad:bfea50d1a536e291,3,False,Northern,3,Northbound,Hendon Central,,,,,113.0,150.0,,5.0,37.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:bfea50d1a536e291:platform:4,tfl:lrad:bfea50d1a536e291,4,False,Northern,4,Southbound,Camden Town,,,,,0.0,137.0,,43.0,57.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:bfea50d1a536e291:platform:5,tfl:lrad:bfea50d1a536e291,5,False,Northern,5,Southbound,Camden Town,,,,,0.0,137.0,,43.0,57.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:5dabd25643c3ec0d:platform:1,tfl:lrad:5dabd25643c3ec0d,1,False,TfL Rail,3,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5dabd25643c3ec0d:platform:2,tfl:lrad:5dabd25643c3ec0d,2,False,TfL Rail,4,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:1e2d749ae1846f49:platform:1,tfl:lrad:1e2d749ae1846f49,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:1e2d749ae1846f49:platform:2,tfl:lrad:1e2d749ae1846f49,2,False,London Overground,2,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1e2d749ae1846f49:platform:3,tfl:lrad:1e2d749ae1846f49,3,False,London Overground,3,Eastbound,Barking,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:846e7f04df0d1c7a:platform:1,tfl:lrad:846e7f04df0d1c7a,1,False,TfL Rail,3,Westbound,Liverpool Street,,Crossways,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:846e7f04df0d1c7a:platform:2,tfl:lrad:846e7f04df0d1c7a,2,False,TfL Rail,4,Eastbound,Shenfield,,Crossways,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ddae7dff05c23279:platform:1,tfl:lrad:ddae7dff05c23279,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:ddae7dff05c23279:platform:2,tfl:lrad:ddae7dff05c23279,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d5bc2b2e0a75e293:platform:1,tfl:lrad:d5bc2b2e0a75e293,1,False,Central,1,Westbound,West Ruislip,,,,,0.0,207.0,,0.0,123.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:d5bc2b2e0a75e293:platform:2,tfl:lrad:d5bc2b2e0a75e293,2,False,Central,3,Eastbound,Liverpool Street,,,,,0.0,173.0,,0.0,140.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:0349e2aaac432c88:platform:1,tfl:lrad:0349e2aaac432c88,1,False,Jubilee,5,Northbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5"",""2""],[""4"",""6"",""2""]]"
+tfl:lrad:0349e2aaac432c88:platform:2,tfl:lrad:0349e2aaac432c88,2,False,Jubilee,6,Southbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5"",""2""],[""4"",""6"",""2""]]"
+tfl:lrad:0349e2aaac432c88:platform:3,tfl:lrad:0349e2aaac432c88,3,False,Piccadilly,2,Eastbound,Oakwood,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5"",""1""],[""4"",""6"",""1""]]"
+tfl:lrad:0349e2aaac432c88:platform:4,tfl:lrad:0349e2aaac432c88,4,False,Piccadilly,1,Westbound,Heathrow,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5"",""1""],[""4"",""6"",""1""]]"
+tfl:lrad:0349e2aaac432c88:platform:5,tfl:lrad:0349e2aaac432c88,5,False,Victoria,3,Northbound,Tottenham Hale,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5""],[""4"",""6""]]"
+tfl:lrad:0349e2aaac432c88:platform:6,tfl:lrad:0349e2aaac432c88,6,False,Victoria,4,Southbound,Brixton,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4"",""5""],[""4"",""6""]]"
+tfl:lrad:8a64bb944fc81abf:platform:1,tfl:lrad:8a64bb944fc81abf,1,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8a64bb944fc81abf:platform:2,tfl:lrad:8a64bb944fc81abf,2,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8a64bb944fc81abf:platform:3,tfl:lrad:8a64bb944fc81abf,3,False,DLR,3,Northbound,Canary Wharf,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:8a64bb944fc81abf:platform:4,tfl:lrad:8a64bb944fc81abf,4,False,DLR,4,Southbound,Lewisham,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:dfd88c86ab480096:platform:1,tfl:lrad:dfd88c86ab480096,1,False,District,1,Westbound,Richmond,,,,,0.0,193.0,,0.0,157.0,,Yes,yes,,unknown,[]
+tfl:lrad:dfd88c86ab480096:platform:2,tfl:lrad:dfd88c86ab480096,2,False,District,2,Eastbound,Earl's Court,,,,,0.0,200.0,,0.0,113.0,,Yes,yes,,unknown,[]
+tfl:lrad:dfd88c86ab480096:platform:3,tfl:lrad:dfd88c86ab480096,3,False,London Overground,1,Westbound,Richmond,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:dfd88c86ab480096:platform:4,tfl:lrad:dfd88c86ab480096,4,False,London Overground,2,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:7a25663c6412d52b:platform:1,tfl:lrad:7a25663c6412d52b,1,False,Thameslink,1,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:7a25663c6412d52b:platform:2,tfl:lrad:7a25663c6412d52b,2,False,Thameslink,2,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:c8a34f568cb44a71:platform:1,tfl:lrad:c8a34f568cb44a71,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:c8a34f568cb44a71:platform:2,tfl:lrad:c8a34f568cb44a71,2,False,London Overground,2,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:424fbd8842cf598c:platform:1,tfl:lrad:424fbd8842cf598c,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,Hepscott Road,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:424fbd8842cf598c:platform:2,tfl:lrad:424fbd8842cf598c,2,False,London Overground,2,Eastbound,Stratford,,Wallis Road,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:2f69d57377c991f3:platform:1,tfl:lrad:2f69d57377c991f3,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:2f69d57377c991f3:platform:2,tfl:lrad:2f69d57377c991f3,2,False,London Overground,2,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:4bc3f6d766ac2669:platform:1,tfl:lrad:4bc3f6d766ac2669,1,False,Central,1,Westbound,Roding Valley,,,,,0.0,117.0,,0.0,157.0,,Yes,yes,,unknown,"[[""3"",""1""]]"
+tfl:lrad:4bc3f6d766ac2669:platform:2,tfl:lrad:4bc3f6d766ac2669,2,False,Central,2,Westbound,Barkingside,,,,,0.0,87.0,,0.0,203.0,,Yes,yes,,unknown,"[[""3"",""2""]]"
+tfl:lrad:4bc3f6d766ac2669:platform:3,tfl:lrad:4bc3f6d766ac2669,3,False,Central,3,Westbound,Barkingside,,,,,0.0,87.0,,0.0,203.0,,Yes,yes,,unknown,"[[""3"",""2""]]"
+tfl:lrad:cfd6dbca2f2bbad9:platform:1,tfl:lrad:cfd6dbca2f2bbad9,1,False,Circle,1,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:2,tfl:lrad:cfd6dbca2f2bbad9,2,False,Circle,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:3,tfl:lrad:cfd6dbca2f2bbad9,3,False,Circle,3,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:4,tfl:lrad:cfd6dbca2f2bbad9,4,False,Hammersmith & City,1,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:5,tfl:lrad:cfd6dbca2f2bbad9,5,False,Hammersmith & City,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:6,tfl:lrad:cfd6dbca2f2bbad9,6,False,Hammersmith & City,3,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cfd6dbca2f2bbad9:platform:7,tfl:lrad:cfd6dbca2f2bbad9,7,False,District,1,Westbound,Turnham Green,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:cfd6dbca2f2bbad9:platform:8,tfl:lrad:cfd6dbca2f2bbad9,8,False,District,4,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:cfd6dbca2f2bbad9:platform:9,tfl:lrad:cfd6dbca2f2bbad9,9,False,Piccadilly,2,Westbound,Acton Town,,,,,0.0,187.0,,0.0,102.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:cfd6dbca2f2bbad9:platform:10,tfl:lrad:cfd6dbca2f2bbad9,10,False,Piccadilly,3,Eastbound,Oakwood,,,,,0.0,179.0,,0.0,110.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:88bce1afc523ef19:platform:1,tfl:lrad:88bce1afc523ef19,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:88bce1afc523ef19:platform:2,tfl:lrad:88bce1afc523ef19,2,False,London Overground,2,Eastbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:a983f0102cee4113:platform:1,tfl:lrad:a983f0102cee4113,1,False,TfL Rail,2,Westbound,Hayes & Harlington,,Station Approach Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a983f0102cee4113:platform:2,tfl:lrad:a983f0102cee4113,2,False,TfL Rail,3,Eastbound,Paddington Station,,Station Approach Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:42610808fac319f8:platform:1,tfl:lrad:42610808fac319f8,1,False,TfL Rail,4,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:42610808fac319f8:platform:2,tfl:lrad:42610808fac319f8,2,False,TfL Rail,3,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:d28206e86a1c490c:platform:1,tfl:lrad:d28206e86a1c490c,1,False,London Overground,1,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:d28206e86a1c490c:platform:2,tfl:lrad:d28206e86a1c490c,2,False,London Overground,2,Eastbound,Barking,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:0cd679e776d2e81a:platform:1,tfl:lrad:0cd679e776d2e81a,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:0cd679e776d2e81a:platform:2,tfl:lrad:0cd679e776d2e81a,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:dd86502a79776d56:platform:1,tfl:lrad:dd86502a79776d56,1,False,Bakerloo,1,Northbound,Harrow & Wealdstone,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:dd86502a79776d56:platform:2,tfl:lrad:dd86502a79776d56,2,False,Bakerloo,2,Southbound,Oxford Circus,,,,,0.0,217.0,,0.0,60.0,,Yes,yes,,unknown,"[[""2""],[""3""]]"
+tfl:lrad:dd86502a79776d56:platform:3,tfl:lrad:dd86502a79776d56,3,False,London Overground,1,Northbound,Watford Junction,,,,,0.0,151.0,,0.0,28.0,,Yes,yes,,unknown,[]
+tfl:lrad:dd86502a79776d56:platform:4,tfl:lrad:dd86502a79776d56,4,False,London Overground,2,Southbound,Euston,,,,,0.0,168.0,,0.0,8.0,,Yes,yes,,unknown,"[[""2""],[""3""]]"
+tfl:lrad:d479200040a00838:platform:1,tfl:lrad:d479200040a00838,1,False,Metropolitan,1,Northbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:d479200040a00838:platform:2,tfl:lrad:d479200040a00838,2,False,Metropolitan,3,Northbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:d479200040a00838:platform:3,tfl:lrad:d479200040a00838,3,False,Metropolitan,4,Northbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:d479200040a00838:platform:4,tfl:lrad:d479200040a00838,4,False,Metropolitan,5,Southbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:d479200040a00838:platform:5,tfl:lrad:d479200040a00838,5,False,Metropolitan,6,Southbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:ff6594ceb2ca3a74:platform:1,tfl:lrad:ff6594ceb2ca3a74,1,False,London Overground,2,Northbound,Watford Junction,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f40fa6aaaa5dacd2:platform:1,tfl:lrad:f40fa6aaaa5dacd2,1,False,London Overground,2,Northbound,Watford Junction,,Headstone Lane side,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:50ffd3e123759f82:platform:1,tfl:lrad:50ffd3e123759f82,1,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:77f8c07d5e29db7e:platform:1,tfl:lrad:77f8c07d5e29db7e,1,False,Piccadilly,1,Westbound,Heathrow Terminal 5,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:77f8c07d5e29db7e:platform:2,tfl:lrad:77f8c07d5e29db7e,2,False,Piccadilly,2,Eastbound,Oakwood,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:77f8c07d5e29db7e:platform:3,tfl:lrad:77f8c07d5e29db7e,3,False,TfL Rail,1,Westbound,Heathrow Terminal 4,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:77f8c07d5e29db7e:platform:4,tfl:lrad:77f8c07d5e29db7e,4,False,TfL Rail,2,Eastbound,Paddington,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:67dfff1e60a96160:platform:1,tfl:lrad:67dfff1e60a96160,1,False,Piccadilly,1,Westbound,Heathrow Terminals 2 & 3 and Oakwood,,,Open Mondays to Saturdays until 23:45 and Sundays until 23:15 only.,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:67dfff1e60a96160:platform:2,tfl:lrad:67dfff1e60a96160,2,False,TfL Rail,2,Eastbound,Paddington,,,Open Mondays to Saturdays until 23:45 and Sundays until 23:15 only.,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:a0095f9fff1b4915:platform:1,tfl:lrad:a0095f9fff1b4915,1,False,Piccadilly,6,Eastbound,Oakwood,,,,2 centre doors on car 5,,,22.0,,,94.0,Yes,yes,Yes,yes,"[[""1""]]"
+tfl:lrad:a0095f9fff1b4915:platform:2,tfl:lrad:a0095f9fff1b4915,2,False,Piccadilly,5,Eastbound,Oakwood,,,,2 centre doors on car 5,,,22.0,,,94.0,Yes,yes,Yes,yes,"[[""1""]]"
+tfl:lrad:7f491cab31f87dc5:platform:1,tfl:lrad:7f491cab31f87dc5,1,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:2f6ce6558a641a72:platform:1,tfl:lrad:2f6ce6558a641a72,1,False,Northern,1,Northbound,Edgware,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:2f6ce6558a641a72:platform:2,tfl:lrad:2f6ce6558a641a72,2,False,Northern,2,Southbound,Camden Town,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:41c625b3a6650149:platform:1,tfl:lrad:41c625b3a6650149,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:41c625b3a6650149:platform:2,tfl:lrad:41c625b3a6650149,2,False,Thameslink,4,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f7eeebc6c95334d1:platform:1,tfl:lrad:f7eeebc6c95334d1,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:f7eeebc6c95334d1:platform:2,tfl:lrad:f7eeebc6c95334d1,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:95a37921211f8ba6:platform:1,tfl:lrad:95a37921211f8ba6,1,False,London Overground,1,Southbound,Liverpool Street,,Station Approach,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:95a37921211f8ba6:platform:2,tfl:lrad:95a37921211f8ba6,2,False,London Overground,2,Northbound,Chingford,,Wilton Place,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:26474a80576e28b7:platform:1,tfl:lrad:26474a80576e28b7,1,False,Northern,1,Southbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:26474a80576e28b7:platform:2,tfl:lrad:26474a80576e28b7,2,False,Northern,2,Southbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:26474a80576e28b7:platform:3,tfl:lrad:26474a80576e28b7,3,False,Northern,3,Southbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:efe14049c43362bd:platform:1,tfl:lrad:efe14049c43362bd,1,False,London Overground,1,Southbound,Clapham Junction and Crystal Palace,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:efe14049c43362bd:platform:2,tfl:lrad:efe14049c43362bd,2,False,London Overground,2,Southbound,Clapham Junction and Crystal Palace,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:efe14049c43362bd:platform:3,tfl:lrad:efe14049c43362bd,3,False,London Overground,7,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:efe14049c43362bd:platform:4,tfl:lrad:efe14049c43362bd,4,False,London Overground,8,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""3""]]"
+tfl:lrad:efe14049c43362bd:platform:5,tfl:lrad:efe14049c43362bd,5,False,Victoria,3,Northbound,Tottenham Hale,Interchange,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:efe14049c43362bd:platform:6,tfl:lrad:efe14049c43362bd,6,False,Victoria,5,Southbound,Brixton,Interchange,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:2976c3d76ddf76a7:platform:1,tfl:lrad:2976c3d76ddf76a7,1,False,Metropolitan,1,Westbound,Uxbridge,,,,,0.0,110.0,,0.0,73.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:2976c3d76ddf76a7:platform:2,tfl:lrad:2976c3d76ddf76a7,2,False,Metropolitan,2,Eastbound,Liverpool Street,,,,,0.0,118.0,,0.0,86.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:2976c3d76ddf76a7:platform:3,tfl:lrad:2976c3d76ddf76a7,3,False,Piccadilly,1,Westbound,Uxbridge,,,,,0.0,177.0,,0.0,83.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:2976c3d76ddf76a7:platform:4,tfl:lrad:2976c3d76ddf76a7,4,False,Piccadilly,2,Eastbound,Oakwood,,,,,0.0,183.0,,0.0,87.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:81cb479428693204:platform:1,tfl:lrad:81cb479428693204,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:81cb479428693204:platform:2,tfl:lrad:81cb479428693204,2,False,London Overground,2,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:03c79d80dfbc205a:platform:1,tfl:lrad:03c79d80dfbc205a,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:03c79d80dfbc205a:platform:2,tfl:lrad:03c79d80dfbc205a,2,False,London Overground,2,Southbound,Crystal Palace and West Croydon,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:519c9e29cb4700c7:platform:1,tfl:lrad:519c9e29cb4700c7,1,False,Piccadilly,1,Westbound,Heathrow,,,,,0.0,107.0,,0.0,71.0,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:519c9e29cb4700c7:platform:2,tfl:lrad:519c9e29cb4700c7,2,False,Piccadilly,2,Eastbound,Oakwood,,,,,0.0,107.0,,0.0,71.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:89ba013254581b55:platform:1,tfl:lrad:89ba013254581b55,1,False,Piccadilly,1,Westbound,Heathrow,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:89ba013254581b55:platform:2,tfl:lrad:89ba013254581b55,2,False,Piccadilly,2,Eastbound,Oakwood,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:8721f6a7bbab6be0:platform:1,tfl:lrad:8721f6a7bbab6be0,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:8721f6a7bbab6be0:platform:2,tfl:lrad:8721f6a7bbab6be0,2,False,London Overground,2,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:17501aecac10cb52:platform:1,tfl:lrad:17501aecac10cb52,1,False,Metropolitan,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:17501aecac10cb52:platform:2,tfl:lrad:17501aecac10cb52,2,False,Metropolitan,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:17501aecac10cb52:platform:3,tfl:lrad:17501aecac10cb52,3,False,Piccadilly,1,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:17501aecac10cb52:platform:4,tfl:lrad:17501aecac10cb52,4,False,Piccadilly,2,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:825e89b8f0af8ce2:platform:1,tfl:lrad:825e89b8f0af8ce2,1,False,London Overground,1,Southbound,Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:825e89b8f0af8ce2:platform:2,tfl:lrad:825e89b8f0af8ce2,2,False,London Overground,2,Northbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:f79f47e622ca8eab:platform:1,tfl:lrad:f79f47e622ca8eab,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:f79f47e622ca8eab:platform:2,tfl:lrad:f79f47e622ca8eab,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:b2b9fae024911af7:platform:1,tfl:lrad:b2b9fae024911af7,1,False,TfL Rail,3,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:b2b9fae024911af7:platform:2,tfl:lrad:b2b9fae024911af7,2,False,TfL Rail,4,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:de8783c2f6c3e74d:platform:1,tfl:lrad:de8783c2f6c3e74d,1,False,Northern,3,Northbound,Charing Cross,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:de8783c2f6c3e74d:platform:2,tfl:lrad:de8783c2f6c3e74d,2,False,Northern,1,Northbound,Bank,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:de8783c2f6c3e74d:platform:3,tfl:lrad:de8783c2f6c3e74d,3,False,Northern,2,Southbound,Morden,,,,,51.0,120.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:de8783c2f6c3e74d:platform:4,tfl:lrad:de8783c2f6c3e74d,4,False,Northern,4,Southbound,Morden,,,,,51.0,120.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:af0a4d04d7afead7:platform:1,tfl:lrad:af0a4d04d7afead7,1,False,London Overground,1,Westbound,Richmond and Clapham Junction,,Station Terrace,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:af0a4d04d7afead7:platform:2,tfl:lrad:af0a4d04d7afead7,2,False,London Overground,2,Eastbound,Stratford,,Chamberlayne Road,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:f198eb16a2ca905a:platform:1,tfl:lrad:f198eb16a2ca905a,1,False,District,1,Eastbound,High Street Kensington,,Olympia Way,,,0.0,123.0,,0.0,50.0,,Yes,yes,,unknown,[]
+tfl:lrad:f198eb16a2ca905a:platform:2,tfl:lrad:f198eb16a2ca905a,2,False,London Overground,2,Northbound,Stratford,,Olympia Way,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f198eb16a2ca905a:platform:3,tfl:lrad:f198eb16a2ca905a,3,False,London Overground,3,Southbound,Clapham Junction,,Russell Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:af26fe117c1703fc:platform:1,tfl:lrad:af26fe117c1703fc,1,False,District,1,Eastbound,Earl's Court,,Station Approach,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:af26fe117c1703fc:platform:2,tfl:lrad:af26fe117c1703fc,2,False,District,2,Westbound,Richmond,,North End,,,0.0,153.0,,0.0,50.0,,Yes,yes,,unknown,[]
+tfl:lrad:af26fe117c1703fc:platform:3,tfl:lrad:af26fe117c1703fc,3,False,London Overground,1,Eastbound,Stratford,,Station Approach,,,0.0,227.0,,0.0,73.0,,Yes,yes,,unknown,[]
+tfl:lrad:af26fe117c1703fc:platform:4,tfl:lrad:af26fe117c1703fc,4,False,London Overground,2,Westbound,Richmond,,North End,,,0.0,153.0,,0.0,50.0,,Yes,yes,,unknown,[]
+tfl:lrad:b0b5adf94c39ecf5:platform:1,tfl:lrad:b0b5adf94c39ecf5,1,False,Jubilee,1,Northbound,Stanmore,,,,,0.0,140.0,,0.0,77.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b0b5adf94c39ecf5:platform:2,tfl:lrad:b0b5adf94c39ecf5,2,False,Jubilee,2,Southbound,Stratford,,,,,0.0,127.0,,0.0,80.0,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:cdf6d857ccb4a086:platform:1,tfl:lrad:cdf6d857ccb4a086,1,False,DLR,1,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:cdf6d857ccb4a086:platform:2,tfl:lrad:cdf6d857ccb4a086,2,False,DLR,2,Northbound,Bank and Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:6187c160eb9ca116:platform:1,tfl:lrad:6187c160eb9ca116,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:6187c160eb9ca116:platform:2,tfl:lrad:6187c160eb9ca116,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:2416d897d76027a5:platform:1,tfl:lrad:2416d897d76027a5,1,False,Jubilee,1,Northbound,Stanmore,,,,2 centre doors on cars 5 and 6,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:2416d897d76027a5:platform:2,tfl:lrad:2416d897d76027a5,2,False,Jubilee,2,Southbound,Stratford,,,,2 centre doors on cars 2 and 3,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:6fe97e856bcb0239:platform:1,tfl:lrad:6fe97e856bcb0239,1,False,Circle,1,Westbound,Edgware Road,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:2,tfl:lrad:6fe97e856bcb0239,2,False,Circle,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:3,tfl:lrad:6fe97e856bcb0239,3,False,Hammersmith & City,1,Westbound,Hammersmith,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:4,tfl:lrad:6fe97e856bcb0239,4,False,Hammersmith & City,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:5,tfl:lrad:6fe97e856bcb0239,5,False,Metropolitan,1,Westbound,"Amersham, Chesham, Uxbridge and Watford",,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:6,tfl:lrad:6fe97e856bcb0239,6,False,Metropolitan,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""],[""3"",""1""],[""10"",""1""],[""11"",""1""]]"
+tfl:lrad:6fe97e856bcb0239:platform:7,tfl:lrad:6fe97e856bcb0239,7,False,Northern,7,Northbound,Edgware and High Barnet,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3"",""5""]]"
+tfl:lrad:6fe97e856bcb0239:platform:8,tfl:lrad:6fe97e856bcb0239,8,False,Northern,8,Southbound,Morden,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3"",""5""]]"
+tfl:lrad:6fe97e856bcb0239:platform:9,tfl:lrad:6fe97e856bcb0239,9,False,Piccadilly,5,Westbound,Heathrow,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""10"",""6"",""7""],[""11"",""6"",""7""],[""2"",""6"",""7""],[""3"",""6"",""7""]]"
+tfl:lrad:6fe97e856bcb0239:platform:10,tfl:lrad:6fe97e856bcb0239,10,False,Piccadilly,6,Eastbound,Oakwood,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""10"",""6"",""7""],[""11"",""6"",""7""],[""2"",""6"",""7""],[""3"",""6"",""7""]]"
+tfl:lrad:6fe97e856bcb0239:platform:11,tfl:lrad:6fe97e856bcb0239,11,False,Victoria,3,Northbound,Tottenham Hale,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""10"",""6"",""8""],[""11"",""6"",""8""],[""2"",""6"",""8""],[""3"",""6"",""8""]]"
+tfl:lrad:6fe97e856bcb0239:platform:12,tfl:lrad:6fe97e856bcb0239,12,False,Victoria,4,Southbound,Brixton,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""10"",""6"",""8""],[""11"",""6"",""8""],[""2"",""6"",""8""],[""3"",""6"",""8""]]"
+tfl:lrad:6fe97e856bcb0239:platform:13,tfl:lrad:6fe97e856bcb0239,13,False,Thameslink,0,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:14,tfl:lrad:6fe97e856bcb0239,14,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:15,tfl:lrad:6fe97e856bcb0239,15,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:16,tfl:lrad:6fe97e856bcb0239,16,False,Thameslink,3,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:17,tfl:lrad:6fe97e856bcb0239,17,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:18,tfl:lrad:6fe97e856bcb0239,18,False,Thameslink,5,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:19,tfl:lrad:6fe97e856bcb0239,19,False,Thameslink,6,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:20,tfl:lrad:6fe97e856bcb0239,20,False,Thameslink,7,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:21,tfl:lrad:6fe97e856bcb0239,21,False,Thameslink,8,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:22,tfl:lrad:6fe97e856bcb0239,22,False,Thameslink,9,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:23,tfl:lrad:6fe97e856bcb0239,23,False,Thameslink,10,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:24,tfl:lrad:6fe97e856bcb0239,24,False,Thameslink,11,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:25,tfl:lrad:6fe97e856bcb0239,25,False,Thameslink,A,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6fe97e856bcb0239:platform:26,tfl:lrad:6fe97e856bcb0239,26,False,Thameslink,B,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:936569cf6cd47768:platform:1,tfl:lrad:936569cf6cd47768,1,False,DLR,1,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:936569cf6cd47768:platform:2,tfl:lrad:936569cf6cd47768,2,False,DLR,2,Southbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:ef71e4e90064e001:platform:1,tfl:lrad:ef71e4e90064e001,1,False,TfL Rail,3,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,"[[""3"",""2""]]"
+tfl:lrad:ef71e4e90064e001:platform:2,tfl:lrad:ef71e4e90064e001,2,False,TfL Rail,4,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:aebce29b972a1cbf:platform:1,tfl:lrad:aebce29b972a1cbf,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:aebce29b972a1cbf:platform:2,tfl:lrad:aebce29b972a1cbf,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:581a4635008717f1:platform:1,tfl:lrad:581a4635008717f1,1,False,DLR,5,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:581a4635008717f1:platform:2,tfl:lrad:581a4635008717f1,2,False,DLR,6,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:efc8957f2a786c82:platform:1,tfl:lrad:efc8957f2a786c82,1,False,DLR,3,Eastbound,Westferry,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""],[""3""]]"
+tfl:lrad:efc8957f2a786c82:platform:2,tfl:lrad:efc8957f2a786c82,2,False,DLR,4,Westbound,Shadwell,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""2""],[""4""]]"
+tfl:lrad:78657b03d3f7bbb5:platform:1,tfl:lrad:78657b03d3f7bbb5,1,False,Circle,1,Eastbound,Monument,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:78657b03d3f7bbb5:platform:2,tfl:lrad:78657b03d3f7bbb5,2,False,Hammersmith & City,1,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:78657b03d3f7bbb5:platform:3,tfl:lrad:78657b03d3f7bbb5,3,False,Metropolitan,1,Eastbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:78657b03d3f7bbb5:platform:4,tfl:lrad:78657b03d3f7bbb5,4,False,London Overground,1,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:5,tfl:lrad:78657b03d3f7bbb5,5,False,London Overground,2,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:6,tfl:lrad:78657b03d3f7bbb5,6,False,London Overground,3,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:7,tfl:lrad:78657b03d3f7bbb5,7,False,London Overground,4,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:8,tfl:lrad:78657b03d3f7bbb5,8,False,London Overground,5,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:9,tfl:lrad:78657b03d3f7bbb5,9,False,London Overground,6,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:10,tfl:lrad:78657b03d3f7bbb5,10,False,London Overground,7,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:11,tfl:lrad:78657b03d3f7bbb5,11,False,London Overground,8,Eastbound,"Enfield Town, Cheshunt and Chingford",,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:12,tfl:lrad:78657b03d3f7bbb5,12,False,TfL Rail,15,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:13,tfl:lrad:78657b03d3f7bbb5,13,False,TfL Rail,16,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:14,tfl:lrad:78657b03d3f7bbb5,14,False,TfL Rail,17,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78657b03d3f7bbb5:platform:15,tfl:lrad:78657b03d3f7bbb5,15,False,TfL Rail,18,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3cf54e9870f614e4:platform:1,tfl:lrad:3cf54e9870f614e4,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:3cf54e9870f614e4:platform:2,tfl:lrad:3cf54e9870f614e4,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f79b126437ef5295:platform:1,tfl:lrad:f79b126437ef5295,1,False,Jubilee,3,Westbound,Stanmore,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:f79b126437ef5295:platform:2,tfl:lrad:f79b126437ef5295,2,False,Jubilee,4,Eastbound,Stratford,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:f79b126437ef5295:platform:3,tfl:lrad:f79b126437ef5295,3,False,Northern,1,Northbound,Edgware and High Barnet,,,,2 centre doors on cars 5 and 6,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3"",""4""]]"
+tfl:lrad:f79b126437ef5295:platform:4,tfl:lrad:f79b126437ef5295,4,False,Northern,2,Southbound,Morden,,,,2 centre doors on cars 2 and 3,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3"",""4""]]"
+tfl:lrad:f79b126437ef5295:platform:5,tfl:lrad:f79b126437ef5295,5,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:f79b126437ef5295:platform:6,tfl:lrad:f79b126437ef5295,6,False,Thameslink,5,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:ad4faa5fb30e3592:platform:1,tfl:lrad:ad4faa5fb30e3592,1,False,DLR,1,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:ad4faa5fb30e3592:platform:2,tfl:lrad:ad4faa5fb30e3592,2,False,DLR,2,Northbound,Bank and Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:454f03482c1faac6:platform:1,tfl:lrad:454f03482c1faac6,1,False,TfL Rail,3,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:454f03482c1faac6:platform:2,tfl:lrad:454f03482c1faac6,2,False,TfL Rail,4,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:585ec210aee2d588:platform:1,tfl:lrad:585ec210aee2d588,1,False,TfL Rail,1,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:585ec210aee2d588:platform:2,tfl:lrad:585ec210aee2d588,2,False,TfL Rail,2,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:6780ee616819fc12:platform:1,tfl:lrad:6780ee616819fc12,1,False,TfL Rail,1,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""3"",""2""]]"
+tfl:lrad:6780ee616819fc12:platform:2,tfl:lrad:6780ee616819fc12,2,False,TfL Rail,2,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""3"",""1""]]"
+tfl:lrad:29f7cdc65672f5a4:platform:1,tfl:lrad:29f7cdc65672f5a4,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:29f7cdc65672f5a4:platform:2,tfl:lrad:29f7cdc65672f5a4,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d2650e667e3892ad:platform:1,tfl:lrad:d2650e667e3892ad,1,False,Central,4,Eastbound,Woodford,,,,,0.0,223.0,,0.0,43.0,,Yes,yes,,unknown,[]
+tfl:lrad:d2650e667e3892ad:platform:2,tfl:lrad:d2650e667e3892ad,2,False,Central,1,Westbound,Barkingside,,,,,0.0,227.0,,0.0,43.0,,Yes,yes,,unknown,[]
+tfl:lrad:d2650e667e3892ad:platform:3,tfl:lrad:d2650e667e3892ad,3,False,District,3,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d2650e667e3892ad:platform:4,tfl:lrad:d2650e667e3892ad,4,False,District,2,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d2650e667e3892ad:platform:5,tfl:lrad:d2650e667e3892ad,5,False,Hammersmith & City,3,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:d2650e667e3892ad:platform:6,tfl:lrad:d2650e667e3892ad,6,False,Hammersmith & City,2,Westbound,Hammersmith,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:852676ad734584da:platform:1,tfl:lrad:852676ad734584da,1,False,Thameslink,1,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:852676ad734584da:platform:2,tfl:lrad:852676ad734584da,2,False,Thameslink,2,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:92bac4b7a08d7f47:platform:1,tfl:lrad:92bac4b7a08d7f47,1,False,Northern,1,Southbound,Camden Town,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:91124d138c150768:platform:1,tfl:lrad:91124d138c150768,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:91124d138c150768:platform:2,tfl:lrad:91124d138c150768,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:23338c666a896abc:platform:1,tfl:lrad:23338c666a896abc,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:23338c666a896abc:platform:2,tfl:lrad:23338c666a896abc,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f5182556affb4dd5:platform:1,tfl:lrad:f5182556affb4dd5,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f5182556affb4dd5:platform:2,tfl:lrad:f5182556affb4dd5,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f5182556affb4dd5:platform:3,tfl:lrad:f5182556affb4dd5,3,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f5182556affb4dd5:platform:4,tfl:lrad:f5182556affb4dd5,4,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:fc3b0985bc9601f8:platform:1,tfl:lrad:fc3b0985bc9601f8,1,False,Northern,2,Northbound,Bank and Charing Cross,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""],[""2""]]"
+tfl:lrad:eaaae786dbc0773b:platform:1,tfl:lrad:eaaae786dbc0773b,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:eaaae786dbc0773b:platform:2,tfl:lrad:eaaae786dbc0773b,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:468032f9f30d78a7:platform:1,tfl:lrad:468032f9f30d78a7,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:468032f9f30d78a7:platform:2,tfl:lrad:468032f9f30d78a7,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:48cfa78ae7b982be:platform:1,tfl:lrad:48cfa78ae7b982be,1,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:fd63590891524eca:platform:1,tfl:lrad:fd63590891524eca,1,False,London Overground,D,,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a0f55564468bcc63:platform:1,tfl:lrad:a0f55564468bcc63,1,False,London Overground,1,Southbound,Crystal Palace and West Croydon,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:a0f55564468bcc63:platform:2,tfl:lrad:a0f55564468bcc63,2,False,London Overground,5,Northbound,Dalston Junction and Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""3""]]"
+tfl:lrad:f61e05b0c3b5ceb7:platform:1,tfl:lrad:f61e05b0c3b5ceb7,1,False,Central,2,Eastbound,Hainault,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:f61e05b0c3b5ceb7:platform:2,tfl:lrad:f61e05b0c3b5ceb7,2,False,Central,1,Westbound,Ealing Broadway,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1d45924d331c089b:platform:1,tfl:lrad:1d45924d331c089b,1,False,Jubilee,1,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""2""]]"
+tfl:lrad:1d45924d331c089b:platform:2,tfl:lrad:1d45924d331c089b,2,False,Jubilee,2,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""2""]]"
+tfl:lrad:1d45924d331c089b:platform:3,tfl:lrad:1d45924d331c089b,3,False,Jubilee,3,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4"",""1""]]"
+tfl:lrad:03e7dc399d38f3d8:platform:1,tfl:lrad:03e7dc399d38f3d8,1,False,Metropolitan,1,Northbound,Harrow-on-the-Hill,,,Use the interchange at this station to change between trains on the Uxbridge branch and trains towards Pinner. At peak times another change may be needed at Harrow-on-the-hill for trains toward Amersham/Chesham.,,0.0,50.0,28.0,86.0,180.0,163.0,,unknown,,unknown,[]
+tfl:lrad:03e7dc399d38f3d8:platform:2,tfl:lrad:03e7dc399d38f3d8,2,False,Metropolitan,2,Southbound,Liverpool Street,,,,,0.0,50.0,29.0,86.0,180.0,90.0,,unknown,,unknown,[]
+tfl:lrad:471831b4dff62666:platform:1,tfl:lrad:471831b4dff62666,1,False,London Overground,1,Northbound,Dalston Junction,,Station Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:732413ec471381c9:platform:1,tfl:lrad:732413ec471381c9,1,False,Piccadilly,1,Westbound,Heathrow,,,,2 centre doors on car 2,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:732413ec471381c9:platform:2,tfl:lrad:732413ec471381c9,2,False,Piccadilly,2,Eastbound,Oakwood,,,,2 centre doors on car 5,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:a63dfec4a216b09c:platform:1,tfl:lrad:a63dfec4a216b09c,1,False,Thameslink,7,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5d7e00fbb6c3a3fd:platform:1,tfl:lrad:5d7e00fbb6c3a3fd,1,False,Bakerloo,3,Southbound,Oxford Circus,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5d7e00fbb6c3a3fd:platform:2,tfl:lrad:5d7e00fbb6c3a3fd,2,False,Bakerloo,4,Northbound,Harrow & Wealdstone,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5d7e00fbb6c3a3fd:platform:3,tfl:lrad:5d7e00fbb6c3a3fd,3,False,Victoria,5,Southbound,Brixton,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5d7e00fbb6c3a3fd:platform:4,tfl:lrad:5d7e00fbb6c3a3fd,4,False,Victoria,6,Northbound,Tottenham Hale,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:1e7bec7ad9302c10:platform:1,tfl:lrad:1e7bec7ad9302c10,1,False,Circle,15,Westbound,Hammersmith,,,,,,,50.0,,,180.0,,unknown,,unknown,"[[""3""]]"
+tfl:lrad:1e7bec7ad9302c10:platform:2,tfl:lrad:1e7bec7ad9302c10,2,False,Circle,16,Eastbound,Edgware Road,Interchange,,,,,,133.0,,,0.0,,unknown,,unknown,[]
+tfl:lrad:1e7bec7ad9302c10:platform:3,tfl:lrad:1e7bec7ad9302c10,3,False,Hammersmith & City,15,Westbound,Hammersmith,,,,,,,50.0,,,180.0,,unknown,,unknown,"[[""3""]]"
+tfl:lrad:1e7bec7ad9302c10:platform:4,tfl:lrad:1e7bec7ad9302c10,4,False,Hammersmith & City,16,Eastbound,Edgware Road,Interchange,,,,,,133.0,,,0.0,,unknown,,unknown,[]
+tfl:lrad:1e7bec7ad9302c10:platform:5,tfl:lrad:1e7bec7ad9302c10,5,False,District,2,Eastbound,Edgware Road,,,"If travelling towards Liverpool Street, take the District Line towards Edgware Road and change there for the Circle line.",,0.0,50.0,133.0,0.0,85.0,0.0,,unknown,,unknown,[]
+tfl:lrad:1e7bec7ad9302c10:platform:6,tfl:lrad:1e7bec7ad9302c10,6,False,Circle,2,Eastbound,,,,"If travelling towards Liverpool Street, take the District Line towards Edgware Road and change there for the Circle line.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:1e7bec7ad9302c10:platform:7,tfl:lrad:1e7bec7ad9302c10,7,False,TfL Rail,12,Westbound,Heathrow,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:1e7bec7ad9302c10:platform:8,tfl:lrad:1e7bec7ad9302c10,8,False,TfL Rail,11,Westbound,Heathrow,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:e7ed5f22c269a965:platform:1,tfl:lrad:e7ed5f22c269a965,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:180b3e7cc3fd92f4:platform:1,tfl:lrad:180b3e7cc3fd92f4,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:180b3e7cc3fd92f4:platform:2,tfl:lrad:180b3e7cc3fd92f4,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:a9a4ce4e3525437b:platform:1,tfl:lrad:a9a4ce4e3525437b,1,False,Metropolitan,1,Northbound,"Amersham, Chesham and Uxbridge",,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2"",""1""]]"
+tfl:lrad:a9a4ce4e3525437b:platform:2,tfl:lrad:a9a4ce4e3525437b,2,False,Metropolitan,2,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:20bf54aeddc50918:platform:1,tfl:lrad:20bf54aeddc50918,1,False,DLR,1,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:20bf54aeddc50918:platform:2,tfl:lrad:20bf54aeddc50918,2,False,DLR,2,Northbound,Bank and Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:1167625c6ba5449d:platform:1,tfl:lrad:1167625c6ba5449d,1,False,DLR,1,Eastbound,Woolwich Arsenal,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:1167625c6ba5449d:platform:2,tfl:lrad:1167625c6ba5449d,2,False,DLR,2,Northbound,Stratford,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:1167625c6ba5449d:platform:3,tfl:lrad:1167625c6ba5449d,3,False,DLR,3,Southbound,Canary Wharf,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:1167625c6ba5449d:platform:4,tfl:lrad:1167625c6ba5449d,4,False,DLR,4,Westbound,Westferry,,,,,0.0,50.0,,86.0,180.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:38b53f7836e227b2:platform:1,tfl:lrad:38b53f7836e227b2,1,False,DLR,1,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:38b53f7836e227b2:platform:2,tfl:lrad:38b53f7836e227b2,2,False,DLR,2,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:14287e4e012067c3:platform:1,tfl:lrad:14287e4e012067c3,1,False,DLR,1,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:14287e4e012067c3:platform:2,tfl:lrad:14287e4e012067c3,2,False,DLR,2,Westbound,Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:f330b9533a842fa3:platform:1,tfl:lrad:f330b9533a842fa3,1,False,Thameslink,3,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f330b9533a842fa3:platform:2,tfl:lrad:f330b9533a842fa3,2,False,Thameslink,4,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:5149049f928467e7:platform:1,tfl:lrad:5149049f928467e7,1,False,London Overground,1,Northbound,Dalston Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:5149049f928467e7:platform:2,tfl:lrad:5149049f928467e7,2,False,London Overground,2,Southbound,Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:1f2a3832fa802d3b:platform:1,tfl:lrad:1f2a3832fa802d3b,1,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:c8f980402219532d:platform:1,tfl:lrad:c8f980402219532d,1,False,Metropolitan,1,Westbound,Uxbridge,,,,,,,102.0,,,87.0,Yes,yes,,unknown,[]
+tfl:lrad:c8f980402219532d:platform:2,tfl:lrad:c8f980402219532d,2,False,Metropolitan,2,Eastbound,Liverpool Street,,,,,,,90.0,,,132.0,Yes,yes,,unknown,[]
+tfl:lrad:c8f980402219532d:platform:3,tfl:lrad:c8f980402219532d,3,False,Piccadilly,1,Westbound,Uxbridge,,,,,,,198.0,,,142.0,Yes,yes,,unknown,[]
+tfl:lrad:c8f980402219532d:platform:4,tfl:lrad:c8f980402219532d,4,False,Piccadilly,2,Eastbound,Oakwood,,,,,,,175.0,,,127.0,Yes,yes,,unknown,[]
+tfl:lrad:167254435cc1729c:platform:1,tfl:lrad:167254435cc1729c,1,False,TfL Rail,14,Eastbound,Ealing Broadway,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:73ecc98dbeeeaa8a:platform:1,tfl:lrad:73ecc98dbeeeaa8a,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:528829645f0ff9f8:platform:1,tfl:lrad:528829645f0ff9f8,1,False,District,3,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:2,tfl:lrad:528829645f0ff9f8,2,False,District,4,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:3,tfl:lrad:528829645f0ff9f8,3,False,District,5,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:4,tfl:lrad:528829645f0ff9f8,4,False,District,6,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:5,tfl:lrad:528829645f0ff9f8,5,False,District,7,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:6,tfl:lrad:528829645f0ff9f8,6,False,London Overground,3,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:7,tfl:lrad:528829645f0ff9f8,7,False,London Overground,4,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:528829645f0ff9f8:platform:8,tfl:lrad:528829645f0ff9f8,8,False,London Overground,5,Eastbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:db8e6fc8a8f338ae:platform:1,tfl:lrad:db8e6fc8a8f338ae,1,False,Metropolitan,2,Southbound,Liverpool Street,,,,,,,23.0,,,189.0,Yes,yes,,unknown,[]
+tfl:lrad:8713f0ce589b1249:platform:1,tfl:lrad:8713f0ce589b1249,1,False,Central,1,Westbound,Woodford,,Station Approach & Cherry Tree,,,,,137.0,,,157.0,Yes,yes,,unknown,[]
+tfl:lrad:8713f0ce589b1249:platform:2,tfl:lrad:8713f0ce589b1249,2,False,Central,2,Eastbound,Barkingside,,Station Way,,,,,103.0,,,193.0,Yes,yes,,unknown,[]
+tfl:lrad:fbcf4ad8e4311991:platform:1,tfl:lrad:fbcf4ad8e4311991,1,False,London Overground,1,Eastbound,Upminster,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:fbcf4ad8e4311991:platform:2,tfl:lrad:fbcf4ad8e4311991,2,False,TfL Rail,4,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:fbcf4ad8e4311991:platform:3,tfl:lrad:fbcf4ad8e4311991,3,False,TfL Rail,5,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:90b97db2afec93be:platform:1,tfl:lrad:90b97db2afec93be,1,False,DLR,1,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:90b97db2afec93be:platform:2,tfl:lrad:90b97db2afec93be,2,False,DLR,2,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:576acb1fb5fb26f6:platform:1,tfl:lrad:576acb1fb5fb26f6,1,False,DLR,1,Eastbound,Beckton,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:576acb1fb5fb26f6:platform:2,tfl:lrad:576acb1fb5fb26f6,2,False,DLR,2,Westbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:248635bc5afbdaf1:platform:1,tfl:lrad:248635bc5afbdaf1,1,False,Metropolitan,2,Eastbound,Liverpool Street,,,,,,,127.0,,,113.0,Yes,yes,,unknown,[]
+tfl:lrad:248635bc5afbdaf1:platform:2,tfl:lrad:248635bc5afbdaf1,2,False,Piccadilly,2,Eastbound,Oakwood,,,,,,,200.0,,,110.0,Yes,yes,,unknown,[]
+tfl:lrad:c1fc55f3a092b883:platform:1,tfl:lrad:c1fc55f3a092b883,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:c1fc55f3a092b883:platform:2,tfl:lrad:c1fc55f3a092b883,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5d4c9a00cec68179:platform:1,tfl:lrad:5d4c9a00cec68179,1,False,TfL Rail,3,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:5d4c9a00cec68179:platform:2,tfl:lrad:5d4c9a00cec68179,2,False,TfL Rail,4,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:e446b2bcf0c66393:platform:1,tfl:lrad:e446b2bcf0c66393,1,False,DLR,1,Eastbound,Beckton and Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:e446b2bcf0c66393:platform:2,tfl:lrad:e446b2bcf0c66393,2,False,DLR,2,Westbound,Bank and Tower Gateway,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:7306f92f4a8b33ea:platform:1,tfl:lrad:7306f92f4a8b33ea,1,False,TfL Rail,5,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:7306f92f4a8b33ea:platform:2,tfl:lrad:7306f92f4a8b33ea,2,False,TfL Rail,6,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:9e069865bbd2e917:platform:1,tfl:lrad:9e069865bbd2e917,1,False,London Overground,1,Southbound,Clapham Junction,,Ticket hall,,,,,,,,,Yes,yes,,unknown,"[[""1"",""2""]]"
+tfl:lrad:9e069865bbd2e917:platform:2,tfl:lrad:9e069865bbd2e917,2,False,London Overground,2,Northbound,Stratford,,Ticket hall,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:3b02e0966e7f4563:platform:1,tfl:lrad:3b02e0966e7f4563,1,False,London Overground,1,Northbound,Highbury & Islington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:3b02e0966e7f4563:platform:2,tfl:lrad:3b02e0966e7f4563,2,False,London Overground,2,Southbound,"New Cross, Clapham Junction, Crystal Palace and West Croydon",,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:b40c9a729fa8bd7c:platform:1,tfl:lrad:b40c9a729fa8bd7c,1,False,Thameslink,1,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:b40c9a729fa8bd7c:platform:2,tfl:lrad:b40c9a729fa8bd7c,2,False,Thameslink,2,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8daf0900be37b253:platform:1,tfl:lrad:8daf0900be37b253,1,False,TfL Rail,4,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:8daf0900be37b253:platform:2,tfl:lrad:8daf0900be37b253,2,False,TfL Rail,5,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:08747dde232fff1c:platform:1,tfl:lrad:08747dde232fff1c,1,False,London Overground,1,Westbound,Richmond,,Kingswood Terrace,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:08747dde232fff1c:platform:2,tfl:lrad:08747dde232fff1c,2,False,London Overground,2,Eastbound,Stratford,,Palmerston Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:df39254c35c29952:platform:1,tfl:lrad:df39254c35c29952,1,False,District,1,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:df39254c35c29952:platform:2,tfl:lrad:df39254c35c29952,2,False,District,2,Westbound,Wimbledon,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:4426aee0c091dde5:platform:1,tfl:lrad:4426aee0c091dde5,1,False,Circle,1,Westbound,High Street Kensington,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:4426aee0c091dde5:platform:2,tfl:lrad:4426aee0c091dde5,2,False,Circle,2,Eastbound,Liverpool Street,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:4426aee0c091dde5:platform:3,tfl:lrad:4426aee0c091dde5,3,False,District,1,Westbound,Earl's Court,,,,,,,127.0,,,70.0,Yes,yes,,unknown,[]
+tfl:lrad:0070c76524e3edf8:platform:1,tfl:lrad:0070c76524e3edf8,1,False,DLR,1,Southbound,Lewisham,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:0070c76524e3edf8:platform:2,tfl:lrad:0070c76524e3edf8,2,False,DLR,2,Northbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:33f344c70c284f98:platform:1,tfl:lrad:33f344c70c284f98,1,False,London Overground,1,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:33f344c70c284f98:platform:2,tfl:lrad:33f344c70c284f98,2,False,London Overground,2,Eastbound,Barking,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:90bd860fead7dcd3:platform:1,tfl:lrad:90bd860fead7dcd3,1,False,Jubilee,1,Westbound,Stanmore,,,"For level access leaving the train at Green Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:90bd860fead7dcd3:platform:2,tfl:lrad:90bd860fead7dcd3,2,False,Jubilee,2,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""]]"
+tfl:lrad:92db236b94a74c4a:platform:1,tfl:lrad:92db236b94a74c4a,1,False,Central,1,Westbound,Liverpool Street,,George Lane (West),,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:92db236b94a74c4a:platform:2,tfl:lrad:92db236b94a74c4a,2,False,Central,2,Eastbound,Epping,,Station Passage (East),,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:de2ef935fe14215c:platform:1,tfl:lrad:de2ef935fe14215c,1,False,Jubilee,1,Southbound,Stratford,,,"For level access leaving the train at Wembley Park, Kingsbury or Green Park, please travel in the correct carriage. Station entry and exit requires a 110m journey via station car park, including steep ramps.",,147.0,173.0,,90.0,100.0,,Yes,yes,,unknown,[]
+tfl:lrad:de2ef935fe14215c:platform:2,tfl:lrad:de2ef935fe14215c,2,False,Jubilee,2,Southbound,Stratford,,,"For level access leaving the train at Wembley Park, Kingsbury or Green Park, please travel in the correct carriage. Station entry and exit requires a 110m journey via station car park, including steep ramps.",,147.0,173.0,,90.0,100.0,,Yes,yes,,unknown,[]
+tfl:lrad:de2ef935fe14215c:platform:3,tfl:lrad:de2ef935fe14215c,3,False,Jubilee,3,Southbound,Stratford,,,"For level access leaving the train at Wembley Park, Kingsbury or Green Park, please travel in the correct carriage. Station entry and exit requires a 110m journey via station car park, including steep ramps.",,147.0,173.0,,90.0,100.0,,Yes,yes,,unknown,[]
+tfl:lrad:327f68ac346efdfa:platform:1,tfl:lrad:327f68ac346efdfa,1,False,DLR,1,Southbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""],[""3"",""1""]]"
+tfl:lrad:327f68ac346efdfa:platform:2,tfl:lrad:327f68ac346efdfa,2,False,DLR,2,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""1""],[""3"",""1""]]"
+tfl:lrad:8c87d19f863cce79:platform:1,tfl:lrad:8c87d19f863cce79,1,False,Northern,2,Northbound,Camden Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8c87d19f863cce79:platform:2,tfl:lrad:8c87d19f863cce79,2,False,Northern,3,Southbound,Morden,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8c87d19f863cce79:platform:3,tfl:lrad:8c87d19f863cce79,3,False,Victoria,1,Northbound,Tottenham Hale,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:8c87d19f863cce79:platform:4,tfl:lrad:8c87d19f863cce79,4,False,Victoria,4,Southbound,Brixton,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:3423fd9827faae3c:platform:1,tfl:lrad:3423fd9827faae3c,1,False,Central,3,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""18""],[""17"",""3""]]"
+tfl:lrad:3423fd9827faae3c:platform:2,tfl:lrad:3423fd9827faae3c,2,False,Central,3A,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3423fd9827faae3c:platform:3,tfl:lrad:3423fd9827faae3c,3,False,Central,6,Eastbound,Epping,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""10""],[""17"",""2""]]"
+tfl:lrad:3423fd9827faae3c:platform:4,tfl:lrad:3423fd9827faae3c,4,False,DLR,4A,Westbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""18""],[""17"",""3""]]"
+tfl:lrad:3423fd9827faae3c:platform:5,tfl:lrad:3423fd9827faae3c,5,False,DLR,4B,Westbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""18""],[""17"",""3""]]"
+tfl:lrad:3423fd9827faae3c:platform:6,tfl:lrad:3423fd9827faae3c,6,False,DLR,16,Northbound,Stratford International,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""17""],[""4""],[""6""]]"
+tfl:lrad:3423fd9827faae3c:platform:7,tfl:lrad:3423fd9827faae3c,7,False,DLR,17,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""8""],[""17"",""4"",""5""],[""17"",""6"",""5""],[""17"",""4"",""7""],[""17"",""6"",""7""]]"
+tfl:lrad:3423fd9827faae3c:platform:8,tfl:lrad:3423fd9827faae3c,8,False,Jubilee,13,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""8""],[""17"",""4"",""5""],[""17"",""6"",""5""],[""17"",""4"",""7""],[""17"",""6"",""7""]]"
+tfl:lrad:3423fd9827faae3c:platform:9,tfl:lrad:3423fd9827faae3c,9,False,Jubilee,14,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""8""],[""17"",""4"",""5""],[""17"",""6"",""5""],[""17"",""4"",""7""],[""17"",""6"",""7""]]"
+tfl:lrad:3423fd9827faae3c:platform:10,tfl:lrad:3423fd9827faae3c,10,False,Jubilee,15,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""16"",""8""],[""17"",""4"",""5""],[""17"",""6"",""5""],[""17"",""4"",""7""],[""17"",""6"",""7""]]"
+tfl:lrad:3423fd9827faae3c:platform:11,tfl:lrad:3423fd9827faae3c,11,False,London Overground,1,Westbound,Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""12""],[""17"",""9""]]"
+tfl:lrad:3423fd9827faae3c:platform:12,tfl:lrad:3423fd9827faae3c,12,False,London Overground,2,Westbound,Richmond,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""12""],[""17"",""9""]]"
+tfl:lrad:3423fd9827faae3c:platform:13,tfl:lrad:3423fd9827faae3c,13,False,TfL Rail,5,Westbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""18""],[""17"",""3""]]"
+tfl:lrad:3423fd9827faae3c:platform:14,tfl:lrad:3423fd9827faae3c,14,False,TfL Rail,8,Eastbound,Shenfield,,,,,,,,,,,Yes,yes,,unknown,"[[""16"",""10""],[""17"",""2""]]"
+tfl:lrad:e83657ba9a5caffc:platform:1,tfl:lrad:e83657ba9a5caffc,1,False,DLR,1,Southbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:e83657ba9a5caffc:platform:2,tfl:lrad:e83657ba9a5caffc,2,False,DLR,2,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:a81f30562b7ba340:platform:1,tfl:lrad:a81f30562b7ba340,1,False,DLR,1,Southbound,Woolwich,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""],[""3""]]"
+tfl:lrad:a81f30562b7ba340:platform:2,tfl:lrad:a81f30562b7ba340,2,False,DLR,2,Southbound,Woolwich,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""],[""3""]]"
+tfl:lrad:6f89e7622063497f:platform:1,tfl:lrad:6f89e7622063497f,1,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:b013fcd1544ec2df:platform:1,tfl:lrad:b013fcd1544ec2df,1,False,Piccadilly,1,Westbound,Uxbridge,,Orchard Gate,,,,,117.0,,,108.0,Yes,yes,,unknown,[]
+tfl:lrad:b013fcd1544ec2df:platform:2,tfl:lrad:b013fcd1544ec2df,2,False,Piccadilly,2,Eastbound,Oakwood,,Station Approach,,,,,164.0,,,107.0,Yes,yes,,unknown,[]
+tfl:lrad:ca41c0da56521a0e:platform:1,tfl:lrad:ca41c0da56521a0e,1,False,Thameslink,1,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ca41c0da56521a0e:platform:2,tfl:lrad:ca41c0da56521a0e,2,False,Thameslink,2,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6547c12240c631c2:platform:1,tfl:lrad:6547c12240c631c2,1,False,Thameslink,1,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6547c12240c631c2:platform:2,tfl:lrad:6547c12240c631c2,2,False,Thameslink,2,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6547c12240c631c2:platform:3,tfl:lrad:6547c12240c631c2,3,False,Thameslink,3,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6547c12240c631c2:platform:4,tfl:lrad:6547c12240c631c2,4,False,Thameslink,4,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78327aba9dd4ccb9:platform:1,tfl:lrad:78327aba9dd4ccb9,1,False,London Overground,1,Northbound,Highbury & Islington,,Peak Hill Gardens,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:78327aba9dd4ccb9:platform:2,tfl:lrad:78327aba9dd4ccb9,2,False,London Overground,2,Southbound,Crystal Palace and West Croydon,,Station Approach,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f058693c23cffec5:platform:1,tfl:lrad:f058693c23cffec5,1,False,TfL Rail,3,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,"[[""1"",""2""],[""3"",""2""]]"
+tfl:lrad:f058693c23cffec5:platform:2,tfl:lrad:f058693c23cffec5,2,False,TfL Rail,4,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:48dcc8d5fc76541d:platform:1,tfl:lrad:48dcc8d5fc76541d,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:48dcc8d5fc76541d:platform:2,tfl:lrad:48dcc8d5fc76541d,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:403d124eb6a16cce:platform:1,tfl:lrad:403d124eb6a16cce,1,False,Central,2,Eastbound,Epping,,,,,,,67.0,,,220.0,Yes,yes,,unknown,[]
+tfl:lrad:514d5ac1006b7db1:platform:1,tfl:lrad:514d5ac1006b7db1,1,False,Central,1,Westbound,Ealing Broadway and West Ruislip,,,,,,,,,,,Yes,yes,,unknown,"[[""1"",""2"",""5""],[""3"",""2"",""5""]]"
+tfl:lrad:514d5ac1006b7db1:platform:2,tfl:lrad:514d5ac1006b7db1,2,False,Central,2,Eastbound,Epping,,,,,,,,,,,Yes,yes,,unknown,"[[""1"",""2"",""5""],[""3"",""2"",""5""]]"
+tfl:lrad:514d5ac1006b7db1:platform:3,tfl:lrad:514d5ac1006b7db1,3,False,Northern,3,Northbound,Edgware and High Barnet,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""4""],[""3"",""4""]]"
+tfl:lrad:514d5ac1006b7db1:platform:4,tfl:lrad:514d5ac1006b7db1,4,False,Northern,4,Southbound,Morden,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""4""],[""3"",""4""]]"
+tfl:lrad:a8826bef12cdf18d:platform:1,tfl:lrad:a8826bef12cdf18d,1,False,Victoria,1,Northbound,Walthamstow Central,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:a8826bef12cdf18d:platform:2,tfl:lrad:a8826bef12cdf18d,2,False,Victoria,2,Southbound,Brixton,,,,"Both sets of double doors on cars 4 and 5, plus the 2 single doors in between (on the car 4/5 join)",0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:c2ee3ec99ce4bf81:platform:1,tfl:lrad:c2ee3ec99ce4bf81,1,False,TfL Rail,3,Westbound,Reading,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:c2ee3ec99ce4bf81:platform:2,tfl:lrad:c2ee3ec99ce4bf81,2,False,TfL Rail,4,Eastbound,Paddington Station,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ec507f47678dbe0b:platform:1,tfl:lrad:ec507f47678dbe0b,1,False,DLR,1,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:ec507f47678dbe0b:platform:2,tfl:lrad:ec507f47678dbe0b,2,False,DLR,2,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:1,tfl:lrad:1dc2ba1c1b1cb93c,1,False,Circle,1,Westbound,Edgware Road,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:2,tfl:lrad:1dc2ba1c1b1cb93c,2,False,Circle,2,Westbound,Edgware Road,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:3,tfl:lrad:1dc2ba1c1b1cb93c,3,False,Circle,3,Eastbound,Hammersmith,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:4,tfl:lrad:1dc2ba1c1b1cb93c,4,False,District,1,Westbound,Earl's Court,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:5,tfl:lrad:1dc2ba1c1b1cb93c,5,False,District,2,Westbound,Earl's Court,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:1dc2ba1c1b1cb93c:platform:6,tfl:lrad:1dc2ba1c1b1cb93c,6,False,District,3,Eastbound,Upminster,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:87f019244b87f13a:platform:1,tfl:lrad:87f019244b87f13a,1,False,District,3,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:87f019244b87f13a:platform:2,tfl:lrad:87f019244b87f13a,2,False,District,4,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3""]]"
+tfl:lrad:87f019244b87f13a:platform:3,tfl:lrad:87f019244b87f13a,3,False,District,5,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3""]]"
+tfl:lrad:8b175b624d3a975d:platform:1,tfl:lrad:8b175b624d3a975d,1,False,District,1,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:8b175b624d3a975d:platform:2,tfl:lrad:8b175b624d3a975d,2,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:f869981bfe73aaa9:platform:1,tfl:lrad:f869981bfe73aaa9,1,False,London Overground,1,Westbound,Gospel Oak,,Holloway Road,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f869981bfe73aaa9:platform:2,tfl:lrad:f869981bfe73aaa9,2,False,London Overground,2,Eastbound,Barking,,,,,,,,,,,"[""Yes"",""Holloway Road entrance""]",unknown,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:1,tfl:lrad:b890625afaaa7c71,1,False,Metropolitan,1,Eastbound,Liverpool Street,,,,,95.0,128.0,,69.0,83.0,,Yes,yes,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:2,tfl:lrad:b890625afaaa7c71,2,False,Metropolitan,2,Eastbound,Liverpool Street,,,,,95.0,128.0,,69.0,83.0,,Yes,yes,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:3,tfl:lrad:b890625afaaa7c71,3,False,Metropolitan,4,Eastbound,Liverpool Street,,,,,95.0,128.0,,69.0,83.0,,Yes,yes,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:4,tfl:lrad:b890625afaaa7c71,4,False,Piccadilly,1,Eastbound,Oakwood,,,,,127.0,140.0,,84.0,104.0,,Yes,yes,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:5,tfl:lrad:b890625afaaa7c71,5,False,Piccadilly,2,Eastbound,Oakwood,,,,,127.0,140.0,,84.0,104.0,,Yes,yes,,unknown,[]
+tfl:lrad:b890625afaaa7c71:platform:6,tfl:lrad:b890625afaaa7c71,6,False,Piccadilly,4,Eastbound,Oakwood,,,,,127.0,140.0,,84.0,104.0,,Yes,yes,,unknown,[]
+tfl:lrad:c2736c63624e893c:platform:1,tfl:lrad:c2736c63624e893c,1,False,Victoria,1,Northbound,Walthamstow Central,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:c2736c63624e893c:platform:2,tfl:lrad:c2736c63624e893c,2,False,Victoria,2,Southbound,Brixton,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1"",""2""]]"
+tfl:lrad:ea08053041ba1da9:platform:1,tfl:lrad:ea08053041ba1da9,1,False,Circle,1,Westbound,Edgware Road,,,,,,,,,,,Yes,yes,,unknown,"[[""A1B2"",""D4""],[""C3"",""E5"",""D4""]]"
+tfl:lrad:ea08053041ba1da9:platform:2,tfl:lrad:ea08053041ba1da9,2,False,Circle,2,Eastbound,Hammersmith,,,,,,,,,,,Yes,yes,,unknown,"[[""A1B2"",""D4"",""F6""],[""C3"",""E5"",""F6""]]"
+tfl:lrad:ea08053041ba1da9:platform:3,tfl:lrad:ea08053041ba1da9,3,False,District,1,Westbound,Earl's Court,,,,,,,,,,,Yes,yes,,unknown,"[[""A1B2"",""D4""],[""C3"",""E5"",""D4""]]"
+tfl:lrad:ea08053041ba1da9:platform:4,tfl:lrad:ea08053041ba1da9,4,False,District,2,Eastbound,Upminster,,,,,,,,,,,Yes,yes,,unknown,"[[""A1B2"",""D4"",""F6""],[""C3"",""E5"",""F6""]]"
+tfl:lrad:ea08053041ba1da9:platform:5,tfl:lrad:ea08053041ba1da9,5,False,Victoria,3,Northbound,Walthamstow Central,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""A1B2"",""D4"",""F6""],[""C3"",""E5"",""G7""]]"
+tfl:lrad:ea08053041ba1da9:platform:6,tfl:lrad:ea08053041ba1da9,6,False,Victoria,4,Southbound,Brixton,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""A1B2"",""D4"",""F6""],[""C3"",""E5"",""G7""]]"
+tfl:lrad:bdc261a55e929a72:platform:1,tfl:lrad:bdc261a55e929a72,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:bdc261a55e929a72:platform:2,tfl:lrad:bdc261a55e929a72,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:6332252b83bc2551:platform:1,tfl:lrad:6332252b83bc2551,1,False,London Overground,1,Southbound,Liverpool Street,,Station Approach,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:6332252b83bc2551:platform:2,tfl:lrad:6332252b83bc2551,2,False,London Overground,2,Northbound,Chingford,,,,,,,,,,,"[""Yes"",""Selborne Road entrance""]",unknown,,unknown,[]
+tfl:lrad:b3eca62a4f2d04ee:platform:1,tfl:lrad:b3eca62a4f2d04ee,1,False,London Overground,1,Westbound,Gospel Oak,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:b3eca62a4f2d04ee:platform:2,tfl:lrad:b3eca62a4f2d04ee,2,False,London Overground,2,Eastbound,Barking,,,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:cb0b0196ab5e3bb1:platform:1,tfl:lrad:cb0b0196ab5e3bb1,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:cb0b0196ab5e3bb1:platform:2,tfl:lrad:cb0b0196ab5e3bb1,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:f1f285671bfb898b:platform:1,tfl:lrad:f1f285671bfb898b,1,False,Jubilee,5,Westbound,Stanmore,,,"For level access leaving the train at Green Park or Wembley Park, please travel in the correct carriage.",,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:f1f285671bfb898b:platform:2,tfl:lrad:f1f285671bfb898b,2,False,Jubilee,6,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:eaee08fa3cee88b3:platform:1,tfl:lrad:eaee08fa3cee88b3,1,False,London Overground,1,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:eaee08fa3cee88b3:platform:2,tfl:lrad:eaee08fa3cee88b3,2,False,London Overground,2,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:eaee08fa3cee88b3:platform:3,tfl:lrad:eaee08fa3cee88b3,3,False,London Overground,3,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:eaee08fa3cee88b3:platform:4,tfl:lrad:eaee08fa3cee88b3,4,False,London Overground,4,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:9a529ea8e9cb1f4f:platform:1,tfl:lrad:9a529ea8e9cb1f4f,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:775c62f65b825283:platform:1,tfl:lrad:775c62f65b825283,1,False,Bakerloo,1,Northbound,Harrow & Wealdstone,,,,,,,163.0,,,143.0,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:775c62f65b825283:platform:2,tfl:lrad:775c62f65b825283,2,False,Bakerloo,2,Southbound,Oxford Circus,,,,,,,157.0,,,107.0,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:775c62f65b825283:platform:3,tfl:lrad:775c62f65b825283,3,False,London Overground,1,Northbound,Watford Junction,,,,,,,315.0,,,38.0,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:775c62f65b825283:platform:4,tfl:lrad:775c62f65b825283,4,False,London Overground,2,Southbound,Euston,,,,,,,325.0,,,91.0,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:1,tfl:lrad:8639cc59a9ee56d9,1,False,Jubilee,3,Northbound,Stanmore,,,"For level access leaving the train at this platform, please travel in the correct carriage. For level access travelling from Green Park, continue to Kingsbury and ask a member of staff for assistance.",,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:2,tfl:lrad:8639cc59a9ee56d9,2,False,Jubilee,4,Southbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:3,tfl:lrad:8639cc59a9ee56d9,3,False,Metropolitan,1,Northbound,"Amersham, Chesham and Uxbridge",,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:4,tfl:lrad:8639cc59a9ee56d9,4,False,Metropolitan,2,Northbound,"Amersham, Chesham and Uxbridge",,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:5,tfl:lrad:8639cc59a9ee56d9,5,False,Metropolitan,5,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""3""]]"
+tfl:lrad:8639cc59a9ee56d9:platform:6,tfl:lrad:8639cc59a9ee56d9,6,False,Metropolitan,6,Southbound,Liverpool Street,,,,8 car trains: cars 4 (3rd door) and 5 (1st door),0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""4""]]"
+tfl:lrad:95d25c5d93f39b4d:platform:1,tfl:lrad:95d25c5d93f39b4d,1,False,District,2,Eastbound,Edgware Road,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""3""]]"
+tfl:lrad:95d25c5d93f39b4d:platform:2,tfl:lrad:95d25c5d93f39b4d,2,False,London Overground,3,Southbound,Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""3""]]"
+tfl:lrad:95d25c5d93f39b4d:platform:3,tfl:lrad:95d25c5d93f39b4d,3,False,London Overground,4,Northbound,Willesden Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""4""]]"
+tfl:lrad:2ca2c618a4a2a027:platform:1,tfl:lrad:2ca2c618a4a2a027,1,False,London Overground,1,Northbound,Highbury & Islington,,London Road car park,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:2ca2c618a4a2a027:platform:2,tfl:lrad:2ca2c618a4a2a027,2,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:6ebdc5713b0f7003:platform:1,tfl:lrad:6ebdc5713b0f7003,1,False,TfL Rail,3,Westbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:6ebdc5713b0f7003:platform:2,tfl:lrad:6ebdc5713b0f7003,2,False,TfL Rail,4,Eastbound,,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:41b6fe8ac8133278:platform:1,tfl:lrad:41b6fe8ac8133278,1,False,DLR,1,Eastbound,Canary Wharf and Poplar,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""],[""3""]]"
+tfl:lrad:41b6fe8ac8133278:platform:2,tfl:lrad:41b6fe8ac8133278,2,False,DLR,2,Westbound,Shadwell,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""],[""4""]]"
+tfl:lrad:49950fb572610182:platform:1,tfl:lrad:49950fb572610182,1,False,Northern,1,Northbound,Woodside Park,,Nether Street,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,[]
+tfl:lrad:49950fb572610182:platform:2,tfl:lrad:49950fb572610182,2,False,Northern,2,Southbound,Camden Town,,Wentworth Street,"Entrance unlocked during AM peak hours, and locked with a RADAR key at all other times. Call 0845 330 9880 or use Help Point on the southbound platform to ask staff to unlock the gate if necessary.",,,,43.0,,,147.0,Yes,yes,,unknown,[]
+tfl:lrad:925cb35e0d55bd71:platform:1,tfl:lrad:925cb35e0d55bd71,1,False,District,1,Westbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4""]]"
+tfl:lrad:925cb35e0d55bd71:platform:2,tfl:lrad:925cb35e0d55bd71,2,False,District,2,Eastbound,Upminster,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4""]]"
+tfl:lrad:925cb35e0d55bd71:platform:3,tfl:lrad:925cb35e0d55bd71,3,False,DLR,3,Southbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""5""]]"
+tfl:lrad:925cb35e0d55bd71:platform:4,tfl:lrad:925cb35e0d55bd71,4,False,DLR,4,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""5""]]"
+tfl:lrad:925cb35e0d55bd71:platform:5,tfl:lrad:925cb35e0d55bd71,5,False,Hammersmith & City,1,Westbound,Hammersmith,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4""]]"
+tfl:lrad:925cb35e0d55bd71:platform:6,tfl:lrad:925cb35e0d55bd71,6,False,Hammersmith & City,2,Eastbound,Barking,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""4""]]"
+tfl:lrad:925cb35e0d55bd71:platform:7,tfl:lrad:925cb35e0d55bd71,7,False,Jubilee,5,Westbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""]]"
+tfl:lrad:925cb35e0d55bd71:platform:8,tfl:lrad:925cb35e0d55bd71,8,False,Jubilee,6,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1"",""2""]]"
+tfl:lrad:ce3b3c856e0cc023:platform:1,tfl:lrad:ce3b3c856e0cc023,1,False,Overground,1,Eastbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:ce3b3c856e0cc023:platform:2,tfl:lrad:ce3b3c856e0cc023,2,False,Overground,2,Westbound,Willesden Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:ce3b3c856e0cc023:platform:3,tfl:lrad:ce3b3c856e0cc023,3,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ce3b3c856e0cc023:platform:4,tfl:lrad:ce3b3c856e0cc023,4,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ce3b3c856e0cc023:platform:5,tfl:lrad:ce3b3c856e0cc023,5,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:ce3b3c856e0cc023:platform:6,tfl:lrad:ce3b3c856e0cc023,6,False,Thameslink,3,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:f87a17a259355b8b:platform:1,tfl:lrad:f87a17a259355b8b,1,False,Overground,1,Eastbound,Highbury & Islington,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:f87a17a259355b8b:platform:2,tfl:lrad:f87a17a259355b8b,2,False,Overground,2,Westbound,Willesden Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:0ede859f51c6cfad:platform:1,tfl:lrad:0ede859f51c6cfad,1,False,Thameslink,2,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:0ede859f51c6cfad:platform:2,tfl:lrad:0ede859f51c6cfad,2,False,Thameslink,1,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:0ede859f51c6cfad:platform:3,tfl:lrad:0ede859f51c6cfad,3,False,Thameslink,4,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:0ede859f51c6cfad:platform:4,tfl:lrad:0ede859f51c6cfad,4,False,Thameslink,3,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:21c419c9b4a578a1:platform:1,tfl:lrad:21c419c9b4a578a1,1,False,DLR,2,Southbound,Canary Wharf,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:21c419c9b4a578a1:platform:2,tfl:lrad:21c419c9b4a578a1,2,False,DLR,3,Northbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:21c419c9b4a578a1:platform:3,tfl:lrad:21c419c9b4a578a1,3,False,DLR,4,Westbound,Westferry,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:d65a995af7fef7ac:platform:1,tfl:lrad:d65a995af7fef7ac,1,False,Thameslink,1,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:d65a995af7fef7ac:platform:2,tfl:lrad:d65a995af7fef7ac,2,False,Thameslink,2,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:3e499ae4cddadb13:platform:1,tfl:lrad:3e499ae4cddadb13,1,False,Circle,1,Westbound,High Street Kensington,,,,,,,,,,,Yes,yes,,unknown,"[[""2"",""4""]]"
+tfl:lrad:3e499ae4cddadb13:platform:2,tfl:lrad:3e499ae4cddadb13,2,False,Circle,2,Eastbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""2"",""3""]]"
+tfl:lrad:3e499ae4cddadb13:platform:3,tfl:lrad:3e499ae4cddadb13,3,False,District,1,Westbound,Earl's Court,,,,,,,,,,,Yes,yes,,unknown,"[[""2"",""4""]]"
+tfl:lrad:3e499ae4cddadb13:platform:4,tfl:lrad:3e499ae4cddadb13,4,False,District,2,Eastbound,Upminster,,,,,,,,,,,Yes,yes,,unknown,"[[""2"",""3""]]"
+tfl:lrad:3e499ae4cddadb13:platform:5,tfl:lrad:3e499ae4cddadb13,5,False,Jubilee,3,Eastbound,Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""4"",""5""]]"
+tfl:lrad:3e499ae4cddadb13:platform:6,tfl:lrad:3e499ae4cddadb13,6,False,Jubilee,4,Westbound,Stanmore,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2"",""4"",""5""]]"
+tfl:lrad:8dd234c28eb10567:platform:1,tfl:lrad:8dd234c28eb10567,1,False,DLR,1,Southbound,Woolwich Arsenal,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""]]"
+tfl:lrad:8dd234c28eb10567:platform:2,tfl:lrad:8dd234c28eb10567,2,False,DLR,2,Northbound,Bank and Stratford,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""1""]]"
+tfl:lrad:72158691b49f61a0:platform:1,tfl:lrad:72158691b49f61a0,1,False,Overground,1,Southbound,Liverpool Street,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:72158691b49f61a0:platform:2,tfl:lrad:72158691b49f61a0,2,False,Overground,2,Northbound,Silver Street,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:b7395652e738ec54:platform:1,tfl:lrad:b7395652e738ec54,1,False,Bakerloo,1,Southbound,Oxford Circus,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b7395652e738ec54:platform:2,tfl:lrad:b7395652e738ec54,2,False,Bakerloo,3,Northbound,Harrow & Wealdstone,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b7395652e738ec54:platform:3,tfl:lrad:b7395652e738ec54,3,False,London Overground,1,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b7395652e738ec54:platform:4,tfl:lrad:b7395652e738ec54,4,False,London Overground,2,Southbound,Euston,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b7395652e738ec54:platform:5,tfl:lrad:b7395652e738ec54,5,False,London Overground,3,Northbound,Watford Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""1""]]"
+tfl:lrad:b7395652e738ec54:platform:6,tfl:lrad:b7395652e738ec54,6,False,London Overground,4,Northbound,Stratford,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:b7395652e738ec54:platform:7,tfl:lrad:b7395652e738ec54,7,False,London Overground,5,Westbound,Richmond & Clapham Junction,,,,,,,,,,,Yes,yes,,unknown,"[[""2""]]"
+tfl:lrad:36bc7a025a38f261:platform:1,tfl:lrad:36bc7a025a38f261,1,False,District,1,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:36bc7a025a38f261:platform:2,tfl:lrad:36bc7a025a38f261,2,False,District,2,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:36bc7a025a38f261:platform:3,tfl:lrad:36bc7a025a38f261,3,False,District,3,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:36bc7a025a38f261:platform:4,tfl:lrad:36bc7a025a38f261,4,False,District,4,Eastbound,Earl's Court,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""1""]]"
+tfl:lrad:36bc7a025a38f261:platform:5,tfl:lrad:36bc7a025a38f261,5,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,"[[""2""]]"
+tfl:lrad:36bc7a025a38f261:platform:6,tfl:lrad:36bc7a025a38f261,6,False,Thameslink,9,Northbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:36bc7a025a38f261:platform:7,tfl:lrad:36bc7a025a38f261,7,False,Thameslink,9,Southbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a94481b92cdeef94:platform:1,tfl:lrad:a94481b92cdeef94,1,False,Central,1,Westbound,Stratford,,Snakes Lane/Madeira Grove,Entrance unlocked until 21:00. Use intercom to ask staff to unlock gate if necessary.,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a94481b92cdeef94:platform:2,tfl:lrad:a94481b92cdeef94,2,False,Central,2,Westbound,Stratford,,Snakes Lane/Madeira Grove,Entrance unlocked until 21:00. Use intercom to ask staff to unlock gate if necessary.,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:a94481b92cdeef94:platform:3,tfl:lrad:a94481b92cdeef94,3,False,Central,3,Eastbound,Epping,,The Broadway,,,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:30cb657904653fb0:platform:1,tfl:lrad:30cb657904653fb0,1,False,Circle,1,Eastbound,Edgware Road,,,,,,,15.0,,,95.0,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:30cb657904653fb0:platform:2,tfl:lrad:30cb657904653fb0,2,False,Circle,2,Westbound,Hammersmith,,,,,,,15.0,,,95.0,,unknown,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:30cb657904653fb0:platform:3,tfl:lrad:30cb657904653fb0,3,False,Hammersmith & City,1,Eastbound,Edgware Road,,,,,,,15.0,,,95.0,,unknown,,unknown,"[[""1""],[""2""]]"
+tfl:lrad:30cb657904653fb0:platform:4,tfl:lrad:30cb657904653fb0,4,False,Hammersmith & City,2,Westbound,Hammersmith,,,,,,,15.0,,,95.0,,unknown,,unknown,"[[""3""],[""4""]]"
+tfl:lrad:9e804d08b7a20b1c:platform:1,tfl:lrad:9e804d08b7a20b1c,1,False,Tram,,Eastbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:9e804d08b7a20b1c:platform:2,tfl:lrad:9e804d08b7a20b1c,2,False,Tram,,Westbound,,,,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5e9a790da790b2ba:platform:1,tfl:lrad:5e9a790da790b2ba,1,False,Northern,1,Northbound,High Barnet,,Holden Road,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:5e9a790da790b2ba:platform:2,tfl:lrad:5e9a790da790b2ba,2,False,Northern,2,Southbound,Camden Town,,Woodside Park,,,0.0,50.0,,0.0,85.0,,,unknown,Yes,yes,[]
+tfl:lrad:347f4c73e9c56baf:platform:1,tfl:lrad:347f4c73e9c56baf,1,False,Thameslink,1,Westbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:347f4c73e9c56baf:platform:2,tfl:lrad:347f4c73e9c56baf,2,False,Thameslink,2,Eastbound,,,,"Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk",,,,,,,,Yes,yes,,unknown,[]
+tfl:lrad:347f4c73e9c56baf:platform:3,tfl:lrad:347f4c73e9c56baf,3,False,DLR,3,Northbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""],[""3""]]"
+tfl:lrad:347f4c73e9c56baf:platform:4,tfl:lrad:347f4c73e9c56baf,4,False,DLR,4,Northbound,Canning Town,,,,,0.0,50.0,,0.0,85.0,,,unknown,,unknown,"[[""2""],[""3""]]"

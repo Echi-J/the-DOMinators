@@ -31,7 +31,8 @@
       "matched_coordinates": 466,
       "london_coordinates": 432,
       "static_source_http_modified_at": "2025-05-23T11:05:49Z",
-      "url": "tfl/station_access.json"
+      "url": "tfl/station_access.json",
+      "snapshot_retrieved_at": "2026-11-08T22:31:42.433335+00:00"
     },
     {
       "id": "tfl_lift_disruptions",
@@ -56,6 +57,24 @@
       "url": "/api/observations",
       "visibility": "approved_only",
       "preloaded_survey_records": 0
+    },
+    {
+      "id": "toiletmap_london",
+      "records": 1921,
+      "source_snapshot_date": "2026-11-08",
+      "license": "CC-BY-4.0",
+      "url": "toiletmap/london_toilets.geojson",
+      "metadata_url": "toiletmap/metadata.json",
+      "records_are_unique_toilets": false,
+      "cross_source_merges_applied": 0
+    },
+    {
+      "id": "venue_operator_statements",
+      "venues": 2,
+      "claims": 9,
+      "url": "venue_evidence/operator_statements.json",
+      "independent_field_surveys": 0
     }
-  ]
+  ],
+  "updated_at": "2026-11-08T22:41:52.644136+00:00"
 }
