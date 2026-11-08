@@ -1,0 +1,13 @@
+Official registry records imported: 0.
+
+Checked on 4 November 2026:
+https://www.changing-places.org/terms-conditions
+https://www.changing-places.org/find
+
+The current website terms restrict reproduction to personal use and prohibit reproduction on another website or other media. No permission or licensed export allowing this project's public website and GitHub redistribution has been obtained. The registry has not been scraped or republished.
+
+osm_candidates.csv contains an OSM name/tag candidate, not an official registry record. registry_status remains not_verified. Do not mark a venue as a registered Changing Places facility from this file, an ordinary accessible-toilet tag or an adult-changing-table tag.
+
+Next action: request an authorized Greater London export or API access from the registry operator. Confirm the permitted fields, website use, public GitHub redistribution, attribution, update frequency and withdrawal handling. No email has been sent.
+
+import_changing_places.py accepts a permitted export and documented permission metadata. It proposes nearby matches for review; it does not grant permission or automatically verify that two records describe the same facility. No empty or fabricated official-registry CSV is included.

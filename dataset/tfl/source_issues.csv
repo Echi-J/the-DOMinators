@@ -1,0 +1,6 @@
+record_id,field,raw_value,issue
+tfl:lrad:f009025ae89536b1:platform:3,Line,,nested_source_lines_container_flattened
+tfl:lrad:f009025ae89536b1:platform:4,Line,"{""LineName"":""Thameslink"",""AdditionalAccessibilityInformation"":""Not operated by TfL. If you need assistance, please check assisted travel at www.thameslinkrailway.co.uk"",""Platform"":""2"",""Direction"":""Northbound"",""LevelAccessByManualRamp"":""Yes""}",duplicate_source_platform_record_retained
+tfl:lrad:f009025ae89536b1:platform:4,Line,,nested_source_lines_container_flattened
+tfl:lrad:f869981bfe73aaa9:platform:2,LevelAccessByManualRamp,"[""Yes"",""Holloway Road entrance""]",invalid_or_repeated_boolean_preserved_as_unknown
+tfl:lrad:6332252b83bc2551:platform:2,LevelAccessByManualRamp,"[""Yes"",""Selborne Road entrance""]",invalid_or_repeated_boolean_preserved_as_unknown

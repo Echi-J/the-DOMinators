@@ -1,0 +1,346 @@
+lift_record_id,station_id,lift_id_raw,lift_name_raw,from_stop_area,to_stop_area,limited_capacity,limited_capacity_raw,notes_raw,operating_status
+tfl:lrad:e22ea13fac5fbaf7:lift:1,tfl:lrad:e22ea13fac5fbaf7,1,,BOOKH,DLRN,unknown,,,unknown
+tfl:lrad:e22ea13fac5fbaf7:lift:2,tfl:lrad:e22ea13fac5fbaf7,2,,BOOKH,DLRS,unknown,,,unknown
+tfl:lrad:89dffdd9f7dd0e6b:lift:1,tfl:lrad:89dffdd9f7dd0e6b,1,,AC-S,RPL1,unknown,,,unknown
+tfl:lrad:89dffdd9f7dd0e6b:lift:2,tfl:lrad:89dffdd9f7dd0e6b,2,,AC-S,RPL2,unknown,,,unknown
+tfl:lrad:811198dea9a45ff1:lift:1,tfl:lrad:811198dea9a45ff1,1,,BookH,DisWB,unknown,,,unknown
+tfl:lrad:811198dea9a45ff1:lift:2,tfl:lrad:811198dea9a45ff1,2,,BookH,DisEB,unknown,,,unknown
+tfl:lrad:57a1c641f54687e4:lift:1,tfl:lrad:57a1c641f54687e4,1,,CONC,DLR-N,unknown,,,unknown
+tfl:lrad:57a1c641f54687e4:lift:2,tfl:lrad:57a1c641f54687e4,2,,CONC,DLR-S,unknown,,,unknown
+tfl:lrad:e90dc159960f4657:lift:1,tfl:lrad:e90dc159960f4657,1,,FootB,MetNB,unknown,,,unknown
+tfl:lrad:e90dc159960f4657:lift:2,tfl:lrad:e90dc159960f4657,2,,FootB,MetSB,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:1,tfl:lrad:11eca05ac7b6088f,2,,ConNL,BookN,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:2,tfl:lrad:11eca05ac7b6088f,3,,ConNL,BookN,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:3,tfl:lrad:11eca05ac7b6088f,4,,ConNL,BookN,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:4,tfl:lrad:11eca05ac7b6088f,5,,ConNL,BookN,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:5,tfl:lrad:11eca05ac7b6088f,6,,ConNL,DLR,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:6,tfl:lrad:11eca05ac7b6088f,7,,R-KWS,BookN,unknown,,Lift available on request. Press button to alert staff.,unknown
+tfl:lrad:11eca05ac7b6088f:lift:7,tfl:lrad:11eca05ac7b6088f,8,,S-BLO,BMez,unknown,,,unknown
+tfl:lrad:11eca05ac7b6088f:lift:8,tfl:lrad:11eca05ac7b6088f,9,,BMez,Water,unknown,,,unknown
+tfl:lrad:459778aa3f0ad11e:lift:1,tfl:lrad:459778aa3f0ad11e,1,,BookH,RPL-G,unknown,,,unknown
+tfl:lrad:c422808987aeb082:lift:1,tfl:lrad:c422808987aeb082,1,,BookH,Jubil,unknown,,,unknown
+tfl:lrad:04cff30b698ab9ac:lift:1,tfl:lrad:04cff30b698ab9ac,6,,LULB,LUE,unknown,,,unknown
+tfl:lrad:04cff30b698ab9ac:lift:2,tfl:lrad:04cff30b698ab9ac,8,,LULB,LUW,unknown,,,unknown
+tfl:lrad:868f1ddbb7cb7c45:lift:1,tfl:lrad:868f1ddbb7cb7c45,1,,BookH,RPL W,unknown,,,unknown
+tfl:lrad:868f1ddbb7cb7c45:lift:2,tfl:lrad:868f1ddbb7cb7c45,2,,BookH,RPL E,unknown,,,unknown
+tfl:lrad:0a55c7a757203307:lift:1,tfl:lrad:0a55c7a757203307,1,,DITCH,DLR-E,unknown,,,unknown
+tfl:lrad:0a55c7a757203307:lift:2,tfl:lrad:0a55c7a757203307,2,,DITCH,DLR-W,unknown,,,unknown
+tfl:lrad:bb6e60c2450c1e7d:lift:1,tfl:lrad:bb6e60c2450c1e7d,1,,BookH,CJL,unknown,,,unknown
+tfl:lrad:bb6e60c2450c1e7d:lift:2,tfl:lrad:bb6e60c2450c1e7d,2,,CJL,Centr,unknown,,,unknown
+tfl:lrad:bb6e60c2450c1e7d:lift:3,tfl:lrad:bb6e60c2450c1e7d,3,,CJL,JubNB,unknown,,,unknown
+tfl:lrad:bb6e60c2450c1e7d:lift:4,tfl:lrad:bb6e60c2450c1e7d,4,,C-STR,BookH,unknown,,,unknown
+tfl:lrad:989dba577ea6e9a2:lift:1,tfl:lrad:989dba577ea6e9a2,1,,BookH,NorNB,unknown,,,unknown
+tfl:lrad:989dba577ea6e9a2:lift:2,tfl:lrad:989dba577ea6e9a2,2,,BookH,NorNB,unknown,,,unknown
+tfl:lrad:6922fa2eb6da4a3f:lift:1,tfl:lrad:6922fa2eb6da4a3f,1,,BOWRD,DLR-N,unknown,,,unknown
+tfl:lrad:6922fa2eb6da4a3f:lift:2,tfl:lrad:6922fa2eb6da4a3f,2,,BOWRD,DLR-S,unknown,,,unknown
+tfl:lrad:49d824c5c40beb04:lift:1,tfl:lrad:49d824c5c40beb04,1,,BDGE,RPL-2,unknown,,,unknown
+tfl:lrad:db6124beb630caf0:lift:1,tfl:lrad:db6124beb630caf0,1,,BookH,A-BRI,unknown,,,unknown
+tfl:lrad:db6124beb630caf0:lift:2,tfl:lrad:db6124beb630caf0,2,,BookH,Victo,unknown,,,unknown
+tfl:lrad:205c75bb07618dc5:lift:1,tfl:lrad:205c75bb07618dc5,1,,Brdge,RPL-N,unknown,,,unknown
+tfl:lrad:4ccdd73fcd5a0b07:lift:1,tfl:lrad:4ccdd73fcd5a0b07,1,,BookH,DisEB,unknown,,,unknown
+tfl:lrad:4ccdd73fcd5a0b07:lift:2,tfl:lrad:4ccdd73fcd5a0b07,2,,BookH,DisWB,unknown,,,unknown
+tfl:lrad:49fff2191246ce79:lift:1,tfl:lrad:49fff2191246ce79,3,,BookH,Picca,unknown,,,unknown
+tfl:lrad:49fff2191246ce79:lift:2,tfl:lrad:49fff2191246ce79,4,,BookH,Picca,unknown,,,unknown
+tfl:lrad:1581b3b273b14542:lift:1,tfl:lrad:1581b3b273b14542,2,,RLY,RPL,unknown,,,unknown
+tfl:lrad:e811710e11a4c8a8:lift:1,tfl:lrad:e811710e11a4c8a8,1,,Subwy,RPL W,unknown,,,unknown
+tfl:lrad:e811710e11a4c8a8:lift:2,tfl:lrad:e811710e11a4c8a8,2,,Subwy,RPL E,unknown,,,unknown
+tfl:lrad:e3e237fd15595459:lift:1,tfl:lrad:e3e237fd15595459,1,,RLY,Jubil,unknown,,,unknown
+tfl:lrad:e3e237fd15595459:lift:2,tfl:lrad:e3e237fd15595459,2,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:e3e237fd15595459:lift:3,tfl:lrad:e3e237fd15595459,4,,SURRE,RLY,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:1,tfl:lrad:c4e9782ae0afd89d,LU 1,,PLA,BookJ,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:2,tfl:lrad:c4e9782ae0afd89d,LU 2,,BookJ,Jubil,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:3,tfl:lrad:c4e9782ae0afd89d,DLR 1,,NORTH,DLR M,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:4,tfl:lrad:c4e9782ae0afd89d,DLR 2,,NORTH,DLR M,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:5,tfl:lrad:c4e9782ae0afd89d,DLR S2,,SHW,DLR-N,unknown,,,unknown
+tfl:lrad:c4e9782ae0afd89d:lift:6,tfl:lrad:c4e9782ae0afd89d,DLR S3,,SHE,DLR-S,unknown,,,unknown
+tfl:lrad:78fb6442124655cc:lift:1,tfl:lrad:78fb6442124655cc,1,,BOW,BookH,unknown,,,unknown
+tfl:lrad:78fb6442124655cc:lift:2,tfl:lrad:78fb6442124655cc,2,,BookH,Jubil,unknown,,,unknown
+tfl:lrad:78fb6442124655cc:lift:3,tfl:lrad:78fb6442124655cc,3,,ENTRA,BookH,unknown,,,unknown
+tfl:lrad:78fb6442124655cc:lift:4,tfl:lrad:78fb6442124655cc,4,,BookH,DLRL,unknown,,,unknown
+tfl:lrad:9b9cb45b7b7eb624:lift:1,tfl:lrad:9b9cb45b7b7eb624,2,,BookH,DisWB,unknown,,,unknown
+tfl:lrad:67c08a87e7adb2fd:lift:1,tfl:lrad:67c08a87e7adb2fd,1,,Entr,RPL 1,unknown,,,unknown
+tfl:lrad:67c08a87e7adb2fd:lift:2,tfl:lrad:67c08a87e7adb2fd,2,,Entr,RPL 2,unknown,,,unknown
+tfl:lrad:67c08a87e7adb2fd:lift:3,tfl:lrad:67c08a87e7adb2fd,3,,Entr,RPL 4,unknown,,,unknown
+tfl:lrad:3d11fd4d048bfe32:lift:1,tfl:lrad:3d11fd4d048bfe32,1,,RLY,RPL1,unknown,,,unknown
+tfl:lrad:3d11fd4d048bfe32:lift:2,tfl:lrad:3d11fd4d048bfe32,2,,RLY,RPL2,unknown,,,unknown
+tfl:lrad:7d857ca9880734ea:lift:1,tfl:lrad:7d857ca9880734ea,1,,RLY,RPL-K,unknown,,,unknown
+tfl:lrad:7d857ca9880734ea:lift:2,tfl:lrad:7d857ca9880734ea,2,,Subwy,RPL-K,unknown,,,unknown
+tfl:lrad:41499e397261aea3:lift:1,tfl:lrad:41499e397261aea3,1,,BookH,C-CAR,unknown,,,unknown
+tfl:lrad:24d8977b16aecaa0:lift:1,tfl:lrad:24d8977b16aecaa0,1,,CROSA,DLR_S,yes,Yes,,unknown
+tfl:lrad:24d8977b16aecaa0:lift:2,tfl:lrad:24d8977b16aecaa0,2,,CROSA,DLR-N,yes,Yes,,unknown
+tfl:lrad:dd16153eb820db79:lift:1,tfl:lrad:dd16153eb820db79,1,,RLY,RPLTN,unknown,,,unknown
+tfl:lrad:dd16153eb820db79:lift:2,tfl:lrad:dd16153eb820db79,2,,RLY,RPL T,unknown,,,unknown
+tfl:lrad:dd16153eb820db79:lift:3,tfl:lrad:dd16153eb820db79,3,,RLY,RPLFN,unknown,,,unknown
+tfl:lrad:2d454dd37854b98d:lift:1,tfl:lrad:2d454dd37854b98d,1,,Walkw,DLR,unknown,,,unknown
+tfl:lrad:2d454dd37854b98d:lift:2,tfl:lrad:2d454dd37854b98d,2,,Walkw,VIC,unknown,,,unknown
+tfl:lrad:16350fdfa1e43531:lift:1,tfl:lrad:16350fdfa1e43531,1,,CREEK,DLR,unknown,,,unknown
+tfl:lrad:e95096d1f97e7aeb:lift:1,tfl:lrad:e95096d1f97e7aeb,1,,RLY,RPL,unknown,,,unknown
+tfl:lrad:a4cbcd404417cec7:lift:1,tfl:lrad:a4cbcd404417cec7,1,,Footb,CenEB,unknown,,,unknown
+tfl:lrad:a4cbcd404417cec7:lift:2,tfl:lrad:a4cbcd404417cec7,2,,Footb,CenWB,unknown,,,unknown
+tfl:lrad:3c4ccdb551f8396f:lift:1,tfl:lrad:3c4ccdb551f8396f,1,,RLY,RPL1,unknown,,,unknown
+tfl:lrad:3c4ccdb551f8396f:lift:2,tfl:lrad:3c4ccdb551f8396f,2,,RLY,RPL23,unknown,,,unknown
+tfl:lrad:79376a74f95dcbbc:lift:1,tfl:lrad:79376a74f95dcbbc,1,,C,DLR-S,unknown,,,unknown
+tfl:lrad:79376a74f95dcbbc:lift:2,tfl:lrad:79376a74f95dcbbc,2,,C,DLR-N,unknown,,,unknown
+tfl:lrad:2d28984d658aaab9:lift:1,tfl:lrad:2d28984d658aaab9,1,,CONC,DLR-N,yes,Yes,,unknown
+tfl:lrad:2d28984d658aaab9:lift:2,tfl:lrad:2d28984d658aaab9,2,,CONC,DLR-S,yes,Yes,,unknown
+tfl:lrad:d7d1b7afd1427603:lift:1,tfl:lrad:d7d1b7afd1427603,1,,Bridge,RPL W,unknown,,,unknown
+tfl:lrad:d7d1b7afd1427603:lift:2,tfl:lrad:d7d1b7afd1427603,2,,Bridge,RPL W,unknown,,,unknown
+tfl:lrad:d7d1b7afd1427603:lift:3,tfl:lrad:d7d1b7afd1427603,3,,Bridge,LL,unknown,,,unknown
+tfl:lrad:b02165638c3dba98:lift:1,tfl:lrad:b02165638c3dba98,3,,BookE,PicLi,unknown,,,unknown
+tfl:lrad:b02165638c3dba98:lift:2,tfl:lrad:b02165638c3dba98,4,,BookE,PicLi,unknown,,,unknown
+tfl:lrad:b02165638c3dba98:lift:3,tfl:lrad:b02165638c3dba98,5,,GANT,DisEB,unknown,,,unknown
+tfl:lrad:b02165638c3dba98:lift:4,tfl:lrad:b02165638c3dba98,6,,GANT,DisWB,unknown,,,unknown
+tfl:lrad:c3ee230868104abe:lift:1,tfl:lrad:c3ee230868104abe,1,,BookH,DisWB,unknown,,,unknown
+tfl:lrad:c3ee230868104abe:lift:2,tfl:lrad:c3ee230868104abe,2,,BookH,DisEB,unknown,,,unknown
+tfl:lrad:a152f0203eaa7f7d:lift:1,tfl:lrad:a152f0203eaa7f7d,1,,BookH,DLR-E,unknown,,,unknown
+tfl:lrad:a152f0203eaa7f7d:lift:2,tfl:lrad:a152f0203eaa7f7d,2,,BookH,DLR-W,unknown,,,unknown
+tfl:lrad:a152f0203eaa7f7d:lift:3,tfl:lrad:a152f0203eaa7f7d,3,,ASPEN,BookH,unknown,,,unknown
+tfl:lrad:9b45bf78ef4a13cc:lift:1,tfl:lrad:9b45bf78ef4a13cc,1,,BookH,Nort1,unknown,,,unknown
+tfl:lrad:9b45bf78ef4a13cc:lift:2,tfl:lrad:9b45bf78ef4a13cc,2,,BookH,Nor23,unknown,,,unknown
+tfl:lrad:e4539b9500c6faa0:lift:1,tfl:lrad:e4539b9500c6faa0,1,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:e4539b9500c6faa0:lift:2,tfl:lrad:e4539b9500c6faa0,2,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:5fd3e9790861dd21:lift:1,tfl:lrad:5fd3e9790861dd21,5,,BookS,NorSB,unknown,,,unknown
+tfl:lrad:5fd3e9790861dd21:lift:2,tfl:lrad:5fd3e9790861dd21,6,,BookS,NorSB,unknown,,,unknown
+tfl:lrad:d2388a6de55f5104:lift:1,tfl:lrad:d2388a6de55f5104,1,,BookH,Gower,unknown,,,unknown
+tfl:lrad:d2388a6de55f5104:lift:2,tfl:lrad:d2388a6de55f5104,2,,BookH,HamWB,unknown,,,unknown
+tfl:lrad:c885d5c21541996c:lift:1,tfl:lrad:c885d5c21541996c,1,,NBK,HamEB,unknown,,,unknown
+tfl:lrad:c885d5c21541996c:lift:2,tfl:lrad:c885d5c21541996c,2,,BookH,HamWB,unknown,,,unknown
+tfl:lrad:6003d884dcd4e9eb:lift:1,tfl:lrad:6003d884dcd4e9eb,1,,BookH,NorSB,unknown,,,unknown
+tfl:lrad:6003d884dcd4e9eb:lift:2,tfl:lrad:6003d884dcd4e9eb,2,,BookH,NorNB,unknown,,,unknown
+tfl:lrad:b8dc9668ceba901f:lift:1,tfl:lrad:b8dc9668ceba901f,1,,Cor N,VicNB,unknown,,,unknown
+tfl:lrad:b8dc9668ceba901f:lift:2,tfl:lrad:b8dc9668ceba901f,3,,Cor N,VicSB,unknown,,,unknown
+tfl:lrad:9ab3f8e7b45d83be:lift:1,tfl:lrad:9ab3f8e7b45d83be,1,,RLY,RPL-W,unknown,,,unknown
+tfl:lrad:9ab3f8e7b45d83be:lift:2,tfl:lrad:9ab3f8e7b45d83be,2,,RLY,RPL-E,unknown,,,unknown
+tfl:lrad:77f83fb3203cd8b2:lift:1,tfl:lrad:77f83fb3203cd8b2,1,,BRBG,RPL-N,unknown,,,unknown
+tfl:lrad:77f83fb3203cd8b2:lift:2,tfl:lrad:77f83fb3203cd8b2,2,,BRBG,RPL-S,unknown,,,unknown
+tfl:lrad:44eefaa2f6e41b9a:lift:1,tfl:lrad:44eefaa2f6e41b9a,1,,BookH,DisEB,unknown,,,unknown
+tfl:lrad:44eefaa2f6e41b9a:lift:2,tfl:lrad:44eefaa2f6e41b9a,2,,BookH,DisWB,unknown,,,unknown
+tfl:lrad:24b20c1862cdba37:lift:1,tfl:lrad:24b20c1862cdba37,1,,CONC,DLR-E,unknown,,,unknown
+tfl:lrad:24b20c1862cdba37:lift:2,tfl:lrad:24b20c1862cdba37,2,,CONC,DLR-W,unknown,,,unknown
+tfl:lrad:bfea50d1a536e291:lift:1,tfl:lrad:bfea50d1a536e291,1,,BookH,PLT1,unknown,,,unknown
+tfl:lrad:bfea50d1a536e291:lift:2,tfl:lrad:bfea50d1a536e291,2,,BookH,PLT2,unknown,,,unknown
+tfl:lrad:1e2d749ae1846f49:lift:1,tfl:lrad:1e2d749ae1846f49,1,,Subwy,RPL-H,unknown,,,unknown
+tfl:lrad:1e2d749ae1846f49:lift:2,tfl:lrad:1e2d749ae1846f49,2,,Subwy,RPL-S,unknown,,,unknown
+tfl:lrad:d5bc2b2e0a75e293:lift:1,tfl:lrad:d5bc2b2e0a75e293,1,,BookH,PLATS,unknown,,,unknown
+tfl:lrad:0349e2aaac432c88:lift:1,tfl:lrad:0349e2aaac432c88,1,,LoCon,Picca,unknown,,,unknown
+tfl:lrad:0349e2aaac432c88:lift:2,tfl:lrad:0349e2aaac432c88,2,,LoCon,JUB,unknown,,,unknown
+tfl:lrad:0349e2aaac432c88:lift:3,tfl:lrad:0349e2aaac432c88,4,,D-P-S,BookH,unknown,,,unknown
+tfl:lrad:0349e2aaac432c88:lift:4,tfl:lrad:0349e2aaac432c88,5,,BookH,VIC,unknown,,,unknown
+tfl:lrad:0349e2aaac432c88:lift:5,tfl:lrad:0349e2aaac432c88,6,,BookH,VIC,unknown,,,unknown
+tfl:lrad:8a64bb944fc81abf:lift:1,tfl:lrad:8a64bb944fc81abf,1,,WALLW,DLR E,unknown,,,unknown
+tfl:lrad:8a64bb944fc81abf:lift:2,tfl:lrad:8a64bb944fc81abf,2,,WALLW,DLRW,unknown,,,unknown
+tfl:lrad:c8a34f568cb44a71:lift:1,tfl:lrad:c8a34f568cb44a71,1,,RLY,RPL W,unknown,,,unknown
+tfl:lrad:c8a34f568cb44a71:lift:2,tfl:lrad:c8a34f568cb44a71,2,,RLY,RPL E,unknown,,,unknown
+tfl:lrad:424fbd8842cf598c:lift:1,tfl:lrad:424fbd8842cf598c,1,,EntrW,RPL W,unknown,,,unknown
+tfl:lrad:424fbd8842cf598c:lift:2,tfl:lrad:424fbd8842cf598c,2,,EntrE,RPL E,unknown,,,unknown
+tfl:lrad:2f69d57377c991f3:lift:1,tfl:lrad:2f69d57377c991f3,1,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:2f69d57377c991f3:lift:2,tfl:lrad:2f69d57377c991f3,2,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:4bc3f6d766ac2669:lift:1,tfl:lrad:4bc3f6d766ac2669,1,,LAND,Cent1,unknown,,,unknown
+tfl:lrad:4bc3f6d766ac2669:lift:2,tfl:lrad:4bc3f6d766ac2669,2,,LAND,Cen23,unknown,,,unknown
+tfl:lrad:4bc3f6d766ac2669:lift:3,tfl:lrad:4bc3f6d766ac2669,3,,BookH,LAND,unknown,,,unknown
+tfl:lrad:cfd6dbca2f2bbad9:lift:1,tfl:lrad:cfd6dbca2f2bbad9,1,,WBHal,DisEB,unknown,,,unknown
+tfl:lrad:cfd6dbca2f2bbad9:lift:2,tfl:lrad:cfd6dbca2f2bbad9,2,,WBHal,DisWB,unknown,,,unknown
+tfl:lrad:88bce1afc523ef19:lift:1,tfl:lrad:88bce1afc523ef19,1,,Entr,RPL W,unknown,,,unknown
+tfl:lrad:88bce1afc523ef19:lift:2,tfl:lrad:88bce1afc523ef19,2,,Entr,RPL E,unknown,,,unknown
+tfl:lrad:42610808fac319f8:lift:1,tfl:lrad:42610808fac319f8,1,,RLY,RPL-2,unknown,,,unknown
+tfl:lrad:42610808fac319f8:lift:2,tfl:lrad:42610808fac319f8,2,,RLY,RPL-4,unknown,,,unknown
+tfl:lrad:dd86502a79776d56:lift:1,tfl:lrad:dd86502a79776d56,1,,UNB,FOOTB,unknown,,,unknown
+tfl:lrad:dd86502a79776d56:lift:2,tfl:lrad:dd86502a79776d56,2,,FOOTB,USB,unknown,,,unknown
+tfl:lrad:dd86502a79776d56:lift:3,tfl:lrad:dd86502a79776d56,3,,FOOTB,RPLAN,unknown,,,unknown
+tfl:lrad:dd86502a79776d56:lift:4,tfl:lrad:dd86502a79776d56,4,,FOOTB,RPLAS,unknown,,,unknown
+tfl:lrad:77f8c07d5e29db7e:lift:1,tfl:lrad:77f8c07d5e29db7e,1,,BookH,Picca,unknown,,,unknown
+tfl:lrad:77f8c07d5e29db7e:lift:2,tfl:lrad:77f8c07d5e29db7e,2,,Entr,RPL,unknown,,,unknown
+tfl:lrad:67dfff1e60a96160:lift:1,tfl:lrad:67dfff1e60a96160,1,,BookH,A-TER,unknown,,,unknown
+tfl:lrad:67dfff1e60a96160:lift:2,tfl:lrad:67dfff1e60a96160,2,,RPL,A-TER,unknown,,,unknown
+tfl:lrad:a0095f9fff1b4915:lift:1,tfl:lrad:a0095f9fff1b4915,1,,A-T5,PICC,unknown,,,unknown
+tfl:lrad:a0095f9fff1b4915:lift:2,tfl:lrad:a0095f9fff1b4915,2,,A-T5,RPL,unknown,,,unknown
+tfl:lrad:2f6ce6558a641a72:lift:1,tfl:lrad:2f6ce6558a641a72,1,,BookH,North,unknown,,,unknown
+tfl:lrad:f7eeebc6c95334d1:lift:1,tfl:lrad:f7eeebc6c95334d1,1,,CONC,DLR-S,unknown,,,unknown
+tfl:lrad:f7eeebc6c95334d1:lift:2,tfl:lrad:f7eeebc6c95334d1,2,,CONC,DLR-N,unknown,,,unknown
+tfl:lrad:efe14049c43362bd:lift:1,tfl:lrad:efe14049c43362bd,1,,RLY,RPLHT,unknown,,,unknown
+tfl:lrad:efe14049c43362bd:lift:2,tfl:lrad:efe14049c43362bd,2,,RLY,RPLHW,unknown,,,unknown
+tfl:lrad:efe14049c43362bd:lift:3,tfl:lrad:efe14049c43362bd,3,,RLY,RPLHE,unknown,,,unknown
+tfl:lrad:2976c3d76ddf76a7:lift:1,tfl:lrad:2976c3d76ddf76a7,1,,BookH,MetEB,unknown,,,unknown
+tfl:lrad:2976c3d76ddf76a7:lift:2,tfl:lrad:2976c3d76ddf76a7,2,,BookH,MetWB,unknown,,,unknown
+tfl:lrad:03c79d80dfbc205a:lift:1,tfl:lrad:03c79d80dfbc205a,1,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:03c79d80dfbc205a:lift:2,tfl:lrad:03c79d80dfbc205a,2,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:519c9e29cb4700c7:lift:1,tfl:lrad:519c9e29cb4700c7,1,,BookH,PicEB,unknown,,,unknown
+tfl:lrad:519c9e29cb4700c7:lift:2,tfl:lrad:519c9e29cb4700c7,2,,BookH,PicWB,unknown,,,unknown
+tfl:lrad:89ba013254581b55:lift:1,tfl:lrad:89ba013254581b55,1,,BookH,Picca,yes,Yes,Entrance/exit via stairlift for manual wheelchair users only. The maximum operating weight of the stairlift is 225kg.,unknown
+tfl:lrad:8721f6a7bbab6be0:lift:1,tfl:lrad:8721f6a7bbab6be0,1,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:8721f6a7bbab6be0:lift:2,tfl:lrad:8721f6a7bbab6be0,2,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:17501aecac10cb52:lift:1,tfl:lrad:17501aecac10cb52,1,,BookH,MetWB,unknown,,,unknown
+tfl:lrad:17501aecac10cb52:lift:2,tfl:lrad:17501aecac10cb52,2,,BookH,MetEB,unknown,,,unknown
+tfl:lrad:825e89b8f0af8ce2:lift:1,tfl:lrad:825e89b8f0af8ce2,1,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:825e89b8f0af8ce2:lift:2,tfl:lrad:825e89b8f0af8ce2,2,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:f79f47e622ca8eab:lift:1,tfl:lrad:f79f47e622ca8eab,1,,MANCH,DLR,unknown,,,unknown
+tfl:lrad:af0a4d04d7afead7:lift:1,tfl:lrad:af0a4d04d7afead7,1,,Bridg,RPL E,unknown,,,unknown
+tfl:lrad:b0b5adf94c39ecf5:lift:1,tfl:lrad:b0b5adf94c39ecf5,1,,BookH,Jubil,unknown,,,unknown
+tfl:lrad:cdf6d857ccb4a086:lift:1,tfl:lrad:cdf6d857ccb4a086,1,,BridE,DLR,unknown,,,unknown
+tfl:lrad:cdf6d857ccb4a086:lift:2,tfl:lrad:cdf6d857ccb4a086,2,,PIER,BridE,unknown,,,unknown
+tfl:lrad:2416d897d76027a5:lift:1,tfl:lrad:2416d897d76027a5,1,,BookH,JubNB,unknown,,,unknown
+tfl:lrad:2416d897d76027a5:lift:2,tfl:lrad:2416d897d76027a5,2,,BookH,JubSB,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:1,tfl:lrad:6fe97e856bcb0239,1,F,WTH,Circl,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:2,tfl:lrad:6fe97e856bcb0239,2,E,I-E/C,WTH,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:3,tfl:lrad:6fe97e856bcb0239,3,D,I-E/C,TTH,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:4,tfl:lrad:6fe97e856bcb0239,5,G,NPN,NorNB,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:5,tfl:lrad:6fe97e856bcb0239,6,H,NTH,NPN,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:6,tfl:lrad:6fe97e856bcb0239,7,J,NPE,PicWB,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:7,tfl:lrad:6fe97e856bcb0239,8,K,NPE,VicNB,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:8,tfl:lrad:6fe97e856bcb0239,10,A,KC911,NTH,unknown,,,unknown
+tfl:lrad:6fe97e856bcb0239:lift:9,tfl:lrad:6fe97e856bcb0239,11,C,H-STP,NTH,unknown,,,unknown
+tfl:lrad:936569cf6cd47768:lift:1,tfl:lrad:936569cf6cd47768,1,,BRDGE,DLR-N,unknown,,,unknown
+tfl:lrad:936569cf6cd47768:lift:2,tfl:lrad:936569cf6cd47768,2,,BRDGE,DLR-S,unknown,,,unknown
+tfl:lrad:ef71e4e90064e001:lift:1,tfl:lrad:ef71e4e90064e001,1,,RPL,RLY,unknown,,,unknown
+tfl:lrad:ef71e4e90064e001:lift:2,tfl:lrad:ef71e4e90064e001,2,,RPL,RLY,unknown,,,unknown
+tfl:lrad:ef71e4e90064e001:lift:3,tfl:lrad:ef71e4e90064e001,3,,RPL,RLY,unknown,,,unknown
+tfl:lrad:efc8957f2a786c82:lift:1,tfl:lrad:efc8957f2a786c82,1,,BRANC,DLRE,yes,Yes,,unknown
+tfl:lrad:efc8957f2a786c82:lift:2,tfl:lrad:efc8957f2a786c82,2,,BRANC,DLRW,yes,Yes,,unknown
+tfl:lrad:efc8957f2a786c82:lift:3,tfl:lrad:efc8957f2a786c82,3,,BUTCH,DLRE,yes,Yes,,unknown
+tfl:lrad:efc8957f2a786c82:lift:4,tfl:lrad:efc8957f2a786c82,4,,BUTCH,DLRW,yes,Yes,,unknown
+tfl:lrad:78657b03d3f7bbb5:lift:1,tfl:lrad:78657b03d3f7bbb5,1,,BookH,RPL,unknown,,,unknown
+tfl:lrad:f79b126437ef5295:lift:1,tfl:lrad:f79b126437ef5295,2,,BookJ,Jubil,unknown,,,unknown
+tfl:lrad:f79b126437ef5295:lift:2,tfl:lrad:f79b126437ef5295,3,,BOROU,BookN,unknown,,,unknown
+tfl:lrad:f79b126437ef5295:lift:3,tfl:lrad:f79b126437ef5295,4,,BookN,North,unknown,,,unknown
+tfl:lrad:ad4faa5fb30e3592:lift:1,tfl:lrad:ad4faa5fb30e3592,1,,DRERD,DLR,unknown,,,unknown
+tfl:lrad:ad4faa5fb30e3592:lift:2,tfl:lrad:ad4faa5fb30e3592,2,,DRERD,DLR,unknown,,,unknown
+tfl:lrad:585ec210aee2d588:lift:1,tfl:lrad:585ec210aee2d588,1,,RLY,RPL-E,unknown,,,unknown
+tfl:lrad:585ec210aee2d588:lift:2,tfl:lrad:585ec210aee2d588,2,,RLY,RPL-W,unknown,,,unknown
+tfl:lrad:6780ee616819fc12:lift:1,tfl:lrad:6780ee616819fc12,1,,RLY,RPL-E,unknown,,,unknown
+tfl:lrad:6780ee616819fc12:lift:2,tfl:lrad:6780ee616819fc12,2,,RLY,RPL-W,unknown,,,unknown
+tfl:lrad:6780ee616819fc12:lift:3,tfl:lrad:6780ee616819fc12,3,,RLY,RPL-4,unknown,,,unknown
+tfl:lrad:92bac4b7a08d7f47:lift:1,tfl:lrad:92bac4b7a08d7f47,1,,BookH,North,unknown,,,unknown
+tfl:lrad:fc3b0985bc9601f8:lift:1,tfl:lrad:fc3b0985bc9601f8,1,,BookH,Nort1,unknown,,,unknown
+tfl:lrad:fc3b0985bc9601f8:lift:2,tfl:lrad:fc3b0985bc9601f8,2,,BookH,Nort2,unknown,,,unknown
+tfl:lrad:a0f55564468bcc63:lift:1,tfl:lrad:a0f55564468bcc63,1,,RLY,RPL-1,unknown,,,unknown
+tfl:lrad:a0f55564468bcc63:lift:2,tfl:lrad:a0f55564468bcc63,3,,RLY,RPL-5,unknown,,,unknown
+tfl:lrad:f61e05b0c3b5ceb7:lift:1,tfl:lrad:f61e05b0c3b5ceb7,1,,BookH,CenEB,unknown,,,unknown
+tfl:lrad:f61e05b0c3b5ceb7:lift:2,tfl:lrad:f61e05b0c3b5ceb7,2,,BookH,CenWB,unknown,,,unknown
+tfl:lrad:1d45924d331c089b:lift:1,tfl:lrad:1d45924d331c089b,1,,BookH,JubEB,unknown,,,unknown
+tfl:lrad:1d45924d331c089b:lift:2,tfl:lrad:1d45924d331c089b,2,,BookH,JubWT,unknown,,,unknown
+tfl:lrad:1d45924d331c089b:lift:3,tfl:lrad:1d45924d331c089b,4,,OEntr,BookH,unknown,,,unknown
+tfl:lrad:732413ec471381c9:lift:1,tfl:lrad:732413ec471381c9,1,,BookH,Picca,unknown,,,unknown
+tfl:lrad:1e7bec7ad9302c10:lift:1,tfl:lrad:1e7bec7ad9302c10,2,,Lawn,D - L,unknown,,,unknown
+tfl:lrad:1e7bec7ad9302c10:lift:2,tfl:lrad:1e7bec7ad9302c10,3,,BookH,PLAT,unknown,,,unknown
+tfl:lrad:a9a4ce4e3525437b:lift:1,tfl:lrad:a9a4ce4e3525437b,1,,Bridg,MetNB,unknown,,,unknown
+tfl:lrad:a9a4ce4e3525437b:lift:2,tfl:lrad:a9a4ce4e3525437b,2,,Bridg,MetSB,unknown,,,unknown
+tfl:lrad:20bf54aeddc50918:lift:1,tfl:lrad:20bf54aeddc50918,1,,NWR,DLR-W,unknown,,,unknown
+tfl:lrad:20bf54aeddc50918:lift:2,tfl:lrad:20bf54aeddc50918,2,,NWR,DLR-E,unknown,,,unknown
+tfl:lrad:1167625c6ba5449d:lift:1,tfl:lrad:1167625c6ba5449d,1,,CONC,BRIDG,yes,Yes,,unknown
+tfl:lrad:1167625c6ba5449d:lift:2,tfl:lrad:1167625c6ba5449d,2,,CONC,BRIDG,yes,Yes,,unknown
+tfl:lrad:38b53f7836e227b2:lift:1,tfl:lrad:38b53f7836e227b2,1,,Bridg,DLR,unknown,,,unknown
+tfl:lrad:38b53f7836e227b2:lift:2,tfl:lrad:38b53f7836e227b2,2,,Bridg,CONNA,unknown,,,unknown
+tfl:lrad:14287e4e012067c3:lift:1,tfl:lrad:14287e4e012067c3,1,,BOOK,DLR-E,unknown,,,unknown
+tfl:lrad:14287e4e012067c3:lift:2,tfl:lrad:14287e4e012067c3,2,,BOOK,DLR-W,unknown,,,unknown
+tfl:lrad:5149049f928467e7:lift:1,tfl:lrad:5149049f928467e7,1,,Entr,RPL,unknown,,,unknown
+tfl:lrad:528829645f0ff9f8:lift:1,tfl:lrad:528829645f0ff9f8,1,,RLY,RPL W,unknown,,,unknown
+tfl:lrad:528829645f0ff9f8:lift:2,tfl:lrad:528829645f0ff9f8,2,,RLY,RPL E,unknown,,,unknown
+tfl:lrad:90b97db2afec93be:lift:1,tfl:lrad:90b97db2afec93be,1,,CONC,DLR-E,unknown,,,unknown
+tfl:lrad:90b97db2afec93be:lift:2,tfl:lrad:90b97db2afec93be,2,,CONC,DLR-W,unknown,,,unknown
+tfl:lrad:576acb1fb5fb26f6:lift:1,tfl:lrad:576acb1fb5fb26f6,1,,BookH,DLR-E,unknown,,,unknown
+tfl:lrad:576acb1fb5fb26f6:lift:2,tfl:lrad:576acb1fb5fb26f6,2,,BookH,SEA,unknown,,,unknown
+tfl:lrad:576acb1fb5fb26f6:lift:3,tfl:lrad:576acb1fb5fb26f6,3,,BookH,VICTO,unknown,,,unknown
+tfl:lrad:5d4c9a00cec68179:lift:1,tfl:lrad:5d4c9a00cec68179,1,,RLY,RPL-E,unknown,,,unknown
+tfl:lrad:5d4c9a00cec68179:lift:2,tfl:lrad:5d4c9a00cec68179,2,,RLY,RPL-W,unknown,,,unknown
+tfl:lrad:e446b2bcf0c66393:lift:1,tfl:lrad:e446b2bcf0c66393,1,,CORNW,DLR,unknown,,,unknown
+tfl:lrad:7306f92f4a8b33ea:lift:1,tfl:lrad:7306f92f4a8b33ea,1,,RLY,RPL-5,unknown,,,unknown
+tfl:lrad:9e069865bbd2e917:lift:1,tfl:lrad:9e069865bbd2e917,1,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:9e069865bbd2e917:lift:2,tfl:lrad:9e069865bbd2e917,2,,Bridg,RPL-S,unknown,,,unknown
+tfl:lrad:3b02e0966e7f4563:lift:1,tfl:lrad:3b02e0966e7f4563,1,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:3b02e0966e7f4563:lift:2,tfl:lrad:3b02e0966e7f4563,2,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:df39254c35c29952:lift:1,tfl:lrad:df39254c35c29952,1,,BookH,Distr,unknown,,,unknown
+tfl:lrad:0070c76524e3edf8:lift:1,tfl:lrad:0070c76524e3edf8,1,,LSC,DLR-S,yes,Yes,,unknown
+tfl:lrad:0070c76524e3edf8:lift:2,tfl:lrad:0070c76524e3edf8,2,,LSC,DLR-N,yes,Yes,,unknown
+tfl:lrad:33f344c70c284f98:lift:1,tfl:lrad:33f344c70c284f98,1,,SUB,RPL-W,unknown,,,unknown
+tfl:lrad:33f344c70c284f98:lift:2,tfl:lrad:33f344c70c284f98,2,,SUB,RPL-E,unknown,,,unknown
+tfl:lrad:90bd860fead7dcd3:lift:1,tfl:lrad:90bd860fead7dcd3,1,,BookH,JubWB,unknown,,,unknown
+tfl:lrad:90bd860fead7dcd3:lift:2,tfl:lrad:90bd860fead7dcd3,2,,A-CUT,BookH,unknown,,,unknown
+tfl:lrad:327f68ac346efdfa:lift:1,tfl:lrad:327f68ac346efdfa,1,,DLR,BOOKH,unknown,,,unknown
+tfl:lrad:327f68ac346efdfa:lift:2,tfl:lrad:327f68ac346efdfa,2,,STEPH,BOOKH,unknown,,,unknown
+tfl:lrad:327f68ac346efdfa:lift:3,tfl:lrad:327f68ac346efdfa,3,,BOOKH,STARL,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:1,tfl:lrad:3423fd9827faae3c,2,,Sub-M,CenEB,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:2,tfl:lrad:3423fd9827faae3c,3,,Sub-M,CenWB,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:3,tfl:lrad:3423fd9827faae3c,4,,MEZ,TH-E,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:4,tfl:lrad:3423fd9827faae3c,6,,MEZ,TH-E,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:5,tfl:lrad:3423fd9827faae3c,5,,MEZ,TH-W,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:6,tfl:lrad:3423fd9827faae3c,7,,MEZ,TH-W,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:7,tfl:lrad:3423fd9827faae3c,8,,Sub-W,Jubil,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:8,tfl:lrad:3423fd9827faae3c,9,,Sub-M,RPL-O,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:9,tfl:lrad:3423fd9827faae3c,10,,Sub-W,CenWB,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:10,tfl:lrad:3423fd9827faae3c,12,,Sub-W,RPL-O,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:11,tfl:lrad:3423fd9827faae3c,16,,WESTF,Sub-W,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:12,tfl:lrad:3423fd9827faae3c,17,,WESTF,Sub-M,unknown,,,unknown
+tfl:lrad:3423fd9827faae3c:lift:13,tfl:lrad:3423fd9827faae3c,18,,Sub-W,CenWB,unknown,,,unknown
+tfl:lrad:e83657ba9a5caffc:lift:1,tfl:lrad:e83657ba9a5caffc,2,,BOOKH,DLRN,unknown,,,unknown
+tfl:lrad:a81f30562b7ba340:lift:1,tfl:lrad:a81f30562b7ba340,1,,BH-E,DLR,unknown,,,unknown
+tfl:lrad:a81f30562b7ba340:lift:2,tfl:lrad:a81f30562b7ba340,2,,BH-E,DLR,unknown,,,unknown
+tfl:lrad:a81f30562b7ba340:lift:3,tfl:lrad:a81f30562b7ba340,3,,BH-E,DLR,unknown,,,unknown
+tfl:lrad:f058693c23cffec5:lift:1,tfl:lrad:f058693c23cffec5,1,,Entr,RLY,unknown,,,unknown
+tfl:lrad:f058693c23cffec5:lift:2,tfl:lrad:f058693c23cffec5,2,,Entr,RLY,unknown,,,unknown
+tfl:lrad:f058693c23cffec5:lift:3,tfl:lrad:f058693c23cffec5,3,,Entr,RLY,unknown,,,unknown
+tfl:lrad:514d5ac1006b7db1:lift:1,tfl:lrad:514d5ac1006b7db1,1,,D-NPE,BookH,unknown,,,unknown
+tfl:lrad:514d5ac1006b7db1:lift:2,tfl:lrad:514d5ac1006b7db1,2,,BookH,UpCon,unknown,,,unknown
+tfl:lrad:514d5ac1006b7db1:lift:3,tfl:lrad:514d5ac1006b7db1,3,,F-O/C,BookH,unknown,,,unknown
+tfl:lrad:514d5ac1006b7db1:lift:4,tfl:lrad:514d5ac1006b7db1,4,,BookH,UpCon,unknown,,,unknown
+tfl:lrad:514d5ac1006b7db1:lift:5,tfl:lrad:514d5ac1006b7db1,5,,UpCon,CenEB,unknown,,,unknown
+tfl:lrad:a8826bef12cdf18d:lift:1,tfl:lrad:a8826bef12cdf18d,1,,LUBOO,Victo,unknown,,,unknown
+tfl:lrad:ec507f47678dbe0b:lift:1,tfl:lrad:ec507f47678dbe0b,1,,MINOR,DLR,yes,Yes,,unknown
+tfl:lrad:ec507f47678dbe0b:lift:2,tfl:lrad:ec507f47678dbe0b,2,,MINOR,DLR,yes,Yes,,unknown
+tfl:lrad:1dc2ba1c1b1cb93c:lift:1,tfl:lrad:1dc2ba1c1b1cb93c,1,,A-TRI,DisEB,unknown,,,unknown
+tfl:lrad:1dc2ba1c1b1cb93c:lift:2,tfl:lrad:1dc2ba1c1b1cb93c,2,,B-JUB,DisWB,unknown,,,unknown
+tfl:lrad:87f019244b87f13a:lift:1,tfl:lrad:87f019244b87f13a,1,,BridW,Dis45,unknown,,,unknown
+tfl:lrad:87f019244b87f13a:lift:2,tfl:lrad:87f019244b87f13a,2,,BridW,Dis45,unknown,,,unknown
+tfl:lrad:87f019244b87f13a:lift:3,tfl:lrad:87f019244b87f13a,3,,BridW,Dis45,unknown,,,unknown
+tfl:lrad:c2736c63624e893c:lift:1,tfl:lrad:c2736c63624e893c,1,,B-B-E,BookH,unknown,,,unknown
+tfl:lrad:c2736c63624e893c:lift:2,tfl:lrad:c2736c63624e893c,2,,BookH,Victo,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:1,tfl:lrad:ea08053041ba1da9,A1B2,A and B,D-VIC,BookV,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:2,tfl:lrad:ea08053041ba1da9,D4,D,BookV,DisW,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:3,tfl:lrad:ea08053041ba1da9,F6,F,DVLnk,DisE,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:4,tfl:lrad:ea08053041ba1da9,C3,C,CARD,BookN,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:5,tfl:lrad:ea08053041ba1da9,E5,E,BookN,NInt,unknown,,,unknown
+tfl:lrad:ea08053041ba1da9:lift:6,tfl:lrad:ea08053041ba1da9,G7,G,NInt,VicNB,unknown,,,unknown
+tfl:lrad:f1f285671bfb898b:lift:1,tfl:lrad:f1f285671bfb898b,2,,BookJ,Jubil,unknown,,,unknown
+tfl:lrad:eaee08fa3cee88b3:lift:1,tfl:lrad:eaee08fa3cee88b3,1,,RLY-D,RPL-D,unknown,,,unknown
+tfl:lrad:775c62f65b825283:lift:1,tfl:lrad:775c62f65b825283,1,,RLY,UNB,unknown,,,unknown
+tfl:lrad:775c62f65b825283:lift:2,tfl:lrad:775c62f65b825283,2,,RLY,USB,unknown,,,unknown
+tfl:lrad:8639cc59a9ee56d9:lift:1,tfl:lrad:8639cc59a9ee56d9,1,,BookH,MET1,unknown,,Platform not always in use depending on time of day.,unknown
+tfl:lrad:8639cc59a9ee56d9:lift:2,tfl:lrad:8639cc59a9ee56d9,2,,BookH,JubNB,unknown,,,unknown
+tfl:lrad:8639cc59a9ee56d9:lift:3,tfl:lrad:8639cc59a9ee56d9,3,,BookH,JubSB,unknown,,,unknown
+tfl:lrad:8639cc59a9ee56d9:lift:4,tfl:lrad:8639cc59a9ee56d9,4,,BookH,MET6,unknown,,Platform not always in use depending on time of day.,unknown
+tfl:lrad:8639cc59a9ee56d9:lift:5,tfl:lrad:8639cc59a9ee56d9,5,,BookH,E-STA,unknown,,,unknown
+tfl:lrad:95d25c5d93f39b4d:lift:1,tfl:lrad:95d25c5d93f39b4d,3,,RLY,RPL S,unknown,,,unknown
+tfl:lrad:95d25c5d93f39b4d:lift:2,tfl:lrad:95d25c5d93f39b4d,4,,RLY,RPL N,unknown,,,unknown
+tfl:lrad:6ebdc5713b0f7003:lift:1,tfl:lrad:6ebdc5713b0f7003,1,,DRAYT,RPL1,unknown,,,unknown
+tfl:lrad:6ebdc5713b0f7003:lift:2,tfl:lrad:6ebdc5713b0f7003,2,,DRAYT,RPL2,unknown,,,unknown
+tfl:lrad:41b6fe8ac8133278:lift:1,tfl:lrad:41b6fe8ac8133278,1,,WIDR,DLR-E,unknown,,,unknown
+tfl:lrad:41b6fe8ac8133278:lift:2,tfl:lrad:41b6fe8ac8133278,3,,WIDR,DLR-E,unknown,,,unknown
+tfl:lrad:41b6fe8ac8133278:lift:3,tfl:lrad:41b6fe8ac8133278,2,,WIDR,DLR-W,unknown,,,unknown
+tfl:lrad:41b6fe8ac8133278:lift:4,tfl:lrad:41b6fe8ac8133278,4,,WIDR,DLR-W,unknown,,,unknown
+tfl:lrad:925cb35e0d55bd71:lift:1,tfl:lrad:925cb35e0d55bd71,1,,BookH,Footb,unknown,,,unknown
+tfl:lrad:925cb35e0d55bd71:lift:2,tfl:lrad:925cb35e0d55bd71,2,,Footb,Jubil,unknown,,,unknown
+tfl:lrad:925cb35e0d55bd71:lift:3,tfl:lrad:925cb35e0d55bd71,4,,BookH,Dist,unknown,,,unknown
+tfl:lrad:925cb35e0d55bd71:lift:4,tfl:lrad:925cb35e0d55bd71,5,,Footb,DLR,unknown,,,unknown
+tfl:lrad:ce3b3c856e0cc023:lift:1,tfl:lrad:ce3b3c856e0cc023,1,,ENTBR,RPL-W,unknown,,,unknown
+tfl:lrad:ce3b3c856e0cc023:lift:2,tfl:lrad:ce3b3c856e0cc023,2,,ENTBR,RPL-E,unknown,,,unknown
+tfl:lrad:f87a17a259355b8b:lift:1,tfl:lrad:f87a17a259355b8b,1,,ENTBTR,RPL-W,unknown,,,unknown
+tfl:lrad:f87a17a259355b8b:lift:2,tfl:lrad:f87a17a259355b8b,2,,ENTBTR,RPL-E,unknown,,,unknown
+tfl:lrad:21c419c9b4a578a1:lift:1,tfl:lrad:21c419c9b4a578a1,1,,CONC,DLR-S,yes,Yes,,unknown
+tfl:lrad:21c419c9b4a578a1:lift:2,tfl:lrad:21c419c9b4a578a1,2,,CONC,DLR-N,yes,Yes,,unknown
+tfl:lrad:3e499ae4cddadb13:lift:1,tfl:lrad:3e499ae4cddadb13,2,A,BookH,A-BRI,unknown,,,unknown
+tfl:lrad:3e499ae4cddadb13:lift:2,tfl:lrad:3e499ae4cddadb13,3,B,BookH,DisEB,unknown,,,unknown
+tfl:lrad:3e499ae4cddadb13:lift:3,tfl:lrad:3e499ae4cddadb13,4,C,BookH,DisWB,unknown,,,unknown
+tfl:lrad:3e499ae4cddadb13:lift:4,tfl:lrad:3e499ae4cddadb13,5,D,DisWB,JubEB,unknown,,,unknown
+tfl:lrad:8dd234c28eb10567:lift:1,tfl:lrad:8dd234c28eb10567,1,,Entr,DLR-W,unknown,,,unknown
+tfl:lrad:8dd234c28eb10567:lift:2,tfl:lrad:8dd234c28eb10567,2,,Entr,DLR-E,unknown,,,unknown
+tfl:lrad:72158691b49f61a0:lift:1,tfl:lrad:72158691b49f61a0,1,,RLY,RPL-S,unknown,,,unknown
+tfl:lrad:72158691b49f61a0:lift:2,tfl:lrad:72158691b49f61a0,2,,RLY,RPL-N,unknown,,,unknown
+tfl:lrad:b7395652e738ec54:lift:1,tfl:lrad:b7395652e738ec54,1,,RLY,Under,unknown,,,unknown
+tfl:lrad:b7395652e738ec54:lift:2,tfl:lrad:b7395652e738ec54,2,,Sub,RPL-H,unknown,,,unknown
+tfl:lrad:36bc7a025a38f261:lift:1,tfl:lrad:36bc7a025a38f261,1,,BookH,Under,unknown,,,unknown
+tfl:lrad:36bc7a025a38f261:lift:2,tfl:lrad:36bc7a025a38f261,2,,BookH,Tram,unknown,,,unknown
+tfl:lrad:30cb657904653fb0:lift:1,tfl:lrad:30cb657904653fb0,1,,BookH,HamEB,unknown,,,unknown
+tfl:lrad:30cb657904653fb0:lift:2,tfl:lrad:30cb657904653fb0,2,,BookH,HamEB,unknown,,,unknown
+tfl:lrad:30cb657904653fb0:lift:3,tfl:lrad:30cb657904653fb0,3,,BookH,HamWB,unknown,,,unknown
+tfl:lrad:30cb657904653fb0:lift:4,tfl:lrad:30cb657904653fb0,4,,BookH,HamWB,unknown,,,unknown
+tfl:lrad:347f4c73e9c56baf:lift:1,tfl:lrad:347f4c73e9c56baf,2,,BED,DLR,unknown,,,unknown
+tfl:lrad:347f4c73e9c56baf:lift:2,tfl:lrad:347f4c73e9c56baf,3,,WOO,DLR,unknown,,,unknown
