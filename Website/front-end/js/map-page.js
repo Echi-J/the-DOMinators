@@ -14,7 +14,8 @@ async loadData() {
     let mode = query.get('mode'), borough = query.get('borough');
     try { mode ||= localStorage.getItem('al-mode'); borough ||= localStorage.getItem('al-boro'); localStorage.removeItem('al-mode'); localStorage.removeItem('al-boro'); } catch {}
     const selected = data.boroughs.find(b => b.ui_code === borough || b.borough_code === borough);
-    this.setState({ ...data, dataLoading: false, dataReady: true, mode: mode === 'map' ? 'map' : 'visit' });
+    const need=Object.fromEntries(['ent','toilet','lift','cp'].map(k=>[k,(query.get('needs')||'').split(',').includes(k)&&data.needEvidence.coverage[k].positive_places>0]));
+    this.setState({ ...data, need, dataLoading: false, dataReady: true, mode: mode === 'map' ? 'map' : 'visit' });
     if (selected) await this.openArea(selected.ui_code, query.get('place'));
     window.AccessWorkspace?.placesReady();
   } catch (error) { this.setState({ dataLoading: false, dataError: error.message }); }
@@ -104,14 +105,18 @@ const greens = ['#E3E9C9', '#C2D69E', '#8DB866', '#4E8A4F', '#2A5E35'];
 const oranges = ['#F6E9D2', '#F2C994', '#E8973F', '#C2602A', '#7E3417'];
 const gl = (s) => s < 45 ? 0 : s < 55 ? 1 : s < 65 ? 2 : s < 78 ? 3 : 4;
 const ol = (m) => m < 45 ? 0 : m < 60 ? 1 : m < 72 ? 2 : m < 82 ? 3 : 4;
-const P = (S.features || []).map(f => AccessData.legacyPlace(f, S.origin));
 const KEYS = ['ent', 'toilet', 'lift', 'cp'];
-const NEEDN = { ent: 'Step-free way in', toilet: 'Accessible toilet', lift: 'Step-free access to every floor', cp: 'Changing Places toilet' };
+const P = (S.features || []).map(f => {const p=AccessData.legacyPlace(f,S.origin);p.needEvidence=S.needEvidence?.resolutions[p[0]]||{};if(V)KEYS.forEach((k,i)=>{if(p.needEvidence[k])p[6+i]=p.needEvidence[k].value;});return p;});
+const NEEDN = { ent: 'Step-free entrance', toilet: 'Accessible toilet', lift: 'Every public floor step-free', cp: 'Changing Places toilet' };
 const SHORT = { ent: 'Step-free', toilet: 'Toilet', lift: 'Lift', cp: 'Changing Places' };
 const CATN = { food: 'Food and drink', park: 'Park', museum: 'Culture', shop: 'Shops', toilet: 'Toilet' };
 const val = (p, k) => p[6 + KEYS.indexOf(k)];
 const mine = (p, k) => (ans[p[0]] || {})[k];
-const chosen = KEYS.filter((k) => need[k]);
+const coverage=S.needEvidence?.coverage||{};
+const chosen = KEYS.filter((k) => need[k]&&(coverage[k]?.positive_places||0)>0);
+const setNeeds=n=>{const u=new URL(location.href),active=KEYS.filter(k=>n[k]&&(coverage[k]?.positive_places||0)>0);if(active.length)u.searchParams.set('needs',active.join(','));else u.searchParams.delete('needs');history.replaceState({},'',u);this.setState({need:n,limit:40});};
+const boroughCode=(S.boroughs||[]).find(b=>b.ui_code===S.area||b.borough_code===S.area)?.borough_code;
+const facilityURL=kind=>'map.html?view=facilities&kind='+kind+(boroughCode?'&borough='+boroughCode:'');
 const status = (p, ks) => {
 const use = ks || chosen;
 const vs = use.length ? use.map((k) => val(p, k)) : [p.data.wheelchair_display_status];
@@ -169,10 +174,10 @@ const shown = P.filter((p) => (cat === 'all' || p[2] === cat) && (!q || [p[1],p[
 const ord = { fit: 0, unknown: 1, nofit: 2 };
 const sorted = shown.slice().sort((a, b) => ord[status(a)] - ord[status(b)] || byDistance(a,b));
 const fitN = shown.filter((p) => status(p) === 'fit').length;
-const noMatch = level === 'area' && V && vstep === 'list' && chosen.length > 0 && fitN === 0;
+const noMatch = level === 'area' && V && vstep === 'list' && chosen.length > 0 && shown.length > 0 && fitN === 0;
 let dropKey = null, dropBest = -1;
 if (noMatch) chosen.forEach((k) => { const rest = chosen.filter((x) => x !== k); const n = shown.filter((p) => status(p, rest) === 'fit').length; if (n > dropBest) { dropBest = n; dropKey = k; } });
-const marksFor = p => { const detailed = (chosen.length ? chosen : ['toilet']).map(k => { const m=MARK[val(p,k)]; return {text:SHORT[k]+': '+m.text,bg:m.bg,fg:m.fg,border:m.border==='none'?'none':'1.5px dashed #8E8F78'}; }); if(!chosen.length) detailed.unshift({text:'Wheelchair tag: '+p.data.wheelchair_access,bg:'#FBFBF2',fg:'#38452f',border:'none'}); return detailed; };
+const marksFor = p => { const detailed = (chosen.length ? chosen : ['toilet']).map(k => { const m=MARK[val(p,k)]; return {text:SHORT[k]+': '+m.text+(p.needEvidence[k]?' (operator)':''),bg:m.bg,fg:m.fg,border:m.border==='none'?'none':'1.5px dashed #8E8F78'}; }); if(!chosen.length) detailed.unshift({text:'Wheelchair tag: '+p.data.wheelchair_access,bg:'#FBFBF2',fg:'#38452f',border:'none'}); return detailed; };
 
 // selected place (visitor)
 const selP = P.find((p) => p[0] === S.sel);
@@ -183,13 +188,13 @@ const evidence=(S.evidenceById||{})[selP[0]];
 const rowKeys = chosen.concat(KEYS.filter((k) => !need[k]));
 pl = { name: selP[1], icon: IC[selP[2]], meta: CATN[selP[2]] + ' · ' + AccessData.distance(selP[5]),
 pinBg: lk.bg, pinFg: lk.fg, pinBorder: lk.border,
-verdict: !chosen.length ? 'Overall wheelchair tag: ' + selP.data.wheelchair_access : (st === 'fit' ? 'Source tags indicate your selected needs' : st === 'unknown' ? 'Some of what you need is not known' : 'Source tags indicate a limitation'),
+verdict: !chosen.length ? 'Overall wheelchair tag: ' + selP.data.wheelchair_access : (st === 'fit' ? 'Source evidence supports your selected needs' : st === 'unknown' ? 'Some of what you need is not known' : 'Source evidence records a limitation'),
 vBg: st === 'fit' ? '#CFE3BF' : st === 'unknown' ? '#E9EBCD' : '#ECE3CF', vFg: st === 'fit' ? '#1F4A2A' : st === 'unknown' ? '#4B4C3D' : '#7A3A12',
 rows: rowKeys.map((k) => {
 const v = val(selP, k), m = MARK[v], a = mine(selP, k);
 const pending = v === 'unknown' && a && a !== 'unsure';
 return { label: NEEDN[k], icon: IC[k], mine: !!need[k], bg: need[k] ? '#E3E6C4' : '#ECEDD3',
-value: pending ? ('Your local note: ' + (a === 'one' ? 'one floor' : a) + ' (unreviewed)') : m.text, fg: pending ? '#7A3A12' : m.fg,
+value: pending ? ('Your local note: ' + (a === 'one' ? 'one floor' : a) + ' (unreviewed)') : m.text+(selP.needEvidence[k]?' (operator statement)':''), fg: pending ? '#7A3A12' : m.fg,
 dot: pending ? '#F2C994' : m.dot, mark: pending ? '1' : m.mark, dotBorder: pending ? 'none' : m.border };
 }),
 confirm: 'OSM source snapshot: 18 Oct 2026. Not independently verified; no community confirmation count.',
@@ -198,6 +203,7 @@ pl.hasEvidence=!!evidence;pl.evidenceRows=AccessEvidence.rows(evidence);pl.evide
 pl.evidenceURL=evidence?'map.html?view=facilities&feature='+encodeURIComponent(evidence.feature_id):'map.html?view=facilities';
 pl.evidenceError=S.evidenceError||'';pl.isChangingCandidate=!!evidence?.feature_kinds.includes('adult_changing_candidate');
 const operator=(S.operatorById||{})[selP[0]];pl.hasOperator=!!operator;pl.operatorClaims=(operator?.claims||[]).map(c=>({...c,label:AccessEvidence.attributeLabels[c.attribute]||'Access limitation',sourceURL:operator.source_url,checkedDate:operator.checked_at.slice(0,10)}));
+const entrance=selP.needEvidence.ent;pl.hasEntranceMatch=!!entrance;pl.entranceScopes=entrance?.positive_scopes.join('; ')||'';pl.entranceSource=entrance?.source_url||'';pl.entranceChecked=entrance?.checked_at.slice(0,10)||'';pl.entranceConflict=!!entrance?.conflict;pl.entranceSupported=entrance?.value==='yes';
 pl.nearbyStations=AccessEvidence.nearest(selP.data,S.stations||[]);pl.hasStations=pl.nearbyStations.length>0;
 pl.observationURL=AccessEvidence.observationURL(selP.data);pl.reviewedLoading=!!S.reviewedLoading;pl.reviewedError=S.reviewedError||'';
 pl.reviewed=(S.reviewed||[]).map(r=>({...r,label:AccessEvidence.attributeLabels[r.attribute]||r.attribute,evidence_url:AccessData.safeURL(r.evidence_url)}));pl.hasReviewed=pl.reviewed.length>0;
@@ -259,7 +265,7 @@ toCity: () => this.setState({ level: 'city', sel: null, vstep: 'list', mstep: 'l
 zoomIn: () => this.geoMap?.map.zoomIn(), zoomOut: () => this.geoMap?.map.zoomOut(),
 locate: () => this.useLocation(),
 legendTitle: V ? (chosen.length ? 'What you need' : 'Overall wheelchair tag') : 'Missing source evidence',
-pinLegend: V ? [{ text: chosen.length ? 'Has it' : 'Yes', bg: '#2F6B3C', border: '3px solid #F2F3DC' }, { text: 'Not known yet', bg: '#F2F3DC', border: '3px dashed #8E8F78' }, { text: chosen.length ? 'Doesn’t have it' : 'No', bg: '#CFCDB8', border: '3px solid #F2F3DC' }]
+pinLegend: V ? [{ text: chosen.length ? 'Source supports' : 'Yes', bg: '#2F6B3C', border: '3px solid #F2F3DC' }, { text: 'Not known yet', bg: '#F2F3DC', border: '3px dashed #8E8F78' }, { text: chosen.length ? 'Source limitation' : 'No', bg: '#CFCDB8', border: '3px solid #F2F3DC' }]
 : [{ text: 'Source unknown', bg: '#FBF6EC', border: '3px dashed #B4562A' }, { text: 'You answered', bg: '#E8873A', border: '3px solid #F7EEDD' }, { text: 'Already known', bg: '#8DB866', border: '3px solid #F7EEDD' }],
 panelClass: 'ma-panel' + (sheet === 'peek' ? ' ma-peek' : ''),
 panelLabel: isCity ? 'Choose an area' : (V ? 'Places' : 'Mapping'),
@@ -272,18 +278,24 @@ q: S.q || '', onSearch: (e) => this.setState({ q: e.target.value, limit: 40 }),
 hasBoroResults: boroResults.length > 0, boroResults: boroResults, noBoroResults: isCity && !!q && boroResults.length === 0,
 useLocation: () => this.useLocation(),
 hasBoro: !!boroB, noBoro: !boroB, bo: bo, openBoro: () => boroB && openArea(boroB[0]),
-needs: KEYS.map((k) => ({ label: NEEDN[k], icon: IC[k], pressed: need[k] ? 'true' : 'false',
-bg: need[k] ? '#DCE7C4' : '#FBFBF2', border: need[k] ? '2px solid #2F6B3C' : '2px solid #D3D4B8', iconBg: need[k] ? '#2F6B3C' : '#E3E6C4', iconFg: need[k] ? '#F2F3DC' : '#4B4C3D',
-toggle: () => { const n = Object.assign({}, need); n[k] = !n[k]; this.setState({ need: n }); } })),
+needs: KEYS.map((k) => {const available=(coverage[k]?.positive_places||0)>0,on=available&&!!need[k],local=coverage[k]?.by_borough[boroughCode]||0;return {id:k,label:NEEDN[k],icon:IC[k],available,unavailable:!available,pressed:on?'true':'false',
+coverage:available?`${local} source-supported ${local===1?'place':'places'} here · ${coverage[k].positive_places} in London`:k==='cp'?'Official register not connected':'No complete floor-access records yet',
+bg:on?'#DCE7C4':'#FBFBF2',border:on?'2px solid #2F6B3C':'2px solid #D3D4B8',iconBg:on?'#2F6B3C':'#E3E6C4',iconFg:on?'#F2F3DC':'#4B4C3D',
+toggle:()=>{if(available)setNeeds({...need,[k]:!need[k]});}};}),
+entranceRecordsURL:facilityURL('entrance'),liftRecordsURL:facilityURL('lift'),toiletRecordsURL:facilityURL('all_toilets'),
+hasEntranceExample:noMatch&&chosen.includes('ent')&&!!coverage.ent?.examples.length,
+entranceExample:coverage.ent?.examples[0]?.name||'',
+openEntranceExample:()=>{const example=coverage.ent?.examples[0];if(!example)return;this.setState({cat:'all',q:''});setNeeds({ent:true,toilet:false,lift:false,cp:false});return this.openArea(example.borough_code,example.place_id);},
 cats: [['all', 'All'], ['food', 'Food and drink'], ['park', 'Parks'], ['museum', 'Culture'], ['shop', 'Shops'], ['toilet', 'Toilets']].map((c) => ({ label: c[1], pressed: cat === c[0] ? 'true' : 'false',
 bg: cat === c[0] ? '#26261F' : 'transparent', fg: cat === c[0] ? '#F2F3DC' : '#26261F', border: cat === c[0] ? '2px solid #26261F' : '2px solid #C9C9AE', pick: () => this.setState({ cat: c[0], limit: 40 }) })),
-countText: chosen.length ? fitN + ' source-tag matches · ' + shown.length + ' results including unknowns' : shown.length + ' places in this borough',
-noMatch: noMatch, dropText: dropKey ? 'Show places without ' + NEEDN[dropKey].toLowerCase() : '',
-dropNeed: () => { if (dropKey) { const n = Object.assign({}, need); n[dropKey] = false; this.setState({ need: n }); } },
+countText: chosen.length ? fitN + ' source-supported ' + (fitN===1?'match':'matches') + ' · ' + shown.length + ' results including unknowns' : shown.length + ' places in this borough',
+noPlaceResults:level==='area'&&V&&vstep==='list'&&!S.placesLoading&&shown.length===0,
+noMatch: noMatch, dropText: dropKey ? 'Remove ' + NEEDN[dropKey].toLowerCase() + ' filter' : '',
+dropNeed: () => { if (dropKey) setNeeds({...need,[dropKey]:false}); },
 lookFurther: () => this.setState({ level: 'city', q: '', sel: null }),
 results: sorted.slice(0, S.limit || 40).map((p) => { const st = status(p), lk = look(st); return { name: p[1], icon: IC[p[2]], min: minutes(p[5]), showDistance: !!S.origin, marks: marksFor(p),
 pinBg: lk.bg, pinFg: lk.fg, pinBorder: lk.border, op: st === 'nofit' ? 0.72 : 1, bg: V ? '#E3E6C4' : '#F6EDDC',
-aria: p[1] + ', ' + AccessData.distance(p[5]) + ', ' + (chosen.length ? (st === 'fit' ? 'source tags match selected needs' : st === 'unknown' ? 'selected needs not fully known' : 'source tags indicate a limitation') : 'overall wheelchair source tag: ' + p.data.wheelchair_access),
+aria: p[1] + ', ' + AccessData.distance(p[5]) + ', ' + (chosen.length ? (st === 'fit' ? 'source evidence supports selected needs' : st === 'unknown' ? 'selected needs not fully known' : 'source evidence records a limitation') : 'overall wheelchair source tag: ' + p.data.wheelchair_access),
 open: () => this.setState({ sel: p[0], vstep: 'place' }) }; }),
 pl: pl, backToList: () => this.setState({ vstep: 'list', sel: null, rep: {} }), backToPlace: () => this.setState({ vstep: 'place' }),
 act: {

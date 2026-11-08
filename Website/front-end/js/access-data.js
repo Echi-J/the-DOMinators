@@ -12,8 +12,8 @@
   }
   let metadataPromise;
   function metadata() {
-    if (!metadataPromise) metadataPromise = Promise.all(['catalog.json', 'boroughs.json', 'borough_boundaries.geojson', 'ui_config.json'].map(json))
-      .then(([catalog, boroughs, boundaries, config]) => ({ catalog, boroughs, boundaries, config }))
+    if (!metadataPromise) metadataPromise = Promise.all(['catalog.json', 'boroughs.json', 'borough_boundaries.geojson', 'ui_config.json', 'need_evidence.json'].map(json))
+      .then(([catalog, boroughs, boundaries, config, needEvidence]) => ({ catalog, boroughs, boundaries, config, needEvidence }))
       .catch(error => { metadataPromise = null; throw error; });
     return metadataPromise;
   }

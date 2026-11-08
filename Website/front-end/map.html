@@ -39,14 +39,14 @@ a{color:inherit}
 }
 </style>
 <script src="js/dc-runtime.js"></script>
-<link rel="stylesheet" href="css/data-integration.css">
-<script src="js/access-data.js"></script>
+<link rel="stylesheet" href="css/data-integration.css?v=20261108-needs">
+<script src="js/access-data.js?v=20261108-needs"></script>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="js/access-map.js"></script>
 <script src="js/access-evidence.js"></script><link rel="stylesheet" href="css/access-tools.css">
-<script src="js/map-page.js"></script>
-<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js" defer></script></head>
+<script src="js/map-page.js?v=20261108-needs"></script>
+<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js?v=20261108-needs" defer></script></head>
 <body data-page="map">
 <a class="site-skip" href="#page-content">Skip to content</a>
 <header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
@@ -122,7 +122,7 @@ a{color:inherit}
 <div class="ma-legend" style="background: rgba(251,251,242,0.95); border-radius: 18px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; box-shadow: 0 8px 20px rgba(31,48,24,0.12);">
 <span style="font-weight: 600;">{{legendTitle}}</span>
 <sc-for list="{{pinLegend}}" as="l" hint-placeholder-count="3"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 18px; height: 18px; border-radius: 50%; background: {{l.bg}}; border: {{l.border}}; box-sizing: border-box;"></span>{{l.text}}</span></sc-for>
-<span style="font-size: 12px; color: #5C5D4C;">OSM source tags · 18 Oct 2026</span>
+<span style="font-size: 12px; color: #5C5D4C;">Source claims · dates in place details</span>
 </div>
 </div>
 </sc-if>
@@ -177,10 +177,15 @@ a{color:inherit}
 <span style="font-size: 17px; font-weight: 600;">What do you need?</span>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
 <sc-for list="{{needs}}" as="n" hint-placeholder-count="4">
-<button type="button" onClick="{{n.toggle}}" aria-pressed="{{n.pressed}}" style="min-height: 62px; display: flex; align-items: center; gap: 10px; text-align: left; border-radius: 16px; border: {{n.border}}; background: {{n.bg}}; padding: 8px 10px; font-size: 15px; font-weight: 500; cursor: pointer;">
-<span style="flex: none; width: 36px; height: 36px; border-radius: 11px; background: {{n.iconBg}}; display: flex; align-items: center; justify-content: center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{n.iconFg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{n.icon}}"></path></svg></span>{{n.label}}</button>
+<div class="al-need-cell">
+<sc-if value="{{n.available}}"><button type="button" class="al-need-option" data-need="{{n.id}}" onClick="{{n.toggle}}" aria-label="{{n.label}}" aria-describedby="need-status-{{n.id}}" aria-pressed="{{n.pressed}}" style="border:{{n.border}};background:{{n.bg}};"><span class="al-need-icon" style="background:{{n.iconBg}};"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{n.iconFg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{n.icon}}"></path></svg></span><span>{{n.label}}</span></button></sc-if>
+<sc-if value="{{n.unavailable}}"><button type="button" class="al-need-option" data-need="{{n.id}}" disabled aria-label="{{n.label}}" aria-describedby="need-status-{{n.id}}"><span class="al-need-icon"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6c705c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{n.icon}}"></path></svg></span><span>{{n.label}}</span></button></sc-if>
+<p id="need-status-{{n.id}}" class="al-need-status">{{n.coverage}}</p>
+</div>
 </sc-for>
 </div>
+<p class="al-need-note">Matches use source claims about a particular entrance or facility. Unknown information does not mean a facility is absent.</p>
+<nav class="al-evidence-shortcuts" aria-label="Other access information"><a href="{{entranceRecordsURL}}">Mapped entrances</a><a href="{{liftRecordsURL}}">Mapped lifts</a><a href="{{toiletRecordsURL}}">More toilet records</a><a href="https://www.changing-places.org/find" target="_blank" rel="noopener noreferrer">Official Changing Places map ↗</a></nav>
 </div>
 <div role="group" aria-label="Type of place" style="display: flex; flex-wrap: wrap; gap: 6px;">
 <sc-for list="{{cats}}" as="c" hint-placeholder-count="6"><button type="button" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}" style="min-height: 44px; border-radius: 22px; border: {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; padding: 0 14px; font-size: 15px; cursor: pointer;"><span style="color: {{c.fg}};">{{c.label}}</span></button></sc-for>
@@ -188,12 +193,14 @@ a{color:inherit}
 <p aria-live="polite" style="margin: 0; font-size: 17px; font-weight: 600;">{{countText}}</p>
 <sc-if value="{{noMatch}}" hint-placeholder-val="{{false}}">
 <div style="background: #FBFBF2; border: 2px dashed #8E8F78; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px;">
-<span style="font-size: 17px; font-weight: 600;">Nothing nearby has all of this yet.</span>
-<span style="font-size: 15px; color: #4B4C3D;">Places that might are listed below.</span>
+<span style="font-size: 17px; font-weight: 600;">No source-supported matches for these filters.</span>
+<span style="font-size: 15px; color: #4B4C3D;">The selected information is unknown or records a limitation. This does not establish that facilities are absent. Unknown places remain listed below.</span>
+<sc-if value="{{hasEntranceExample}}"><button type="button" class="al-evidence-example" onClick="{{openEntranceExample}}">View entrance evidence at {{entranceExample}}</button></sc-if>
 <button type="button" onClick="{{dropNeed}}" style="min-height: 48px; border: none; border-radius: 14px; background: #26261F; color: #F2F3DC; font-size: 15px; cursor: pointer;"><span style="color: #F2F3DC;">{{dropText}}</span></button>
 <button type="button" onClick="{{lookFurther}}" style="min-height: 48px; border: 2px solid #9A9B82; border-radius: 14px; background: transparent; font-size: 15px; cursor: pointer;">Choose another borough</button>
 </div>
 </sc-if>
+<sc-if value="{{noPlaceResults}}"><p role="status">No places match this name or category in the selected borough. Clear the search or choose a different category.</p></sc-if>
 <div style="display: flex; flex-direction: column; gap: 8px;">
 <sc-for list="{{results}}" as="r" hint-placeholder-count="5">
 <button type="button" onClick="{{r.open}}" aria-label="{{r.aria}}" style="display: flex; align-items: center; gap: 12px; text-align: left; width: 100%; border-radius: 18px; border: 2px solid transparent; background: {{r.bg}}; padding: 12px; cursor: pointer; opacity: {{r.op}};">
@@ -225,6 +232,7 @@ a{color:inherit}
 </div>
 <span style="font-size: 14px; color: #5C5D4C;">{{pl.confirm}}</span>
 <div class="al-source-details"><p>{{pl.address}}</p><p>Access restrictions: {{pl.access}}</p><p>Opening hours (source): {{pl.hours}}</p><sc-if value="{{pl.hasRawName}}"><p>Original name: {{pl.rawName}}</p></sc-if><a href="{{pl.sourceURL}}" target="_blank" rel="noopener noreferrer">View original OSM object</a><sc-if value="{{pl.hasWebsite}}"> · <a href="{{pl.website}}" target="_blank" rel="noopener noreferrer">Venue website</a></sc-if><p>OSM object last edited: {{pl.sourceDate}}</p></div>
+<sc-if value="{{pl.hasEntranceMatch}}"><section class="al-evidence-section"><h2>Entrance evidence used for matching</h2><sc-if value="{{pl.entranceSupported}}"><p>The operator reports a step-free entrance at {{pl.entranceScopes}}. This supports at least one named entrance; other entrances may differ. It does not establish an accessible route from your starting point.</p></sc-if><sc-if value="{{pl.entranceConflict}}"><p>The sources conflict, so the entrance answer remains unknown. Read the individual statements before deciding.</p></sc-if><a href="{{pl.entranceSource}}" target="_blank" rel="noopener noreferrer">Operator source · checked {{pl.entranceChecked}}</a></section></sc-if>
 <section class="al-evidence-section"><h2>Facility source evidence</h2><sc-if value="{{pl.evidenceError}}"><p>{{pl.evidenceError}}</p></sc-if><sc-if value="{{pl.hasEvidence}}"><p>OSM snapshot {{pl.evidenceDate}} · same OSM object, not a new site survey.</p><sc-for list="{{pl.evidenceRows}}" as="e"><div class="al-evidence-row"><span>{{e.label}}</span><span>{{e.value}}</span></div></sc-for><sc-if value="{{pl.isChangingCandidate}}"><p>Changing Places candidate only. Official registration has not been verified.</p></sc-if></sc-if><a href="{{pl.evidenceURL}}">Explore facility evidence and sources</a></section>
 <sc-if value="{{pl.hasOperator}}"><section class="al-evidence-section"><h2>Venue operator information</h2><p>Published by the venue, checked online on the date below. These are not independent field observations and do not overwrite OSM tags.</p><sc-for list="{{pl.operatorClaims}}" as="o"><div><b>{{o.label}} · {{o.value}}</b><p>{{o.scope}}: {{o.summary}}</p><a href="{{o.sourceURL}}" target="_blank" rel="noopener noreferrer">Operator source · checked {{o.checkedDate}}</a></div></sc-for></section></sc-if>
 <section class="al-evidence-section"><h2>Nearby stations</h2><p>Straight-line distance from the venue point. This is not an accessible walking route. TfL static access source: May 2025.</p><sc-for list="{{pl.nearbyStations}}" as="st"><a class="al-related-link" href="{{st.url}}">{{st.name}} · {{st.distance}} · source access: {{st.access}}</a></sc-for><a href="map.html?view=stations">All stations and latest lift reports</a></section>

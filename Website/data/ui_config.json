@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-03",
+  "version": "2026-11-08-needs",
   "categories": [
     {
       "id": "food",
@@ -49,9 +49,10 @@
   "needs": [
     {
       "id": "ent",
-      "label": "Step-free way in",
+      "label": "Step-free entrance",
       "known_source_records": 0,
-      "evidence_rule": "A verified route from the street to the entrance; overall wheelchair tags alone are not converted."
+      "evidence_rule": "A verified route from the street to the entrance; overall wheelchair tags alone are not converted.",
+      "filter_rule": "At least one specifically named entrance reported step-free by an operator. Full street routes are not inferred."
     },
     {
       "id": "toilet",
@@ -64,13 +65,15 @@
       "prototype_label": "Lift to every floor",
       "recommended_label": "Step-free access to every floor",
       "known_source_records": 0,
-      "evidence_rule": "Detailed public-floor access assessment required; lift existence alone is insufficient."
+      "evidence_rule": "Detailed public-floor access assessment required; lift existence alone is insufficient.",
+      "filter_rule": "Disabled when there are no positive all-public-floor assessments. Mapped lifts are offered as a separate query."
     },
     {
       "id": "cp",
       "label": "Changing Places toilet",
       "known_source_records": 0,
-      "evidence_rule": "Verified facility listing or detailed facility audit required; adult changing table alone is insufficient."
+      "evidence_rule": "Verified facility listing or detailed facility audit required; adult changing table alone is insufficient.",
+      "filter_rule": "Disabled while official registered-facility evidence is unavailable. An external official map is linked."
     }
   ],
   "statuses": [
@@ -89,9 +92,9 @@
   "mapper_question_ids_in_current_website": [
     "ent",
     "toilet",
-    "lift"
+    "lift",
+    "cp"
   ],
-  "missing_mapper_question": "cp",
   "floor_answer_one_policy": "Preserve the raw answer. Ask whether the building has only one public floor or only one of several floors is accessible; do not auto-map to yes or partly.",
   "coverage_metric": "Recognised overall OSM wheelchair tags divided by selected OSM objects, not community answers or detailed-need coverage.",
   "coverage_bands": {
@@ -103,5 +106,7 @@
   "attribution": "© OpenStreetMap contributors; ODbL 1.0",
   "show_community_confirmations": false,
   "show_walking_times": false,
-  "unknown_is_inaccessible": false
+  "unknown_is_inaccessible": false,
+  "known_source_records_scope": "Original core OSM fields only; effective filter coverage is in need_evidence.json.",
+  "need_evidence_url": "need_evidence.json"
 }

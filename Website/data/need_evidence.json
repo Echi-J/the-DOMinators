@@ -1,0 +1,145 @@
+{
+  "schema_version": "access-london-need-evidence-1",
+  "core_record_count": 74500,
+  "source_dates": {
+    "osm": "2026-10-18T20:25:06Z",
+    "operator_statements_checked_at": "2026-11-08T23:00:32.989436+00:00"
+  },
+  "rules": {
+    "ent": "At least one named entrance is explicitly reported step-free. Other entrances may differ.",
+    "toilet": "Explicit core toilet claim or a scoped operator statement.",
+    "lift": "A mapped lift is insufficient to establish access to every public floor.",
+    "cp": "Ordinary toilet or adult-changing equipment claims do not establish official registration."
+  },
+  "coverage": {
+    "ent": {
+      "positive_places": 1,
+      "by_borough": {
+        "E09000020": 1
+      },
+      "examples": [
+        {
+          "place_id": "osm:relation/29795",
+          "name": "Victoria and Albert Museum",
+          "borough_code": "E09000020",
+          "borough_name": "Kensington and Chelsea"
+        }
+      ]
+    },
+    "toilet": {
+      "positive_places": 805,
+      "by_borough": {
+        "E09000001": 34,
+        "E09000002": 3,
+        "E09000003": 21,
+        "E09000004": 3,
+        "E09000005": 17,
+        "E09000006": 19,
+        "E09000007": 69,
+        "E09000008": 9,
+        "E09000009": 13,
+        "E09000010": 27,
+        "E09000011": 34,
+        "E09000012": 41,
+        "E09000013": 12,
+        "E09000014": 15,
+        "E09000015": 6,
+        "E09000016": 9,
+        "E09000017": 32,
+        "E09000018": 10,
+        "E09000019": 21,
+        "E09000020": 19,
+        "E09000021": 11,
+        "E09000022": 27,
+        "E09000023": 33,
+        "E09000024": 11,
+        "E09000025": 27,
+        "E09000026": 10,
+        "E09000027": 47,
+        "E09000028": 40,
+        "E09000030": 42,
+        "E09000031": 9,
+        "E09000032": 25,
+        "E09000033": 109
+      },
+      "examples": [
+        {
+          "place_id": "osm:node/11359989174",
+          "name": "Starbucks",
+          "borough_code": "E09000001",
+          "borough_name": "City of London"
+        },
+        {
+          "place_id": "osm:node/1141415186",
+          "name": "Farmer J",
+          "borough_code": "E09000001",
+          "borough_name": "City of London"
+        },
+        {
+          "place_id": "osm:node/1561417481",
+          "name": "Hung, Drawn and Quartered",
+          "borough_code": "E09000001",
+          "borough_name": "City of London"
+        }
+      ]
+    },
+    "lift": {
+      "positive_places": 0,
+      "by_borough": {},
+      "examples": []
+    },
+    "cp": {
+      "positive_places": 0,
+      "by_borough": {},
+      "examples": []
+    }
+  },
+  "resolutions": {
+    "osm:way/27765411": {
+      "toilet": {
+        "value": "yes",
+        "basis": "operator_statement",
+        "core_value": "yes",
+        "conflict": false,
+        "positive_scopes": [
+          "Museum levels"
+        ],
+        "other_scopes": [],
+        "source_url": "https://www.sciencemuseum.org.uk/visit/accessibility",
+        "checked_at": "2026-11-08T23:00:32.989436+00:00"
+      }
+    },
+    "osm:relation/29795": {
+      "ent": {
+        "value": "yes",
+        "basis": "operator_statement",
+        "core_value": "unknown",
+        "conflict": false,
+        "positive_scopes": [
+          "Cromwell Road entrance",
+          "Exhibition Road entrance"
+        ],
+        "other_scopes": [
+          {
+            "scope": "Tunnel entrance",
+            "value": "no"
+          }
+        ],
+        "source_url": "https://www.vam.ac.uk/info/disability-access",
+        "checked_at": "2026-11-08T23:00:32.989436+00:00"
+      },
+      "toilet": {
+        "value": "yes",
+        "basis": "operator_statement",
+        "core_value": "yes",
+        "conflict": false,
+        "positive_scopes": [
+          "Museum-wide provision"
+        ],
+        "other_scopes": [],
+        "source_url": "https://www.vam.ac.uk/info/disability-access",
+        "checked_at": "2026-11-08T23:00:32.989436+00:00"
+      }
+    }
+  }
+}

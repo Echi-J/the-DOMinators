@@ -16,3 +16,13 @@
 
 .al-evidence-section{background:#fbfbf2;border:1px solid #c9c9ae;border-radius:14px;padding:13px;display:flex;flex-direction:column;gap:8px}.al-evidence-section h2{font-size:17px;margin:0}.al-evidence-section p{margin:2px 0;font-size:14px}.al-evidence-section a{color:#244f2e;overflow-wrap:anywhere}.al-evidence-row{font-size:14px;display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid #e3e6c4;padding:5px 0}.al-evidence-row span:last-child{text-align:right}.al-related-link{display:block;padding:9px;background:#e3e6c4;border-radius:8px;font-size:14px;min-height:44px}
 .al-data-nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;padding:10px 16px;background:#e3e6c4;color:#26261f;font-size:14px}.al-data-nav a{color:#244f2e;min-height:36px;display:flex;align-items:center}
+/* Coverage and evidence actions for the four original access needs. */
+.al-need-cell{min-width:0;display:flex;flex-direction:column;gap:5px}
+.al-need-option{min-height:78px;flex:1;display:flex;align-items:center;gap:9px;text-align:left;border-radius:16px;border:2px solid #d3d4b8;background:#fbfbf2;padding:10px;font:500 15px/1.3 'Outfit',Arial,sans-serif;cursor:pointer;color:#26261f}
+.al-need-option:disabled{background:#e9e9dc;border-color:#d0d1c0;color:#666b57;cursor:not-allowed}
+.al-need-icon{flex:none;width:34px;height:34px;border-radius:10px;background:#dfe2cb;display:flex;align-items:center;justify-content:center}
+.al-need-status{margin:0;padding:0 3px;font-size:11px;line-height:1.4;color:#4d5846}
+.al-need-note{margin:4px 0 0;font-size:12px;line-height:1.45;color:#4d5846}
+.al-evidence-shortcuts{display:flex;flex-wrap:wrap;gap:8px 13px;font-size:12px;line-height:1.5}
+.al-evidence-shortcuts a{color:#275737;text-underline-offset:3px;padding:3px 0}
+.al-evidence-example{padding:11px 13px;border:1px solid #93ab78;border-radius:12px;background:#e3e9d1;color:#24492b;text-align:left;font:500 14px/1.4 'Outfit',Arial,sans-serif;cursor:pointer}
