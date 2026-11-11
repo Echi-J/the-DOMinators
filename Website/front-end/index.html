@@ -2,142 +2,475 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Access London</title>
+<title>Access London — places you can get into</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A map of cafés, parks, museums, shops and toilets across London, showing what's known about step-free access and what still needs checking.">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;display=swap">
+<link rel="stylesheet" href="css/site.css">
 <style>
-body{margin:0;background:#E8EBD2}
-a{color:inherit}
-.hm *:focus-visible{outline:3px solid #233A6B;outline-offset:3px;border-radius:12px}
-.hm-skip{position:absolute;left:16px;top:-80px;z-index:20;background:#26261F;color:#F2F3DC;padding:12px 18px;border-radius:12px;text-decoration:none;font-size:16px}
-.hm-skip:focus{top:16px}
-.hm-world{position:absolute;left:50%;top:50%;width:max(100cqw,177.78cqh);height:max(56.25cqw,100cqh);transform:translate(-50%,-50%)}
-.hm-card{position:absolute;width:236px;transform-origin:50% 100%;transition:opacity .35s ease,transform .35s ease}
-.hm-pin{transition:background .6s ease,border-color .6s ease,opacity .6s ease,width .3s ease,height .3s ease,margin .3s ease}
-.hm-fill{transition:fill .8s ease,stroke .8s ease,opacity .8s ease}
-.hm-switchrow{position:absolute;left:50%;top:22px;transform:translateX(-50%)}
-.hm-tiles{display:flex}
-@keyframes hmprogA{from{width:0}to{width:100%}}
-@keyframes hmprogB{from{width:0}to{width:100%}}
-@keyframes hmrise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.hm-rise{animation:hmrise .55s ease both}
-@media (prefers-reduced-motion: reduce){.hm-card,.hm-pin,.hm-fill{transition:none}.hm-rise{animation:none}}
-@container hm (max-width: 760px){
-.hm-switchrow{top:86px;left:16px;right:16px;transform:none}
-.hm-switch{width:100%}
-.hm-switch button{flex:1}
-.hm-tiles{display:none}
-.hm-navlink{display:none}
-.hm-bottom{left:20px !important;right:20px !important;bottom:28px !important}
-.hm-card{width:200px}
+/* ============ The first screen: one big illustrated map, the words sit on top of it ============ */
+.hero { position: relative; height: 100vh; height: 100svh; min-height: 620px; overflow: hidden; background: #E9EBD1; transition: background 0.6s ease; }
+body[data-mode='map'] .hero { background: #F1E7D3; }
+.scape { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.scrim { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 70%; pointer-events: none; --g: 233,235,209;
+  background: radial-gradient(ellipse 58% 80% at 0% 100%, rgba(var(--g),0.92) 38%, rgba(var(--g),0) 78%); transition: opacity 0.6s ease; }
+body[data-mode='map'] .scrim { --g: 241,231,211; }
+
+/* map colours: Visitor is sage and cream, Mapper is sand and terracotta (as on the map page) */
+.scape { --ground: #E9EBD1; --park: #BFD69B; --tree: #8DB46E; --tree2: #6E9C55; --water: #A8C8C3; --road: #FBF9EE; --edge: #DCD8BF; --mid: #D6D1B6; }
+body[data-mode='map'] .scape { --ground: #F1E7D3; --park: #E2D7B2; --tree: #CDBF8F; --tree2: #B9AA78; --water: #C4D5CD; --road: #FCF7EC; --edge: #E3D7BE; --mid: #DCCFB2; }
+.scape .ground { fill: var(--ground); }
+.scape .park { fill: var(--park); }
+.scape .tree { fill: var(--tree); }
+.scape .tree2 { fill: var(--tree2); }
+.scape .water { stroke: var(--water); }
+.scape .road { stroke: var(--road); }
+.scape .edge { stroke: var(--edge); }
+.scape .mid { stroke: var(--mid); }
+.scape .ground, .scape .park, .scape .tree, .scape .tree2 { transition: fill 0.6s ease; }
+.scape .water, .scape .road, .scape .edge, .scape .mid { transition: stroke 0.6s ease; }
+
+/* pins. Known places: green (yes) or grey (no / partly). Not known: dashed. */
+.pin .bg, .pin .ic, .pin .dot, .swapper { transition: fill 0.5s ease, stroke 0.5s ease, opacity 0.45s ease, transform 0.45s var(--ease-out); }
+.pin .swapper, .pin .dot { transform-box: fill-box; transform-origin: center; }
+.k-fit .bg { fill: #3B6E44; stroke: #F7F6E8; }
+.k-nofit .bg { fill: #7D7866; stroke: #F7F6E8; }
+.k-fit .ic, .k-nofit .ic { stroke: #fff; }
+.k-unk .bg { fill: #F7F6EA; stroke: #6E6F5C; stroke-dasharray: 6 5; }
+.k-unk .ic { stroke: #3A3B30; }
+.pin .dot { fill: #5E9440; stroke: #fff; opacity: 0; transform: scale(0.4); }
+/* Mapper: what's known shrinks to small dots, the gaps turn terracotta */
+body[data-mode='map'] .k-fit .swapper, body[data-mode='map'] .k-nofit .swapper { opacity: 0; transform: scale(0.6); }
+body[data-mode='map'] .k-fit .dot, body[data-mode='map'] .k-nofit .dot { opacity: 1; transform: none; }
+body[data-mode='map'] .k-unk .bg { stroke: #B4562A; }
+body[data-mode='map'] .k-unk .ic { stroke: #8A3B1C; }
+
+/* the story's moments (CSS), started by adding .play to the svg */
+.pop, .ring, .later, .cardin, .press { transform-box: fill-box; transform-origin: center; }
+.pop { opacity: 0; }
+.play .pop { animation: pop 0.45s var(--ease-out) var(--d, 0s) both; }
+@keyframes pop { from { opacity: 0; transform: scale(0.85) translateY(8px); } to { opacity: 1; transform: none; } }
+.ring { opacity: 0; }
+.play .ring { animation: ring 0.6s var(--ease-out) var(--d, 0s) both; }
+@keyframes ring { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: none; } }
+.later, .cardin { opacity: 0; }
+.play .later { animation: pop 0.45s var(--ease-out) var(--d, 0s) both; }
+.play .cardin { animation: card 0.5s var(--ease-out) var(--d, 0s) both; }
+@keyframes card { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.press rect { fill: transparent; stroke: #B9A88C; }
+.press text { fill: #26261F; }
+.play .press rect { animation: pressbg 0.25s ease-out var(--d) both; }
+.play .press text { animation: presstx 0.25s ease-out var(--d) both; }
+@keyframes pressbg { to { fill: #26261F; stroke: #26261F; } }
+@keyframes presstx { to { fill: #F2F3DC; } }
+/* each story shows only its own bits */
+body[data-mode='visit'] .only-map, body[data-mode='map'] .only-visit { display: none; }
+.person { opacity: 0; transition: opacity 0.3s ease; }
+.person.here { opacity: 1; }
+/* the pause button stops everything */
+.paused, .paused * { animation-play-state: paused !important; }
+
+/* ---- floating header ---- */
+.htop { position: absolute; z-index: 5; top: 0; left: 0; right: 0; padding: 18px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; pointer-events: none; }
+.htop > * { pointer-events: auto; }
+.word { justify-self: start; display: inline-flex; align-items: center; min-height: 56px; padding: 0 22px; border-radius: 16px; background: #1F1F1A; color: #F2F3DC; text-decoration: none; font-size: 24px; font-weight: 600; letter-spacing: -0.03em; box-shadow: 0 8px 20px rgba(20,25,15,0.18); }
+.mid-ctl { display: flex; align-items: center; gap: 12px; }
+.seg { display: flex; gap: 4px; padding: 6px; border-radius: 22px; background: rgba(251,251,242,0.94); box-shadow: 0 8px 22px rgba(31,48,24,0.14); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.seg button { min-height: 52px; border: 0; border-radius: 16px; padding: 0 22px; display: flex; align-items: center; gap: 10px; background: transparent; color: var(--ink); font: 500 18px 'Outfit', Arial, sans-serif; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease, transform 0.12s ease-out; }
+.seg button[aria-pressed='true'][data-mode='visit'] { background: #3B6E44; color: #F7F6E8; }
+.seg button[aria-pressed='true'][data-mode='map'] { background: var(--orange); color: var(--ink); }
+.round { width: 56px; height: 56px; border-radius: 50%; border: 0; background: rgba(251,251,242,0.94); box-shadow: 0 8px 22px rgba(31,48,24,0.14); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.12s ease-out; }
+.right { justify-self: end; display: flex; gap: 10px; }
+.nav { display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 16px; background: rgba(251,251,242,0.94); box-shadow: 0 8px 22px rgba(31,48,24,0.12); text-decoration: none; font-size: 18px; font-weight: 500; transition: transform 0.12s ease-out, background-color 0.2s ease; }
+.nav.dark { background: #2F5D3A; color: #F7F6E8; }
+@media (hover: hover) and (pointer: fine) { .nav:hover { background: #fff; } .nav.dark:hover { background: #244B2E; } }
+.round:active, .word:active, .nav:active { transform: scale(0.97); }
+
+/* ---- the words, bottom left ---- */
+.words { position: absolute; z-index: 4; left: 48px; bottom: 56px; max-width: 58%; }
+.words h1 { margin: 0; font-size: clamp(54px, 7.7vw, 156px); font-weight: 600; line-height: 0.9; letter-spacing: -0.055em; color: #3B6B45; transition: color 0.45s ease; text-shadow: 0 2px 0 rgba(233,235,209,0.6); }
+body[data-mode='map'] .words h1 { color: var(--terracotta); text-shadow: 0 2px 0 rgba(241,231,211,0.6); }
+.words p { margin: 26px 0 30px; font-size: clamp(18px, 1.55vw, 25px); line-height: 1.4; max-width: 30ch; color: #2E2F25; }
+.cta { display: inline-flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 30px; border-radius: 20px; background: #1F1F1A; color: #F7F6E8; text-decoration: none; font-size: 21px; font-weight: 500; box-shadow: 0 12px 26px rgba(20,25,15,0.22); transition: transform 0.12s ease-out, background-color 0.3s ease, color 0.3s ease; }
+.cta:active { transform: scale(0.97); }
+body[data-mode='map'] .cta { background: var(--orange); color: var(--ink); }
+.swap { animation: swap 0.45s var(--ease-out) both; }
+@keyframes swap { from { opacity: 0; transform: translateY(8px); filter: blur(2px); } to { opacity: 1; transform: none; filter: none; } }
+
+/* ---- the 33 boroughs, bottom right: real tiles, each opens that borough ---- */
+.tiles { position: absolute; z-index: 4; right: 32px; bottom: 32px; padding: 18px 18px 14px; max-width: 280px; border-radius: 28px; background: rgba(251,251,242,0.94); box-shadow: 0 16px 40px rgba(31,48,24,0.16); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.grid { display: grid; grid-template-columns: repeat(8, 26px); grid-auto-rows: 26px; gap: 5px; }
+.grid a { border-radius: 7px; display: block; transition: transform 0.15s var(--ease-out), background-color 0.5s ease, border-color 0.5s ease; }
+.grid a.none { background: rgba(225,223,208,0.7); border: 2px dashed #A9A890; }
+@media (hover: hover) and (pointer: fine) { .grid a:hover { transform: scale(1.12); } }
+.grid a:focus-visible { outline-offset: 2px; }
+.tiles p { margin: 12px 0 0; font-size: 15px; line-height: 1.35; color: #2E2F25; min-height: 1.5em; }
+
+/* the little handle: there's more below */
+.more { position: absolute; z-index: 4; left: 50%; bottom: 10px; transform: translateX(-50%); width: 64px; height: 28px; display: flex; align-items: center; justify-content: center; }
+.more::before { content: ''; width: 56px; height: 6px; border-radius: 3px; background: #6E6F5C; opacity: 0.6; }
+
+@media (max-width: 1100px) { .words { max-width: 54%; } }
+@media (max-width: 900px) {
+  .scrim { height: 48%; background: linear-gradient(to top, rgba(var(--g),0.95) 45%, rgba(var(--g),0)); }
+  .tiles { display: none; }
+  .words { left: 20px; right: 20px; bottom: 40px; max-width: none; }
+  .right .nav { padding: 0 14px; min-height: 44px; font-size: 15px; }
 }
+@media (max-width: 760px) {
+  .htop { grid-template-columns: auto 1fr; padding: 14px 16px; row-gap: 10px; }
+  .word { min-height: 46px; font-size: 20px; padding: 0 16px; }
+  .right { gap: 6px; }
+  .mid-ctl { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+  .seg { padding: 4px; } .seg button { min-height: 46px; padding: 0 16px; font-size: 16px; }
+  .round { width: 50px; height: 50px; }
+  .words { left: 16px; right: 16px; bottom: 36px; }
+  .words p { margin: 16px 0 22px; }
+  .cta { min-height: 56px; font-size: 18px; padding: 0 24px; }
+}
+@media (max-width: 380px) { .right .nav:not(.dark) { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .play .pop, .play .ring, .play .later, .play .cardin { animation: none; opacity: 1; transform: none; }
+  .play .press rect { animation: none; fill: #26261F; stroke: #26261F; }
+  .play .press text { animation: none; fill: #F2F3DC; }
+  .swap { animation: none; }
+}
+
+/* ============ Below the first screen (unchanged) ============ */
+.ways { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px; }
+.way { border-radius: 28px; padding: 30px; }
+.way.visit { background: var(--green-soft); }
+.way.map { background: #F6E3CC; }
+.way h2 { margin: 0 0 18px; font-size: 32px; line-height: 1.05; letter-spacing: -0.03em; }
+.way.visit h2 { color: var(--green); }
+.way.map h2 { color: var(--terracotta); }
+.steps { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.steps li { display: flex; gap: 14px; align-items: flex-start; font-size: 17px; }
+.steps svg { flex: none; width: 44px; height: 44px; padding: 11px; border-radius: 50%; background: var(--paper); }
+.way a { font-weight: 600; }
+.honest { margin-top: 20px; border-radius: 28px; background: var(--ink); color: var(--cream); padding: 36px 32px; display: grid; grid-template-columns: auto 1fr; gap: 12px 36px; align-items: center; }
+.honest .big { font-size: clamp(64px, 9vw, 120px); font-weight: 600; line-height: 0.9; letter-spacing: -0.05em; color: #C2D69E; }
+.honest p { margin: 0; font-size: 20px; max-width: 46ch; }
+.honest a { color: #C2D69E; font-weight: 600; }
+@media (max-width: 900px) { .ways, .honest { grid-template-columns: 1fr; } }
 </style>
-<script src="js/dc-runtime.js"></script>
-<link rel="stylesheet" href="css/data-integration.css?v=20261108-needs">
-<script src="js/access-data.js?v=20261108-needs"></script>
-<script src="js/home-page.js"></script>
-<link rel="stylesheet" href="css/site-shell.css"><script src="js/site-shell.js?v=20261108-needs" defer></script></head>
-<body data-page="home">
-<a class="site-skip" href="#page-content">Skip to content</a>
-<header class="site-header"><a class="site-brand" href="index.html" aria-label="Access London home"><span>Access.</span><strong>London</strong></a><nav aria-label="Main navigation"><a href="map.html" data-nav="map">Explore map</a><a href="observations.html" data-nav="observations">Contribute</a><a href="how-to-use.html" data-nav="help">How to use</a><a href="about.html" data-nav="about">About &amp; data</a></nav></header>
-<div id="page-content"></div>
-<template id="dc-template">
-<div class="al-data-banner" role="status" aria-live="polite">
-<sc-if value="{{dataLoading}}">Loading the real London dataset…</sc-if>
-<sc-if value="{{dataError}}"><span>{{dataError}}</span> <button type="button" onClick="{{retryData}}">Retry loading</button></sc-if>
-<sc-if value="{{dataReady}}">{{dataSummary}}</sc-if>
-</div>
-<div class="hm" style="container-type: size; container-name: hm; position: relative; height: 100vh; min-height: 560px; overflow: hidden; background: {{land}}; transition: background .8s ease; color: #26261F; font-family: 'Outfit', Arial, sans-serif;">
-<a class="hm-skip" href="map.html" onClick="{{goVisit}}">Go straight to the map</a>
+</head>
+<body data-mode="visit">
+<a class="skip" href="#main">Skip to content</a>
 
-<div class="hm-world" aria-hidden="true">
-<svg viewBox="0 0 1600 900" style="position: absolute; inset: 0; width: 100%; height: 100%;">
-<defs>
-<pattern id="hmLawn" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)"><rect class="hm-fill" width="64" height="64" style="fill: {{parkA}}"></rect><rect class="hm-fill" width="32" height="64" style="fill: {{parkB}}"></rect></pattern>
-</defs>
-<rect class="hm-fill" width="1600" height="900" style="fill: {{land}}"></rect>
-<g fill="url(#hmLawn)">
-<path d="M60 40 C260 0 420 60 400 190 C380 300 200 300 120 260 C30 210 0 90 60 40 Z"></path>
-<path d="M1180 140 C1380 90 1560 160 1560 300 C1560 420 1420 460 1300 430 C1180 400 1100 220 1180 140 Z"></path>
-<path d="M1240 640 C1400 600 1580 660 1570 780 C1560 880 1380 900 1290 860 C1200 820 1150 680 1240 640 Z"></path>
-<path d="M760 640 C860 600 1000 640 990 720 C980 800 860 820 790 790 C720 760 690 670 760 640 Z"></path>
-</g>
-<path class="hm-fill" d="M-60 330 C260 400 460 260 780 340 S1220 520 1660 420" fill="none" style="stroke: {{river}}" stroke-width="70" stroke-linecap="round"></path>
-<g fill="none" stroke-linecap="round">
-<g class="hm-fill" style="stroke: {{roadEdge}}" stroke-width="30"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
-<g stroke="#FBFAF0" stroke-width="24"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
-<g class="hm-fill" style="stroke: {{roadEdge}}" stroke-width="2.5" stroke-dasharray="16 14"><path d="M-40 760 C300 700 520 560 760 560 S1180 640 1640 520"></path><path d="M520 -40 C560 200 470 420 600 600 S700 860 680 940"></path><path d="M1100 -40 C1060 220 1180 420 1120 620 S1180 860 1200 940"></path></g>
-<g stroke="#FBFAF0" stroke-width="9" opacity="0.9"><path d="M0 180 L1600 150"></path><path d="M0 470 C400 455 1200 490 1600 455"></path><path d="M300 -20 L260 920"></path><path d="M860 -20 L900 920"></path><path d="M1400 -20 L1380 920"></path></g>
-</g>
-<g class="hm-fill" style="fill: {{treeA}}"><circle cx="150" cy="110" r="34"></circle><circle cx="230" cy="190" r="26"></circle><circle cx="320" cy="120" r="22"></circle><circle cx="1260" cy="230" r="40"></circle><circle cx="1360" cy="330" r="30"></circle><circle cx="1470" cy="230" r="24"></circle><circle cx="1330" cy="720" r="36"></circle><circle cx="1460" cy="790" r="26"></circle><circle cx="860" cy="700" r="28"></circle></g>
-<g class="hm-fill" style="fill: {{treeB}}"><circle cx="138" cy="98" r="15"></circle><circle cx="1246" cy="216" r="18"></circle><circle cx="1318" cy="706" r="16"></circle><circle cx="850" cy="690" r="12"></circle></g>
-<g class="hm-fill" style="opacity: {{visitFig}}" transform="translate(1075,775) rotate(80) scale(1.3)"><ellipse cx="10" cy="12" rx="40" ry="30" fill="#1F4A2A" opacity="0.2"></ellipse><rect x="-36" y="-26" width="11" height="54" rx="5" fill="#26261F"></rect><rect x="25" y="-26" width="11" height="54" rx="5" fill="#26261F"></rect><rect x="-25" y="-20" width="50" height="44" rx="12" fill="#ECEBD2"></rect><rect x="-16" y="-46" width="32" height="30" rx="9" fill="#233A6B"></rect><ellipse cx="0" cy="4" rx="22" ry="15" fill="#2F6B3C"></ellipse><circle cx="0" cy="7" r="11" fill="#2B211C"></circle></g>
-<g class="hm-fill" style="opacity: {{mapFig}}" transform="translate(1075,775) rotate(80) scale(1.3)"><ellipse cx="8" cy="10" rx="34" ry="24" fill="#6B4320" opacity="0.18"></ellipse><ellipse cx="0" cy="0" rx="28" ry="17" fill="#E8873A"></ellipse><circle cx="0" cy="2" r="12" fill="#2B211C"></circle><rect x="12" y="-26" width="14" height="22" rx="3" fill="#26261F"></rect><rect x="14.5" y="-23.5" width="9" height="16" rx="1.5" fill="#F2C994"></rect></g>
-</svg>
+<div class="hero">
+  <!-- The illustrated map. Pins are added by the script below; the place and its card are made up. -->
+  <svg class="scape" id="scape" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img"
+       aria-label="Illustration of a street map: someone in a wheelchair travels to a museum whose card says it has a step-free way in and an accessible toilet. In Mapper mode, someone answers questions about the same museum.">
+    <defs>
+      <pattern id="stripes" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="24" fill="rgba(255,255,255,0.2)"/></pattern>
+      <filter id="sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#1F3018" flood-opacity="0.3"/></filter>
+      <filter id="csh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#1F3018" flood-opacity="0.2"/></filter>
+    </defs>
+    <rect class="ground" x="-1000" y="-1000" width="3600" height="3400"/>
 
-<sc-for list="{{pins}}" as="p" hint-placeholder-count="13">
-<div class="hm-pin" style="position: absolute; left: {{p.x}}; top: {{p.y}}; width: {{p.size}}; height: {{p.size}}; margin: {{p.margin}}; border-radius: 50%; box-sizing: border-box; background: {{p.bg}}; border: {{p.border}}; opacity: {{p.op}}; box-shadow: {{p.shadow}}; display: flex; align-items: center; justify-content: center;">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{p.fg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="opacity: {{p.iconOp}}"><path d="{{p.icon}}"></path></svg>
-</div>
-</sc-for>
-<sc-for list="{{cards}}" as="c" hint-placeholder-count="3">
-<div class="hm-card" style="left: {{c.x}}; top: {{c.y}}; opacity: {{c.op}}; transform: {{c.tf}};">
-<div style="background: #FBFBF2; border-radius: 18px; padding: 14px 16px; box-shadow: 0 18px 40px rgba(31,48,24,0.22); display: flex; flex-direction: column; gap: 8px;">
-<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;"><span style="font-size: 17px; font-weight: 600;">{{c.name}}</span><span style="font-size: 14px; color: #5C5D4C; white-space: nowrap;">{{c.meta}}</span></div>
-<div style="display: flex; flex-wrap: wrap; gap: 5px;"><sc-for list="{{c.tags}}" as="t" hint-placeholder-count="2"><span style="display: flex; align-items: center; gap: 5px; font-size: 13px; border-radius: 9px; padding: 4px 9px; background: {{t.bg}}; color: {{t.fg}}; border: {{t.border}};">{{t.text}}</span></sc-for></div>
-</div>
-<div style="width: 16px; height: 16px; background: #FBFBF2; transform: rotate(45deg); margin: -9px auto 0;"></div>
-</div>
-</sc-for>
+    <!-- parks -->
+    <g id="parks">
+      <path d="M-40 60 C120 10 420 40 470 180 C520 320 380 420 220 410 C80 400 -40 330 -40 250Z"/>
+      <path d="M1150 180 C1300 120 1560 150 1640 260 L1640 560 C1500 600 1330 560 1230 480 C1130 400 1080 230 1150 180Z"/>
+      <path d="M720 700 C760 640 960 640 990 720 C1010 800 940 880 830 880 C730 880 690 760 720 700Z"/>
+      <path d="M1210 830 C1270 770 1450 770 1640 810 L1640 1320 L1250 1320 C1180 1150 1160 900 1210 830Z"/>
+      <path d="M760 1080 C850 1010 1000 1040 1020 1130 C1040 1230 900 1290 800 1260 C700 1230 690 1130 760 1080Z"/>
+    </g>
+    <g class="tree"><circle cx="130" cy="125" r="46"/><circle cx="215" cy="260" r="34"/><circle cx="305" cy="135" r="30"/><circle cx="1262" cy="292" r="52"/><circle cx="1480" cy="268" r="32"/><circle cx="1366" cy="436" r="34"/><circle cx="856" cy="772" r="38"/><circle cx="1330" cy="930" r="40"/><circle cx="880" cy="1150" r="34"/></g>
+    <g class="tree2"><circle cx="116" cy="108" r="19"/><circle cx="1248" cy="268" r="22"/><circle cx="845" cy="760" r="16"/><circle cx="1318" cy="914" r="16"/></g>
+
+    <!-- river -->
+    <path class="water" d="M-80 360 C250 330 550 330 820 385 C1080 440 1300 500 1680 480" stroke-width="84" fill="none"/>
+
+    <!-- streets: a soft edge, the street, and dashed middle lines on the bigger ones -->
+    <g fill="none" stroke-linecap="round">
+      <g class="edge" stroke-width="34">
+        <path id="r1" d="M505 -40 C515 200 520 300 495 450 C470 600 560 700 680 1000 L760 1340"/>
+        <path id="r2" d="M860 -40 C862 300 875 600 885 1340"/>
+        <path id="r3" d="M1095 -40 C1100 250 1130 420 1120 560 C1110 640 1094 700 1092 780 C1088 900 1080 1100 1070 1340"/>
+        <path id="r4" d="M-40 196 C500 186 1100 176 1640 160"/>
+        <path id="r5" d="M-40 522 C400 516 800 512 1640 500"/>
+        <path id="r6" d="M-40 702 C300 642 560 642 760 642 C1000 642 1300 682 1640 562"/>
+        <path id="r7" d="M1396 -40 C1396 300 1401 600 1396 1340"/>
+        <path id="r8" d="M-40 980 C400 960 900 990 1640 1040"/>
+      </g>
+      <g class="road" stroke-width="26">
+        <use href="#r1"/><use href="#r2"/><use href="#r3"/><use href="#r4"/><use href="#r5"/><use href="#r6"/><use href="#r7"/><use href="#r8"/>
+      </g>
+      <g class="mid" stroke-width="3" stroke-dasharray="22 16"><use href="#r1"/><use href="#r3"/><use href="#r6"/></g>
+    </g>
+
+    <g id="pins"></g>
+
+    <!-- the museum: grows when picked (Visitor); dashed, then answered (Mapper) -->
+    <g transform="translate(1092 672)">
+      <circle class="ring only-visit" r="62" fill="rgba(59,110,68,0.22)" style="--d:4.4s"/>
+      <circle class="ring only-map" r="62" fill="rgba(232,135,58,0.26)" style="--d:0.9s"/>
+      <g class="only-visit pop" style="--d:0.9s" filter="url(#sh)">
+        <circle r="38" fill="#3B6E44" stroke="#F7F6E8" stroke-width="5"/>
+        <path transform="translate(-18 -18) scale(1.5)" d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g class="only-map pop" style="--d:0.5s" filter="url(#sh)">
+        <circle r="38" fill="#FBF6EC" stroke="#B4562A" stroke-width="4" stroke-dasharray="8 6"/>
+        <path transform="translate(-18 -18) scale(1.5)" d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" stroke="#8A3B1C" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g class="only-map later" style="--d:3.4s" filter="url(#sh)">
+        <circle r="38" fill="#F2C994" stroke="#B4562A" stroke-width="4" stroke-dasharray="8 6"/>
+        <path transform="translate(-18 -18) scale(1.5)" d="M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" stroke="#26261F" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- someone in a wheelchair, seen from above, travelling up the street to the museum -->
+    <g class="person only-visit" id="person">
+      <animateMotion id="travel" begin="indefinite" dur="4.4s" fill="freeze" rotate="auto" calcMode="spline"
+        keyTimes="0;0.2;1" keyPoints="0;0;1" keySplines="0 0 1 1;0.45 0 0.3 1"
+        path="M1072 1200 C1078 1020 1088 880 1092 752"/>
+      <ellipse rx="44" ry="38" fill="rgba(31,48,24,0.12)"/>
+      <rect x="-24" y="-34" width="46" height="10" rx="5" fill="#26261F"/>
+      <rect x="-24" y="24" width="46" height="10" rx="5" fill="#26261F"/>
+      <rect x="-40" y="-16" width="20" height="32" rx="8" fill="#233A6B"/>
+      <ellipse cx="-2" rx="22" ry="21" fill="#3B6E44"/>
+      <circle cx="4" cy="0" r="11.5" fill="#2B2620"/>
+    </g>
+
+    <!-- Visitor: the place's card -->
+    <g class="only-visit cardin" style="--d:4.8s">
+      <g filter="url(#csh)"><rect x="955" y="436" width="276" height="170" rx="22" fill="#FBFBF2"/><path d="M1078 604 l14 15 l14 -15z" fill="#FBFBF2"/></g>
+      <text x="978" y="474" font-family="Outfit, Arial, sans-serif" font-size="23" font-weight="600" fill="#26261F">Museum of River</text>
+      <text x="978" y="500" font-family="Outfit, Arial, sans-serif" font-size="23" font-weight="600" fill="#26261F">Life</text>
+      <text x="1208" y="500" text-anchor="end" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#4B4C3D">12 min</text>
+      <rect x="976" y="518" width="122" height="32" rx="10" fill="#DDE8C8"/>
+      <text x="988" y="540" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#2F6B3C">✓ Step-free</text>
+      <rect x="976" y="558" width="180" height="32" rx="10" fill="#DDE8C8"/>
+      <text x="988" y="580" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#2F6B3C">✓ Accessible toilet</text>
+    </g>
+
+    <!-- Mapper: the first question, then "one more answer" -->
+    <g class="only-map cardin" style="--d:1.3s">
+      <g filter="url(#csh)"><rect x="945" y="430" width="296" height="176" rx="22" fill="#FBFBF2"/><path d="M1078 604 l14 15 l14 -15z" fill="#FBFBF2"/></g>
+      <text x="968" y="464" font-family="Outfit, Arial, sans-serif" font-size="15" fill="#6A5B48">Museum of River Life · 1 of 3</text>
+      <text x="968" y="498" font-family="Outfit, Arial, sans-serif" font-size="22" font-weight="600" fill="#26261F">Is there a step-free</text>
+      <text x="968" y="524" font-family="Outfit, Arial, sans-serif" font-size="22" font-weight="600" fill="#26261F">way in?</text>
+      <g class="press" style="--d:2.9s"><rect x="968" y="546" width="78" height="38" rx="12" stroke-width="2"/><text x="1007" y="571" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="17">Yes</text></g>
+      <rect x="1054" y="546" width="70" height="38" rx="12" fill="none" stroke="#B9A88C" stroke-width="2"/><text x="1089" y="571" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#26261F">No</text>
+      <rect x="1132" y="546" width="88" height="38" rx="12" fill="none" stroke="#B9A88C" stroke-width="2"/><text x="1176" y="571" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#26261F">Not sure</text>
+    </g>
+    <g class="only-map later" style="--d:3.9s">
+      <rect x="962" y="730" width="262" height="44" rx="14" fill="#2F6B3C" filter="url(#sh)"/>
+      <text x="1093" y="758" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="17" fill="#F7F6E8">1 more answer confirms it</text>
+    </g>
+  </svg>
+
+  <div class="scrim"></div>
+
+  <header class="htop">
+    <a class="word" href="index.html" aria-label="Access London, home">Access.</a>
+    <div class="mid-ctl">
+      <div class="seg" role="group" aria-label="Show the story for">
+        <button type="button" data-mode="visit" aria-pressed="true"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11zM12 10h.01"/></svg>Visitor</button>
+        <button type="button" data-mode="map" aria-pressed="false"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Mapper</button>
+      </div>
+      <button type="button" class="round" id="pause" aria-label="Pause the animation"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#26261F"><path id="pause-icon" d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+    </div>
+    <nav class="right" aria-label="Main">
+      <a class="nav" href="map.html">Map</a>
+      <a class="nav" href="about.html">About</a>
+      <a class="nav dark" href="about.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="words" id="words" aria-live="polite">
+    <h1 id="hero-title">Places you<br>can get into.</h1>
+    <p id="hero-sub">Step-free cafés, parks, museums and toilets across London.</p>
+    <a id="hero-cta" class="cta" href="map.html"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path id="cta-icon" d="M3 11l18-8-8 18-2-8z"/></svg><span id="cta-text">Find a spot</span></a>
+  </div>
+
+  <div class="tiles">
+    <div class="grid" id="grid" role="group" aria-label="London's 33 boroughs"></div>
+    <p id="tiles-note">Tap a borough. Darker is easier.</p>
+  </div>
+
+  <a class="more" href="#main" aria-label="More about Access London"></a>
 </div>
 
-<div style="position: absolute; inset: 0; pointer-events: none; background: {{fade}}; transition: background .8s ease;"></div>
+<main id="main" class="wrap">
+  <section aria-label="Two ways to use Access London" class="ways">
+    <div class="way visit">
+      <h2>Visiting somewhere?</h2>
+      <ol class="steps">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2F6B3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 20V5h8v15M14 20l7-5M11 12h.01"/></svg><span>Pick what you need: a step-free way in, an accessible toilet, or both.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2F6B3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11zM12 10h.01"/></svg><span>Green pins have it. Dashed pins mean nobody has checked yet, never “no”.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2F6B3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg><span>Open a place for the details, then get directions and the nearest step-free stations.</span></li>
+      </ol>
+      <a href="map.html">Open the map</a>
+    </div>
+    <div class="way map">
+      <h2>Been somewhere?</h2>
+      <ol class="steps">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4562A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11zM12 10h.01"/></svg><span>See the places near you that nobody has answered for.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4562A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Answer three questions about one you’ve been to. About 30 seconds, no sign-up.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4562A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>When two people agree, the answer shows for everyone.</span></li>
+      </ol>
+      <a href="map.html?mode=map">Start mapping</a>
+    </div>
+  </section>
 
+  <section class="honest" aria-label="How much is known">
+    <span class="big">3 in 4</span>
+    <p>places in our London data have no wheelchair information on OpenStreetMap yet. We show those gaps instead of hiding them. <a href="about.html">Where the data comes from</a></p>
+  </section>
+</main>
 
+<footer class="foot wrap">
+  <span>Made by The DOMinators · UCL CASA0017 Web Architecture</span>
+  <nav aria-label="Footer"><a href="map.html">Map</a><a href="about.html">About and data</a><a href="about.html#contact">Contact us</a></nav>
+</footer>
 
-<div class="hm-switchrow" style="display: flex; align-items: center; gap: 8px;">
-<div class="hm-switch" role="group" aria-label="Show the site for" style="display: flex; gap: 4px; background: rgba(251,251,242,0.92); border-radius: 20px; padding: 5px; box-shadow: 0 10px 30px rgba(31,48,24,0.14);">
-<sc-for list="{{modes}}" as="m" hint-placeholder-count="2">
-<button type="button" onClick="{{m.pick}}" aria-pressed="{{m.pressed}}" style="position: relative; overflow: hidden; min-height: 50px; min-width: 132px; border: none; border-radius: 15px; padding: 0 18px; display: flex; align-items: center; justify-content: center; gap: 9px; background: {{m.bg}}; color: {{m.fg}}; font-family: 'Outfit', Arial, sans-serif; font-size: 17px; font-weight: 500; cursor: pointer; transition: background .5s, color .5s;">
-<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg>{{m.label}}
-<span aria-hidden="true" style="position: absolute; left: 0; bottom: 0; height: 4px; background: {{m.barColor}}; width: {{m.barW}}; animation: {{m.anim}};"></span>
-</button>
-</sc-for>
-</div>
+<script>
+/* Home page. The Visitor and Mapper stories take turns (8 seconds each) on the big map.
+   Pressing Visitor or Mapper shows that story and stops the turns; the pause button stops
+   all movement (WCAG 2.2.2). With "reduce motion" on, each story shows its last frame. */
+(function () {
+  'use strict';
+  const LEN = 8000;
+  const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const svg = document.getElementById('scape');
+  const NS = 'http://www.w3.org/2000/svg';
 
-</div>
+  // ---- the pins on the illustration (made-up places; kinds as on the real map) ----
+  const ICON = {
+    food: 'M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 0-3 2-3 5s1 4 3 4v9',
+    museum: 'M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18',
+    shop: 'M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2',
+    park: 'M12 3l5 7h-3l4 6H6l4-6H7zM12 16v5',
+    toilet: 'M10 4a2 2 0 1 0 0 .01M9 8v6h6l2 5M9 11h5M7.5 12.5a5 5 0 1 0 7 5.5'
+  };
+  // [x, y, kind of place, what's known: fit = yes, nofit = no or partly, unk = not known]
+  const PINS = [[270, 200, 'food', 'fit'], [532, 300, 'shop', 'fit'], [794, 150, 'museum', 'fit'], [843, 330, 'museum', 'fit'],
+    [974, 420, 'food', 'fit'], [810, 490, 'food', 'fit'], [680, 632, 'park', 'nofit'], [843, 622, 'shop', 'fit'],
+    [1187, 222, 'park', 'unk'], [1480, 162, 'food', 'unk'], [1398, 400, 'toilet', 'fit'], [620, 860, 'food', 'unk'],
+    [1240, 990, 'food', 'unk'], [960, 1060, 'park', 'fit'], [1500, 880, 'shop', 'unk'], [640, 196, 'shop', 'unk']];
+  const group = document.getElementById('pins');
+  PINS.forEach(([x, y, kind, k], i) => {
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'pin k-' + k);
+    g.setAttribute('transform', 'translate(' + x + ' ' + y + ')');
+    g.innerHTML = '<circle class="dot" r="10" stroke-width="3"/>' +
+      '<g class="swapper"><g class="pop" style="--d:' + (0.15 + i * 0.05).toFixed(2) + 's" filter="url(#sh)">' +
+      '<circle class="bg" r="27" stroke-width="4"/>' +
+      '<path class="ic" transform="translate(-12 -12)" d="' + ICON[kind] + '" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g></g>';
+    group.appendChild(g);
+  });
+  // parks: a fill and the diagonal stripes on top
+  document.querySelectorAll('#parks path').forEach((p) => {
+    p.setAttribute('class', 'park');
+    const s = p.cloneNode(); s.removeAttribute('class'); s.setAttribute('fill', 'url(#stripes)');
+    p.after(s);
+  });
 
-<div class="hm-bottom" style="position: absolute; left: 48px; bottom: 48px; right: 40%; display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
-<sc-if value="{{isVisit}}" hint-placeholder-val="{{true}}">
-<h1 class="hm-rise" style="margin: 0; font-size: clamp(50px, 7.6cqw, 132px); font-weight: 600; line-height: 0.94; letter-spacing: -0.045em; color: #2F6B3C; max-width: 8.5ch;">Find places. Know the gaps.</h1>
-</sc-if>
-<sc-if value="{{isMap}}" hint-placeholder-val="{{false}}">
-<h1 class="hm-rise" style="margin: 0; font-size: clamp(50px, 7.6cqw, 132px); font-weight: 600; line-height: 0.94; letter-spacing: -0.045em; color: #B4562A; max-width: 8.5ch;">Help someone get in.</h1>
-</sc-if>
-<p style="margin: 0; font-size: clamp(17px, 1.5cqw, 21px); line-height: 1.4; color: #3E3F32; max-width: 30ch;">{{sub}}</p>
-<a href="{{homeDestination}}" onClick="{{goCurrent}}" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px; background: {{ctaBg}}; color: {{ctaFg}}; border-radius: 20px; padding: 18px 28px; font-size: 20px; font-weight: 500; box-shadow: 0 14px 30px rgba(31,48,24,0.2); transition: background .6s, color .6s;">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ctaIcon}}"></path></svg>{{cta}}</a><a class="home-help" href="how-to-use.html">First visit? See how it works →</a>
-</div>
+  // ---- keep the museum and its card in view on any screen shape ----
+  function fit() {
+    const a = innerWidth / innerHeight;
+    let vb = '0 0 1600 1000';
+    if (a < 1.25) {
+      const W = Math.max(440, Math.min(1600, 1000 * a));
+      const x0 = Math.min(1600 - W, Math.max(0, 1120 - W * 0.62));
+      vb = Math.round(x0) + ' ' + (a < 0.8 ? 230 : 0) + ' ' + Math.round(W) + ' 1000';
+    }
+    svg.setAttribute('viewBox', vb);
+  }
+  fit(); addEventListener('resize', fit);
 
-<div class="hm-tiles" style="position: absolute; right: 28px; bottom: 28px; background: rgba(251,251,242,0.94); border-radius: 24px; padding: 16px; flex-direction: column; gap: 10px; box-shadow: 0 16px 40px rgba(31,48,24,0.16);">
-<div style="display: grid; grid-template-columns: repeat(8, 26px); gap: 4px;">
-<sc-for list="{{tiles}}" as="t" hint-placeholder-count="56">
-<sc-if value="{{t.isTile}}" hint-placeholder-val="{{true}}">
-<button type="button" onClick="{{t.pick}}" aria-label="{{t.label}}" aria-pressed="{{t.pressed}}" style="width: 26px; height: 26px; padding: 0; border-radius: 7px; border: {{t.border}}; box-sizing: border-box; background: {{t.bg}}; cursor: pointer; transition: background .6s;"></button>
-</sc-if>
-<sc-if value="{{t.isEmpty}}" hint-placeholder-val="{{false}}"><span></span></sc-if>
-</sc-for>
-</div>
-<div aria-live="polite" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 26px; width: 236px;">
-<span style="font-size: 14px; color: #3E3F32;">{{tileText}}</span>
-<sc-if value="{{hasTile}}" hint-placeholder-val="{{false}}"><a href="map.html" onClick="{{goTile}}" style="font-size: 14px; font-weight: 600; white-space: nowrap;">Open map</a></sc-if>
-</div>
-</div>
-</div>
-<div class="al-home-note">Illustrated background · Open the map for geographic place positions. © OpenStreetMap contributors.</div>
-</template>
-<div id="dc-root"></div>
-<section class="home-journey" aria-labelledby="journey-title"><div class="journey-intro"><p class="section-kicker">ONE MAP. THREE WAYS TO EXPLORE.</p><h2 id="journey-title">Your place. Your journey. The details.</h2><p>Start with a destination, check a station, then look at the facilities. Switch views inside the same map.</p></div><div class="journey-cards"><a href="map.html"><span class="journey-number">01 / PLACES</span><h3>Find somewhere to go</h3><p>Browse cafés, parks, shops and cultural places by borough and access needs.</p><span>Explore places ↗</span></a><a href="map.html?view=stations"><span class="journey-number">02 / STATIONS</span><h3>Check your arrival</h3><p>Read step-free access details and the latest reported lift disruptions.</p><span>Explore stations ↗</span></a><a href="map.html?view=facilities"><span class="journey-number">03 / FACILITIES</span><h3>Look more closely</h3><p>Find mapped entrances, lifts, ramps and toilets, with their original evidence.</p><span>Explore facilities ↗</span></a></div><p class="journey-note">Missing information means unknown. Check the source, date and exact entrance before travelling.</p></section><noscript>Access London needs JavaScript to show the map.</noscript>
-<script type="text/x-dc">class Component extends AccessHomePage {}</script>
+  // ---- the 33 boroughs (from data/boroughs-map.json: tile position, score, % not known) ----
+  // [code, name, row, col, score or null when too few places are checked, % with no wheelchair information]
+  const B = [['CTY','City of London',3,4,69,60],['BAR','Barking and Dagenham',3,7,null,97],['BRN','Barnet',1,3,null,93],['BXL','Bexley',4,7,null,100],['BRT','Brent',2,2,null,93],['BRM','Bromley',5,5,null,88],['CMD','Camden',2,3,67,80],['CRD','Croydon',5,4,null,96],['EAL','Ealing',2,1,67,80],['ENF','Enfield',0,4,null,95],['GRN','Greenwich',4,6,null,89],['HCK','Hackney',2,5,57,76],['HMS','Hammersmith and Fulham',3,1,null,92],['HGY','Haringey',1,4,null,93],['HRW','Harrow',1,2,null,92],['HAV','Havering',2,7,null,98],['HDN','Hillingdon',2,0,null,94],['HNS','Hounslow',3,0,null,91],['ISL','Islington',2,4,null,89],['KNS','Kensington and Chelsea',3,2,null,92],['KNG','Kingston upon Thames',5,2,66,84],['LAM','Lambeth',4,3,null,89],['LSH','Lewisham',4,5,72,82],['MRT','Merton',5,3,null,89],['NWM','Newham',3,6,null,96],['RDB','Redbridge',2,6,null,98],['RCH','Richmond upon Thames',4,1,null,87],['STH','Southwark',4,4,74,85],['SUT','Sutton',6,3,null,97],['TWH','Tower Hamlets',3,5,70,85],['WFR','Waltham Forest',1,5,null,97],['WNS','Wandsworth',4,2,null,92],['WST','Westminster',3,3,57,72]];
+  const greens = (s) => (s >= 72 ? '#2F6B3C' : s >= 68 ? '#4E8247' : s >= 62 ? '#6E9E52' : '#A3C487');
+  const oranges = (u) => (u >= 97 ? '#B4562A' : u >= 92 ? '#CF7340' : u >= 86 ? '#E4A06A' : '#F1CBA0');
+  const grid = document.getElementById('grid'), note = document.getElementById('tiles-note');
+  const NOTE = { visit: 'Tap a borough. Darker is easier.', map: 'Tap a borough. Darker needs more answers.' };
+  const tiles = B.map(([ui, name, row, col, score, unknown]) => {
+    const a = document.createElement('a');
+    a.style.gridRow = row + 1; a.style.gridColumn = col + 1;
+    a.dataset.ui = ui;
+    a.info = { name, score, unknown };
+    const say = () => { note.textContent = label(a); };
+    a.addEventListener('mouseenter', say); a.addEventListener('focus', say);
+    a.addEventListener('mouseleave', () => { note.textContent = NOTE[mode]; });
+    a.addEventListener('blur', () => { note.textContent = NOTE[mode]; });
+    grid.appendChild(a);
+    return a;
+  });
+  function label(a) {
+    const i = a.info;
+    if (mode === 'map') return i.name + ': ' + i.unknown + '% not known yet';
+    return i.name + ': ' + (i.score == null ? 'too few places checked' : 'score ' + i.score);
+  }
+  function paintTiles() {
+    tiles.forEach((a) => {
+      const i = a.info;
+      a.href = (mode === 'map' ? 'map.html?mode=map#' : 'map.html#') + a.dataset.ui;
+      a.setAttribute('aria-label', label(a));
+      const none = mode === 'visit' && i.score == null;
+      a.classList.toggle('none', none);
+      a.style.background = none ? '' : (mode === 'visit' ? greens(i.score) : oranges(i.unknown));
+    });
+    note.textContent = NOTE[mode];
+  }
+
+  // ---- the two stories ----
+  const WORDS = {
+    visit: { h: 'Places you<br>can get into.', p: 'Step-free cafés, parks, museums and toilets across London.', cta: 'Find a spot', href: 'map.html', icon: 'M3 11l18-8-8 18-2-8z' },
+    map: { h: 'Help someone<br>get in.', p: 'Three in four places have no wheelchair information yet. Answer three questions about somewhere you’ve been. No sign-up.', cta: 'Start mapping', href: 'map.html?mode=map', icon: 'M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z' }
+  };
+  const travel = document.getElementById('travel'), person = document.getElementById('person');
+  const pauseBtn = document.getElementById('pause');
+  let mode = 'visit', auto = !calm, paused = false, timer = null;
+
+  function show(next, fromUser) {
+    mode = next;
+    document.body.dataset.mode = mode;
+    document.querySelectorAll('.seg button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+    const w = WORDS[mode], words = document.getElementById('words');
+    document.getElementById('hero-title').innerHTML = w.h;
+    document.getElementById('hero-sub').textContent = w.p;
+    document.getElementById('cta-text').textContent = w.cta;
+    document.getElementById('cta-icon').setAttribute('d', w.icon);
+    document.getElementById('hero-cta').href = w.href;
+    words.classList.remove('swap'); void words.offsetWidth; words.classList.add('swap');
+    paintTiles();
+    // start this story from the beginning
+    svg.classList.remove('play'); void svg.getBoundingClientRect(); svg.classList.add('play');
+    // the person travels in the Visitor story; in the Mapper story they've already arrived
+    try {
+      if (mode === 'visit' && !calm) travel.beginElement(); else travel.beginElementAt(-4.4);
+    } catch (e) { /* very old browser: the person just doesn't move */ }
+    person.classList.add('here');
+    if (paused) svg.pauseAnimations();
+    if (fromUser) auto = false;
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (auto && !paused) timer = setTimeout(() => show(mode === 'visit' ? 'map' : 'visit'), LEN);
+  }
+  function setPaused(p) {
+    paused = p;
+    svg.classList.toggle('paused', p);
+    if (p) svg.pauseAnimations(); else svg.unpauseAnimations();
+    pauseBtn.setAttribute('aria-label', p ? 'Play the animation' : 'Pause the animation');
+    document.getElementById('pause-icon').setAttribute('d', p ? 'M7 4l13 8-13 8z' : 'M6 4h4v16H6zM14 4h4v16h-4z');
+    if (!p && !calm) auto = true;
+    schedule();
+  }
+  document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => show(b.dataset.mode, true)));
+  pauseBtn.addEventListener('click', () => setPaused(!paused));
+  document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(timer); else schedule(); });
+  show('visit');
+  if (calm) { pauseBtn.hidden = true; }
+})();
+</script>
 </body>
 </html>
