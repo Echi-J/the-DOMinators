@@ -1,0 +1,84 @@
+/* site.css — shared look for the home and about pages (the map page keeps its own styles).
+   Colours are the mockup's: cream and sage for visitors, sand and terracotta for mappers. */
+:root {
+  --cream: #F2F3DC;
+  --paper: #FBFBF2;
+  --ink: #26261F;
+  --quiet: #4B4C3D;
+  --line: #D3D4B8;
+  --green: #2F6B3C;
+  --green-soft: #E3E6C4;
+  --sand: #F7EEDD;
+  --terracotta: #B4562A;
+  --orange: #E8873A;
+  --navy: #233A6B;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--cream); color: var(--ink);
+  font-family: 'Outfit', Arial, sans-serif; font-size: 17px; line-height: 1.5;
+  transition: background 0.5s ease;
+}
+body[data-mode='map'] { background: var(--sand); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 20; background: var(--ink); color: var(--cream); padding: 10px 14px; border-radius: 12px; }
+.skip:focus { top: 12px; }
+
+/* ---- Top bar: floating pills, the same as on the map ---- */
+.top {
+  position: sticky; top: 0; z-index: 10; height: 76px; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  background: linear-gradient(to bottom, rgba(242,243,220,0.95), rgba(242,243,220,0));
+}
+body[data-mode='map'] .top { background: linear-gradient(to bottom, rgba(247,238,221,0.95), rgba(247,238,221,0)); }
+.pill {
+  background: rgba(251,251,242,0.92); border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(31,48,24,0.12);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.logo { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; text-decoration: none; }
+.logo b { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; }
+.logo small { font-size: 13px; color: #5C5D4C; margin-left: -4px; }
+.toplink { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 16px; text-decoration: none; font-size: 16px; }
+.modes { display: flex; gap: 4px; padding: 4px; }
+.modes button {
+  min-height: 46px; min-width: 52px; border: none; border-radius: 14px; padding: 0 16px;
+  display: flex; align-items: center; gap: 8px; background: transparent; color: var(--ink);
+  font: 500 16px 'Outfit', Arial, sans-serif; cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.12s ease-out;
+}
+.modes button[aria-pressed='true'][data-mode='visit'] { background: var(--green); color: var(--cream); }
+.modes button[aria-pressed='true'][data-mode='map'] { background: var(--orange); }
+button:active, .btn:active, .toplink:active, .logo:active { transform: scale(0.97); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px; padding: 0 24px; border-radius: 18px; text-decoration: none;
+  font-size: 18px; font-weight: 500; transition: transform 0.12s ease-out, background-color 0.3s ease;
+}
+.btn-dark { background: var(--ink); color: var(--cream); }
+.btn-line { border: 2px solid #9A9B82; }
+
+/* ---- Footer: contact lives here now, not in the top bar ---- */
+.foot {
+  margin-top: 64px; padding: 32px 24px 40px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between;
+  font-size: 15px; color: var(--quiet);
+}
+.foot nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.foot nav a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.foot nav a:hover { text-decoration: underline; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+@media (max-width: 760px) {
+  .top { padding: 0 12px; }
+  .logo b, .logo small, .label { display: none; }
+  .logo { padding: 6px; }
+}
