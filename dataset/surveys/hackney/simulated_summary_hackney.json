@@ -1,0 +1,56 @@
+[
+  {
+    "place_id": "osm:node/3551283263",
+    "place_name": "Petrol Station Toilets",
+    "survey_count": 35,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/100610481",
+    "place_name": "Shoreditch Park",
+    "survey_count": 27,
+    "ent": "unknown",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/10555299892",
+    "place_name": "13th Floor Coffee",
+    "survey_count": 47,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/10110257533",
+    "place_name": "Arsenal Fruit & Veg",
+    "survey_count": 39,
+    "ent": "no",
+    "toilet": "no",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/1558137005",
+    "place_name": "Hackney Museum",
+    "survey_count": 31,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/10036261935",
+    "place_name": "Photobook cafe",
+    "survey_count": 21,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  }
+]

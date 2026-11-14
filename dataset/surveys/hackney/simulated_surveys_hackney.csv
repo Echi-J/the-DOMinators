@@ -1,0 +1,201 @@
+response_id,respondent_id,place_id,place_name,ent,toilet,lift,submitted_at_utc,is_synthetic
+AL-DEMO-R001,AL-DEMO-P001,osm:node/3551283263,Petrol Station Toilets,yes,yes,unsure,2026-10-26T08:13:00Z,1
+AL-DEMO-R002,AL-DEMO-P002,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-10-26T10:24:00Z,1
+AL-DEMO-R003,AL-DEMO-P003,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-10-26T11:50:00Z,1
+AL-DEMO-R004,AL-DEMO-P004,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-10-26T12:50:00Z,1
+AL-DEMO-R005,AL-DEMO-P005,osm:node/10110257533,Arsenal Fruit & Veg,unsure,unsure,unsure,2026-10-26T14:45:00Z,1
+AL-DEMO-R006,AL-DEMO-P006,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-10-26T15:43:00Z,1
+AL-DEMO-R007,AL-DEMO-P007,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-10-26T17:07:00Z,1
+AL-DEMO-R008,AL-DEMO-P008,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,unsure,2026-10-26T19:36:00Z,1
+AL-DEMO-R009,AL-DEMO-P009,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-10-26T20:38:00Z,1
+AL-DEMO-R010,AL-DEMO-P010,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-10-26T22:27:00Z,1
+AL-DEMO-R011,AL-DEMO-P011,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-26T23:19:00Z,1
+AL-DEMO-R012,AL-DEMO-P012,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-10-27T00:42:00Z,1
+AL-DEMO-R013,AL-DEMO-P013,osm:node/1558137005,Hackney Museum,unsure,unsure,yes,2026-10-27T02:34:00Z,1
+AL-DEMO-R014,AL-DEMO-P014,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-10-27T04:44:00Z,1
+AL-DEMO-R015,AL-DEMO-P015,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-10-27T06:13:00Z,1
+AL-DEMO-R016,AL-DEMO-P016,osm:node/10036261935,Photobook cafe,unsure,no,no,2026-10-27T07:20:00Z,1
+AL-DEMO-R017,AL-DEMO-P017,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-10-27T08:02:00Z,1
+AL-DEMO-R018,AL-DEMO-P018,osm:node/10036261935,Photobook cafe,yes,no,no,2026-10-27T10:44:00Z,1
+AL-DEMO-R019,AL-DEMO-P019,osm:node/10110257533,Arsenal Fruit & Veg,no,no,unsure,2026-10-27T11:34:00Z,1
+AL-DEMO-R020,AL-DEMO-P020,osm:node/10110257533,Arsenal Fruit & Veg,unsure,unsure,one,2026-10-27T12:46:00Z,1
+AL-DEMO-R021,AL-DEMO-P021,osm:node/1558137005,Hackney Museum,unsure,no,yes,2026-10-27T14:30:00Z,1
+AL-DEMO-R022,AL-DEMO-P022,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-10-27T16:44:00Z,1
+AL-DEMO-R023,AL-DEMO-P023,osm:node/10110257533,Arsenal Fruit & Veg,no,no,unsure,2026-10-27T17:57:00Z,1
+AL-DEMO-R024,AL-DEMO-P024,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-27T19:14:00Z,1
+AL-DEMO-R025,AL-DEMO-P025,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-10-27T21:11:00Z,1
+AL-DEMO-R026,AL-DEMO-P026,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-10-27T22:39:00Z,1
+AL-DEMO-R027,AL-DEMO-P027,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-10-27T23:31:00Z,1
+AL-DEMO-R028,AL-DEMO-P028,osm:node/10110257533,Arsenal Fruit & Veg,no,no,unsure,2026-10-28T01:45:00Z,1
+AL-DEMO-R029,AL-DEMO-P029,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-28T02:53:00Z,1
+AL-DEMO-R030,AL-DEMO-P030,osm:node/10110257533,Arsenal Fruit & Veg,no,no,unsure,2026-10-28T04:41:00Z,1
+AL-DEMO-R031,AL-DEMO-P031,osm:node/10555299892,13th Floor Coffee,yes,unsure,unsure,2026-10-28T06:11:00Z,1
+AL-DEMO-R032,AL-DEMO-P032,osm:node/1558137005,Hackney Museum,yes,yes,unsure,2026-10-28T07:20:00Z,1
+AL-DEMO-R033,AL-DEMO-P033,osm:node/1558137005,Hackney Museum,yes,no,unsure,2026-10-28T08:04:00Z,1
+AL-DEMO-R034,AL-DEMO-P034,osm:node/1558137005,Hackney Museum,unsure,yes,unsure,2026-10-28T09:30:00Z,1
+AL-DEMO-R035,AL-DEMO-P035,osm:node/10555299892,13th Floor Coffee,unsure,unsure,one,2026-10-28T11:33:00Z,1
+AL-DEMO-R036,AL-DEMO-P036,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-10-28T13:03:00Z,1
+AL-DEMO-R037,AL-DEMO-P037,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,one,2026-10-28T14:17:00Z,1
+AL-DEMO-R038,AL-DEMO-P038,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-10-28T16:04:00Z,1
+AL-DEMO-R039,AL-DEMO-P039,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-10-28T17:10:00Z,1
+AL-DEMO-R040,AL-DEMO-P040,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-28T18:52:00Z,1
+AL-DEMO-R041,AL-DEMO-P041,osm:node/1558137005,Hackney Museum,yes,yes,yes,2026-10-28T21:05:00Z,1
+AL-DEMO-R042,AL-DEMO-P042,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-10-28T22:10:00Z,1
+AL-DEMO-R043,AL-DEMO-P043,osm:node/1558137005,Hackney Museum,unsure,yes,unsure,2026-10-29T00:14:00Z,1
+AL-DEMO-R044,AL-DEMO-P044,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-29T01:40:00Z,1
+AL-DEMO-R045,AL-DEMO-P045,osm:node/3551283263,Petrol Station Toilets,yes,unsure,unsure,2026-10-29T02:41:00Z,1
+AL-DEMO-R046,AL-DEMO-P046,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-10-29T03:32:00Z,1
+AL-DEMO-R047,AL-DEMO-P047,osm:node/10036261935,Photobook cafe,unsure,unsure,no,2026-10-29T05:09:00Z,1
+AL-DEMO-R048,AL-DEMO-P048,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,unsure,2026-10-29T06:51:00Z,1
+AL-DEMO-R049,AL-DEMO-P049,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-10-29T08:33:00Z,1
+AL-DEMO-R050,AL-DEMO-P050,osm:node/10555299892,13th Floor Coffee,unsure,unsure,unsure,2026-10-29T10:25:00Z,1
+AL-DEMO-R051,AL-DEMO-P051,osm:node/10036261935,Photobook cafe,yes,no,unsure,2026-10-29T11:45:00Z,1
+AL-DEMO-R052,AL-DEMO-P052,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-10-29T12:43:00Z,1
+AL-DEMO-R053,AL-DEMO-P053,osm:node/1558137005,Hackney Museum,yes,yes,unsure,2026-10-29T15:02:00Z,1
+AL-DEMO-R054,AL-DEMO-P054,osm:node/10110257533,Arsenal Fruit & Veg,unsure,unsure,one,2026-10-29T15:35:00Z,1
+AL-DEMO-R055,AL-DEMO-P055,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-10-29T18:00:00Z,1
+AL-DEMO-R056,AL-DEMO-P056,osm:node/10555299892,13th Floor Coffee,unsure,unsure,one,2026-10-29T19:31:00Z,1
+AL-DEMO-R057,AL-DEMO-P057,osm:node/1558137005,Hackney Museum,yes,no,unsure,2026-10-29T20:43:00Z,1
+AL-DEMO-R058,AL-DEMO-P058,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-10-29T22:21:00Z,1
+AL-DEMO-R059,AL-DEMO-P059,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-10-29T23:02:00Z,1
+AL-DEMO-R060,AL-DEMO-P060,osm:node/10036261935,Photobook cafe,yes,unsure,one,2026-10-30T00:55:00Z,1
+AL-DEMO-R061,AL-DEMO-P061,osm:node/1558137005,Hackney Museum,yes,yes,yes,2026-10-30T03:05:00Z,1
+AL-DEMO-R062,AL-DEMO-P062,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-10-30T04:37:00Z,1
+AL-DEMO-R063,AL-DEMO-P063,osm:node/10555299892,13th Floor Coffee,yes,unsure,unsure,2026-10-30T05:13:00Z,1
+AL-DEMO-R064,AL-DEMO-P064,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,one,2026-10-30T07:04:00Z,1
+AL-DEMO-R065,AL-DEMO-P065,osm:node/10036261935,Photobook cafe,yes,unsure,one,2026-10-30T08:47:00Z,1
+AL-DEMO-R066,AL-DEMO-P066,osm:node/1558137005,Hackney Museum,yes,yes,yes,2026-10-30T09:57:00Z,1
+AL-DEMO-R067,AL-DEMO-P067,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-10-30T11:10:00Z,1
+AL-DEMO-R068,AL-DEMO-P068,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-10-30T13:39:00Z,1
+AL-DEMO-R069,AL-DEMO-P069,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-10-30T14:11:00Z,1
+AL-DEMO-R070,AL-DEMO-P070,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-10-30T16:18:00Z,1
+AL-DEMO-R071,AL-DEMO-P071,osm:node/10036261935,Photobook cafe,yes,unsure,unsure,2026-10-30T17:35:00Z,1
+AL-DEMO-R072,AL-DEMO-P072,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-30T18:42:00Z,1
+AL-DEMO-R073,AL-DEMO-P073,osm:node/10110257533,Arsenal Fruit & Veg,unsure,unsure,one,2026-10-30T20:48:00Z,1
+AL-DEMO-R074,AL-DEMO-P074,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-10-30T22:20:00Z,1
+AL-DEMO-R075,AL-DEMO-P075,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-10-31T00:09:00Z,1
+AL-DEMO-R076,AL-DEMO-P076,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-10-31T01:32:00Z,1
+AL-DEMO-R077,AL-DEMO-P077,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-31T02:59:00Z,1
+AL-DEMO-R078,AL-DEMO-P078,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-10-31T03:59:00Z,1
+AL-DEMO-R079,AL-DEMO-P079,osm:node/10036261935,Photobook cafe,yes,no,unsure,2026-10-31T06:15:00Z,1
+AL-DEMO-R080,AL-DEMO-P080,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-10-31T06:53:00Z,1
+AL-DEMO-R081,AL-DEMO-P081,osm:node/3551283263,Petrol Station Toilets,yes,yes,unsure,2026-10-31T08:21:00Z,1
+AL-DEMO-R082,AL-DEMO-P082,osm:node/10555299892,13th Floor Coffee,unsure,unsure,unsure,2026-10-31T09:55:00Z,1
+AL-DEMO-R083,AL-DEMO-P083,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-10-31T11:39:00Z,1
+AL-DEMO-R084,AL-DEMO-P084,osm:node/10036261935,Photobook cafe,yes,unsure,no,2026-10-31T12:57:00Z,1
+AL-DEMO-R085,AL-DEMO-P085,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,unsure,2026-10-31T14:36:00Z,1
+AL-DEMO-R086,AL-DEMO-P086,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-10-31T15:39:00Z,1
+AL-DEMO-R087,AL-DEMO-P087,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-10-31T17:15:00Z,1
+AL-DEMO-R088,AL-DEMO-P088,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,one,2026-10-31T19:18:00Z,1
+AL-DEMO-R089,AL-DEMO-P089,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-10-31T21:05:00Z,1
+AL-DEMO-R090,AL-DEMO-P090,osm:node/10036261935,Photobook cafe,yes,unsure,unsure,2026-10-31T21:34:00Z,1
+AL-DEMO-R091,AL-DEMO-P091,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-10-31T23:16:00Z,1
+AL-DEMO-R092,AL-DEMO-P092,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-11-01T00:47:00Z,1
+AL-DEMO-R093,AL-DEMO-P093,osm:node/10036261935,Photobook cafe,yes,no,one,2026-11-01T02:49:00Z,1
+AL-DEMO-R094,AL-DEMO-P094,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-11-01T04:22:00Z,1
+AL-DEMO-R095,AL-DEMO-P095,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-01T05:54:00Z,1
+AL-DEMO-R096,AL-DEMO-P096,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,unsure,2026-11-01T06:51:00Z,1
+AL-DEMO-R097,AL-DEMO-P097,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-01T08:25:00Z,1
+AL-DEMO-R098,AL-DEMO-P098,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-11-01T09:57:00Z,1
+AL-DEMO-R099,AL-DEMO-P099,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-01T11:34:00Z,1
+AL-DEMO-R100,AL-DEMO-P100,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-11-01T13:08:00Z,1
+AL-DEMO-R101,AL-DEMO-P101,osm:node/10036261935,Photobook cafe,yes,no,one,2026-11-01T14:22:00Z,1
+AL-DEMO-R102,AL-DEMO-P102,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-01T16:31:00Z,1
+AL-DEMO-R103,AL-DEMO-P103,osm:node/10036261935,Photobook cafe,yes,no,no,2026-11-01T17:21:00Z,1
+AL-DEMO-R104,AL-DEMO-P104,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-01T19:28:00Z,1
+AL-DEMO-R105,AL-DEMO-P105,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-11-01T20:22:00Z,1
+AL-DEMO-R106,AL-DEMO-P106,osm:node/3551283263,Petrol Station Toilets,yes,unsure,unsure,2026-11-01T22:22:00Z,1
+AL-DEMO-R107,AL-DEMO-P107,osm:node/3551283263,Petrol Station Toilets,yes,unsure,one,2026-11-01T23:58:00Z,1
+AL-DEMO-R108,AL-DEMO-P108,osm:node/10036261935,Photobook cafe,unsure,no,unsure,2026-11-02T01:20:00Z,1
+AL-DEMO-R109,AL-DEMO-P109,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,unsure,2026-11-02T02:07:00Z,1
+AL-DEMO-R110,AL-DEMO-P110,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,one,2026-11-02T03:40:00Z,1
+AL-DEMO-R111,AL-DEMO-P111,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-11-02T05:58:00Z,1
+AL-DEMO-R112,AL-DEMO-P112,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-02T06:32:00Z,1
+AL-DEMO-R113,AL-DEMO-P113,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-11-02T09:14:00Z,1
+AL-DEMO-R114,AL-DEMO-P114,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-11-02T09:58:00Z,1
+AL-DEMO-R115,AL-DEMO-P115,osm:node/10110257533,Arsenal Fruit & Veg,unsure,unsure,one,2026-11-02T12:08:00Z,1
+AL-DEMO-R116,AL-DEMO-P116,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-11-02T13:13:00Z,1
+AL-DEMO-R117,AL-DEMO-P117,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-11-02T14:26:00Z,1
+AL-DEMO-R118,AL-DEMO-P118,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-11-02T15:45:00Z,1
+AL-DEMO-R119,AL-DEMO-P119,osm:node/10036261935,Photobook cafe,yes,no,unsure,2026-11-02T17:15:00Z,1
+AL-DEMO-R120,AL-DEMO-P120,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-11-02T18:58:00Z,1
+AL-DEMO-R121,AL-DEMO-P121,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-11-02T20:19:00Z,1
+AL-DEMO-R122,AL-DEMO-P122,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-02T22:17:00Z,1
+AL-DEMO-R123,AL-DEMO-P123,osm:node/1558137005,Hackney Museum,yes,yes,unsure,2026-11-02T23:50:00Z,1
+AL-DEMO-R124,AL-DEMO-P124,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-11-03T01:06:00Z,1
+AL-DEMO-R125,AL-DEMO-P125,osm:node/10036261935,Photobook cafe,yes,no,no,2026-11-03T03:15:00Z,1
+AL-DEMO-R126,AL-DEMO-P126,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-11-03T04:00:00Z,1
+AL-DEMO-R127,AL-DEMO-P127,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-03T05:58:00Z,1
+AL-DEMO-R128,AL-DEMO-P128,osm:node/1558137005,Hackney Museum,yes,no,unsure,2026-11-03T07:06:00Z,1
+AL-DEMO-R129,AL-DEMO-P129,osm:node/1558137005,Hackney Museum,unsure,yes,yes,2026-11-03T08:48:00Z,1
+AL-DEMO-R130,AL-DEMO-P130,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-03T10:13:00Z,1
+AL-DEMO-R131,AL-DEMO-P131,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-11-03T11:05:00Z,1
+AL-DEMO-R132,AL-DEMO-P132,osm:node/1558137005,Hackney Museum,yes,no,unsure,2026-11-03T12:32:00Z,1
+AL-DEMO-R133,AL-DEMO-P133,osm:node/1558137005,Hackney Museum,unsure,yes,yes,2026-11-03T14:47:00Z,1
+AL-DEMO-R134,AL-DEMO-P134,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-03T15:34:00Z,1
+AL-DEMO-R135,AL-DEMO-P135,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-11-03T17:57:00Z,1
+AL-DEMO-R136,AL-DEMO-P136,osm:node/10555299892,13th Floor Coffee,yes,unsure,unsure,2026-11-03T19:05:00Z,1
+AL-DEMO-R137,AL-DEMO-P137,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-03T20:21:00Z,1
+AL-DEMO-R138,AL-DEMO-P138,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-03T21:45:00Z,1
+AL-DEMO-R139,AL-DEMO-P139,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-03T23:17:00Z,1
+AL-DEMO-R140,AL-DEMO-P140,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-04T00:51:00Z,1
+AL-DEMO-R141,AL-DEMO-P141,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-04T02:34:00Z,1
+AL-DEMO-R142,AL-DEMO-P142,osm:node/10036261935,Photobook cafe,yes,unsure,one,2026-11-04T03:56:00Z,1
+AL-DEMO-R143,AL-DEMO-P143,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-04T05:48:00Z,1
+AL-DEMO-R144,AL-DEMO-P144,osm:node/1558137005,Hackney Museum,yes,no,yes,2026-11-04T07:30:00Z,1
+AL-DEMO-R145,AL-DEMO-P145,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-11-04T09:15:00Z,1
+AL-DEMO-R146,AL-DEMO-P146,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-04T10:00:00Z,1
+AL-DEMO-R147,AL-DEMO-P147,osm:node/10110257533,Arsenal Fruit & Veg,no,unsure,one,2026-11-04T11:32:00Z,1
+AL-DEMO-R148,AL-DEMO-P148,osm:node/3551283263,Petrol Station Toilets,unsure,unsure,unsure,2026-11-04T13:18:00Z,1
+AL-DEMO-R149,AL-DEMO-P149,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-11-04T14:27:00Z,1
+AL-DEMO-R150,AL-DEMO-P150,osm:node/10036261935,Photobook cafe,yes,unsure,one,2026-11-04T15:58:00Z,1
+AL-DEMO-R151,AL-DEMO-P151,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-04T18:14:00Z,1
+AL-DEMO-R152,AL-DEMO-P152,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,one,2026-11-04T18:55:00Z,1
+AL-DEMO-R153,AL-DEMO-P153,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-11-04T20:14:00Z,1
+AL-DEMO-R154,AL-DEMO-P154,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-11-04T22:43:00Z,1
+AL-DEMO-R155,AL-DEMO-P155,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-04T23:05:00Z,1
+AL-DEMO-R156,AL-DEMO-P156,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-11-05T01:39:00Z,1
+AL-DEMO-R157,AL-DEMO-P157,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-05T03:04:00Z,1
+AL-DEMO-R158,AL-DEMO-P158,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-11-05T03:38:00Z,1
+AL-DEMO-R159,AL-DEMO-P159,osm:node/10555299892,13th Floor Coffee,yes,no,unsure,2026-11-05T05:39:00Z,1
+AL-DEMO-R160,AL-DEMO-P160,osm:node/1558137005,Hackney Museum,unsure,unsure,unsure,2026-11-05T06:58:00Z,1
+AL-DEMO-R161,AL-DEMO-P161,osm:node/1558137005,Hackney Museum,yes,unsure,unsure,2026-11-05T09:13:00Z,1
+AL-DEMO-R162,AL-DEMO-P162,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-11-05T10:12:00Z,1
+AL-DEMO-R163,AL-DEMO-P163,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,unsure,2026-11-05T11:52:00Z,1
+AL-DEMO-R164,AL-DEMO-P164,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-05T12:55:00Z,1
+AL-DEMO-R165,AL-DEMO-P165,osm:node/3551283263,Petrol Station Toilets,yes,yes,unsure,2026-11-05T14:04:00Z,1
+AL-DEMO-R166,AL-DEMO-P166,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-11-05T16:02:00Z,1
+AL-DEMO-R167,AL-DEMO-P167,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-05T17:09:00Z,1
+AL-DEMO-R168,AL-DEMO-P168,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,unsure,2026-11-05T19:11:00Z,1
+AL-DEMO-R169,AL-DEMO-P169,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-05T20:02:00Z,1
+AL-DEMO-R170,AL-DEMO-P170,osm:node/10555299892,13th Floor Coffee,unsure,no,one,2026-11-05T22:27:00Z,1
+AL-DEMO-R171,AL-DEMO-P171,osm:node/10036261935,Photobook cafe,yes,no,unsure,2026-11-06T00:15:00Z,1
+AL-DEMO-R172,AL-DEMO-P172,osm:way/100610481,Shoreditch Park,yes,unsure,unsure,2026-11-06T01:06:00Z,1
+AL-DEMO-R173,AL-DEMO-P173,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-11-06T02:59:00Z,1
+AL-DEMO-R174,AL-DEMO-P174,osm:node/3551283263,Petrol Station Toilets,yes,unsure,unsure,2026-11-06T03:36:00Z,1
+AL-DEMO-R175,AL-DEMO-P175,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-06T06:00:00Z,1
+AL-DEMO-R176,AL-DEMO-P176,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-06T07:38:00Z,1
+AL-DEMO-R177,AL-DEMO-P177,osm:node/3551283263,Petrol Station Toilets,yes,unsure,one,2026-11-06T08:56:00Z,1
+AL-DEMO-R178,AL-DEMO-P178,osm:node/10555299892,13th Floor Coffee,yes,unsure,one,2026-11-06T10:45:00Z,1
+AL-DEMO-R179,AL-DEMO-P179,osm:node/10036261935,Photobook cafe,unsure,no,no,2026-11-06T12:02:00Z,1
+AL-DEMO-R180,AL-DEMO-P180,osm:node/10555299892,13th Floor Coffee,unsure,no,unsure,2026-11-06T12:57:00Z,1
+AL-DEMO-R181,AL-DEMO-P181,osm:node/3551283263,Petrol Station Toilets,unsure,yes,unsure,2026-11-06T14:34:00Z,1
+AL-DEMO-R182,AL-DEMO-P182,osm:node/10036261935,Photobook cafe,yes,unsure,unsure,2026-11-06T16:24:00Z,1
+AL-DEMO-R183,AL-DEMO-P183,osm:node/3551283263,Petrol Station Toilets,yes,unsure,one,2026-11-06T17:54:00Z,1
+AL-DEMO-R184,AL-DEMO-P184,osm:way/100610481,Shoreditch Park,no,unsure,unsure,2026-11-06T19:35:00Z,1
+AL-DEMO-R185,AL-DEMO-P185,osm:node/1558137005,Hackney Museum,yes,yes,unsure,2026-11-06T20:08:00Z,1
+AL-DEMO-R186,AL-DEMO-P186,osm:node/1558137005,Hackney Museum,yes,yes,yes,2026-11-06T22:18:00Z,1
+AL-DEMO-R187,AL-DEMO-P187,osm:node/3551283263,Petrol Station Toilets,yes,yes,unsure,2026-11-06T23:08:00Z,1
+AL-DEMO-R188,AL-DEMO-P188,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-07T00:56:00Z,1
+AL-DEMO-R189,AL-DEMO-P189,osm:node/1558137005,Hackney Museum,yes,no,yes,2026-11-07T02:11:00Z,1
+AL-DEMO-R190,AL-DEMO-P190,osm:node/3551283263,Petrol Station Toilets,yes,yes,one,2026-11-07T04:37:00Z,1
+AL-DEMO-R191,AL-DEMO-P191,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-07T05:11:00Z,1
+AL-DEMO-R192,AL-DEMO-P192,osm:node/10110257533,Arsenal Fruit & Veg,unsure,no,unsure,2026-11-07T06:51:00Z,1
+AL-DEMO-R193,AL-DEMO-P193,osm:node/1558137005,Hackney Museum,yes,unsure,yes,2026-11-07T08:58:00Z,1
+AL-DEMO-R194,AL-DEMO-P194,osm:node/1558137005,Hackney Museum,yes,unsure,unsure,2026-11-07T10:38:00Z,1
+AL-DEMO-R195,AL-DEMO-P195,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-07T11:01:00Z,1
+AL-DEMO-R196,AL-DEMO-P196,osm:way/100610481,Shoreditch Park,unsure,unsure,unsure,2026-11-07T12:45:00Z,1
+AL-DEMO-R197,AL-DEMO-P197,osm:node/10110257533,Arsenal Fruit & Veg,no,no,one,2026-11-07T14:42:00Z,1
+AL-DEMO-R198,AL-DEMO-P198,osm:node/1558137005,Hackney Museum,yes,no,unsure,2026-11-07T15:30:00Z,1
+AL-DEMO-R199,AL-DEMO-P199,osm:node/10555299892,13th Floor Coffee,yes,no,one,2026-11-07T17:41:00Z,1
+AL-DEMO-R200,AL-DEMO-P200,osm:node/3551283263,Petrol Station Toilets,unsure,yes,one,2026-11-07T18:56:00Z,1
