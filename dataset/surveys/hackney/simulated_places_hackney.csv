@@ -1,0 +1,7 @@
+place_id,place_name,borough,borough_code,longitude,latitude,wheelchair_tag_present,osm_url,osm_version_checked,project_source_snapshot_utc,osm_checked_on
+osm:node/10555299892,13th Floor Coffee,Hackney,E09000012,-0.08473739,51.5608955,0,https://www.openstreetmap.org/node/10555299892,2,2026-10-18T20:25:06Z,2026-11-10
+osm:node/10110257533,Arsenal Fruit & Veg,Hackney,E09000012,-0.10272589,51.5637958,0,https://www.openstreetmap.org/node/10110257533,1,2026-10-18T20:25:06Z,2026-11-10
+osm:node/3551283263,Petrol Station Toilets,Hackney,E09000012,-0.05891839,51.5641908,0,https://www.openstreetmap.org/node/3551283263,1,2026-10-18T20:25:06Z,2026-11-10
+osm:node/1558137005,Hackney Museum,Hackney,E09000012,-0.05591049,51.544491,0,https://www.openstreetmap.org/node/1558137005,7,2026-10-18T20:25:06Z,2026-11-10
+osm:way/100610481,Shoreditch Park,Hackney,E09000012,-0.08623951,51.53458708,0,https://www.openstreetmap.org/way/100610481,21,2026-10-18T20:25:06Z,2026-11-10
+osm:node/10036261935,Photobook cafe,Hackney,E09000012,-0.08381729,51.5245632,0,https://www.openstreetmap.org/node/10036261935,3,2026-10-18T20:25:06Z,2026-11-10
