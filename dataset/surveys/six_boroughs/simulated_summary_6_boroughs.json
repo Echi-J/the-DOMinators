@@ -1,0 +1,326 @@
+[
+  {
+    "place_id": "osm:node/5836502584",
+    "place_name": "Brent Museum",
+    "survey_count": 43,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/617427470",
+    "place_name": "The Library at Willesden Green",
+    "survey_count": 36,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:relation/21292421",
+    "place_name": "Gladstone Park",
+    "survey_count": 31,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:relation/18915597",
+    "place_name": "Fryent Country Park",
+    "survey_count": 44,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/3246895686",
+    "place_name": "Dark Habit Coffee",
+    "survey_count": 38,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/439037559",
+    "place_name": "Paradise by way of Kensal Green",
+    "survey_count": 19,
+    "ent": "unknown",
+    "toilet": "no",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/10073490911",
+    "place_name": "Ottolenghi",
+    "survey_count": 40,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/7126677078",
+    "place_name": "Notting Hill Gate Library",
+    "survey_count": 18,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/19748095",
+    "place_name": "Avondale Park",
+    "survey_count": 27,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/129377070",
+    "place_name": "Sambourne House",
+    "survey_count": 44,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/10807015",
+    "place_name": "National Army Museum",
+    "survey_count": 20,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/8137262",
+    "place_name": "Holland Park",
+    "survey_count": 43,
+    "ent": "unknown",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/27815146",
+    "place_name": "Islington Central Library",
+    "survey_count": 39,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/336347265",
+    "place_name": "Arsenal Museum",
+    "survey_count": 21,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/339394917",
+    "place_name": "The Compton Arms",
+    "survey_count": 32,
+    "ent": "no",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/13583467062",
+    "place_name": "Quentin Blake Centre for Illustration",
+    "survey_count": 26,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/5247197725",
+    "place_name": "The Charterhouse",
+    "survey_count": 31,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:relation/18794121",
+    "place_name": "Highbury Fields",
+    "survey_count": 19,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/1042201707",
+    "place_name": "V&A East Museum",
+    "survey_count": 46,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/10870057348",
+    "place_name": "West Ham United Coffee Co.",
+    "survey_count": 35,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/23018529",
+    "place_name": "Thames Barrier Park",
+    "survey_count": 19,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/868617836",
+    "place_name": "Custom House Library",
+    "survey_count": 23,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/7794409755",
+    "place_name": "Starbucks Excel",
+    "survey_count": 21,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/13868329",
+    "place_name": "West Ham Park",
+    "survey_count": 29,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/910356813",
+    "place_name": "The Fan Museum",
+    "survey_count": 45,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/162578781",
+    "place_name": "Charlton Park",
+    "survey_count": 30,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/1306360473",
+    "place_name": "Queen's Gardens Toilets",
+    "survey_count": 31,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/1708956913",
+    "place_name": "Eltham Library",
+    "survey_count": 41,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/11197951160",
+    "place_name": "Cutty Sark Caf\u00e9",
+    "survey_count": 46,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/12883274419",
+    "place_name": "Old Royal Naval College Visitor Centre",
+    "survey_count": 40,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/618694098",
+    "place_name": "Victoria Library",
+    "survey_count": 38,
+    "ent": "yes",
+    "toilet": "no",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/11361621056",
+    "place_name": "The Caf\u00e9 at Foyles",
+    "survey_count": 20,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "partly",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/1493424622",
+    "place_name": "Handel & Hendrix",
+    "survey_count": 45,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:relation/1384127",
+    "place_name": "The Regent's Park",
+    "survey_count": 28,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "unknown",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:node/3349882188",
+    "place_name": "Hunterian Museum",
+    "survey_count": 39,
+    "ent": "yes",
+    "toilet": "unknown",
+    "lift": "yes",
+    "is_synthetic": 1
+  },
+  {
+    "place_id": "osm:way/120316250",
+    "place_name": "Apsley House",
+    "survey_count": 45,
+    "ent": "yes",
+    "toilet": "yes",
+    "lift": "partly",
+    "is_synthetic": 1
+  }
+]

@@ -1,0 +1,37 @@
+place_id,place_name,borough,borough_code,category,longitude,latitude,wheelchair_tag_present,osm_url,survey_count
+osm:node/5836502584,Brent Museum,Brent,E09000005,museum,-0.22899,51.54674,0,https://www.openstreetmap.org/node/5836502584,43
+osm:way/617427470,The Library at Willesden Green,Brent,E09000005,library,-0.22899,51.54682,0,https://www.openstreetmap.org/way/617427470,36
+osm:relation/21292421,Gladstone Park,Brent,E09000005,park,-0.23738,51.55815,0,https://www.openstreetmap.org/relation/21292421,31
+osm:relation/18915597,Fryent Country Park,Brent,E09000005,park,-0.28111,51.57561,0,https://www.openstreetmap.org/relation/18915597,44
+osm:way/439037559,Paradise by way of Kensal Green,Brent,E09000005,pub,-0.21629,51.52885,0,https://www.openstreetmap.org/way/439037559,19
+osm:node/3246895686,Dark Habit Coffee,Brent,E09000005,cafe,-0.20643,51.53686,0,https://www.openstreetmap.org/node/3246895686,38
+osm:way/10807015,National Army Museum,Kensington and Chelsea,E09000020,museum,-0.16029,51.48626,0,https://www.openstreetmap.org/way/10807015,20
+osm:way/129377070,Sambourne House,Kensington and Chelsea,E09000020,museum,-0.19687,51.50048,0,https://www.openstreetmap.org/way/129377070,44
+osm:way/8137262,Holland Park,Kensington and Chelsea,E09000020,park,-0.20412,51.50295,0,https://www.openstreetmap.org/way/8137262,43
+osm:way/19748095,Avondale Park,Kensington and Chelsea,E09000020,park,-0.21241,51.51066,0,https://www.openstreetmap.org/way/19748095,27
+osm:node/7126677078,Notting Hill Gate Library,Kensington and Chelsea,E09000020,library,-0.19743,51.51135,0,https://www.openstreetmap.org/node/7126677078,18
+osm:node/10073490911,Ottolenghi,Kensington and Chelsea,E09000020,cafe,-0.15852,51.49286,0,https://www.openstreetmap.org/node/10073490911,40
+osm:node/336347265,Arsenal Museum,Islington,E09000019,museum,-0.10814,51.55667,0,https://www.openstreetmap.org/node/336347265,21
+osm:node/5247197725,The Charterhouse,Islington,E09000019,museum,-0.09978,51.52146,0,https://www.openstreetmap.org/node/5247197725,31
+osm:node/13583467062,Quentin Blake Centre for Illustration,Islington,E09000019,museum,-0.10764,51.52859,0,https://www.openstreetmap.org/node/13583467062,26
+osm:relation/18794121,Highbury Fields,Islington,E09000019,park,-0.10009,51.55129,0,https://www.openstreetmap.org/relation/18794121,19
+osm:way/27815146,Islington Central Library,Islington,E09000019,library,-0.10716,51.54912,0,https://www.openstreetmap.org/way/27815146,39
+osm:node/339394917,The Compton Arms,Islington,E09000019,pub,-0.10201,51.54366,0,https://www.openstreetmap.org/node/339394917,32
+osm:way/1042201707,V&A East Museum,Newham,E09000025,museum,-0.01355,51.54189,0,https://www.openstreetmap.org/way/1042201707,46
+osm:way/13868329,West Ham Park,Newham,E09000025,park,0.01846,51.53927,0,https://www.openstreetmap.org/way/13868329,29
+osm:way/23018529,Thames Barrier Park,Newham,E09000025,park,0.03417,51.50071,0,https://www.openstreetmap.org/way/23018529,19
+osm:way/868617836,Custom House Library,Newham,E09000025,library,0.03136,51.51523,0,https://www.openstreetmap.org/way/868617836,23
+osm:node/7794409755,Starbucks Excel,Newham,E09000025,cafe,0.02572,51.50912,0,https://www.openstreetmap.org/node/7794409755,21
+osm:node/10870057348,West Ham United Coffee Co.,Newham,E09000025,cafe,-0.01509,51.53741,0,https://www.openstreetmap.org/node/10870057348,35
+osm:node/12883274419,Old Royal Naval College Visitor Centre,Greenwich,E09000011,museum,-0.00862,51.48283,0,https://www.openstreetmap.org/node/12883274419,40
+osm:node/910356813,The Fan Museum,Greenwich,E09000011,museum,-0.00807,51.4791,0,https://www.openstreetmap.org/node/910356813,45
+osm:way/162578781,Charlton Park,Greenwich,E09000011,park,0.04372,51.48056,0,https://www.openstreetmap.org/way/162578781,30
+osm:way/1306360473,Queen's Gardens Toilets,Greenwich,E09000011,toilets,0.05783,51.43018,0,https://www.openstreetmap.org/way/1306360473,31
+osm:node/11197951160,Cutty Sark Café,Greenwich,E09000011,cafe,-0.00948,51.48254,0,https://www.openstreetmap.org/node/11197951160,46
+osm:node/1708956913,Eltham Library,Greenwich,E09000011,library,0.05739,51.45126,0,https://www.openstreetmap.org/node/1708956913,41
+osm:way/120316250,Apsley House,Westminster,E09000033,museum,-0.15171,51.50347,0,https://www.openstreetmap.org/way/120316250,45
+osm:node/1493424622,Handel & Hendrix,Westminster,E09000033,museum,-0.14588,51.51294,0,https://www.openstreetmap.org/node/1493424622,45
+osm:node/3349882188,Hunterian Museum,Westminster,E09000033,museum,-0.11587,51.51528,0,https://www.openstreetmap.org/node/3349882188,39
+osm:relation/1384127,The Regent's Park,Westminster,E09000033,park,-0.15373,51.53016,0,https://www.openstreetmap.org/relation/1384127,28
+osm:node/618694098,Victoria Library,Westminster,E09000033,library,-0.14795,51.49279,0,https://www.openstreetmap.org/node/618694098,38
+osm:node/11361621056,The Café at Foyles,Westminster,E09000033,cafe,-0.13006,51.51428,0,https://www.openstreetmap.org/node/11361621056,20

@@ -1,0 +1,1193 @@
+response_id,respondent_id,place_id,place_name,ent,toilet,lift,submitted_at_utc,is_synthetic
+AL-DEMO-R201,AL-DEMO-P201,osm:node/618694098,Victoria Library,yes,no,yes,2026-10-28T07:03:00Z,1
+AL-DEMO-R202,AL-DEMO-P202,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-10-28T07:16:00Z,1
+AL-DEMO-R203,AL-DEMO-P203,osm:node/7126677078,Notting Hill Gate Library,yes,unsure,yes,2026-10-28T07:23:00Z,1
+AL-DEMO-R204,AL-DEMO-P204,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-10-28T07:27:00Z,1
+AL-DEMO-R205,AL-DEMO-P205,osm:node/11361621056,The Café at Foyles,yes,unsure,unsure,2026-10-28T07:59:00Z,1
+AL-DEMO-R206,AL-DEMO-P206,osm:way/1042201707,V&A East Museum,yes,unsure,one,2026-10-28T08:05:00Z,1
+AL-DEMO-R207,AL-DEMO-P207,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-10-28T08:14:00Z,1
+AL-DEMO-R208,AL-DEMO-P208,osm:way/27815146,Islington Central Library,unsure,yes,unsure,2026-10-28T08:28:00Z,1
+AL-DEMO-R209,AL-DEMO-P209,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-10-28T08:36:00Z,1
+AL-DEMO-R210,AL-DEMO-P210,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-10-28T09:01:00Z,1
+AL-DEMO-R211,AL-DEMO-P211,osm:way/27815146,Islington Central Library,yes,yes,one,2026-10-28T09:10:00Z,1
+AL-DEMO-R212,AL-DEMO-P212,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-10-28T09:16:00Z,1
+AL-DEMO-R213,AL-DEMO-P213,osm:node/336347265,Arsenal Museum,unsure,unsure,yes,2026-10-28T09:53:00Z,1
+AL-DEMO-R214,AL-DEMO-P214,osm:node/910356813,The Fan Museum,yes,yes,one,2026-10-28T10:45:00Z,1
+AL-DEMO-R215,AL-DEMO-P215,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-10-28T10:55:00Z,1
+AL-DEMO-R216,AL-DEMO-P216,osm:way/617427470,The Library at Willesden Green,yes,unsure,one,2026-10-28T10:57:00Z,1
+AL-DEMO-R217,AL-DEMO-P217,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-10-28T11:11:00Z,1
+AL-DEMO-R218,AL-DEMO-P218,osm:way/27815146,Islington Central Library,yes,unsure,unsure,2026-10-28T11:22:00Z,1
+AL-DEMO-R219,AL-DEMO-P219,osm:way/23018529,Thames Barrier Park,yes,unsure,unsure,2026-10-28T11:24:00Z,1
+AL-DEMO-R220,AL-DEMO-P220,osm:way/129377070,Sambourne House,yes,unsure,unsure,2026-10-28T11:50:00Z,1
+AL-DEMO-R221,AL-DEMO-P221,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-10-28T12:09:00Z,1
+AL-DEMO-R222,AL-DEMO-P222,osm:way/10807015,National Army Museum,yes,unsure,yes,2026-10-28T12:49:00Z,1
+AL-DEMO-R223,AL-DEMO-P223,osm:node/7126677078,Notting Hill Gate Library,unsure,no,yes,2026-10-28T12:56:00Z,1
+AL-DEMO-R224,AL-DEMO-P224,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-10-28T13:59:00Z,1
+AL-DEMO-R225,AL-DEMO-P225,osm:node/336347265,Arsenal Museum,yes,unsure,unsure,2026-10-28T14:22:00Z,1
+AL-DEMO-R226,AL-DEMO-P226,osm:way/868617836,Custom House Library,yes,yes,yes,2026-10-28T14:50:00Z,1
+AL-DEMO-R227,AL-DEMO-P227,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-10-28T14:54:00Z,1
+AL-DEMO-R228,AL-DEMO-P228,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-10-28T15:17:00Z,1
+AL-DEMO-R229,AL-DEMO-P229,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-10-28T15:25:00Z,1
+AL-DEMO-R230,AL-DEMO-P230,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-10-28T16:00:00Z,1
+AL-DEMO-R231,AL-DEMO-P231,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-10-28T16:08:00Z,1
+AL-DEMO-R232,AL-DEMO-P232,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-10-28T16:21:00Z,1
+AL-DEMO-R233,AL-DEMO-P233,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-10-28T17:13:00Z,1
+AL-DEMO-R234,AL-DEMO-P234,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-28T17:52:00Z,1
+AL-DEMO-R235,AL-DEMO-P235,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-28T17:55:00Z,1
+AL-DEMO-R236,AL-DEMO-P236,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-28T17:56:00Z,1
+AL-DEMO-R237,AL-DEMO-P237,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-28T17:59:00Z,1
+AL-DEMO-R238,AL-DEMO-P238,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-28T18:21:00Z,1
+AL-DEMO-R239,AL-DEMO-P239,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-10-28T18:31:00Z,1
+AL-DEMO-R240,AL-DEMO-P240,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-10-28T18:41:00Z,1
+AL-DEMO-R241,AL-DEMO-P241,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-28T18:47:00Z,1
+AL-DEMO-R242,AL-DEMO-P242,osm:node/1708956913,Eltham Library,yes,unsure,yes,2026-10-28T18:51:00Z,1
+AL-DEMO-R243,AL-DEMO-P243,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-10-28T19:12:00Z,1
+AL-DEMO-R244,AL-DEMO-P244,osm:relation/18794121,Highbury Fields,yes,unsure,unsure,2026-10-28T20:10:00Z,1
+AL-DEMO-R245,AL-DEMO-P245,osm:way/27815146,Islington Central Library,yes,unsure,unsure,2026-10-28T20:17:00Z,1
+AL-DEMO-R246,AL-DEMO-P246,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-10-28T20:35:00Z,1
+AL-DEMO-R247,AL-DEMO-P247,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-10-28T20:42:00Z,1
+AL-DEMO-R248,AL-DEMO-P248,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-10-28T20:55:00Z,1
+AL-DEMO-R249,AL-DEMO-P249,osm:node/11361621056,The Café at Foyles,unsure,no,one,2026-10-28T22:04:00Z,1
+AL-DEMO-R250,AL-DEMO-P250,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-10-28T22:08:00Z,1
+AL-DEMO-R251,AL-DEMO-P251,osm:node/336347265,Arsenal Museum,yes,yes,yes,2026-10-28T22:11:00Z,1
+AL-DEMO-R252,AL-DEMO-P252,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-10-28T22:57:00Z,1
+AL-DEMO-R253,AL-DEMO-P253,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,unsure,yes,2026-10-28T23:10:00Z,1
+AL-DEMO-R254,AL-DEMO-P254,osm:node/336347265,Arsenal Museum,unsure,unsure,yes,2026-10-28T23:20:00Z,1
+AL-DEMO-R255,AL-DEMO-P255,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-10-28T23:24:00Z,1
+AL-DEMO-R256,AL-DEMO-P256,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-10-28T23:44:00Z,1
+AL-DEMO-R257,AL-DEMO-P257,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-28T23:58:00Z,1
+AL-DEMO-R258,AL-DEMO-P258,osm:way/868617836,Custom House Library,unsure,unsure,yes,2026-10-29T00:01:00Z,1
+AL-DEMO-R259,AL-DEMO-P259,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-10-29T00:17:00Z,1
+AL-DEMO-R260,AL-DEMO-P260,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-29T00:32:00Z,1
+AL-DEMO-R261,AL-DEMO-P261,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-10-29T00:39:00Z,1
+AL-DEMO-R262,AL-DEMO-P262,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-10-29T01:14:00Z,1
+AL-DEMO-R263,AL-DEMO-P263,osm:way/1306360473,Queen's Gardens Toilets,unsure,unsure,unsure,2026-10-29T01:18:00Z,1
+AL-DEMO-R264,AL-DEMO-P264,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-10-29T01:28:00Z,1
+AL-DEMO-R265,AL-DEMO-P265,osm:relation/18794121,Highbury Fields,yes,unsure,unsure,2026-10-29T01:32:00Z,1
+AL-DEMO-R266,AL-DEMO-P266,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-10-29T01:41:00Z,1
+AL-DEMO-R267,AL-DEMO-P267,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-10-29T01:48:00Z,1
+AL-DEMO-R268,AL-DEMO-P268,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-10-29T01:57:00Z,1
+AL-DEMO-R269,AL-DEMO-P269,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-29T02:59:00Z,1
+AL-DEMO-R270,AL-DEMO-P270,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-29T03:00:00Z,1
+AL-DEMO-R271,AL-DEMO-P271,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-29T03:25:00Z,1
+AL-DEMO-R272,AL-DEMO-P272,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-10-29T03:52:00Z,1
+AL-DEMO-R273,AL-DEMO-P273,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-10-29T03:55:00Z,1
+AL-DEMO-R274,AL-DEMO-P274,osm:node/910356813,The Fan Museum,unsure,unsure,unsure,2026-10-29T04:34:00Z,1
+AL-DEMO-R275,AL-DEMO-P275,osm:node/11361621056,The Café at Foyles,yes,unsure,one,2026-10-29T04:57:00Z,1
+AL-DEMO-R276,AL-DEMO-P276,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-29T05:30:00Z,1
+AL-DEMO-R277,AL-DEMO-P277,osm:way/868617836,Custom House Library,yes,yes,yes,2026-10-29T05:46:00Z,1
+AL-DEMO-R278,AL-DEMO-P278,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-10-29T06:02:00Z,1
+AL-DEMO-R279,AL-DEMO-P279,osm:way/27815146,Islington Central Library,unsure,unsure,one,2026-10-29T06:09:00Z,1
+AL-DEMO-R280,AL-DEMO-P280,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-10-29T07:01:00Z,1
+AL-DEMO-R281,AL-DEMO-P281,osm:node/1708956913,Eltham Library,unsure,yes,unsure,2026-10-29T07:22:00Z,1
+AL-DEMO-R282,AL-DEMO-P282,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-10-29T07:43:00Z,1
+AL-DEMO-R283,AL-DEMO-P283,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-10-29T08:06:00Z,1
+AL-DEMO-R284,AL-DEMO-P284,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-10-29T08:16:00Z,1
+AL-DEMO-R285,AL-DEMO-P285,osm:node/1708956913,Eltham Library,yes,unsure,unsure,2026-10-29T08:20:00Z,1
+AL-DEMO-R286,AL-DEMO-P286,osm:way/23018529,Thames Barrier Park,unsure,yes,unsure,2026-10-29T08:36:00Z,1
+AL-DEMO-R287,AL-DEMO-P287,osm:node/618694098,Victoria Library,unsure,no,yes,2026-10-29T08:44:00Z,1
+AL-DEMO-R288,AL-DEMO-P288,osm:way/120316250,Apsley House,yes,yes,unsure,2026-10-29T09:21:00Z,1
+AL-DEMO-R289,AL-DEMO-P289,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-10-29T09:23:00Z,1
+AL-DEMO-R290,AL-DEMO-P290,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,unsure,2026-10-29T09:27:00Z,1
+AL-DEMO-R291,AL-DEMO-P291,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-10-29T09:38:00Z,1
+AL-DEMO-R292,AL-DEMO-P292,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-10-29T09:50:00Z,1
+AL-DEMO-R293,AL-DEMO-P293,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-10-29T09:52:00Z,1
+AL-DEMO-R294,AL-DEMO-P294,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-10-29T10:18:00Z,1
+AL-DEMO-R295,AL-DEMO-P295,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-29T10:28:00Z,1
+AL-DEMO-R296,AL-DEMO-P296,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-29T10:35:00Z,1
+AL-DEMO-R297,AL-DEMO-P297,osm:node/1708956913,Eltham Library,unsure,yes,unsure,2026-10-29T11:19:00Z,1
+AL-DEMO-R298,AL-DEMO-P298,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,unsure,yes,2026-10-29T11:31:00Z,1
+AL-DEMO-R299,AL-DEMO-P299,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-10-29T11:32:00Z,1
+AL-DEMO-R300,AL-DEMO-P300,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-10-29T12:02:00Z,1
+AL-DEMO-R301,AL-DEMO-P301,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-10-29T12:15:00Z,1
+AL-DEMO-R302,AL-DEMO-P302,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-29T12:35:00Z,1
+AL-DEMO-R303,AL-DEMO-P303,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-10-29T12:54:00Z,1
+AL-DEMO-R304,AL-DEMO-P304,osm:node/336347265,Arsenal Museum,unsure,yes,unsure,2026-10-29T13:10:00Z,1
+AL-DEMO-R305,AL-DEMO-P305,osm:node/910356813,The Fan Museum,yes,unsure,one,2026-10-29T13:39:00Z,1
+AL-DEMO-R306,AL-DEMO-P306,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-10-29T13:50:00Z,1
+AL-DEMO-R307,AL-DEMO-P307,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-10-29T13:53:00Z,1
+AL-DEMO-R308,AL-DEMO-P308,osm:way/27815146,Islington Central Library,yes,yes,one,2026-10-29T14:02:00Z,1
+AL-DEMO-R309,AL-DEMO-P309,osm:way/1042201707,V&A East Museum,yes,unsure,unsure,2026-10-29T14:18:00Z,1
+AL-DEMO-R310,AL-DEMO-P310,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-10-29T14:37:00Z,1
+AL-DEMO-R311,AL-DEMO-P311,osm:way/27815146,Islington Central Library,yes,unsure,unsure,2026-10-29T14:41:00Z,1
+AL-DEMO-R312,AL-DEMO-P312,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-29T14:56:00Z,1
+AL-DEMO-R313,AL-DEMO-P313,osm:way/617427470,The Library at Willesden Green,unsure,yes,one,2026-10-29T15:18:00Z,1
+AL-DEMO-R314,AL-DEMO-P314,osm:node/11361621056,The Café at Foyles,unsure,unsure,unsure,2026-10-29T15:37:00Z,1
+AL-DEMO-R315,AL-DEMO-P315,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-29T15:48:00Z,1
+AL-DEMO-R316,AL-DEMO-P316,osm:way/617427470,The Library at Willesden Green,yes,unsure,one,2026-10-29T16:47:00Z,1
+AL-DEMO-R317,AL-DEMO-P317,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-10-29T16:51:00Z,1
+AL-DEMO-R318,AL-DEMO-P318,osm:way/27815146,Islington Central Library,unsure,yes,one,2026-10-29T16:52:00Z,1
+AL-DEMO-R319,AL-DEMO-P319,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-10-29T16:53:00Z,1
+AL-DEMO-R320,AL-DEMO-P320,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-10-29T17:25:00Z,1
+AL-DEMO-R321,AL-DEMO-P321,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-10-29T17:45:00Z,1
+AL-DEMO-R322,AL-DEMO-P322,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-10-29T18:03:00Z,1
+AL-DEMO-R323,AL-DEMO-P323,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-10-29T18:22:00Z,1
+AL-DEMO-R324,AL-DEMO-P324,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-10-29T18:30:00Z,1
+AL-DEMO-R325,AL-DEMO-P325,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-10-29T18:49:00Z,1
+AL-DEMO-R326,AL-DEMO-P326,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-10-29T19:02:00Z,1
+AL-DEMO-R327,AL-DEMO-P327,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-10-29T19:04:00Z,1
+AL-DEMO-R328,AL-DEMO-P328,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-29T19:22:00Z,1
+AL-DEMO-R329,AL-DEMO-P329,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-29T20:02:00Z,1
+AL-DEMO-R330,AL-DEMO-P330,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-29T20:12:00Z,1
+AL-DEMO-R331,AL-DEMO-P331,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-10-29T20:20:00Z,1
+AL-DEMO-R332,AL-DEMO-P332,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-10-29T20:34:00Z,1
+AL-DEMO-R333,AL-DEMO-P333,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-10-29T20:55:00Z,1
+AL-DEMO-R334,AL-DEMO-P334,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-10-29T20:56:00Z,1
+AL-DEMO-R335,AL-DEMO-P335,osm:node/5247197725,The Charterhouse,yes,yes,yes,2026-10-29T21:16:00Z,1
+AL-DEMO-R336,AL-DEMO-P336,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-10-29T21:53:00Z,1
+AL-DEMO-R337,AL-DEMO-P337,osm:way/27815146,Islington Central Library,yes,unsure,one,2026-10-29T21:59:00Z,1
+AL-DEMO-R338,AL-DEMO-P338,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-10-29T22:10:00Z,1
+AL-DEMO-R339,AL-DEMO-P339,osm:node/336347265,Arsenal Museum,yes,unsure,yes,2026-10-29T22:28:00Z,1
+AL-DEMO-R340,AL-DEMO-P340,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-10-29T22:51:00Z,1
+AL-DEMO-R341,AL-DEMO-P341,osm:node/11361621056,The Café at Foyles,yes,unsure,unsure,2026-10-29T22:59:00Z,1
+AL-DEMO-R342,AL-DEMO-P342,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-10-29T23:11:00Z,1
+AL-DEMO-R343,AL-DEMO-P343,osm:way/27815146,Islington Central Library,yes,yes,one,2026-10-29T23:13:00Z,1
+AL-DEMO-R344,AL-DEMO-P344,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-10-29T23:22:00Z,1
+AL-DEMO-R345,AL-DEMO-P345,osm:node/910356813,The Fan Museum,unsure,yes,one,2026-10-29T23:24:00Z,1
+AL-DEMO-R346,AL-DEMO-P346,osm:way/23018529,Thames Barrier Park,yes,unsure,unsure,2026-10-29T23:27:00Z,1
+AL-DEMO-R347,AL-DEMO-P347,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-29T23:42:00Z,1
+AL-DEMO-R348,AL-DEMO-P348,osm:node/1708956913,Eltham Library,unsure,unsure,yes,2026-10-29T23:59:00Z,1
+AL-DEMO-R349,AL-DEMO-P349,osm:node/618694098,Victoria Library,yes,unsure,yes,2026-10-30T00:20:00Z,1
+AL-DEMO-R350,AL-DEMO-P350,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-10-30T00:25:00Z,1
+AL-DEMO-R351,AL-DEMO-P351,osm:way/23018529,Thames Barrier Park,yes,unsure,unsure,2026-10-30T01:55:00Z,1
+AL-DEMO-R352,AL-DEMO-P352,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-10-30T02:00:00Z,1
+AL-DEMO-R353,AL-DEMO-P353,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-10-30T02:02:00Z,1
+AL-DEMO-R354,AL-DEMO-P354,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-10-30T02:17:00Z,1
+AL-DEMO-R355,AL-DEMO-P355,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-10-30T02:44:00Z,1
+AL-DEMO-R356,AL-DEMO-P356,osm:way/120316250,Apsley House,unsure,unsure,unsure,2026-10-30T03:08:00Z,1
+AL-DEMO-R357,AL-DEMO-P357,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-10-30T03:39:00Z,1
+AL-DEMO-R358,AL-DEMO-P358,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-10-30T03:52:00Z,1
+AL-DEMO-R359,AL-DEMO-P359,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-10-30T05:08:00Z,1
+AL-DEMO-R360,AL-DEMO-P360,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-10-30T05:15:00Z,1
+AL-DEMO-R361,AL-DEMO-P361,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-10-30T05:23:00Z,1
+AL-DEMO-R362,AL-DEMO-P362,osm:node/1708956913,Eltham Library,yes,unsure,unsure,2026-10-30T06:48:00Z,1
+AL-DEMO-R363,AL-DEMO-P363,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-10-30T07:06:00Z,1
+AL-DEMO-R364,AL-DEMO-P364,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-30T07:22:00Z,1
+AL-DEMO-R365,AL-DEMO-P365,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-10-30T07:57:00Z,1
+AL-DEMO-R366,AL-DEMO-P366,osm:node/618694098,Victoria Library,unsure,no,yes,2026-10-30T08:33:00Z,1
+AL-DEMO-R367,AL-DEMO-P367,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-30T08:51:00Z,1
+AL-DEMO-R368,AL-DEMO-P368,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,unsure,yes,2026-10-30T09:12:00Z,1
+AL-DEMO-R369,AL-DEMO-P369,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-30T09:40:00Z,1
+AL-DEMO-R370,AL-DEMO-P370,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-30T09:46:00Z,1
+AL-DEMO-R371,AL-DEMO-P371,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-30T10:24:00Z,1
+AL-DEMO-R372,AL-DEMO-P372,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-10-30T11:16:00Z,1
+AL-DEMO-R373,AL-DEMO-P373,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-10-30T11:18:00Z,1
+AL-DEMO-R374,AL-DEMO-P374,osm:way/1042201707,V&A East Museum,yes,unsure,one,2026-10-30T11:42:00Z,1
+AL-DEMO-R375,AL-DEMO-P375,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-10-30T11:55:00Z,1
+AL-DEMO-R376,AL-DEMO-P376,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-10-30T12:00:00Z,1
+AL-DEMO-R377,AL-DEMO-P377,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-10-30T12:53:00Z,1
+AL-DEMO-R378,AL-DEMO-P378,osm:way/129377070,Sambourne House,yes,unsure,unsure,2026-10-30T12:57:00Z,1
+AL-DEMO-R379,AL-DEMO-P379,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-30T13:05:00Z,1
+AL-DEMO-R380,AL-DEMO-P380,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-10-30T13:12:00Z,1
+AL-DEMO-R381,AL-DEMO-P381,osm:way/120316250,Apsley House,unsure,yes,one,2026-10-30T14:30:00Z,1
+AL-DEMO-R382,AL-DEMO-P382,osm:way/129377070,Sambourne House,unsure,unsure,unsure,2026-10-30T14:46:00Z,1
+AL-DEMO-R383,AL-DEMO-P383,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-10-30T14:51:00Z,1
+AL-DEMO-R384,AL-DEMO-P384,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,unsure,2026-10-30T15:16:00Z,1
+AL-DEMO-R385,AL-DEMO-P385,osm:way/1042201707,V&A East Museum,yes,unsure,unsure,2026-10-30T15:22:00Z,1
+AL-DEMO-R386,AL-DEMO-P386,osm:way/8137262,Holland Park,no,unsure,unsure,2026-10-30T15:31:00Z,1
+AL-DEMO-R387,AL-DEMO-P387,osm:way/13868329,West Ham Park,yes,unsure,yes,2026-10-30T15:46:00Z,1
+AL-DEMO-R388,AL-DEMO-P388,osm:way/1306360473,Queen's Gardens Toilets,unsure,unsure,unsure,2026-10-30T16:08:00Z,1
+AL-DEMO-R389,AL-DEMO-P389,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-10-30T16:28:00Z,1
+AL-DEMO-R390,AL-DEMO-P390,osm:way/1042201707,V&A East Museum,unsure,unsure,unsure,2026-10-30T16:32:00Z,1
+AL-DEMO-R391,AL-DEMO-P391,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-30T16:53:00Z,1
+AL-DEMO-R392,AL-DEMO-P392,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-10-30T17:33:00Z,1
+AL-DEMO-R393,AL-DEMO-P393,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-30T19:02:00Z,1
+AL-DEMO-R394,AL-DEMO-P394,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-10-30T19:27:00Z,1
+AL-DEMO-R395,AL-DEMO-P395,osm:node/910356813,The Fan Museum,yes,yes,one,2026-10-30T19:33:00Z,1
+AL-DEMO-R396,AL-DEMO-P396,osm:way/120316250,Apsley House,yes,yes,unsure,2026-10-30T20:06:00Z,1
+AL-DEMO-R397,AL-DEMO-P397,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-10-30T20:20:00Z,1
+AL-DEMO-R398,AL-DEMO-P398,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-10-30T20:23:00Z,1
+AL-DEMO-R399,AL-DEMO-P399,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-30T20:53:00Z,1
+AL-DEMO-R400,AL-DEMO-P400,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-10-30T21:10:00Z,1
+AL-DEMO-R401,AL-DEMO-P401,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-10-30T21:23:00Z,1
+AL-DEMO-R402,AL-DEMO-P402,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-30T23:30:00Z,1
+AL-DEMO-R403,AL-DEMO-P403,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-10-31T00:09:00Z,1
+AL-DEMO-R404,AL-DEMO-P404,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-10-31T00:12:00Z,1
+AL-DEMO-R405,AL-DEMO-P405,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-10-31T00:21:00Z,1
+AL-DEMO-R406,AL-DEMO-P406,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-31T00:24:00Z,1
+AL-DEMO-R407,AL-DEMO-P407,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-10-31T00:27:00Z,1
+AL-DEMO-R408,AL-DEMO-P408,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-10-31T00:47:00Z,1
+AL-DEMO-R409,AL-DEMO-P409,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-31T02:15:00Z,1
+AL-DEMO-R410,AL-DEMO-P410,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-10-31T02:23:00Z,1
+AL-DEMO-R411,AL-DEMO-P411,osm:way/868617836,Custom House Library,yes,unsure,unsure,2026-10-31T02:40:00Z,1
+AL-DEMO-R412,AL-DEMO-P412,osm:node/1708956913,Eltham Library,yes,unsure,unsure,2026-10-31T02:43:00Z,1
+AL-DEMO-R413,AL-DEMO-P413,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-10-31T02:52:00Z,1
+AL-DEMO-R414,AL-DEMO-P414,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-10-31T03:04:00Z,1
+AL-DEMO-R415,AL-DEMO-P415,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-31T03:12:00Z,1
+AL-DEMO-R416,AL-DEMO-P416,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-10-31T03:38:00Z,1
+AL-DEMO-R417,AL-DEMO-P417,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-31T03:45:00Z,1
+AL-DEMO-R418,AL-DEMO-P418,osm:way/120316250,Apsley House,yes,yes,one,2026-10-31T03:58:00Z,1
+AL-DEMO-R419,AL-DEMO-P419,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-10-31T04:07:00Z,1
+AL-DEMO-R420,AL-DEMO-P420,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-31T04:24:00Z,1
+AL-DEMO-R421,AL-DEMO-P421,osm:relation/1384127,The Regent's Park,yes,unsure,no,2026-10-31T04:27:00Z,1
+AL-DEMO-R422,AL-DEMO-P422,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-10-31T05:08:00Z,1
+AL-DEMO-R423,AL-DEMO-P423,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-10-31T05:14:00Z,1
+AL-DEMO-R424,AL-DEMO-P424,osm:node/1493424622,Handel & Hendrix,yes,no,unsure,2026-10-31T05:24:00Z,1
+AL-DEMO-R425,AL-DEMO-P425,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-10-31T06:08:00Z,1
+AL-DEMO-R426,AL-DEMO-P426,osm:way/120316250,Apsley House,yes,unsure,one,2026-10-31T06:22:00Z,1
+AL-DEMO-R427,AL-DEMO-P427,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-10-31T06:39:00Z,1
+AL-DEMO-R428,AL-DEMO-P428,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-31T07:05:00Z,1
+AL-DEMO-R429,AL-DEMO-P429,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-10-31T07:10:00Z,1
+AL-DEMO-R430,AL-DEMO-P430,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-31T07:50:00Z,1
+AL-DEMO-R431,AL-DEMO-P431,osm:way/27815146,Islington Central Library,unsure,yes,one,2026-10-31T08:04:00Z,1
+AL-DEMO-R432,AL-DEMO-P432,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-10-31T08:06:00Z,1
+AL-DEMO-R433,AL-DEMO-P433,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-10-31T08:15:00Z,1
+AL-DEMO-R434,AL-DEMO-P434,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-10-31T08:58:00Z,1
+AL-DEMO-R435,AL-DEMO-P435,osm:way/120316250,Apsley House,yes,yes,unsure,2026-10-31T09:03:00Z,1
+AL-DEMO-R436,AL-DEMO-P436,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-31T09:52:00Z,1
+AL-DEMO-R437,AL-DEMO-P437,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-10-31T10:28:00Z,1
+AL-DEMO-R438,AL-DEMO-P438,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-10-31T10:42:00Z,1
+AL-DEMO-R439,AL-DEMO-P439,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-10-31T10:57:00Z,1
+AL-DEMO-R440,AL-DEMO-P440,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-10-31T11:32:00Z,1
+AL-DEMO-R441,AL-DEMO-P441,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-10-31T12:09:00Z,1
+AL-DEMO-R442,AL-DEMO-P442,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-10-31T12:20:00Z,1
+AL-DEMO-R443,AL-DEMO-P443,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-10-31T12:24:00Z,1
+AL-DEMO-R444,AL-DEMO-P444,osm:node/5836502584,Brent Museum,yes,yes,one,2026-10-31T12:32:00Z,1
+AL-DEMO-R445,AL-DEMO-P445,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-10-31T12:55:00Z,1
+AL-DEMO-R446,AL-DEMO-P446,osm:way/120316250,Apsley House,yes,yes,unsure,2026-10-31T13:43:00Z,1
+AL-DEMO-R447,AL-DEMO-P447,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-10-31T14:13:00Z,1
+AL-DEMO-R448,AL-DEMO-P448,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-10-31T14:16:00Z,1
+AL-DEMO-R449,AL-DEMO-P449,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-10-31T14:19:00Z,1
+AL-DEMO-R450,AL-DEMO-P450,osm:node/339394917,The Compton Arms,no,no,unsure,2026-10-31T14:28:00Z,1
+AL-DEMO-R451,AL-DEMO-P451,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,unsure,yes,2026-10-31T14:42:00Z,1
+AL-DEMO-R452,AL-DEMO-P452,osm:way/617427470,The Library at Willesden Green,yes,unsure,unsure,2026-10-31T14:59:00Z,1
+AL-DEMO-R453,AL-DEMO-P453,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-10-31T15:09:00Z,1
+AL-DEMO-R454,AL-DEMO-P454,osm:node/1708956913,Eltham Library,unsure,unsure,yes,2026-10-31T15:12:00Z,1
+AL-DEMO-R455,AL-DEMO-P455,osm:way/129377070,Sambourne House,unsure,yes,one,2026-10-31T15:13:00Z,1
+AL-DEMO-R456,AL-DEMO-P456,osm:node/618694098,Victoria Library,yes,unsure,yes,2026-10-31T15:15:00Z,1
+AL-DEMO-R457,AL-DEMO-P457,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-31T15:18:00Z,1
+AL-DEMO-R458,AL-DEMO-P458,osm:node/910356813,The Fan Museum,unsure,unsure,unsure,2026-10-31T15:26:00Z,1
+AL-DEMO-R459,AL-DEMO-P459,osm:way/617427470,The Library at Willesden Green,unsure,yes,one,2026-10-31T15:38:00Z,1
+AL-DEMO-R460,AL-DEMO-P460,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-10-31T16:00:00Z,1
+AL-DEMO-R461,AL-DEMO-P461,osm:node/5836502584,Brent Museum,yes,yes,unsure,2026-10-31T16:05:00Z,1
+AL-DEMO-R462,AL-DEMO-P462,osm:way/120316250,Apsley House,yes,yes,unsure,2026-10-31T16:11:00Z,1
+AL-DEMO-R463,AL-DEMO-P463,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-10-31T16:29:00Z,1
+AL-DEMO-R464,AL-DEMO-P464,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-10-31T17:05:00Z,1
+AL-DEMO-R465,AL-DEMO-P465,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-10-31T17:11:00Z,1
+AL-DEMO-R466,AL-DEMO-P466,osm:way/1042201707,V&A East Museum,unsure,unsure,one,2026-10-31T17:17:00Z,1
+AL-DEMO-R467,AL-DEMO-P467,osm:node/618694098,Victoria Library,unsure,unsure,yes,2026-10-31T17:18:00Z,1
+AL-DEMO-R468,AL-DEMO-P468,osm:way/617427470,The Library at Willesden Green,unsure,yes,unsure,2026-10-31T17:32:00Z,1
+AL-DEMO-R469,AL-DEMO-P469,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-10-31T17:33:00Z,1
+AL-DEMO-R470,AL-DEMO-P470,osm:way/439037559,Paradise by way of Kensal Green,yes,unsure,one,2026-10-31T17:53:00Z,1
+AL-DEMO-R471,AL-DEMO-P471,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,yes,2026-10-31T17:55:00Z,1
+AL-DEMO-R472,AL-DEMO-P472,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-10-31T18:25:00Z,1
+AL-DEMO-R473,AL-DEMO-P473,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-10-31T18:33:00Z,1
+AL-DEMO-R474,AL-DEMO-P474,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-10-31T18:36:00Z,1
+AL-DEMO-R475,AL-DEMO-P475,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-10-31T18:46:00Z,1
+AL-DEMO-R476,AL-DEMO-P476,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-10-31T19:24:00Z,1
+AL-DEMO-R477,AL-DEMO-P477,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-10-31T19:42:00Z,1
+AL-DEMO-R478,AL-DEMO-P478,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-10-31T20:25:00Z,1
+AL-DEMO-R479,AL-DEMO-P479,osm:way/129377070,Sambourne House,yes,unsure,one,2026-10-31T20:40:00Z,1
+AL-DEMO-R480,AL-DEMO-P480,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-10-31T20:52:00Z,1
+AL-DEMO-R481,AL-DEMO-P481,osm:way/129377070,Sambourne House,yes,unsure,unsure,2026-10-31T20:53:00Z,1
+AL-DEMO-R482,AL-DEMO-P482,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-10-31T21:25:00Z,1
+AL-DEMO-R483,AL-DEMO-P483,osm:way/129377070,Sambourne House,yes,unsure,unsure,2026-10-31T21:27:00Z,1
+AL-DEMO-R484,AL-DEMO-P484,osm:node/618694098,Victoria Library,yes,no,unsure,2026-10-31T21:40:00Z,1
+AL-DEMO-R485,AL-DEMO-P485,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,yes,unsure,2026-10-31T21:49:00Z,1
+AL-DEMO-R486,AL-DEMO-P486,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-10-31T22:21:00Z,1
+AL-DEMO-R487,AL-DEMO-P487,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-10-31T22:46:00Z,1
+AL-DEMO-R488,AL-DEMO-P488,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-10-31T23:19:00Z,1
+AL-DEMO-R489,AL-DEMO-P489,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-10-31T23:29:00Z,1
+AL-DEMO-R490,AL-DEMO-P490,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-10-31T23:47:00Z,1
+AL-DEMO-R491,AL-DEMO-P491,osm:way/1042201707,V&A East Museum,unsure,unsure,unsure,2026-10-31T23:58:00Z,1
+AL-DEMO-R492,AL-DEMO-P492,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-01T00:54:00Z,1
+AL-DEMO-R493,AL-DEMO-P493,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-01T01:00:00Z,1
+AL-DEMO-R494,AL-DEMO-P494,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-01T01:11:00Z,1
+AL-DEMO-R495,AL-DEMO-P495,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-11-01T01:20:00Z,1
+AL-DEMO-R496,AL-DEMO-P496,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-01T01:48:00Z,1
+AL-DEMO-R497,AL-DEMO-P497,osm:way/120316250,Apsley House,unsure,unsure,unsure,2026-11-01T02:32:00Z,1
+AL-DEMO-R498,AL-DEMO-P498,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-01T02:47:00Z,1
+AL-DEMO-R499,AL-DEMO-P499,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-01T03:09:00Z,1
+AL-DEMO-R500,AL-DEMO-P500,osm:node/336347265,Arsenal Museum,unsure,yes,yes,2026-11-01T04:13:00Z,1
+AL-DEMO-R501,AL-DEMO-P501,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-01T04:49:00Z,1
+AL-DEMO-R502,AL-DEMO-P502,osm:node/336347265,Arsenal Museum,yes,yes,yes,2026-11-01T04:55:00Z,1
+AL-DEMO-R503,AL-DEMO-P503,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-01T05:40:00Z,1
+AL-DEMO-R504,AL-DEMO-P504,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-11-01T06:41:00Z,1
+AL-DEMO-R505,AL-DEMO-P505,osm:way/27815146,Islington Central Library,unsure,unsure,unsure,2026-11-01T06:43:00Z,1
+AL-DEMO-R506,AL-DEMO-P506,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-01T06:51:00Z,1
+AL-DEMO-R507,AL-DEMO-P507,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-11-01T06:56:00Z,1
+AL-DEMO-R508,AL-DEMO-P508,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-01T07:13:00Z,1
+AL-DEMO-R509,AL-DEMO-P509,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-01T07:26:00Z,1
+AL-DEMO-R510,AL-DEMO-P510,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-01T07:59:00Z,1
+AL-DEMO-R511,AL-DEMO-P511,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-01T08:11:00Z,1
+AL-DEMO-R512,AL-DEMO-P512,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-01T08:13:00Z,1
+AL-DEMO-R513,AL-DEMO-P513,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-11-01T08:30:00Z,1
+AL-DEMO-R514,AL-DEMO-P514,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-01T08:35:00Z,1
+AL-DEMO-R515,AL-DEMO-P515,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-01T09:04:00Z,1
+AL-DEMO-R516,AL-DEMO-P516,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-01T09:09:00Z,1
+AL-DEMO-R517,AL-DEMO-P517,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-11-01T09:41:00Z,1
+AL-DEMO-R518,AL-DEMO-P518,osm:way/1042201707,V&A East Museum,unsure,unsure,unsure,2026-11-01T09:50:00Z,1
+AL-DEMO-R519,AL-DEMO-P519,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-01T09:55:00Z,1
+AL-DEMO-R520,AL-DEMO-P520,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-01T10:21:00Z,1
+AL-DEMO-R521,AL-DEMO-P521,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-01T10:35:00Z,1
+AL-DEMO-R522,AL-DEMO-P522,osm:node/336347265,Arsenal Museum,yes,yes,yes,2026-11-01T11:13:00Z,1
+AL-DEMO-R523,AL-DEMO-P523,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-01T11:18:00Z,1
+AL-DEMO-R524,AL-DEMO-P524,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-01T11:49:00Z,1
+AL-DEMO-R525,AL-DEMO-P525,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-01T11:51:00Z,1
+AL-DEMO-R526,AL-DEMO-P526,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-01T11:57:00Z,1
+AL-DEMO-R527,AL-DEMO-P527,osm:node/11361621056,The Café at Foyles,yes,unsure,unsure,2026-11-01T12:42:00Z,1
+AL-DEMO-R528,AL-DEMO-P528,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-01T12:58:00Z,1
+AL-DEMO-R529,AL-DEMO-P529,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-01T12:59:00Z,1
+AL-DEMO-R530,AL-DEMO-P530,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-01T13:04:00Z,1
+AL-DEMO-R531,AL-DEMO-P531,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-01T13:07:00Z,1
+AL-DEMO-R532,AL-DEMO-P532,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-01T13:20:00Z,1
+AL-DEMO-R533,AL-DEMO-P533,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-01T13:21:00Z,1
+AL-DEMO-R534,AL-DEMO-P534,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-01T13:38:00Z,1
+AL-DEMO-R535,AL-DEMO-P535,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-01T14:04:00Z,1
+AL-DEMO-R536,AL-DEMO-P536,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-01T14:30:00Z,1
+AL-DEMO-R537,AL-DEMO-P537,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-01T14:31:00Z,1
+AL-DEMO-R538,AL-DEMO-P538,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-01T14:42:00Z,1
+AL-DEMO-R539,AL-DEMO-P539,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-01T15:07:00Z,1
+AL-DEMO-R540,AL-DEMO-P540,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-01T15:24:00Z,1
+AL-DEMO-R541,AL-DEMO-P541,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-01T15:27:00Z,1
+AL-DEMO-R542,AL-DEMO-P542,osm:way/129377070,Sambourne House,yes,unsure,unsure,2026-11-01T15:56:00Z,1
+AL-DEMO-R543,AL-DEMO-P543,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-11-01T16:10:00Z,1
+AL-DEMO-R544,AL-DEMO-P544,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-01T16:42:00Z,1
+AL-DEMO-R545,AL-DEMO-P545,osm:node/618694098,Victoria Library,unsure,no,yes,2026-11-01T16:48:00Z,1
+AL-DEMO-R546,AL-DEMO-P546,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-01T17:12:00Z,1
+AL-DEMO-R547,AL-DEMO-P547,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-01T17:42:00Z,1
+AL-DEMO-R548,AL-DEMO-P548,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-01T19:08:00Z,1
+AL-DEMO-R549,AL-DEMO-P549,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-01T19:39:00Z,1
+AL-DEMO-R550,AL-DEMO-P550,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-01T20:18:00Z,1
+AL-DEMO-R551,AL-DEMO-P551,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-01T20:29:00Z,1
+AL-DEMO-R552,AL-DEMO-P552,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-01T20:35:00Z,1
+AL-DEMO-R553,AL-DEMO-P553,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-01T21:26:00Z,1
+AL-DEMO-R554,AL-DEMO-P554,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-01T21:37:00Z,1
+AL-DEMO-R555,AL-DEMO-P555,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-01T21:47:00Z,1
+AL-DEMO-R556,AL-DEMO-P556,osm:way/129377070,Sambourne House,yes,unsure,one,2026-11-01T22:09:00Z,1
+AL-DEMO-R557,AL-DEMO-P557,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-01T22:18:00Z,1
+AL-DEMO-R558,AL-DEMO-P558,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-01T22:31:00Z,1
+AL-DEMO-R559,AL-DEMO-P559,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-01T22:58:00Z,1
+AL-DEMO-R560,AL-DEMO-P560,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-01T22:59:00Z,1
+AL-DEMO-R561,AL-DEMO-P561,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-01T23:16:00Z,1
+AL-DEMO-R562,AL-DEMO-P562,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-01T23:46:00Z,1
+AL-DEMO-R563,AL-DEMO-P563,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-01T23:50:00Z,1
+AL-DEMO-R564,AL-DEMO-P564,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-11-02T00:23:00Z,1
+AL-DEMO-R565,AL-DEMO-P565,osm:way/13868329,West Ham Park,yes,no,unsure,2026-11-02T00:30:00Z,1
+AL-DEMO-R566,AL-DEMO-P566,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-11-02T00:49:00Z,1
+AL-DEMO-R567,AL-DEMO-P567,osm:way/10807015,National Army Museum,yes,unsure,yes,2026-11-02T00:50:00Z,1
+AL-DEMO-R568,AL-DEMO-P568,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-02T00:52:00Z,1
+AL-DEMO-R569,AL-DEMO-P569,osm:node/5247197725,The Charterhouse,unsure,unsure,unsure,2026-11-02T01:51:00Z,1
+AL-DEMO-R570,AL-DEMO-P570,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-02T01:57:00Z,1
+AL-DEMO-R571,AL-DEMO-P571,osm:way/23018529,Thames Barrier Park,yes,unsure,no,2026-11-02T02:25:00Z,1
+AL-DEMO-R572,AL-DEMO-P572,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-02T02:29:00Z,1
+AL-DEMO-R573,AL-DEMO-P573,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-02T03:05:00Z,1
+AL-DEMO-R574,AL-DEMO-P574,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-02T03:11:00Z,1
+AL-DEMO-R575,AL-DEMO-P575,osm:node/7794409755,Starbucks Excel,yes,unsure,one,2026-11-02T03:13:00Z,1
+AL-DEMO-R576,AL-DEMO-P576,osm:way/162578781,Charlton Park,yes,yes,unsure,2026-11-02T04:01:00Z,1
+AL-DEMO-R577,AL-DEMO-P577,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-02T04:02:00Z,1
+AL-DEMO-R578,AL-DEMO-P578,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,unsure,2026-11-02T04:18:00Z,1
+AL-DEMO-R579,AL-DEMO-P579,osm:node/336347265,Arsenal Museum,unsure,yes,yes,2026-11-02T04:44:00Z,1
+AL-DEMO-R580,AL-DEMO-P580,osm:node/618694098,Victoria Library,yes,unsure,unsure,2026-11-02T04:46:00Z,1
+AL-DEMO-R581,AL-DEMO-P581,osm:node/618694098,Victoria Library,yes,no,yes,2026-11-02T05:13:00Z,1
+AL-DEMO-R582,AL-DEMO-P582,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-02T05:18:00Z,1
+AL-DEMO-R583,AL-DEMO-P583,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-02T05:20:00Z,1
+AL-DEMO-R584,AL-DEMO-P584,osm:node/1708956913,Eltham Library,unsure,unsure,yes,2026-11-02T05:44:00Z,1
+AL-DEMO-R585,AL-DEMO-P585,osm:way/617427470,The Library at Willesden Green,yes,unsure,unsure,2026-11-02T06:24:00Z,1
+AL-DEMO-R586,AL-DEMO-P586,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-11-02T06:45:00Z,1
+AL-DEMO-R587,AL-DEMO-P587,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-02T06:51:00Z,1
+AL-DEMO-R588,AL-DEMO-P588,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-02T07:43:00Z,1
+AL-DEMO-R589,AL-DEMO-P589,osm:way/120316250,Apsley House,yes,yes,one,2026-11-02T07:58:00Z,1
+AL-DEMO-R590,AL-DEMO-P590,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-02T08:23:00Z,1
+AL-DEMO-R591,AL-DEMO-P591,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-02T08:37:00Z,1
+AL-DEMO-R592,AL-DEMO-P592,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-02T08:43:00Z,1
+AL-DEMO-R593,AL-DEMO-P593,osm:node/5836502584,Brent Museum,yes,yes,one,2026-11-02T08:48:00Z,1
+AL-DEMO-R594,AL-DEMO-P594,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-02T08:52:00Z,1
+AL-DEMO-R595,AL-DEMO-P595,osm:way/10807015,National Army Museum,yes,unsure,unsure,2026-11-02T09:31:00Z,1
+AL-DEMO-R596,AL-DEMO-P596,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-02T09:33:00Z,1
+AL-DEMO-R597,AL-DEMO-P597,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-02T10:28:00Z,1
+AL-DEMO-R598,AL-DEMO-P598,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-02T10:39:00Z,1
+AL-DEMO-R599,AL-DEMO-P599,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-11-02T10:47:00Z,1
+AL-DEMO-R600,AL-DEMO-P600,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-02T12:20:00Z,1
+AL-DEMO-R601,AL-DEMO-P601,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-02T12:30:00Z,1
+AL-DEMO-R602,AL-DEMO-P602,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-11-02T13:03:00Z,1
+AL-DEMO-R603,AL-DEMO-P603,osm:way/868617836,Custom House Library,unsure,yes,unsure,2026-11-02T13:41:00Z,1
+AL-DEMO-R604,AL-DEMO-P604,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-02T13:43:00Z,1
+AL-DEMO-R605,AL-DEMO-P605,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-02T15:57:00Z,1
+AL-DEMO-R606,AL-DEMO-P606,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-02T16:09:00Z,1
+AL-DEMO-R607,AL-DEMO-P607,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-02T16:18:00Z,1
+AL-DEMO-R608,AL-DEMO-P608,osm:node/336347265,Arsenal Museum,unsure,unsure,unsure,2026-11-02T16:23:00Z,1
+AL-DEMO-R609,AL-DEMO-P609,osm:node/618694098,Victoria Library,unsure,unsure,yes,2026-11-02T16:30:00Z,1
+AL-DEMO-R610,AL-DEMO-P610,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,yes,2026-11-02T16:33:00Z,1
+AL-DEMO-R611,AL-DEMO-P611,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-11-02T16:44:00Z,1
+AL-DEMO-R612,AL-DEMO-P612,osm:node/3246895686,Dark Habit Coffee,unsure,unsure,unsure,2026-11-02T17:16:00Z,1
+AL-DEMO-R613,AL-DEMO-P613,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-02T17:50:00Z,1
+AL-DEMO-R614,AL-DEMO-P614,osm:node/1708956913,Eltham Library,unsure,unsure,yes,2026-11-02T17:59:00Z,1
+AL-DEMO-R615,AL-DEMO-P615,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-02T18:26:00Z,1
+AL-DEMO-R616,AL-DEMO-P616,osm:way/162578781,Charlton Park,yes,no,unsure,2026-11-02T18:27:00Z,1
+AL-DEMO-R617,AL-DEMO-P617,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-02T18:42:00Z,1
+AL-DEMO-R618,AL-DEMO-P618,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-11-02T18:46:00Z,1
+AL-DEMO-R619,AL-DEMO-P619,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-02T18:51:00Z,1
+AL-DEMO-R620,AL-DEMO-P620,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-02T19:10:00Z,1
+AL-DEMO-R621,AL-DEMO-P621,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-11-02T19:14:00Z,1
+AL-DEMO-R622,AL-DEMO-P622,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-02T19:34:00Z,1
+AL-DEMO-R623,AL-DEMO-P623,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-02T19:35:00Z,1
+AL-DEMO-R624,AL-DEMO-P624,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-02T19:42:00Z,1
+AL-DEMO-R625,AL-DEMO-P625,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-02T20:06:00Z,1
+AL-DEMO-R626,AL-DEMO-P626,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-02T20:08:00Z,1
+AL-DEMO-R627,AL-DEMO-P627,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-02T20:32:00Z,1
+AL-DEMO-R628,AL-DEMO-P628,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-02T20:46:00Z,1
+AL-DEMO-R629,AL-DEMO-P629,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,unsure,2026-11-02T21:06:00Z,1
+AL-DEMO-R630,AL-DEMO-P630,osm:node/336347265,Arsenal Museum,unsure,unsure,yes,2026-11-02T21:23:00Z,1
+AL-DEMO-R631,AL-DEMO-P631,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-02T21:51:00Z,1
+AL-DEMO-R632,AL-DEMO-P632,osm:way/617427470,The Library at Willesden Green,unsure,yes,unsure,2026-11-02T21:56:00Z,1
+AL-DEMO-R633,AL-DEMO-P633,osm:node/618694098,Victoria Library,yes,unsure,yes,2026-11-02T22:52:00Z,1
+AL-DEMO-R634,AL-DEMO-P634,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-02T23:05:00Z,1
+AL-DEMO-R635,AL-DEMO-P635,osm:node/7126677078,Notting Hill Gate Library,yes,no,yes,2026-11-02T23:13:00Z,1
+AL-DEMO-R636,AL-DEMO-P636,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-03T00:14:00Z,1
+AL-DEMO-R637,AL-DEMO-P637,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-11-03T00:29:00Z,1
+AL-DEMO-R638,AL-DEMO-P638,osm:node/7794409755,Starbucks Excel,yes,no,one,2026-11-03T00:33:00Z,1
+AL-DEMO-R639,AL-DEMO-P639,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-03T01:06:00Z,1
+AL-DEMO-R640,AL-DEMO-P640,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-11-03T01:14:00Z,1
+AL-DEMO-R641,AL-DEMO-P641,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-11-03T01:20:00Z,1
+AL-DEMO-R642,AL-DEMO-P642,osm:node/336347265,Arsenal Museum,unsure,unsure,yes,2026-11-03T03:29:00Z,1
+AL-DEMO-R643,AL-DEMO-P643,osm:way/617427470,The Library at Willesden Green,unsure,yes,one,2026-11-03T03:47:00Z,1
+AL-DEMO-R644,AL-DEMO-P644,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-03T03:55:00Z,1
+AL-DEMO-R645,AL-DEMO-P645,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-03T04:00:00Z,1
+AL-DEMO-R646,AL-DEMO-P646,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-11-03T04:07:00Z,1
+AL-DEMO-R647,AL-DEMO-P647,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-03T04:08:00Z,1
+AL-DEMO-R648,AL-DEMO-P648,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-03T04:33:00Z,1
+AL-DEMO-R649,AL-DEMO-P649,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-03T04:57:00Z,1
+AL-DEMO-R650,AL-DEMO-P650,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-03T05:04:00Z,1
+AL-DEMO-R651,AL-DEMO-P651,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-11-03T05:25:00Z,1
+AL-DEMO-R652,AL-DEMO-P652,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-03T05:31:00Z,1
+AL-DEMO-R653,AL-DEMO-P653,osm:way/10807015,National Army Museum,yes,unsure,yes,2026-11-03T05:55:00Z,1
+AL-DEMO-R654,AL-DEMO-P654,osm:way/617427470,The Library at Willesden Green,yes,yes,unsure,2026-11-03T07:04:00Z,1
+AL-DEMO-R655,AL-DEMO-P655,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-03T08:10:00Z,1
+AL-DEMO-R656,AL-DEMO-P656,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-03T08:43:00Z,1
+AL-DEMO-R657,AL-DEMO-P657,osm:way/27815146,Islington Central Library,unsure,unsure,unsure,2026-11-03T09:02:00Z,1
+AL-DEMO-R658,AL-DEMO-P658,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-03T09:23:00Z,1
+AL-DEMO-R659,AL-DEMO-P659,osm:way/10807015,National Army Museum,unsure,unsure,yes,2026-11-03T09:36:00Z,1
+AL-DEMO-R660,AL-DEMO-P660,osm:node/7794409755,Starbucks Excel,unsure,yes,unsure,2026-11-03T09:43:00Z,1
+AL-DEMO-R661,AL-DEMO-P661,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-03T09:59:00Z,1
+AL-DEMO-R662,AL-DEMO-P662,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-03T10:23:00Z,1
+AL-DEMO-R663,AL-DEMO-P663,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-03T10:30:00Z,1
+AL-DEMO-R664,AL-DEMO-P664,osm:node/910356813,The Fan Museum,unsure,yes,unsure,2026-11-03T10:43:00Z,1
+AL-DEMO-R665,AL-DEMO-P665,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-03T11:08:00Z,1
+AL-DEMO-R666,AL-DEMO-P666,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-03T11:12:00Z,1
+AL-DEMO-R667,AL-DEMO-P667,osm:node/7126677078,Notting Hill Gate Library,yes,no,yes,2026-11-03T11:23:00Z,1
+AL-DEMO-R668,AL-DEMO-P668,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-03T11:31:00Z,1
+AL-DEMO-R669,AL-DEMO-P669,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,yes,unsure,2026-11-03T11:40:00Z,1
+AL-DEMO-R670,AL-DEMO-P670,osm:way/23018529,Thames Barrier Park,yes,unsure,unsure,2026-11-03T11:52:00Z,1
+AL-DEMO-R671,AL-DEMO-P671,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-03T11:53:00Z,1
+AL-DEMO-R672,AL-DEMO-P672,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-03T11:58:00Z,1
+AL-DEMO-R673,AL-DEMO-P673,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-03T12:42:00Z,1
+AL-DEMO-R674,AL-DEMO-P674,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-03T12:44:00Z,1
+AL-DEMO-R675,AL-DEMO-P675,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-11-03T13:18:00Z,1
+AL-DEMO-R676,AL-DEMO-P676,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-03T13:47:00Z,1
+AL-DEMO-R677,AL-DEMO-P677,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-03T14:19:00Z,1
+AL-DEMO-R678,AL-DEMO-P678,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-11-03T14:29:00Z,1
+AL-DEMO-R679,AL-DEMO-P679,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-03T14:35:00Z,1
+AL-DEMO-R680,AL-DEMO-P680,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-03T15:35:00Z,1
+AL-DEMO-R681,AL-DEMO-P681,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-03T15:49:00Z,1
+AL-DEMO-R682,AL-DEMO-P682,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-11-03T16:26:00Z,1
+AL-DEMO-R683,AL-DEMO-P683,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-03T16:44:00Z,1
+AL-DEMO-R684,AL-DEMO-P684,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-03T16:49:00Z,1
+AL-DEMO-R685,AL-DEMO-P685,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-03T17:02:00Z,1
+AL-DEMO-R686,AL-DEMO-P686,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-03T17:25:00Z,1
+AL-DEMO-R687,AL-DEMO-P687,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-03T17:34:00Z,1
+AL-DEMO-R688,AL-DEMO-P688,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-03T17:36:00Z,1
+AL-DEMO-R689,AL-DEMO-P689,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-03T17:45:00Z,1
+AL-DEMO-R690,AL-DEMO-P690,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-03T17:50:00Z,1
+AL-DEMO-R691,AL-DEMO-P691,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-03T18:04:00Z,1
+AL-DEMO-R692,AL-DEMO-P692,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,unsure,2026-11-03T18:39:00Z,1
+AL-DEMO-R693,AL-DEMO-P693,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-03T18:40:00Z,1
+AL-DEMO-R694,AL-DEMO-P694,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-03T19:02:00Z,1
+AL-DEMO-R695,AL-DEMO-P695,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-03T19:26:00Z,1
+AL-DEMO-R696,AL-DEMO-P696,osm:way/617427470,The Library at Willesden Green,unsure,unsure,unsure,2026-11-03T19:27:00Z,1
+AL-DEMO-R697,AL-DEMO-P697,osm:way/120316250,Apsley House,yes,yes,one,2026-11-03T19:28:00Z,1
+AL-DEMO-R698,AL-DEMO-P698,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-03T20:51:00Z,1
+AL-DEMO-R699,AL-DEMO-P699,osm:node/618694098,Victoria Library,unsure,unsure,yes,2026-11-03T21:35:00Z,1
+AL-DEMO-R700,AL-DEMO-P700,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,unsure,2026-11-03T22:01:00Z,1
+AL-DEMO-R701,AL-DEMO-P701,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-03T22:06:00Z,1
+AL-DEMO-R702,AL-DEMO-P702,osm:node/7794409755,Starbucks Excel,unsure,unsure,unsure,2026-11-03T22:17:00Z,1
+AL-DEMO-R703,AL-DEMO-P703,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-11-03T22:18:00Z,1
+AL-DEMO-R704,AL-DEMO-P704,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-11-03T22:22:00Z,1
+AL-DEMO-R705,AL-DEMO-P705,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,yes,2026-11-03T22:52:00Z,1
+AL-DEMO-R706,AL-DEMO-P706,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-03T23:03:00Z,1
+AL-DEMO-R707,AL-DEMO-P707,osm:way/1306360473,Queen's Gardens Toilets,unsure,unsure,unsure,2026-11-03T23:24:00Z,1
+AL-DEMO-R708,AL-DEMO-P708,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-11-03T23:25:00Z,1
+AL-DEMO-R709,AL-DEMO-P709,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-04T00:10:00Z,1
+AL-DEMO-R710,AL-DEMO-P710,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T00:46:00Z,1
+AL-DEMO-R711,AL-DEMO-P711,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-04T00:58:00Z,1
+AL-DEMO-R712,AL-DEMO-P712,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-04T01:17:00Z,1
+AL-DEMO-R713,AL-DEMO-P713,osm:node/11361621056,The Café at Foyles,yes,unsure,unsure,2026-11-04T01:28:00Z,1
+AL-DEMO-R714,AL-DEMO-P714,osm:node/7126677078,Notting Hill Gate Library,yes,unsure,unsure,2026-11-04T01:33:00Z,1
+AL-DEMO-R715,AL-DEMO-P715,osm:way/10807015,National Army Museum,yes,unsure,yes,2026-11-04T01:50:00Z,1
+AL-DEMO-R716,AL-DEMO-P716,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-04T02:09:00Z,1
+AL-DEMO-R717,AL-DEMO-P717,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-04T02:28:00Z,1
+AL-DEMO-R718,AL-DEMO-P718,osm:node/1708956913,Eltham Library,yes,yes,unsure,2026-11-04T02:56:00Z,1
+AL-DEMO-R719,AL-DEMO-P719,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-04T03:07:00Z,1
+AL-DEMO-R720,AL-DEMO-P720,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-04T03:16:00Z,1
+AL-DEMO-R721,AL-DEMO-P721,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-11-04T03:24:00Z,1
+AL-DEMO-R722,AL-DEMO-P722,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-04T03:27:00Z,1
+AL-DEMO-R723,AL-DEMO-P723,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-04T03:44:00Z,1
+AL-DEMO-R724,AL-DEMO-P724,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-04T03:48:00Z,1
+AL-DEMO-R725,AL-DEMO-P725,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T03:52:00Z,1
+AL-DEMO-R726,AL-DEMO-P726,osm:way/868617836,Custom House Library,unsure,unsure,unsure,2026-11-04T04:53:00Z,1
+AL-DEMO-R727,AL-DEMO-P727,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-04T05:20:00Z,1
+AL-DEMO-R728,AL-DEMO-P728,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-11-04T05:25:00Z,1
+AL-DEMO-R729,AL-DEMO-P729,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-04T06:47:00Z,1
+AL-DEMO-R730,AL-DEMO-P730,osm:node/7126677078,Notting Hill Gate Library,yes,no,yes,2026-11-04T06:51:00Z,1
+AL-DEMO-R731,AL-DEMO-P731,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-04T07:19:00Z,1
+AL-DEMO-R732,AL-DEMO-P732,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-04T07:28:00Z,1
+AL-DEMO-R733,AL-DEMO-P733,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T07:40:00Z,1
+AL-DEMO-R734,AL-DEMO-P734,osm:way/129377070,Sambourne House,unsure,yes,one,2026-11-04T07:43:00Z,1
+AL-DEMO-R735,AL-DEMO-P735,osm:node/336347265,Arsenal Museum,yes,yes,unsure,2026-11-04T07:59:00Z,1
+AL-DEMO-R736,AL-DEMO-P736,osm:way/120316250,Apsley House,yes,yes,one,2026-11-04T08:05:00Z,1
+AL-DEMO-R737,AL-DEMO-P737,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-04T08:09:00Z,1
+AL-DEMO-R738,AL-DEMO-P738,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-11-04T09:18:00Z,1
+AL-DEMO-R739,AL-DEMO-P739,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-04T09:19:00Z,1
+AL-DEMO-R740,AL-DEMO-P740,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-04T10:14:00Z,1
+AL-DEMO-R741,AL-DEMO-P741,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-04T10:55:00Z,1
+AL-DEMO-R742,AL-DEMO-P742,osm:relation/1384127,The Regent's Park,unsure,unsure,yes,2026-11-04T11:12:00Z,1
+AL-DEMO-R743,AL-DEMO-P743,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-04T11:26:00Z,1
+AL-DEMO-R744,AL-DEMO-P744,osm:relation/18794121,Highbury Fields,yes,unsure,unsure,2026-11-04T11:30:00Z,1
+AL-DEMO-R745,AL-DEMO-P745,osm:way/120316250,Apsley House,unsure,yes,one,2026-11-04T11:41:00Z,1
+AL-DEMO-R746,AL-DEMO-P746,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,unsure,2026-11-04T11:47:00Z,1
+AL-DEMO-R747,AL-DEMO-P747,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-04T12:09:00Z,1
+AL-DEMO-R748,AL-DEMO-P748,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-04T12:14:00Z,1
+AL-DEMO-R749,AL-DEMO-P749,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-04T12:21:00Z,1
+AL-DEMO-R750,AL-DEMO-P750,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-04T12:37:00Z,1
+AL-DEMO-R751,AL-DEMO-P751,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-04T12:42:00Z,1
+AL-DEMO-R752,AL-DEMO-P752,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-04T12:49:00Z,1
+AL-DEMO-R753,AL-DEMO-P753,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-04T13:00:00Z,1
+AL-DEMO-R754,AL-DEMO-P754,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-04T13:05:00Z,1
+AL-DEMO-R755,AL-DEMO-P755,osm:node/1708956913,Eltham Library,unsure,yes,unsure,2026-11-04T13:21:00Z,1
+AL-DEMO-R756,AL-DEMO-P756,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-04T14:16:00Z,1
+AL-DEMO-R757,AL-DEMO-P757,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-04T14:19:00Z,1
+AL-DEMO-R758,AL-DEMO-P758,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-04T14:38:00Z,1
+AL-DEMO-R759,AL-DEMO-P759,osm:node/910356813,The Fan Museum,unsure,yes,one,2026-11-04T14:44:00Z,1
+AL-DEMO-R760,AL-DEMO-P760,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-04T15:09:00Z,1
+AL-DEMO-R761,AL-DEMO-P761,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-04T15:20:00Z,1
+AL-DEMO-R762,AL-DEMO-P762,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-04T15:50:00Z,1
+AL-DEMO-R763,AL-DEMO-P763,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-04T15:58:00Z,1
+AL-DEMO-R764,AL-DEMO-P764,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-04T16:01:00Z,1
+AL-DEMO-R765,AL-DEMO-P765,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-04T16:07:00Z,1
+AL-DEMO-R766,AL-DEMO-P766,osm:node/1708956913,Eltham Library,yes,unsure,yes,2026-11-04T16:17:00Z,1
+AL-DEMO-R767,AL-DEMO-P767,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-04T16:55:00Z,1
+AL-DEMO-R768,AL-DEMO-P768,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-04T17:13:00Z,1
+AL-DEMO-R769,AL-DEMO-P769,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T17:26:00Z,1
+AL-DEMO-R770,AL-DEMO-P770,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-04T17:31:00Z,1
+AL-DEMO-R771,AL-DEMO-P771,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-11-04T17:48:00Z,1
+AL-DEMO-R772,AL-DEMO-P772,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-04T17:53:00Z,1
+AL-DEMO-R773,AL-DEMO-P773,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-04T17:58:00Z,1
+AL-DEMO-R774,AL-DEMO-P774,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-04T18:09:00Z,1
+AL-DEMO-R775,AL-DEMO-P775,osm:way/27815146,Islington Central Library,unsure,yes,one,2026-11-04T18:21:00Z,1
+AL-DEMO-R776,AL-DEMO-P776,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-11-04T18:27:00Z,1
+AL-DEMO-R777,AL-DEMO-P777,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T18:35:00Z,1
+AL-DEMO-R778,AL-DEMO-P778,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-04T19:00:00Z,1
+AL-DEMO-R779,AL-DEMO-P779,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,unsure,2026-11-04T19:32:00Z,1
+AL-DEMO-R780,AL-DEMO-P780,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-04T19:38:00Z,1
+AL-DEMO-R781,AL-DEMO-P781,osm:way/868617836,Custom House Library,yes,yes,yes,2026-11-04T19:39:00Z,1
+AL-DEMO-R782,AL-DEMO-P782,osm:relation/21292421,Gladstone Park,unsure,no,unsure,2026-11-04T20:21:00Z,1
+AL-DEMO-R783,AL-DEMO-P783,osm:node/618694098,Victoria Library,yes,no,yes,2026-11-04T20:53:00Z,1
+AL-DEMO-R784,AL-DEMO-P784,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-04T21:10:00Z,1
+AL-DEMO-R785,AL-DEMO-P785,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-04T21:39:00Z,1
+AL-DEMO-R786,AL-DEMO-P786,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-11-04T21:46:00Z,1
+AL-DEMO-R787,AL-DEMO-P787,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-04T21:58:00Z,1
+AL-DEMO-R788,AL-DEMO-P788,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-04T22:18:00Z,1
+AL-DEMO-R789,AL-DEMO-P789,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-04T22:27:00Z,1
+AL-DEMO-R790,AL-DEMO-P790,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-04T22:30:00Z,1
+AL-DEMO-R791,AL-DEMO-P791,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-04T22:56:00Z,1
+AL-DEMO-R792,AL-DEMO-P792,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-04T22:58:00Z,1
+AL-DEMO-R793,AL-DEMO-P793,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-04T23:17:00Z,1
+AL-DEMO-R794,AL-DEMO-P794,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-04T23:36:00Z,1
+AL-DEMO-R795,AL-DEMO-P795,osm:way/129377070,Sambourne House,unsure,unsure,unsure,2026-11-04T23:47:00Z,1
+AL-DEMO-R796,AL-DEMO-P796,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-04T23:54:00Z,1
+AL-DEMO-R797,AL-DEMO-P797,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-05T00:04:00Z,1
+AL-DEMO-R798,AL-DEMO-P798,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-05T00:14:00Z,1
+AL-DEMO-R799,AL-DEMO-P799,osm:way/8137262,Holland Park,yes,unsure,unsure,2026-11-05T00:18:00Z,1
+AL-DEMO-R800,AL-DEMO-P800,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-05T00:29:00Z,1
+AL-DEMO-R801,AL-DEMO-P801,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-05T01:12:00Z,1
+AL-DEMO-R802,AL-DEMO-P802,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-05T01:16:00Z,1
+AL-DEMO-R803,AL-DEMO-P803,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-05T01:19:00Z,1
+AL-DEMO-R804,AL-DEMO-P804,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-05T01:20:00Z,1
+AL-DEMO-R805,AL-DEMO-P805,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-05T01:24:00Z,1
+AL-DEMO-R806,AL-DEMO-P806,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-05T02:34:00Z,1
+AL-DEMO-R807,AL-DEMO-P807,osm:node/10073490911,Ottolenghi,yes,no,yes,2026-11-05T02:47:00Z,1
+AL-DEMO-R808,AL-DEMO-P808,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-05T03:06:00Z,1
+AL-DEMO-R809,AL-DEMO-P809,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-05T03:15:00Z,1
+AL-DEMO-R810,AL-DEMO-P810,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-05T03:40:00Z,1
+AL-DEMO-R811,AL-DEMO-P811,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-05T04:10:00Z,1
+AL-DEMO-R812,AL-DEMO-P812,osm:node/1708956913,Eltham Library,unsure,yes,yes,2026-11-05T04:57:00Z,1
+AL-DEMO-R813,AL-DEMO-P813,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-05T05:01:00Z,1
+AL-DEMO-R814,AL-DEMO-P814,osm:relation/21292421,Gladstone Park,unsure,yes,unsure,2026-11-05T05:22:00Z,1
+AL-DEMO-R815,AL-DEMO-P815,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-05T05:32:00Z,1
+AL-DEMO-R816,AL-DEMO-P816,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-11-05T05:54:00Z,1
+AL-DEMO-R817,AL-DEMO-P817,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-05T06:15:00Z,1
+AL-DEMO-R818,AL-DEMO-P818,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-05T06:27:00Z,1
+AL-DEMO-R819,AL-DEMO-P819,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-05T06:36:00Z,1
+AL-DEMO-R820,AL-DEMO-P820,osm:node/910356813,The Fan Museum,unsure,yes,one,2026-11-05T06:42:00Z,1
+AL-DEMO-R821,AL-DEMO-P821,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-05T06:46:00Z,1
+AL-DEMO-R822,AL-DEMO-P822,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-05T07:32:00Z,1
+AL-DEMO-R823,AL-DEMO-P823,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-05T08:09:00Z,1
+AL-DEMO-R824,AL-DEMO-P824,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-05T08:11:00Z,1
+AL-DEMO-R825,AL-DEMO-P825,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-05T08:21:00Z,1
+AL-DEMO-R826,AL-DEMO-P826,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-05T08:41:00Z,1
+AL-DEMO-R827,AL-DEMO-P827,osm:node/336347265,Arsenal Museum,yes,unsure,unsure,2026-11-05T08:44:00Z,1
+AL-DEMO-R828,AL-DEMO-P828,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-05T08:49:00Z,1
+AL-DEMO-R829,AL-DEMO-P829,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-05T08:51:00Z,1
+AL-DEMO-R830,AL-DEMO-P830,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-05T08:54:00Z,1
+AL-DEMO-R831,AL-DEMO-P831,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-05T09:04:00Z,1
+AL-DEMO-R832,AL-DEMO-P832,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-05T09:32:00Z,1
+AL-DEMO-R833,AL-DEMO-P833,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-05T09:33:00Z,1
+AL-DEMO-R834,AL-DEMO-P834,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-05T09:34:00Z,1
+AL-DEMO-R835,AL-DEMO-P835,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-05T09:37:00Z,1
+AL-DEMO-R836,AL-DEMO-P836,osm:relation/18794121,Highbury Fields,unsure,no,unsure,2026-11-05T10:00:00Z,1
+AL-DEMO-R837,AL-DEMO-P837,osm:way/27815146,Islington Central Library,yes,yes,one,2026-11-05T10:04:00Z,1
+AL-DEMO-R838,AL-DEMO-P838,osm:node/336347265,Arsenal Museum,unsure,unsure,unsure,2026-11-05T10:15:00Z,1
+AL-DEMO-R839,AL-DEMO-P839,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-05T10:17:00Z,1
+AL-DEMO-R840,AL-DEMO-P840,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-11-05T10:21:00Z,1
+AL-DEMO-R841,AL-DEMO-P841,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-05T10:51:00Z,1
+AL-DEMO-R842,AL-DEMO-P842,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-05T10:52:00Z,1
+AL-DEMO-R843,AL-DEMO-P843,osm:node/339394917,The Compton Arms,no,no,unsure,2026-11-05T11:25:00Z,1
+AL-DEMO-R844,AL-DEMO-P844,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,one,2026-11-05T11:26:00Z,1
+AL-DEMO-R845,AL-DEMO-P845,osm:node/1708956913,Eltham Library,yes,yes,unsure,2026-11-05T11:35:00Z,1
+AL-DEMO-R846,AL-DEMO-P846,osm:node/618694098,Victoria Library,yes,no,unsure,2026-11-05T11:51:00Z,1
+AL-DEMO-R847,AL-DEMO-P847,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-11-05T12:26:00Z,1
+AL-DEMO-R848,AL-DEMO-P848,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-05T12:51:00Z,1
+AL-DEMO-R849,AL-DEMO-P849,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-05T12:59:00Z,1
+AL-DEMO-R850,AL-DEMO-P850,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-05T13:00:00Z,1
+AL-DEMO-R851,AL-DEMO-P851,osm:node/1708956913,Eltham Library,yes,unsure,unsure,2026-11-05T13:13:00Z,1
+AL-DEMO-R852,AL-DEMO-P852,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-05T13:26:00Z,1
+AL-DEMO-R853,AL-DEMO-P853,osm:node/339394917,The Compton Arms,no,no,unsure,2026-11-05T13:44:00Z,1
+AL-DEMO-R854,AL-DEMO-P854,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-05T13:48:00Z,1
+AL-DEMO-R855,AL-DEMO-P855,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-05T14:14:00Z,1
+AL-DEMO-R856,AL-DEMO-P856,osm:way/1306360473,Queen's Gardens Toilets,unsure,unsure,unsure,2026-11-05T14:21:00Z,1
+AL-DEMO-R857,AL-DEMO-P857,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-05T14:28:00Z,1
+AL-DEMO-R858,AL-DEMO-P858,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-05T14:31:00Z,1
+AL-DEMO-R859,AL-DEMO-P859,osm:node/618694098,Victoria Library,yes,unsure,unsure,2026-11-05T14:32:00Z,1
+AL-DEMO-R860,AL-DEMO-P860,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-05T15:04:00Z,1
+AL-DEMO-R861,AL-DEMO-P861,osm:node/1493424622,Handel & Hendrix,yes,yes,yes,2026-11-05T15:10:00Z,1
+AL-DEMO-R862,AL-DEMO-P862,osm:node/5247197725,The Charterhouse,unsure,unsure,unsure,2026-11-05T15:21:00Z,1
+AL-DEMO-R863,AL-DEMO-P863,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-11-05T15:24:00Z,1
+AL-DEMO-R864,AL-DEMO-P864,osm:way/1042201707,V&A East Museum,yes,unsure,one,2026-11-05T15:33:00Z,1
+AL-DEMO-R865,AL-DEMO-P865,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-05T16:06:00Z,1
+AL-DEMO-R866,AL-DEMO-P866,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-05T16:21:00Z,1
+AL-DEMO-R867,AL-DEMO-P867,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-05T16:37:00Z,1
+AL-DEMO-R868,AL-DEMO-P868,osm:node/1708956913,Eltham Library,unsure,yes,unsure,2026-11-05T16:53:00Z,1
+AL-DEMO-R869,AL-DEMO-P869,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-05T17:03:00Z,1
+AL-DEMO-R870,AL-DEMO-P870,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-05T17:26:00Z,1
+AL-DEMO-R871,AL-DEMO-P871,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-05T17:36:00Z,1
+AL-DEMO-R872,AL-DEMO-P872,osm:node/5836502584,Brent Museum,unsure,yes,one,2026-11-05T17:58:00Z,1
+AL-DEMO-R873,AL-DEMO-P873,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-05T18:04:00Z,1
+AL-DEMO-R874,AL-DEMO-P874,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-05T18:32:00Z,1
+AL-DEMO-R875,AL-DEMO-P875,osm:way/27815146,Islington Central Library,yes,yes,one,2026-11-05T18:33:00Z,1
+AL-DEMO-R876,AL-DEMO-P876,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-11-05T18:43:00Z,1
+AL-DEMO-R877,AL-DEMO-P877,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-05T18:44:00Z,1
+AL-DEMO-R878,AL-DEMO-P878,osm:node/618694098,Victoria Library,unsure,no,unsure,2026-11-05T19:08:00Z,1
+AL-DEMO-R879,AL-DEMO-P879,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-05T19:12:00Z,1
+AL-DEMO-R880,AL-DEMO-P880,osm:way/23018529,Thames Barrier Park,yes,unsure,unsure,2026-11-05T19:28:00Z,1
+AL-DEMO-R881,AL-DEMO-P881,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-05T19:44:00Z,1
+AL-DEMO-R882,AL-DEMO-P882,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-05T19:50:00Z,1
+AL-DEMO-R883,AL-DEMO-P883,osm:node/910356813,The Fan Museum,unsure,unsure,unsure,2026-11-05T20:04:00Z,1
+AL-DEMO-R884,AL-DEMO-P884,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-05T20:13:00Z,1
+AL-DEMO-R885,AL-DEMO-P885,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-05T21:11:00Z,1
+AL-DEMO-R886,AL-DEMO-P886,osm:node/336347265,Arsenal Museum,unsure,yes,yes,2026-11-05T21:17:00Z,1
+AL-DEMO-R887,AL-DEMO-P887,osm:way/27815146,Islington Central Library,unsure,yes,unsure,2026-11-05T21:18:00Z,1
+AL-DEMO-R888,AL-DEMO-P888,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,unsure,2026-11-05T21:54:00Z,1
+AL-DEMO-R889,AL-DEMO-P889,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-05T22:12:00Z,1
+AL-DEMO-R890,AL-DEMO-P890,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-05T22:19:00Z,1
+AL-DEMO-R891,AL-DEMO-P891,osm:node/5836502584,Brent Museum,yes,yes,one,2026-11-05T22:25:00Z,1
+AL-DEMO-R892,AL-DEMO-P892,osm:node/910356813,The Fan Museum,unsure,yes,one,2026-11-05T22:34:00Z,1
+AL-DEMO-R893,AL-DEMO-P893,osm:node/618694098,Victoria Library,unsure,no,unsure,2026-11-05T22:39:00Z,1
+AL-DEMO-R894,AL-DEMO-P894,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-05T22:55:00Z,1
+AL-DEMO-R895,AL-DEMO-P895,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-05T23:13:00Z,1
+AL-DEMO-R896,AL-DEMO-P896,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-05T23:52:00Z,1
+AL-DEMO-R897,AL-DEMO-P897,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-06T00:03:00Z,1
+AL-DEMO-R898,AL-DEMO-P898,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-06T00:06:00Z,1
+AL-DEMO-R899,AL-DEMO-P899,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-11-06T00:08:00Z,1
+AL-DEMO-R900,AL-DEMO-P900,osm:way/617427470,The Library at Willesden Green,yes,unsure,one,2026-11-06T00:15:00Z,1
+AL-DEMO-R901,AL-DEMO-P901,osm:way/27815146,Islington Central Library,yes,unsure,unsure,2026-11-06T00:18:00Z,1
+AL-DEMO-R902,AL-DEMO-P902,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-06T00:29:00Z,1
+AL-DEMO-R903,AL-DEMO-P903,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-06T00:30:00Z,1
+AL-DEMO-R904,AL-DEMO-P904,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-06T01:41:00Z,1
+AL-DEMO-R905,AL-DEMO-P905,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-06T01:43:00Z,1
+AL-DEMO-R906,AL-DEMO-P906,osm:way/868617836,Custom House Library,yes,yes,unsure,2026-11-06T02:07:00Z,1
+AL-DEMO-R907,AL-DEMO-P907,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-06T02:16:00Z,1
+AL-DEMO-R908,AL-DEMO-P908,osm:way/1042201707,V&A East Museum,unsure,unsure,one,2026-11-06T02:30:00Z,1
+AL-DEMO-R909,AL-DEMO-P909,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-06T02:43:00Z,1
+AL-DEMO-R910,AL-DEMO-P910,osm:node/618694098,Victoria Library,unsure,unsure,yes,2026-11-06T03:16:00Z,1
+AL-DEMO-R911,AL-DEMO-P911,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-06T03:24:00Z,1
+AL-DEMO-R912,AL-DEMO-P912,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-06T03:45:00Z,1
+AL-DEMO-R913,AL-DEMO-P913,osm:way/120316250,Apsley House,unsure,unsure,unsure,2026-11-06T04:01:00Z,1
+AL-DEMO-R914,AL-DEMO-P914,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-06T04:36:00Z,1
+AL-DEMO-R915,AL-DEMO-P915,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-06T05:41:00Z,1
+AL-DEMO-R916,AL-DEMO-P916,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-11-06T05:44:00Z,1
+AL-DEMO-R917,AL-DEMO-P917,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-06T05:56:00Z,1
+AL-DEMO-R918,AL-DEMO-P918,osm:way/120316250,Apsley House,yes,unsure,one,2026-11-06T06:28:00Z,1
+AL-DEMO-R919,AL-DEMO-P919,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-06T06:37:00Z,1
+AL-DEMO-R920,AL-DEMO-P920,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-06T06:56:00Z,1
+AL-DEMO-R921,AL-DEMO-P921,osm:node/618694098,Victoria Library,unsure,no,yes,2026-11-06T07:06:00Z,1
+AL-DEMO-R922,AL-DEMO-P922,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-11-06T07:27:00Z,1
+AL-DEMO-R923,AL-DEMO-P923,osm:node/7794409755,Starbucks Excel,yes,unsure,one,2026-11-06T07:38:00Z,1
+AL-DEMO-R924,AL-DEMO-P924,osm:way/27815146,Islington Central Library,yes,yes,one,2026-11-06T07:42:00Z,1
+AL-DEMO-R925,AL-DEMO-P925,osm:way/120316250,Apsley House,yes,yes,one,2026-11-06T07:56:00Z,1
+AL-DEMO-R926,AL-DEMO-P926,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-06T08:04:00Z,1
+AL-DEMO-R927,AL-DEMO-P927,osm:way/439037559,Paradise by way of Kensal Green,no,no,unsure,2026-11-06T08:28:00Z,1
+AL-DEMO-R928,AL-DEMO-P928,osm:node/336347265,Arsenal Museum,unsure,yes,yes,2026-11-06T08:32:00Z,1
+AL-DEMO-R929,AL-DEMO-P929,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-06T09:03:00Z,1
+AL-DEMO-R930,AL-DEMO-P930,osm:node/3246895686,Dark Habit Coffee,unsure,unsure,unsure,2026-11-06T09:09:00Z,1
+AL-DEMO-R931,AL-DEMO-P931,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-06T09:16:00Z,1
+AL-DEMO-R932,AL-DEMO-P932,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-06T09:51:00Z,1
+AL-DEMO-R933,AL-DEMO-P933,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-06T10:00:00Z,1
+AL-DEMO-R934,AL-DEMO-P934,osm:way/23018529,Thames Barrier Park,unsure,no,unsure,2026-11-06T10:06:00Z,1
+AL-DEMO-R935,AL-DEMO-P935,osm:way/23018529,Thames Barrier Park,unsure,unsure,one,2026-11-06T10:14:00Z,1
+AL-DEMO-R936,AL-DEMO-P936,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-06T10:15:00Z,1
+AL-DEMO-R937,AL-DEMO-P937,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-06T10:17:00Z,1
+AL-DEMO-R938,AL-DEMO-P938,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-06T10:41:00Z,1
+AL-DEMO-R939,AL-DEMO-P939,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-11-06T11:05:00Z,1
+AL-DEMO-R940,AL-DEMO-P940,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-11-06T11:12:00Z,1
+AL-DEMO-R941,AL-DEMO-P941,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-06T11:26:00Z,1
+AL-DEMO-R942,AL-DEMO-P942,osm:way/617427470,The Library at Willesden Green,unsure,unsure,one,2026-11-06T11:33:00Z,1
+AL-DEMO-R943,AL-DEMO-P943,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-06T11:36:00Z,1
+AL-DEMO-R944,AL-DEMO-P944,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-06T12:11:00Z,1
+AL-DEMO-R945,AL-DEMO-P945,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-06T12:34:00Z,1
+AL-DEMO-R946,AL-DEMO-P946,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-06T12:40:00Z,1
+AL-DEMO-R947,AL-DEMO-P947,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-06T13:02:00Z,1
+AL-DEMO-R948,AL-DEMO-P948,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-11-06T13:22:00Z,1
+AL-DEMO-R949,AL-DEMO-P949,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-06T13:58:00Z,1
+AL-DEMO-R950,AL-DEMO-P950,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-06T14:55:00Z,1
+AL-DEMO-R951,AL-DEMO-P951,osm:way/13868329,West Ham Park,yes,unsure,no,2026-11-06T15:01:00Z,1
+AL-DEMO-R952,AL-DEMO-P952,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-11-06T15:17:00Z,1
+AL-DEMO-R953,AL-DEMO-P953,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-06T15:25:00Z,1
+AL-DEMO-R954,AL-DEMO-P954,osm:way/1042201707,V&A East Museum,yes,yes,unsure,2026-11-06T15:27:00Z,1
+AL-DEMO-R955,AL-DEMO-P955,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-06T15:29:00Z,1
+AL-DEMO-R956,AL-DEMO-P956,osm:way/868617836,Custom House Library,yes,unsure,unsure,2026-11-06T15:31:00Z,1
+AL-DEMO-R957,AL-DEMO-P957,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-06T16:32:00Z,1
+AL-DEMO-R958,AL-DEMO-P958,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-06T16:40:00Z,1
+AL-DEMO-R959,AL-DEMO-P959,osm:node/1708956913,Eltham Library,unsure,yes,yes,2026-11-06T17:24:00Z,1
+AL-DEMO-R960,AL-DEMO-P960,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-06T17:56:00Z,1
+AL-DEMO-R961,AL-DEMO-P961,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-06T17:59:00Z,1
+AL-DEMO-R962,AL-DEMO-P962,osm:node/10073490911,Ottolenghi,yes,no,no,2026-11-06T18:00:00Z,1
+AL-DEMO-R963,AL-DEMO-P963,osm:node/5247197725,The Charterhouse,unsure,unsure,unsure,2026-11-06T18:01:00Z,1
+AL-DEMO-R964,AL-DEMO-P964,osm:node/1708956913,Eltham Library,unsure,yes,yes,2026-11-06T18:30:00Z,1
+AL-DEMO-R965,AL-DEMO-P965,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-06T18:51:00Z,1
+AL-DEMO-R966,AL-DEMO-P966,osm:way/868617836,Custom House Library,unsure,unsure,unsure,2026-11-06T19:23:00Z,1
+AL-DEMO-R967,AL-DEMO-P967,osm:node/618694098,Victoria Library,yes,unsure,yes,2026-11-06T20:28:00Z,1
+AL-DEMO-R968,AL-DEMO-P968,osm:node/5836502584,Brent Museum,unsure,unsure,one,2026-11-06T21:01:00Z,1
+AL-DEMO-R969,AL-DEMO-P969,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-11-06T21:14:00Z,1
+AL-DEMO-R970,AL-DEMO-P970,osm:way/129377070,Sambourne House,yes,yes,one,2026-11-06T22:36:00Z,1
+AL-DEMO-R971,AL-DEMO-P971,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-11-06T22:41:00Z,1
+AL-DEMO-R972,AL-DEMO-P972,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-06T22:43:00Z,1
+AL-DEMO-R973,AL-DEMO-P973,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-11-06T23:01:00Z,1
+AL-DEMO-R974,AL-DEMO-P974,osm:node/1708956913,Eltham Library,yes,unsure,unsure,2026-11-06T23:13:00Z,1
+AL-DEMO-R975,AL-DEMO-P975,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,one,2026-11-06T23:24:00Z,1
+AL-DEMO-R976,AL-DEMO-P976,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-11-06T23:45:00Z,1
+AL-DEMO-R977,AL-DEMO-P977,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-06T23:51:00Z,1
+AL-DEMO-R978,AL-DEMO-P978,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-07T00:02:00Z,1
+AL-DEMO-R979,AL-DEMO-P979,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-07T00:14:00Z,1
+AL-DEMO-R980,AL-DEMO-P980,osm:way/10807015,National Army Museum,yes,yes,yes,2026-11-07T00:16:00Z,1
+AL-DEMO-R981,AL-DEMO-P981,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-07T00:17:00Z,1
+AL-DEMO-R982,AL-DEMO-P982,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-07T00:18:00Z,1
+AL-DEMO-R983,AL-DEMO-P983,osm:node/10870057348,West Ham United Coffee Co.,unsure,no,one,2026-11-07T00:19:00Z,1
+AL-DEMO-R984,AL-DEMO-P984,osm:way/10807015,National Army Museum,unsure,no,unsure,2026-11-07T01:23:00Z,1
+AL-DEMO-R985,AL-DEMO-P985,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-07T01:33:00Z,1
+AL-DEMO-R986,AL-DEMO-P986,osm:node/1708956913,Eltham Library,yes,unsure,yes,2026-11-07T01:38:00Z,1
+AL-DEMO-R987,AL-DEMO-P987,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-07T01:39:00Z,1
+AL-DEMO-R988,AL-DEMO-P988,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-07T02:45:00Z,1
+AL-DEMO-R989,AL-DEMO-P989,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-07T03:10:00Z,1
+AL-DEMO-R990,AL-DEMO-P990,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-07T03:28:00Z,1
+AL-DEMO-R991,AL-DEMO-P991,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-11-07T03:52:00Z,1
+AL-DEMO-R992,AL-DEMO-P992,osm:node/336347265,Arsenal Museum,yes,unsure,yes,2026-11-07T03:54:00Z,1
+AL-DEMO-R993,AL-DEMO-P993,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-11-07T04:00:00Z,1
+AL-DEMO-R994,AL-DEMO-P994,osm:node/11361621056,The Café at Foyles,yes,unsure,one,2026-11-07T04:03:00Z,1
+AL-DEMO-R995,AL-DEMO-P995,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-07T04:06:00Z,1
+AL-DEMO-R996,AL-DEMO-P996,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-07T04:08:00Z,1
+AL-DEMO-R997,AL-DEMO-P997,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-07T04:32:00Z,1
+AL-DEMO-R998,AL-DEMO-P998,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-07T04:41:00Z,1
+AL-DEMO-R999,AL-DEMO-P999,osm:way/1042201707,V&A East Museum,unsure,unsure,unsure,2026-11-07T05:09:00Z,1
+AL-DEMO-R1000,AL-DEMO-P1000,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-07T05:18:00Z,1
+AL-DEMO-R1001,AL-DEMO-P1001,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-11-07T06:03:00Z,1
+AL-DEMO-R1002,AL-DEMO-P1002,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-07T06:05:00Z,1
+AL-DEMO-R1003,AL-DEMO-P1003,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-07T06:12:00Z,1
+AL-DEMO-R1004,AL-DEMO-P1004,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-07T06:55:00Z,1
+AL-DEMO-R1005,AL-DEMO-P1005,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-07T06:58:00Z,1
+AL-DEMO-R1006,AL-DEMO-P1006,osm:way/868617836,Custom House Library,unsure,yes,yes,2026-11-07T07:01:00Z,1
+AL-DEMO-R1007,AL-DEMO-P1007,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-11-07T07:06:00Z,1
+AL-DEMO-R1008,AL-DEMO-P1008,osm:node/5836502584,Brent Museum,yes,yes,unsure,2026-11-07T07:27:00Z,1
+AL-DEMO-R1009,AL-DEMO-P1009,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-07T07:29:00Z,1
+AL-DEMO-R1010,AL-DEMO-P1010,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-07T07:43:00Z,1
+AL-DEMO-R1011,AL-DEMO-P1011,osm:way/868617836,Custom House Library,unsure,unsure,yes,2026-11-07T07:47:00Z,1
+AL-DEMO-R1012,AL-DEMO-P1012,osm:node/336347265,Arsenal Museum,unsure,yes,unsure,2026-11-07T07:53:00Z,1
+AL-DEMO-R1013,AL-DEMO-P1013,osm:node/618694098,Victoria Library,yes,unsure,unsure,2026-11-07T08:17:00Z,1
+AL-DEMO-R1014,AL-DEMO-P1014,osm:node/5836502584,Brent Museum,unsure,yes,unsure,2026-11-07T08:50:00Z,1
+AL-DEMO-R1015,AL-DEMO-P1015,osm:node/1708956913,Eltham Library,unsure,unsure,yes,2026-11-07T08:53:00Z,1
+AL-DEMO-R1016,AL-DEMO-P1016,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-07T08:55:00Z,1
+AL-DEMO-R1017,AL-DEMO-P1017,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-07T09:13:00Z,1
+AL-DEMO-R1018,AL-DEMO-P1018,osm:way/129377070,Sambourne House,yes,yes,one,2026-11-07T09:37:00Z,1
+AL-DEMO-R1019,AL-DEMO-P1019,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-07T10:11:00Z,1
+AL-DEMO-R1020,AL-DEMO-P1020,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-07T10:36:00Z,1
+AL-DEMO-R1021,AL-DEMO-P1021,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-07T10:39:00Z,1
+AL-DEMO-R1022,AL-DEMO-P1022,osm:node/10073490911,Ottolenghi,unsure,unsure,unsure,2026-11-07T11:10:00Z,1
+AL-DEMO-R1023,AL-DEMO-P1023,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-07T11:31:00Z,1
+AL-DEMO-R1024,AL-DEMO-P1024,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-07T11:32:00Z,1
+AL-DEMO-R1025,AL-DEMO-P1025,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-07T11:47:00Z,1
+AL-DEMO-R1026,AL-DEMO-P1026,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,unsure,2026-11-07T12:38:00Z,1
+AL-DEMO-R1027,AL-DEMO-P1027,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-07T13:05:00Z,1
+AL-DEMO-R1028,AL-DEMO-P1028,osm:way/129377070,Sambourne House,yes,yes,one,2026-11-07T13:12:00Z,1
+AL-DEMO-R1029,AL-DEMO-P1029,osm:node/5836502584,Brent Museum,yes,yes,one,2026-11-07T13:29:00Z,1
+AL-DEMO-R1030,AL-DEMO-P1030,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-07T14:10:00Z,1
+AL-DEMO-R1031,AL-DEMO-P1031,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-07T14:17:00Z,1
+AL-DEMO-R1032,AL-DEMO-P1032,osm:way/1042201707,V&A East Museum,yes,yes,unsure,2026-11-07T14:19:00Z,1
+AL-DEMO-R1033,AL-DEMO-P1033,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-07T14:39:00Z,1
+AL-DEMO-R1034,AL-DEMO-P1034,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-07T15:17:00Z,1
+AL-DEMO-R1035,AL-DEMO-P1035,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,no,unsure,2026-11-07T15:36:00Z,1
+AL-DEMO-R1036,AL-DEMO-P1036,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-07T15:48:00Z,1
+AL-DEMO-R1037,AL-DEMO-P1037,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-07T16:00:00Z,1
+AL-DEMO-R1038,AL-DEMO-P1038,osm:node/1708956913,Eltham Library,yes,yes,unsure,2026-11-07T16:06:00Z,1
+AL-DEMO-R1039,AL-DEMO-P1039,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-07T16:11:00Z,1
+AL-DEMO-R1040,AL-DEMO-P1040,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-07T16:15:00Z,1
+AL-DEMO-R1041,AL-DEMO-P1041,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-07T16:24:00Z,1
+AL-DEMO-R1042,AL-DEMO-P1042,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-07T16:31:00Z,1
+AL-DEMO-R1043,AL-DEMO-P1043,osm:way/129377070,Sambourne House,yes,unsure,one,2026-11-07T16:42:00Z,1
+AL-DEMO-R1044,AL-DEMO-P1044,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-07T17:06:00Z,1
+AL-DEMO-R1045,AL-DEMO-P1045,osm:way/617427470,The Library at Willesden Green,unsure,yes,unsure,2026-11-07T17:52:00Z,1
+AL-DEMO-R1046,AL-DEMO-P1046,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-07T19:13:00Z,1
+AL-DEMO-R1047,AL-DEMO-P1047,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-07T19:20:00Z,1
+AL-DEMO-R1048,AL-DEMO-P1048,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-07T19:46:00Z,1
+AL-DEMO-R1049,AL-DEMO-P1049,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-11-07T20:16:00Z,1
+AL-DEMO-R1050,AL-DEMO-P1050,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-07T20:21:00Z,1
+AL-DEMO-R1051,AL-DEMO-P1051,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-07T20:22:00Z,1
+AL-DEMO-R1052,AL-DEMO-P1052,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-07T20:29:00Z,1
+AL-DEMO-R1053,AL-DEMO-P1053,osm:way/120316250,Apsley House,unsure,unsure,unsure,2026-11-07T20:42:00Z,1
+AL-DEMO-R1054,AL-DEMO-P1054,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-07T20:59:00Z,1
+AL-DEMO-R1055,AL-DEMO-P1055,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-07T21:14:00Z,1
+AL-DEMO-R1056,AL-DEMO-P1056,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-07T21:28:00Z,1
+AL-DEMO-R1057,AL-DEMO-P1057,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-07T21:47:00Z,1
+AL-DEMO-R1058,AL-DEMO-P1058,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-07T21:49:00Z,1
+AL-DEMO-R1059,AL-DEMO-P1059,osm:node/5247197725,The Charterhouse,unsure,unsure,unsure,2026-11-07T21:52:00Z,1
+AL-DEMO-R1060,AL-DEMO-P1060,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-07T21:55:00Z,1
+AL-DEMO-R1061,AL-DEMO-P1061,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-07T22:30:00Z,1
+AL-DEMO-R1062,AL-DEMO-P1062,osm:way/617427470,The Library at Willesden Green,unsure,yes,one,2026-11-07T23:14:00Z,1
+AL-DEMO-R1063,AL-DEMO-P1063,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-11-07T23:15:00Z,1
+AL-DEMO-R1064,AL-DEMO-P1064,osm:way/617427470,The Library at Willesden Green,unsure,unsure,unsure,2026-11-07T23:24:00Z,1
+AL-DEMO-R1065,AL-DEMO-P1065,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-07T23:26:00Z,1
+AL-DEMO-R1066,AL-DEMO-P1066,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-11-07T23:31:00Z,1
+AL-DEMO-R1067,AL-DEMO-P1067,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-08T00:43:00Z,1
+AL-DEMO-R1068,AL-DEMO-P1068,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,no,unsure,2026-11-08T01:33:00Z,1
+AL-DEMO-R1069,AL-DEMO-P1069,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-08T01:50:00Z,1
+AL-DEMO-R1070,AL-DEMO-P1070,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-08T01:52:00Z,1
+AL-DEMO-R1071,AL-DEMO-P1071,osm:way/617427470,The Library at Willesden Green,unsure,unsure,unsure,2026-11-08T01:55:00Z,1
+AL-DEMO-R1072,AL-DEMO-P1072,osm:node/5247197725,The Charterhouse,yes,no,yes,2026-11-08T02:17:00Z,1
+AL-DEMO-R1073,AL-DEMO-P1073,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-08T02:22:00Z,1
+AL-DEMO-R1074,AL-DEMO-P1074,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-08T02:30:00Z,1
+AL-DEMO-R1075,AL-DEMO-P1075,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-08T02:52:00Z,1
+AL-DEMO-R1076,AL-DEMO-P1076,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-08T03:06:00Z,1
+AL-DEMO-R1077,AL-DEMO-P1077,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-08T03:09:00Z,1
+AL-DEMO-R1078,AL-DEMO-P1078,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-08T03:16:00Z,1
+AL-DEMO-R1079,AL-DEMO-P1079,osm:way/120316250,Apsley House,unsure,unsure,one,2026-11-08T03:19:00Z,1
+AL-DEMO-R1080,AL-DEMO-P1080,osm:node/618694098,Victoria Library,unsure,no,yes,2026-11-08T03:20:00Z,1
+AL-DEMO-R1081,AL-DEMO-P1081,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-08T03:25:00Z,1
+AL-DEMO-R1082,AL-DEMO-P1082,osm:way/27815146,Islington Central Library,yes,unsure,one,2026-11-08T03:29:00Z,1
+AL-DEMO-R1083,AL-DEMO-P1083,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-08T03:30:00Z,1
+AL-DEMO-R1084,AL-DEMO-P1084,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-08T03:42:00Z,1
+AL-DEMO-R1085,AL-DEMO-P1085,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-08T04:10:00Z,1
+AL-DEMO-R1086,AL-DEMO-P1086,osm:way/120316250,Apsley House,yes,yes,one,2026-11-08T04:13:00Z,1
+AL-DEMO-R1087,AL-DEMO-P1087,osm:node/7794409755,Starbucks Excel,yes,unsure,one,2026-11-08T04:15:00Z,1
+AL-DEMO-R1088,AL-DEMO-P1088,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-08T04:40:00Z,1
+AL-DEMO-R1089,AL-DEMO-P1089,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-08T05:13:00Z,1
+AL-DEMO-R1090,AL-DEMO-P1090,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-08T05:47:00Z,1
+AL-DEMO-R1091,AL-DEMO-P1091,osm:node/5247197725,The Charterhouse,unsure,unsure,unsure,2026-11-08T05:49:00Z,1
+AL-DEMO-R1092,AL-DEMO-P1092,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-08T06:10:00Z,1
+AL-DEMO-R1093,AL-DEMO-P1093,osm:way/1306360473,Queen's Gardens Toilets,yes,no,unsure,2026-11-08T06:44:00Z,1
+AL-DEMO-R1094,AL-DEMO-P1094,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-08T07:14:00Z,1
+AL-DEMO-R1095,AL-DEMO-P1095,osm:way/120316250,Apsley House,yes,yes,one,2026-11-08T07:19:00Z,1
+AL-DEMO-R1096,AL-DEMO-P1096,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-08T07:32:00Z,1
+AL-DEMO-R1097,AL-DEMO-P1097,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-08T07:40:00Z,1
+AL-DEMO-R1098,AL-DEMO-P1098,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-08T07:45:00Z,1
+AL-DEMO-R1099,AL-DEMO-P1099,osm:node/5836502584,Brent Museum,yes,yes,unsure,2026-11-08T07:54:00Z,1
+AL-DEMO-R1100,AL-DEMO-P1100,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-08T09:01:00Z,1
+AL-DEMO-R1101,AL-DEMO-P1101,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,yes,2026-11-08T09:23:00Z,1
+AL-DEMO-R1102,AL-DEMO-P1102,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-08T09:31:00Z,1
+AL-DEMO-R1103,AL-DEMO-P1103,osm:node/1708956913,Eltham Library,unsure,yes,unsure,2026-11-08T09:35:00Z,1
+AL-DEMO-R1104,AL-DEMO-P1104,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-08T10:05:00Z,1
+AL-DEMO-R1105,AL-DEMO-P1105,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-08T10:31:00Z,1
+AL-DEMO-R1106,AL-DEMO-P1106,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-08T10:37:00Z,1
+AL-DEMO-R1107,AL-DEMO-P1107,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-08T10:39:00Z,1
+AL-DEMO-R1108,AL-DEMO-P1108,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-11-08T10:42:00Z,1
+AL-DEMO-R1109,AL-DEMO-P1109,osm:node/618694098,Victoria Library,yes,no,yes,2026-11-08T10:50:00Z,1
+AL-DEMO-R1110,AL-DEMO-P1110,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-08T11:21:00Z,1
+AL-DEMO-R1111,AL-DEMO-P1111,osm:way/27815146,Islington Central Library,yes,unsure,unsure,2026-11-08T11:46:00Z,1
+AL-DEMO-R1112,AL-DEMO-P1112,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-08T11:49:00Z,1
+AL-DEMO-R1113,AL-DEMO-P1113,osm:node/13583467062,Quentin Blake Centre for Illustration,yes,unsure,unsure,2026-11-08T12:03:00Z,1
+AL-DEMO-R1114,AL-DEMO-P1114,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-08T12:27:00Z,1
+AL-DEMO-R1115,AL-DEMO-P1115,osm:node/339394917,The Compton Arms,no,unsure,unsure,2026-11-08T12:56:00Z,1
+AL-DEMO-R1116,AL-DEMO-P1116,osm:node/618694098,Victoria Library,yes,unsure,yes,2026-11-08T13:17:00Z,1
+AL-DEMO-R1117,AL-DEMO-P1117,osm:way/120316250,Apsley House,unsure,yes,unsure,2026-11-08T13:20:00Z,1
+AL-DEMO-R1118,AL-DEMO-P1118,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-08T13:37:00Z,1
+AL-DEMO-R1119,AL-DEMO-P1119,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-08T13:41:00Z,1
+AL-DEMO-R1120,AL-DEMO-P1120,osm:node/618694098,Victoria Library,unsure,no,yes,2026-11-08T13:57:00Z,1
+AL-DEMO-R1121,AL-DEMO-P1121,osm:way/120316250,Apsley House,yes,yes,one,2026-11-08T14:01:00Z,1
+AL-DEMO-R1122,AL-DEMO-P1122,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-08T14:03:00Z,1
+AL-DEMO-R1123,AL-DEMO-P1123,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-08T14:26:00Z,1
+AL-DEMO-R1124,AL-DEMO-P1124,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-08T14:29:00Z,1
+AL-DEMO-R1125,AL-DEMO-P1125,osm:node/7126677078,Notting Hill Gate Library,yes,no,unsure,2026-11-08T14:33:00Z,1
+AL-DEMO-R1126,AL-DEMO-P1126,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-08T14:37:00Z,1
+AL-DEMO-R1127,AL-DEMO-P1127,osm:way/10807015,National Army Museum,unsure,unsure,yes,2026-11-08T14:44:00Z,1
+AL-DEMO-R1128,AL-DEMO-P1128,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-08T15:14:00Z,1
+AL-DEMO-R1129,AL-DEMO-P1129,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-08T15:52:00Z,1
+AL-DEMO-R1130,AL-DEMO-P1130,osm:way/129377070,Sambourne House,unsure,yes,unsure,2026-11-08T15:56:00Z,1
+AL-DEMO-R1131,AL-DEMO-P1131,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-08T16:46:00Z,1
+AL-DEMO-R1132,AL-DEMO-P1132,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-11-08T16:55:00Z,1
+AL-DEMO-R1133,AL-DEMO-P1133,osm:way/1042201707,V&A East Museum,yes,unsure,unsure,2026-11-08T17:17:00Z,1
+AL-DEMO-R1134,AL-DEMO-P1134,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-08T17:19:00Z,1
+AL-DEMO-R1135,AL-DEMO-P1135,osm:node/7126677078,Notting Hill Gate Library,unsure,unsure,unsure,2026-11-08T18:02:00Z,1
+AL-DEMO-R1136,AL-DEMO-P1136,osm:way/868617836,Custom House Library,unsure,yes,yes,2026-11-08T18:04:00Z,1
+AL-DEMO-R1137,AL-DEMO-P1137,osm:node/11361621056,The Café at Foyles,yes,unsure,one,2026-11-08T18:21:00Z,1
+AL-DEMO-R1138,AL-DEMO-P1138,osm:node/11361621056,The Café at Foyles,unsure,unsure,unsure,2026-11-08T18:31:00Z,1
+AL-DEMO-R1139,AL-DEMO-P1139,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-08T18:48:00Z,1
+AL-DEMO-R1140,AL-DEMO-P1140,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-08T18:55:00Z,1
+AL-DEMO-R1141,AL-DEMO-P1141,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-11-08T19:01:00Z,1
+AL-DEMO-R1142,AL-DEMO-P1142,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-08T19:19:00Z,1
+AL-DEMO-R1143,AL-DEMO-P1143,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-08T19:49:00Z,1
+AL-DEMO-R1144,AL-DEMO-P1144,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-08T19:51:00Z,1
+AL-DEMO-R1145,AL-DEMO-P1145,osm:way/1306360473,Queen's Gardens Toilets,unsure,unsure,unsure,2026-11-08T20:09:00Z,1
+AL-DEMO-R1146,AL-DEMO-P1146,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-08T20:10:00Z,1
+AL-DEMO-R1147,AL-DEMO-P1147,osm:way/120316250,Apsley House,yes,yes,one,2026-11-08T20:30:00Z,1
+AL-DEMO-R1148,AL-DEMO-P1148,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-08T21:28:00Z,1
+AL-DEMO-R1149,AL-DEMO-P1149,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-08T21:29:00Z,1
+AL-DEMO-R1150,AL-DEMO-P1150,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-08T22:54:00Z,1
+AL-DEMO-R1151,AL-DEMO-P1151,osm:node/7126677078,Notting Hill Gate Library,yes,no,unsure,2026-11-08T23:33:00Z,1
+AL-DEMO-R1152,AL-DEMO-P1152,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-08T23:36:00Z,1
+AL-DEMO-R1153,AL-DEMO-P1153,osm:node/1493424622,Handel & Hendrix,unsure,unsure,unsure,2026-11-08T23:43:00Z,1
+AL-DEMO-R1154,AL-DEMO-P1154,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-08T23:47:00Z,1
+AL-DEMO-R1155,AL-DEMO-P1155,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-11-08T23:56:00Z,1
+AL-DEMO-R1156,AL-DEMO-P1156,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-09T00:06:00Z,1
+AL-DEMO-R1157,AL-DEMO-P1157,osm:way/10807015,National Army Museum,yes,unsure,unsure,2026-11-09T00:11:00Z,1
+AL-DEMO-R1158,AL-DEMO-P1158,osm:way/129377070,Sambourne House,yes,yes,unsure,2026-11-09T00:17:00Z,1
+AL-DEMO-R1159,AL-DEMO-P1159,osm:node/7794409755,Starbucks Excel,yes,unsure,unsure,2026-11-09T00:26:00Z,1
+AL-DEMO-R1160,AL-DEMO-P1160,osm:way/129377070,Sambourne House,yes,unsure,one,2026-11-09T00:27:00Z,1
+AL-DEMO-R1161,AL-DEMO-P1161,osm:relation/18794121,Highbury Fields,unsure,yes,unsure,2026-11-09T00:30:00Z,1
+AL-DEMO-R1162,AL-DEMO-P1162,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-09T00:36:00Z,1
+AL-DEMO-R1163,AL-DEMO-P1163,osm:node/7126677078,Notting Hill Gate Library,yes,unsure,yes,2026-11-09T00:40:00Z,1
+AL-DEMO-R1164,AL-DEMO-P1164,osm:node/7126677078,Notting Hill Gate Library,yes,unsure,yes,2026-11-09T01:06:00Z,1
+AL-DEMO-R1165,AL-DEMO-P1165,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-11-09T01:10:00Z,1
+AL-DEMO-R1166,AL-DEMO-P1166,osm:node/10870057348,West Ham United Coffee Co.,unsure,yes,unsure,2026-11-09T01:31:00Z,1
+AL-DEMO-R1167,AL-DEMO-P1167,osm:node/12883274419,Old Royal Naval College Visitor Centre,unsure,unsure,unsure,2026-11-09T01:45:00Z,1
+AL-DEMO-R1168,AL-DEMO-P1168,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-09T01:47:00Z,1
+AL-DEMO-R1169,AL-DEMO-P1169,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-09T01:51:00Z,1
+AL-DEMO-R1170,AL-DEMO-P1170,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-09T03:40:00Z,1
+AL-DEMO-R1171,AL-DEMO-P1171,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-09T03:49:00Z,1
+AL-DEMO-R1172,AL-DEMO-P1172,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-09T03:53:00Z,1
+AL-DEMO-R1173,AL-DEMO-P1173,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-09T04:04:00Z,1
+AL-DEMO-R1174,AL-DEMO-P1174,osm:way/617427470,The Library at Willesden Green,yes,unsure,one,2026-11-09T04:08:00Z,1
+AL-DEMO-R1175,AL-DEMO-P1175,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-09T04:39:00Z,1
+AL-DEMO-R1176,AL-DEMO-P1176,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-09T04:43:00Z,1
+AL-DEMO-R1177,AL-DEMO-P1177,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-09T05:15:00Z,1
+AL-DEMO-R1178,AL-DEMO-P1178,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-09T05:19:00Z,1
+AL-DEMO-R1179,AL-DEMO-P1179,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-09T05:37:00Z,1
+AL-DEMO-R1180,AL-DEMO-P1180,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-11-09T05:52:00Z,1
+AL-DEMO-R1181,AL-DEMO-P1181,osm:node/618694098,Victoria Library,yes,unsure,unsure,2026-11-09T06:05:00Z,1
+AL-DEMO-R1182,AL-DEMO-P1182,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-11-09T06:06:00Z,1
+AL-DEMO-R1183,AL-DEMO-P1183,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-09T06:08:00Z,1
+AL-DEMO-R1184,AL-DEMO-P1184,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-09T06:14:00Z,1
+AL-DEMO-R1185,AL-DEMO-P1185,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-09T06:22:00Z,1
+AL-DEMO-R1186,AL-DEMO-P1186,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-09T06:52:00Z,1
+AL-DEMO-R1187,AL-DEMO-P1187,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-11-09T07:38:00Z,1
+AL-DEMO-R1188,AL-DEMO-P1188,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-09T07:56:00Z,1
+AL-DEMO-R1189,AL-DEMO-P1189,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-09T08:37:00Z,1
+AL-DEMO-R1190,AL-DEMO-P1190,osm:node/910356813,The Fan Museum,yes,yes,unsure,2026-11-09T08:45:00Z,1
+AL-DEMO-R1191,AL-DEMO-P1191,osm:way/1042201707,V&A East Museum,unsure,unsure,one,2026-11-09T08:46:00Z,1
+AL-DEMO-R1192,AL-DEMO-P1192,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-09T08:56:00Z,1
+AL-DEMO-R1193,AL-DEMO-P1193,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-09T09:04:00Z,1
+AL-DEMO-R1194,AL-DEMO-P1194,osm:way/1042201707,V&A East Museum,unsure,yes,unsure,2026-11-09T09:07:00Z,1
+AL-DEMO-R1195,AL-DEMO-P1195,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-11-09T09:32:00Z,1
+AL-DEMO-R1196,AL-DEMO-P1196,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-09T09:42:00Z,1
+AL-DEMO-R1197,AL-DEMO-P1197,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-09T10:02:00Z,1
+AL-DEMO-R1198,AL-DEMO-P1198,osm:way/1042201707,V&A East Museum,yes,yes,unsure,2026-11-09T10:17:00Z,1
+AL-DEMO-R1199,AL-DEMO-P1199,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-09T10:27:00Z,1
+AL-DEMO-R1200,AL-DEMO-P1200,osm:node/618694098,Victoria Library,unsure,no,unsure,2026-11-09T10:40:00Z,1
+AL-DEMO-R1201,AL-DEMO-P1201,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-09T11:09:00Z,1
+AL-DEMO-R1202,AL-DEMO-P1202,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-09T11:21:00Z,1
+AL-DEMO-R1203,AL-DEMO-P1203,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-09T11:50:00Z,1
+AL-DEMO-R1204,AL-DEMO-P1204,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,one,2026-11-09T12:01:00Z,1
+AL-DEMO-R1205,AL-DEMO-P1205,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-09T12:17:00Z,1
+AL-DEMO-R1206,AL-DEMO-P1206,osm:node/339394917,The Compton Arms,unsure,no,unsure,2026-11-09T12:29:00Z,1
+AL-DEMO-R1207,AL-DEMO-P1207,osm:way/617427470,The Library at Willesden Green,yes,unsure,one,2026-11-09T12:52:00Z,1
+AL-DEMO-R1208,AL-DEMO-P1208,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-09T13:14:00Z,1
+AL-DEMO-R1209,AL-DEMO-P1209,osm:way/1042201707,V&A East Museum,unsure,unsure,one,2026-11-09T13:17:00Z,1
+AL-DEMO-R1210,AL-DEMO-P1210,osm:way/129377070,Sambourne House,unsure,unsure,one,2026-11-09T13:38:00Z,1
+AL-DEMO-R1211,AL-DEMO-P1211,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-11-09T14:08:00Z,1
+AL-DEMO-R1212,AL-DEMO-P1212,osm:node/10073490911,Ottolenghi,yes,no,unsure,2026-11-09T15:33:00Z,1
+AL-DEMO-R1213,AL-DEMO-P1213,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-09T15:46:00Z,1
+AL-DEMO-R1214,AL-DEMO-P1214,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-09T15:51:00Z,1
+AL-DEMO-R1215,AL-DEMO-P1215,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-09T15:59:00Z,1
+AL-DEMO-R1216,AL-DEMO-P1216,osm:way/27815146,Islington Central Library,unsure,yes,unsure,2026-11-09T16:16:00Z,1
+AL-DEMO-R1217,AL-DEMO-P1217,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-11-09T16:40:00Z,1
+AL-DEMO-R1218,AL-DEMO-P1218,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-09T16:49:00Z,1
+AL-DEMO-R1219,AL-DEMO-P1219,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-09T17:11:00Z,1
+AL-DEMO-R1220,AL-DEMO-P1220,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-11-09T17:26:00Z,1
+AL-DEMO-R1221,AL-DEMO-P1221,osm:way/27815146,Islington Central Library,unsure,yes,one,2026-11-09T17:42:00Z,1
+AL-DEMO-R1222,AL-DEMO-P1222,osm:way/13868329,West Ham Park,yes,unsure,unsure,2026-11-09T17:50:00Z,1
+AL-DEMO-R1223,AL-DEMO-P1223,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-11-09T18:13:00Z,1
+AL-DEMO-R1224,AL-DEMO-P1224,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-09T18:19:00Z,1
+AL-DEMO-R1225,AL-DEMO-P1225,osm:way/13868329,West Ham Park,yes,yes,unsure,2026-11-09T18:28:00Z,1
+AL-DEMO-R1226,AL-DEMO-P1226,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-09T20:13:00Z,1
+AL-DEMO-R1227,AL-DEMO-P1227,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-09T20:18:00Z,1
+AL-DEMO-R1228,AL-DEMO-P1228,osm:node/910356813,The Fan Museum,unsure,yes,one,2026-11-09T20:30:00Z,1
+AL-DEMO-R1229,AL-DEMO-P1229,osm:node/11361621056,The Café at Foyles,unsure,unsure,one,2026-11-09T20:32:00Z,1
+AL-DEMO-R1230,AL-DEMO-P1230,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-09T21:28:00Z,1
+AL-DEMO-R1231,AL-DEMO-P1231,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-09T21:46:00Z,1
+AL-DEMO-R1232,AL-DEMO-P1232,osm:node/1493424622,Handel & Hendrix,unsure,unsure,yes,2026-11-09T22:48:00Z,1
+AL-DEMO-R1233,AL-DEMO-P1233,osm:way/868617836,Custom House Library,unsure,unsure,yes,2026-11-09T23:02:00Z,1
+AL-DEMO-R1234,AL-DEMO-P1234,osm:node/910356813,The Fan Museum,yes,unsure,unsure,2026-11-09T23:06:00Z,1
+AL-DEMO-R1235,AL-DEMO-P1235,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-09T23:20:00Z,1
+AL-DEMO-R1236,AL-DEMO-P1236,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-09T23:30:00Z,1
+AL-DEMO-R1237,AL-DEMO-P1237,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-09T23:31:00Z,1
+AL-DEMO-R1238,AL-DEMO-P1238,osm:relation/18794121,Highbury Fields,unsure,unsure,unsure,2026-11-09T23:47:00Z,1
+AL-DEMO-R1239,AL-DEMO-P1239,osm:node/3246895686,Dark Habit Coffee,unsure,unsure,unsure,2026-11-09T23:50:00Z,1
+AL-DEMO-R1240,AL-DEMO-P1240,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,one,2026-11-10T00:03:00Z,1
+AL-DEMO-R1241,AL-DEMO-P1241,osm:node/339394917,The Compton Arms,no,no,unsure,2026-11-10T00:12:00Z,1
+AL-DEMO-R1242,AL-DEMO-P1242,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-10T00:20:00Z,1
+AL-DEMO-R1243,AL-DEMO-P1243,osm:node/11361621056,The Café at Foyles,yes,unsure,one,2026-11-10T00:32:00Z,1
+AL-DEMO-R1244,AL-DEMO-P1244,osm:node/7126677078,Notting Hill Gate Library,yes,unsure,yes,2026-11-10T00:35:00Z,1
+AL-DEMO-R1245,AL-DEMO-P1245,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-10T00:38:00Z,1
+AL-DEMO-R1246,AL-DEMO-P1246,osm:way/868617836,Custom House Library,yes,unsure,yes,2026-11-10T01:05:00Z,1
+AL-DEMO-R1247,AL-DEMO-P1247,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-10T01:46:00Z,1
+AL-DEMO-R1248,AL-DEMO-P1248,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-10T01:53:00Z,1
+AL-DEMO-R1249,AL-DEMO-P1249,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-10T02:14:00Z,1
+AL-DEMO-R1250,AL-DEMO-P1250,osm:node/618694098,Victoria Library,yes,unsure,unsure,2026-11-10T02:37:00Z,1
+AL-DEMO-R1251,AL-DEMO-P1251,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-10T02:40:00Z,1
+AL-DEMO-R1252,AL-DEMO-P1252,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-10T03:39:00Z,1
+AL-DEMO-R1253,AL-DEMO-P1253,osm:way/1306360473,Queen's Gardens Toilets,unsure,no,unsure,2026-11-10T03:52:00Z,1
+AL-DEMO-R1254,AL-DEMO-P1254,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-10T03:57:00Z,1
+AL-DEMO-R1255,AL-DEMO-P1255,osm:node/618694098,Victoria Library,unsure,unsure,unsure,2026-11-10T03:58:00Z,1
+AL-DEMO-R1256,AL-DEMO-P1256,osm:node/336347265,Arsenal Museum,unsure,yes,yes,2026-11-10T04:45:00Z,1
+AL-DEMO-R1257,AL-DEMO-P1257,osm:way/10807015,National Army Museum,yes,unsure,unsure,2026-11-10T05:21:00Z,1
+AL-DEMO-R1258,AL-DEMO-P1258,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-10T05:59:00Z,1
+AL-DEMO-R1259,AL-DEMO-P1259,osm:way/19748095,Avondale Park,yes,unsure,unsure,2026-11-10T06:38:00Z,1
+AL-DEMO-R1260,AL-DEMO-P1260,osm:node/5247197725,The Charterhouse,yes,unsure,unsure,2026-11-10T06:46:00Z,1
+AL-DEMO-R1261,AL-DEMO-P1261,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,unsure,2026-11-10T07:21:00Z,1
+AL-DEMO-R1262,AL-DEMO-P1262,osm:way/10807015,National Army Museum,unsure,unsure,unsure,2026-11-10T07:25:00Z,1
+AL-DEMO-R1263,AL-DEMO-P1263,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-10T07:36:00Z,1
+AL-DEMO-R1264,AL-DEMO-P1264,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-10T07:45:00Z,1
+AL-DEMO-R1265,AL-DEMO-P1265,osm:node/5836502584,Brent Museum,yes,unsure,unsure,2026-11-10T07:47:00Z,1
+AL-DEMO-R1266,AL-DEMO-P1266,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-10T07:56:00Z,1
+AL-DEMO-R1267,AL-DEMO-P1267,osm:node/1708956913,Eltham Library,yes,unsure,yes,2026-11-10T07:58:00Z,1
+AL-DEMO-R1268,AL-DEMO-P1268,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-10T08:05:00Z,1
+AL-DEMO-R1269,AL-DEMO-P1269,osm:node/3349882188,Hunterian Museum,yes,unsure,yes,2026-11-10T08:12:00Z,1
+AL-DEMO-R1270,AL-DEMO-P1270,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-10T09:02:00Z,1
+AL-DEMO-R1271,AL-DEMO-P1271,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-10T09:10:00Z,1
+AL-DEMO-R1272,AL-DEMO-P1272,osm:way/23018529,Thames Barrier Park,unsure,unsure,unsure,2026-11-10T09:39:00Z,1
+AL-DEMO-R1273,AL-DEMO-P1273,osm:node/3246895686,Dark Habit Coffee,yes,no,unsure,2026-11-10T09:45:00Z,1
+AL-DEMO-R1274,AL-DEMO-P1274,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-10T10:03:00Z,1
+AL-DEMO-R1275,AL-DEMO-P1275,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-10T10:06:00Z,1
+AL-DEMO-R1276,AL-DEMO-P1276,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-10T10:07:00Z,1
+AL-DEMO-R1277,AL-DEMO-P1277,osm:node/3246895686,Dark Habit Coffee,unsure,no,unsure,2026-11-10T10:08:00Z,1
+AL-DEMO-R1278,AL-DEMO-P1278,osm:node/11197951160,Cutty Sark Café,yes,no,unsure,2026-11-10T11:05:00Z,1
+AL-DEMO-R1279,AL-DEMO-P1279,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-10T11:07:00Z,1
+AL-DEMO-R1280,AL-DEMO-P1280,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-11-10T11:11:00Z,1
+AL-DEMO-R1281,AL-DEMO-P1281,osm:node/1708956913,Eltham Library,yes,yes,yes,2026-11-10T11:34:00Z,1
+AL-DEMO-R1282,AL-DEMO-P1282,osm:way/162578781,Charlton Park,yes,unsure,unsure,2026-11-10T11:39:00Z,1
+AL-DEMO-R1283,AL-DEMO-P1283,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-10T12:00:00Z,1
+AL-DEMO-R1284,AL-DEMO-P1284,osm:node/5836502584,Brent Museum,unsure,unsure,unsure,2026-11-10T12:31:00Z,1
+AL-DEMO-R1285,AL-DEMO-P1285,osm:way/10807015,National Army Museum,yes,unsure,yes,2026-11-10T12:49:00Z,1
+AL-DEMO-R1286,AL-DEMO-P1286,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-10T12:56:00Z,1
+AL-DEMO-R1287,AL-DEMO-P1287,osm:relation/21292421,Gladstone Park,unsure,unsure,unsure,2026-11-10T13:02:00Z,1
+AL-DEMO-R1288,AL-DEMO-P1288,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-10T13:38:00Z,1
+AL-DEMO-R1289,AL-DEMO-P1289,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-10T13:47:00Z,1
+AL-DEMO-R1290,AL-DEMO-P1290,osm:node/10870057348,West Ham United Coffee Co.,yes,unsure,unsure,2026-11-10T14:06:00Z,1
+AL-DEMO-R1291,AL-DEMO-P1291,osm:way/120316250,Apsley House,unsure,unsure,one,2026-11-10T15:06:00Z,1
+AL-DEMO-R1292,AL-DEMO-P1292,osm:way/120316250,Apsley House,yes,yes,unsure,2026-11-10T15:57:00Z,1
+AL-DEMO-R1293,AL-DEMO-P1293,osm:way/120316250,Apsley House,unsure,yes,one,2026-11-10T16:47:00Z,1
+AL-DEMO-R1294,AL-DEMO-P1294,osm:node/10073490911,Ottolenghi,unsure,no,unsure,2026-11-10T16:56:00Z,1
+AL-DEMO-R1295,AL-DEMO-P1295,osm:way/13868329,West Ham Park,unsure,unsure,unsure,2026-11-10T16:58:00Z,1
+AL-DEMO-R1296,AL-DEMO-P1296,osm:way/1042201707,V&A East Museum,yes,yes,one,2026-11-10T17:16:00Z,1
+AL-DEMO-R1297,AL-DEMO-P1297,osm:way/129377070,Sambourne House,unsure,yes,one,2026-11-10T17:19:00Z,1
+AL-DEMO-R1298,AL-DEMO-P1298,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-10T17:46:00Z,1
+AL-DEMO-R1299,AL-DEMO-P1299,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-10T17:54:00Z,1
+AL-DEMO-R1300,AL-DEMO-P1300,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-10T17:56:00Z,1
+AL-DEMO-R1301,AL-DEMO-P1301,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-10T19:10:00Z,1
+AL-DEMO-R1302,AL-DEMO-P1302,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-10T19:51:00Z,1
+AL-DEMO-R1303,AL-DEMO-P1303,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-10T20:09:00Z,1
+AL-DEMO-R1304,AL-DEMO-P1304,osm:node/11361621056,The Café at Foyles,unsure,yes,unsure,2026-11-10T20:27:00Z,1
+AL-DEMO-R1305,AL-DEMO-P1305,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-10T20:45:00Z,1
+AL-DEMO-R1306,AL-DEMO-P1306,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-10T20:55:00Z,1
+AL-DEMO-R1307,AL-DEMO-P1307,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-10T21:20:00Z,1
+AL-DEMO-R1308,AL-DEMO-P1308,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-10T21:22:00Z,1
+AL-DEMO-R1309,AL-DEMO-P1309,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-10T21:37:00Z,1
+AL-DEMO-R1310,AL-DEMO-P1310,osm:way/617427470,The Library at Willesden Green,yes,yes,one,2026-11-10T21:58:00Z,1
+AL-DEMO-R1311,AL-DEMO-P1311,osm:way/120316250,Apsley House,unsure,unsure,unsure,2026-11-10T21:59:00Z,1
+AL-DEMO-R1312,AL-DEMO-P1312,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-10T22:05:00Z,1
+AL-DEMO-R1313,AL-DEMO-P1313,osm:relation/21292421,Gladstone Park,yes,unsure,unsure,2026-11-10T22:13:00Z,1
+AL-DEMO-R1314,AL-DEMO-P1314,osm:way/1042201707,V&A East Museum,yes,unsure,unsure,2026-11-10T22:18:00Z,1
+AL-DEMO-R1315,AL-DEMO-P1315,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-10T22:22:00Z,1
+AL-DEMO-R1316,AL-DEMO-P1316,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-10T22:45:00Z,1
+AL-DEMO-R1317,AL-DEMO-P1317,osm:node/1708956913,Eltham Library,unsure,unsure,unsure,2026-11-10T23:17:00Z,1
+AL-DEMO-R1318,AL-DEMO-P1318,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-10T23:18:00Z,1
+AL-DEMO-R1319,AL-DEMO-P1319,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,unsure,2026-11-10T23:19:00Z,1
+AL-DEMO-R1320,AL-DEMO-P1320,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-10T23:56:00Z,1
+AL-DEMO-R1321,AL-DEMO-P1321,osm:node/5836502584,Brent Museum,yes,yes,unsure,2026-11-11T00:20:00Z,1
+AL-DEMO-R1322,AL-DEMO-P1322,osm:way/617427470,The Library at Willesden Green,yes,yes,unsure,2026-11-11T00:24:00Z,1
+AL-DEMO-R1323,AL-DEMO-P1323,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-11T00:35:00Z,1
+AL-DEMO-R1324,AL-DEMO-P1324,osm:way/120316250,Apsley House,yes,unsure,unsure,2026-11-11T00:58:00Z,1
+AL-DEMO-R1325,AL-DEMO-P1325,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-11-11T01:12:00Z,1
+AL-DEMO-R1326,AL-DEMO-P1326,osm:way/27815146,Islington Central Library,unsure,yes,unsure,2026-11-11T01:13:00Z,1
+AL-DEMO-R1327,AL-DEMO-P1327,osm:way/27815146,Islington Central Library,unsure,unsure,unsure,2026-11-11T01:31:00Z,1
+AL-DEMO-R1328,AL-DEMO-P1328,osm:way/868617836,Custom House Library,unsure,unsure,yes,2026-11-11T02:08:00Z,1
+AL-DEMO-R1329,AL-DEMO-P1329,osm:node/5836502584,Brent Museum,yes,yes,one,2026-11-11T03:14:00Z,1
+AL-DEMO-R1330,AL-DEMO-P1330,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-11T03:16:00Z,1
+AL-DEMO-R1331,AL-DEMO-P1331,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-11T03:21:00Z,1
+AL-DEMO-R1332,AL-DEMO-P1332,osm:node/5836502584,Brent Museum,yes,unsure,one,2026-11-11T03:29:00Z,1
+AL-DEMO-R1333,AL-DEMO-P1333,osm:relation/18915597,Fryent Country Park,unsure,unsure,unsure,2026-11-11T03:46:00Z,1
+AL-DEMO-R1334,AL-DEMO-P1334,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-11T04:03:00Z,1
+AL-DEMO-R1335,AL-DEMO-P1335,osm:way/27815146,Islington Central Library,yes,yes,unsure,2026-11-11T04:12:00Z,1
+AL-DEMO-R1336,AL-DEMO-P1336,osm:node/910356813,The Fan Museum,unsure,yes,unsure,2026-11-11T04:13:00Z,1
+AL-DEMO-R1337,AL-DEMO-P1337,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,yes,2026-11-11T04:23:00Z,1
+AL-DEMO-R1338,AL-DEMO-P1338,osm:way/129377070,Sambourne House,unsure,yes,one,2026-11-11T04:41:00Z,1
+AL-DEMO-R1339,AL-DEMO-P1339,osm:way/868617836,Custom House Library,yes,yes,yes,2026-11-11T04:54:00Z,1
+AL-DEMO-R1340,AL-DEMO-P1340,osm:node/910356813,The Fan Museum,unsure,unsure,one,2026-11-11T05:02:00Z,1
+AL-DEMO-R1341,AL-DEMO-P1341,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-11T05:15:00Z,1
+AL-DEMO-R1342,AL-DEMO-P1342,osm:way/27815146,Islington Central Library,unsure,yes,unsure,2026-11-11T05:16:00Z,1
+AL-DEMO-R1343,AL-DEMO-P1343,osm:way/10807015,National Army Museum,unsure,unsure,yes,2026-11-11T05:47:00Z,1
+AL-DEMO-R1344,AL-DEMO-P1344,osm:relation/1384127,The Regent's Park,yes,unsure,unsure,2026-11-11T05:50:00Z,1
+AL-DEMO-R1345,AL-DEMO-P1345,osm:node/11197951160,Cutty Sark Café,unsure,unsure,unsure,2026-11-11T05:51:00Z,1
+AL-DEMO-R1346,AL-DEMO-P1346,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-11T05:55:00Z,1
+AL-DEMO-R1347,AL-DEMO-P1347,osm:way/129377070,Sambourne House,unsure,yes,one,2026-11-11T06:09:00Z,1
+AL-DEMO-R1348,AL-DEMO-P1348,osm:way/162578781,Charlton Park,unsure,unsure,unsure,2026-11-11T06:10:00Z,1
+AL-DEMO-R1349,AL-DEMO-P1349,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-11T06:17:00Z,1
+AL-DEMO-R1350,AL-DEMO-P1350,osm:node/1493424622,Handel & Hendrix,yes,unsure,yes,2026-11-11T06:18:00Z,1
+AL-DEMO-R1351,AL-DEMO-P1351,osm:node/910356813,The Fan Museum,yes,yes,one,2026-11-11T06:45:00Z,1
+AL-DEMO-R1352,AL-DEMO-P1352,osm:node/11197951160,Cutty Sark Café,yes,unsure,unsure,2026-11-11T07:57:00Z,1
+AL-DEMO-R1353,AL-DEMO-P1353,osm:node/3349882188,Hunterian Museum,yes,unsure,unsure,2026-11-11T08:17:00Z,1
+AL-DEMO-R1354,AL-DEMO-P1354,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,one,2026-11-11T08:36:00Z,1
+AL-DEMO-R1355,AL-DEMO-P1355,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-11T08:50:00Z,1
+AL-DEMO-R1356,AL-DEMO-P1356,osm:node/11361621056,The Café at Foyles,yes,unsure,one,2026-11-11T09:19:00Z,1
+AL-DEMO-R1357,AL-DEMO-P1357,osm:way/1042201707,V&A East Museum,unsure,unsure,one,2026-11-11T10:40:00Z,1
+AL-DEMO-R1358,AL-DEMO-P1358,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-11T10:56:00Z,1
+AL-DEMO-R1359,AL-DEMO-P1359,osm:node/5247197725,The Charterhouse,yes,unsure,yes,2026-11-11T11:09:00Z,1
+AL-DEMO-R1360,AL-DEMO-P1360,osm:node/339394917,The Compton Arms,unsure,unsure,unsure,2026-11-11T11:20:00Z,1
+AL-DEMO-R1361,AL-DEMO-P1361,osm:way/868617836,Custom House Library,unsure,yes,yes,2026-11-11T11:25:00Z,1
+AL-DEMO-R1362,AL-DEMO-P1362,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-11T11:58:00Z,1
+AL-DEMO-R1363,AL-DEMO-P1363,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-11T12:08:00Z,1
+AL-DEMO-R1364,AL-DEMO-P1364,osm:node/13583467062,Quentin Blake Centre for Illustration,unsure,unsure,unsure,2026-11-11T12:19:00Z,1
+AL-DEMO-R1365,AL-DEMO-P1365,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-11T12:38:00Z,1
+AL-DEMO-R1366,AL-DEMO-P1366,osm:node/7126677078,Notting Hill Gate Library,unsure,no,yes,2026-11-11T12:43:00Z,1
+AL-DEMO-R1367,AL-DEMO-P1367,osm:way/129377070,Sambourne House,unsure,unsure,unsure,2026-11-11T12:44:00Z,1
+AL-DEMO-R1368,AL-DEMO-P1368,osm:way/1042201707,V&A East Museum,unsure,yes,one,2026-11-11T13:03:00Z,1
+AL-DEMO-R1369,AL-DEMO-P1369,osm:node/5247197725,The Charterhouse,unsure,unsure,yes,2026-11-11T13:04:00Z,1
+AL-DEMO-R1370,AL-DEMO-P1370,osm:node/3349882188,Hunterian Museum,unsure,unsure,unsure,2026-11-11T14:04:00Z,1
+AL-DEMO-R1371,AL-DEMO-P1371,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-11T14:33:00Z,1
+AL-DEMO-R1372,AL-DEMO-P1372,osm:node/618694098,Victoria Library,yes,no,unsure,2026-11-11T14:36:00Z,1
+AL-DEMO-R1373,AL-DEMO-P1373,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,unsure,2026-11-11T14:46:00Z,1
+AL-DEMO-R1374,AL-DEMO-P1374,osm:way/617427470,The Library at Willesden Green,yes,yes,unsure,2026-11-11T14:48:00Z,1
+AL-DEMO-R1375,AL-DEMO-P1375,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-11T14:49:00Z,1
+AL-DEMO-R1376,AL-DEMO-P1376,osm:node/12883274419,Old Royal Naval College Visitor Centre,yes,unsure,yes,2026-11-11T15:06:00Z,1
+AL-DEMO-R1377,AL-DEMO-P1377,osm:way/19748095,Avondale Park,unsure,unsure,unsure,2026-11-11T15:55:00Z,1
+AL-DEMO-R1378,AL-DEMO-P1378,osm:way/1306360473,Queen's Gardens Toilets,yes,unsure,unsure,2026-11-11T16:10:00Z,1
+AL-DEMO-R1379,AL-DEMO-P1379,osm:node/10870057348,West Ham United Coffee Co.,unsure,unsure,one,2026-11-11T16:14:00Z,1
+AL-DEMO-R1380,AL-DEMO-P1380,osm:node/3349882188,Hunterian Museum,unsure,unsure,yes,2026-11-11T17:11:00Z,1
+AL-DEMO-R1381,AL-DEMO-P1381,osm:node/10073490911,Ottolenghi,yes,unsure,unsure,2026-11-11T17:17:00Z,1
+AL-DEMO-R1382,AL-DEMO-P1382,osm:way/8137262,Holland Park,unsure,unsure,unsure,2026-11-11T17:30:00Z,1
+AL-DEMO-R1383,AL-DEMO-P1383,osm:way/439037559,Paradise by way of Kensal Green,unsure,no,unsure,2026-11-11T17:42:00Z,1
+AL-DEMO-R1384,AL-DEMO-P1384,osm:node/11197951160,Cutty Sark Café,unsure,no,unsure,2026-11-11T18:05:00Z,1
+AL-DEMO-R1385,AL-DEMO-P1385,osm:way/439037559,Paradise by way of Kensal Green,unsure,unsure,unsure,2026-11-11T18:50:00Z,1
+AL-DEMO-R1386,AL-DEMO-P1386,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-11T18:52:00Z,1
+AL-DEMO-R1387,AL-DEMO-P1387,osm:relation/18794121,Highbury Fields,yes,unsure,unsure,2026-11-11T18:59:00Z,1
+AL-DEMO-R1388,AL-DEMO-P1388,osm:node/1493424622,Handel & Hendrix,yes,unsure,unsure,2026-11-11T19:21:00Z,1
+AL-DEMO-R1389,AL-DEMO-P1389,osm:way/10807015,National Army Museum,yes,unsure,unsure,2026-11-11T20:19:00Z,1
+AL-DEMO-R1390,AL-DEMO-P1390,osm:relation/1384127,The Regent's Park,unsure,unsure,unsure,2026-11-11T20:30:00Z,1
+AL-DEMO-R1391,AL-DEMO-P1391,osm:relation/18915597,Fryent Country Park,yes,unsure,unsure,2026-11-11T20:44:00Z,1
+AL-DEMO-R1392,AL-DEMO-P1392,osm:node/3246895686,Dark Habit Coffee,yes,unsure,unsure,2026-11-11T20:46:00Z,1
