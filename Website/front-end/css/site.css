@@ -1,0 +1,281 @@
+:root {
+  --cream: #F2F3DC;
+  --paper: #FBFBF2;
+  --ink: #26261F;
+  --quiet: #4B4C3D;
+  --line: #D3D4B8;
+
+  --green: #2F6B3C;
+  --green-soft: #E3E6C4;
+
+  --sand: #F7EEDD;
+  --terracotta: #B4562A;
+  --orange: #E8873A;
+  --navy: #233A6B;
+}
+
+/* 2. General styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Outfit', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+body[data-mode='map'] {
+  background-color: var(--sand);
+}
+
+a {
+  color: inherit;
+}
+
+/* Keyboard accessibility */
+
+:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* Text for screen readers */
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Skip navigation link */
+
+.skip {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 20;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  background-color: var(--ink);
+  color: var(--cream);
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+/* 3. Navigation bar */
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  height: 76px;
+  padding: 0 24px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(242, 243, 220, 0.95),
+    rgba(242, 243, 220, 0)
+  );
+}
+
+body[data-mode='map'] .top {
+  background: linear-gradient(
+    to bottom,
+    rgba(247, 238, 221, 0.95),
+    rgba(247, 238, 221, 0)
+  );
+}
+
+/* Navigation containers */
+
+.pill {
+  background-color: rgba(251, 251, 242, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(31, 48, 24, 0.12);
+}
+
+/* Website logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px 14px 6px 6px;
+  text-decoration: none;
+}
+
+.logo b {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.logo small {
+  margin-left: -4px;
+  font-size: 13px;
+  color: #5C5D4C;
+}
+
+/* Navigation links */
+
+.toplink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 48px;
+  padding: 0 16px;
+
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Visitor and Mapper buttons */
+
+.modes {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+}
+
+.modes button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 46px;
+  min-width: 52px;
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  background-color: transparent;
+  color: var(--ink);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Active Visitor button */
+
+.modes button[aria-pressed='true'][data-mode='visit'] {
+  background-color: var(--green);
+  color: var(--cream);
+}
+
+/* Active Mapper button */
+
+.modes button[aria-pressed='true'][data-mode='map'] {
+  background-color: var(--orange);
+}
+
+/* 4. Main buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 56px;
+  padding: 0 24px;
+
+  border-radius: 18px;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-dark {
+  background-color: var(--ink);
+  color: var(--cream);
+}
+
+.btn-line {
+  border: 2px solid #9A9B82;
+}
+
+/* 5. Footer */
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+
+  margin-top: 64px;
+  padding: 32px 24px 40px;
+
+  border-top: 1px solid var(--line);
+
+  font-size: 15px;
+  color: var(--quiet);
+}
+
+.foot nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.foot nav a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.foot nav a:hover {
+  text-decoration: underline;
+}
+
+/* 6. Page layout */
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 7. Responsive layout */
+
+@media (max-width: 760px) {
+
+  .top {
+    padding: 0 12px;
+  }
+
+  .logo b,
+  .logo small,
+  .label {
+    display: none;
+  }
+
+  .logo {
+    padding: 6px;
+  }
+
+}

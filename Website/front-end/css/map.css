@@ -1,0 +1,2610 @@
+:root {
+  --cream: #F2F3DC;
+  --paper: #FBFBF2;
+  --ink: #26261F;
+  --muted: #4B4C3D;
+  --secondary-text: #5C5D4C;
+  --line: #D3D4B8;
+  --green: #2F6B3C;
+  --light-green: #E3E6C4;
+  --sand: #F7EEDD;
+  --orange: #E8873A;
+  --terracotta: #B4562A;
+  --navy: #233A6B;
+  --light-sand: #FBF6EC;
+  --sand-border: #B9A88C;
+  --dark-orange: #8A3B1C;
+}
+
+/* 2. Base styles and accessibility */
+body {
+  margin: 0;
+  background: var(--cream);
+}
+
+a {
+  color: inherit;
+}
+
+.ma *:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.ma button {
+  font-family: "Outfit",Arial,sans-serif;
+  color: var(--ink);
+}
+
+/* 3. Map layout and sidebar */
+.ma-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  container-type: size;
+  container-name: stage;
+}
+
+.ma-panel {
+  position: absolute;
+  left: 20px;
+  top: 84px;
+  bottom: 20px;
+  width: 400px;
+  z-index: 5;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 50px rgba(31,48,24,.18);
+}
+
+/* "Map only": the panel slides out to the left. visibility:hidden (after the slide) stops
+   keyboard users tabbing into a panel they can't see. */
+.ma-panel.ma-collapsed {
+  transform: translateX(calc(-100% - 30px));
+  visibility: hidden;
+}
+
+/* the tab on the panel's edge that hides and shows it */
+.ma-paneltab {
+  position: absolute;
+  left: 420px;
+  top: 50%;
+  z-index: 6;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 72px;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 6px 8px 20px rgba(31,48,24,.16);
+}
+
+.ma-stage.is-collapsed .ma-paneltab {
+  left: 0;
+}
+
+.ma-stage.is-collapsed .ma-crumb {
+  left: 44px;
+}
+
+.ma-stage.is-collapsed .ma-tilewrap {
+  left: 54px;
+}
+
+.ma-handle {
+  display: none;
+}
+
+/* The panel's content scrolls inside it (not the panel itself): a scrolling panel on top of
+   the WebGL map drew a blank patch over the map in Chromium. */
+.ma-panel > div,
+.ma-panel > p {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.ma-tilewrap {
+  position: absolute;
+  left: 440px;
+  right: 24px;
+  top: 64px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.ma-crumb {
+  position: absolute;
+  left: 440px;
+  top: 20px;
+  z-index: 4;
+}
+
+.ma-legend {
+  position: absolute;
+  right: 20px;
+  bottom: 44px;
+  z-index: 4;
+}
+
+/* the card above the pin you're pointing at */
+.lm-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  pointer-events: none;
+  min-width: 200px;
+  max-width: 280px;
+  padding: 12px 14px 12px;
+  border-radius: 18px;
+  background: rgba(251,251,242,0.97);
+  box-shadow: 0 12px 28px rgba(31,48,24,0.2);
+  font-family: "Outfit",Arial,sans-serif;
+  color: var(--ink);
+  opacity: 0;
+}
+
+.lm-tip.on {
+  opacity: 1;
+}
+
+.lm-tip b {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.lm-tip .tm {
+  display: block;
+  margin-top: 3px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.lm-tip .tc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lm-tip .ch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lm-tip .ci {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lm-tip .tn {
+  display: block;
+  margin-top: 9px;
+  font-size: 13px;
+  color: #7A3A12;
+  font-weight: 500;
+}
+
+.lm-tip .sim {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #F6E3CC;
+  color: #7A3A12;
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.ma-ctrl {
+  position: absolute;
+  right: 20px;
+  top: 84px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ma-navlink {
+  display: inline-block;
+}
+
+/* map credits: small, in the bottom-right corner, under the key */
+.ma .maplibregl-ctrl-bottom-right {
+  bottom: 6px;
+  right: 8px;
+}
+
+.ma .maplibregl-ctrl-attrib {
+  font: 12px "Outfit",Arial,sans-serif;
+  background: rgba(251,251,242,.85);
+  border-radius: 10px;
+}
+
+/* Floating top bar: no solid header, so the map runs to the top edge */
+
+/* 4. Top navigation */
+.ma-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  height: 72px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.ma-top > * {
+  pointer-events: auto;
+}
+
+.ma-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(251,251,242,.92);
+  border-radius: 18px;
+  padding: 6px 14px 6px 6px;
+  box-shadow: 0 6px 18px rgba(31,48,24,.12);
+}
+
+.ma-logo b {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.ma-logo small {
+  font-size: 13px;
+  color: var(--secondary-text);
+  margin-left: -4px;
+}
+
+.ma-glass {
+  background: rgba(251,251,242,.92);
+  box-shadow: 0 6px 18px rgba(31,48,24,.12);
+}
+
+.ma-about {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.ma-iconbtn {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 16px;
+  border: none;
+  background: var(--paper);
+  box-shadow: 0 8px 20px rgba(31,48,24,.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ma-iconbtn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.ma-iconbtn[aria-pressed="true"] svg {
+  stroke: var(--cream);
+}
+
+.ma-outline {
+  width: 54px;
+  height: 54px;
+  flex: none;
+  border: 2px solid #9A9B82;
+  border-radius: 16px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ma-outline[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.ma-chip {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 22px;
+  padding: 0 13px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ---- Search: the focus ring goes round the whole rounded box (it used to draw a dark
+   rectangle around the bare input inside it) ---- */
+
+/* 5. Search and filters */
+.ma-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ma-searchbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 2px 14px;
+}
+
+.ma-searchbox:focus-within {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(35,58,107,.18);
+}
+
+.ma-searchbox input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: "Outfit",Arial,sans-serif;
+  font-size: 17px;
+  padding: 12px 0;
+  color: var(--ink);
+  outline: none;
+}
+
+.ma .ma-searchbox input:focus-visible {
+  outline: none;
+}
+
+.ma-searchbox input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.ma-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.ma-suggest {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 12px 30px rgba(31,48,24,.16);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ma-sugg {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .ma-sugg:hover {
+    background: #ECEDD3;
+  }
+
+}
+
+.ma-sugg-icon {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma-sugg-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ma-sugg-text b {
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ma-sugg-text span {
+  font-size: 13px;
+  color: var(--secondary-text);
+}
+
+.ma-nores {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.ma-foot {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.ma-foot a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* "you are here" and the station markers on the real map, in the mockup's style */
+
+/* 6. Map markers */
+.lm-you {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 4px solid var(--cream);
+  box-sizing: border-box;
+  box-shadow: 0 0 0 12px rgba(35,58,107,0.14);
+}
+
+.lm-station {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.lm-station span {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--paper);
+  font: 600 14px "Outfit",Arial,sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px var(--paper),0 6px 14px rgba(31,48,24,.3);
+}
+
+.lm-station em {
+  font: 600 13px "Outfit",Arial,sans-serif;
+  font-style: normal;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: rgba(251,251,242,.92);
+  white-space: nowrap;
+}
+
+/* 7. Responsive layout (mobile) */
+@container app (max-width: 760px) {
+  .ma-panel {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    max-height: 52%;
+    border-radius: 26px 26px 0 0;
+    padding: 10px 16px 18px;
+  }
+
+  .ma-panel.ma-peek {
+    max-height: 118px;
+    overflow: hidden;
+  }
+
+  .ma-panel.ma-collapsed {
+    transform: none;
+    visibility: visible;
+  }
+
+  .ma-paneltab {
+    display: none;
+  }
+
+  .ma-stage.is-collapsed .ma-crumb {
+    left: 12px;
+  }
+
+  .ma-stage.is-collapsed .ma-tilewrap {
+    left: 10px;
+  }
+
+  .ma-handle {
+    display: flex;
+  }
+
+  .ma-tilewrap {
+    left: 10px;
+    right: 10px;
+    top: 8px;
+    bottom: auto;
+    height: 47%;
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .ma-tilecard {
+    padding: 12px !important;
+    gap: 8px !important;
+    border-radius: 22px !important;
+  }
+
+  .ma-tilelegend {
+    display: none !important;
+  }
+
+  .ma-legend {
+    display: none !important;
+  }
+
+  .ma-ctrl {
+    right: 12px;
+    top: 76px;
+  }
+
+  .ma-navlink {
+    display: none;
+  }
+
+  .ma-switchlabel {
+    display: none;
+  }
+
+  .ma-top {
+    padding: 0 12px;
+  }
+
+  .ma-logo small,
+  .ma-logo b {
+    display: none;
+  }
+
+  .ma-logo {
+    padding: 6px;
+  }
+
+  .ma .maplibregl-ctrl-bottom-right {
+    bottom: auto;
+    top: 76px;
+    right: auto;
+    left: 8px;
+  }
+
+}
+
+/* Layout and text rules moved from the HTML */
+.ma .overlay-01,
+.ma.overlay-01 {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  z-index: 9;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 15px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  max-width: 80%;
+}
+
+.ma .button-01,
+.ma.button-01 {
+  min-height: 54px;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: transparent;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.ma .text-01,
+.ma.text-01 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-orange);
+}
+
+.ma .text-02,
+.ma.text-02 {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.ma .text-03,
+.ma.text-03 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ma .stack-01,
+.ma.stack-01 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ma .row-01,
+.ma.row-01 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border: 2px dashed #C2602A;
+  border-radius: 18px;
+  background: #F6EDDC;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.ma .text-04,
+.ma.text-04 {
+  margin: 0;
+  font-size: 13px;
+  color: var(--secondary-text);
+}
+
+.ma .text-05,
+.ma.text-05 {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ma .text-06,
+.ma.text-06 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.ma .stack-02,
+.ma.stack-02 {
+  background: var(--light-sand);
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ma .grid-01,
+.ma.grid-01 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ma .text-07,
+.ma.text-07 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.ma .row-02,
+.ma.row-02 {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .stack-03,
+.ma.stack-03 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ma .button-02,
+.ma.button-02 {
+  min-height: 58px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .stack-04,
+.ma.stack-04 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ma .text-08,
+.ma.text-08 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.ma .text-09,
+.ma.text-09 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.ma .row-03,
+.ma.row-03 {
+  width: 84px;
+  height: 84px;
+  border-radius: 26px;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .text-10,
+.ma.text-10 {
+  font-size: 15px;
+  color: var(--secondary-text);
+}
+
+.ma .card-01,
+.ma.card-01 {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.ma .row-04,
+.ma.row-04 {
+  flex: 1;
+  display: flex;
+  gap: 5px;
+}
+
+.ma .row-05,
+.ma.row-05 {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: 2px solid var(--sand-border);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-06,
+.ma.row-06 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ma .stack-05,
+.ma.stack-05 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ma .button-03,
+.ma.button-03 {
+  align-self: flex-start;
+  min-height: 44px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ma .button-04,
+.ma.button-04 {
+  min-height: 52px;
+  border: 2px solid var(--sand-border);
+  border-radius: 18px;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ma .text-11,
+.ma.text-11 {
+  color: var(--cream);
+}
+
+.ma .button-05,
+.ma.button-05 {
+  min-height: 56px;
+  border: none;
+  border-radius: 18px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .text-12,
+.ma.text-12 {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.ma .text-13,
+.ma.text-13 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.ma .stack-06,
+.ma.stack-06 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ma .text-14,
+.ma.text-14 {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.ma .row-07,
+.ma.row-07 {
+  align-self: flex-start;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ma .card-02,
+.ma.card-02 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.ma .stack-07,
+.ma.stack-07 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ma .text-15,
+.ma.text-15 {
+  padding-top: 8px;
+  color: var(--dark-orange);
+}
+
+.ma .card-03,
+.ma.card-03 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F2C994;
+}
+
+.ma .card-04,
+.ma.card-04 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px dashed var(--terracotta);
+  box-sizing: border-box;
+}
+
+.ma .row-08,
+.ma.row-08 {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ma .text-16,
+.ma.text-16 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ma .stack-08,
+.ma.stack-08 {
+  background: var(--light-sand);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ma .text-17,
+.ma.text-17 {
+  font-size: 13px;
+  color: var(--secondary-text);
+}
+
+.ma .text-18,
+.ma.text-18 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ma .stack-09,
+.ma.stack-09 {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.ma .text-19,
+.ma.text-19 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ma .stack-10,
+.ma.stack-10 {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ma .row-09,
+.ma.row-09 {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-10,
+.ma.row-10 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.ma .stack-11,
+.ma.stack-11 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ma .card-05,
+.ma.card-05 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.ma .row-11,
+.ma.row-11 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ma .text-20,
+.ma.text-20 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ma .row-12,
+.ma.row-12 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  background: var(--light-sand);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .text-21,
+.ma.text-21 {
+  font-size: 14px;
+  background: #F6E3CC;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.ma .row-13,
+.ma.row-13 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ma .text-22,
+.ma.text-22 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--terracotta);
+}
+
+.ma .row-14,
+.ma.row-14 {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 14px;
+  background: transparent;
+  padding: 0 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .row-15,
+.ma.row-15 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.ma .button-06,
+.ma.button-06 {
+  min-height: 54px;
+  border: none;
+  border-radius: 16px;
+  background: var(--ink);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.ma .text-23,
+.ma.text-23 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.ma .row-16,
+.ma.row-16 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .text-24,
+.ma.text-24 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--dark-orange);
+}
+
+.ma .button-07,
+.ma.button-07 {
+  min-height: 56px;
+  border: none;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .button-08,
+.ma.button-08 {
+  min-height: 48px;
+  border-radius: 16px;
+  padding: 0 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .row-17,
+.ma.row-17 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ma .text-25,
+.ma.text-25 {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.ma .text-26,
+.ma.text-26 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.ma .text-27,
+.ma.text-27 {
+  font-size: 16px;
+}
+
+.ma .row-18,
+.ma.row-18 {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--paper);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-19,
+.ma.row-19 {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.ma .text-28,
+.ma.text-28 {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #F6E3CC;
+  font-size: 15px;
+}
+
+.ma .stack-12,
+.ma.stack-12 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.ma .text-29,
+.ma.text-29 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.ma .row-20,
+.ma.row-20 {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ma .text-30,
+.ma.text-30 {
+  color: var(--paper);
+}
+
+.ma .button-09,
+.ma.button-09 {
+  align-self: flex-start;
+  min-height: 48px;
+  border: none;
+  border-radius: 14px;
+  background: var(--navy);
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .text-31,
+.ma.text-31 {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.ma .text-32,
+.ma.text-32 {
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.ma .text-33,
+.ma.text-33 {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.ma .stack-13,
+.ma.stack-13 {
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ma .text-34,
+.ma.text-34 {
+  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 6px 11px;
+}
+
+.ma .button-10,
+.ma.button-10 {
+  min-height: 50px;
+  border: 2px solid #9A9B82;
+  border-radius: 14px;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .stack-14,
+.ma.stack-14 {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ma .row-21,
+.ma.row-21 {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-22,
+.ma.row-22 {
+  flex: 1;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 16px;
+  background: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .row-23,
+.ma.row-23 {
+  display: flex;
+  gap: 8px;
+}
+
+.ma .text-35,
+.ma.text-35 {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.ma .text-36,
+.ma.text-36 {
+  margin: 0;
+  font-size: 15px;
+  background: var(--paper);
+  border-left: 3px solid var(--green);
+  padding: 10px 12px;
+}
+
+.ma .row-24,
+.ma.row-24 {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: var(--cream);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.ma .row-25,
+.ma.row-25 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.ma .text-37,
+.ma.text-37 {
+  font-size: 12px;
+  color: #2A5E35;
+}
+
+.ma .text-38,
+.ma.text-38 {
+  font-size: 15px;
+}
+
+.ma .stack-15,
+.ma.stack-15 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ma .row-26,
+.ma.row-26 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 14px;
+  padding: 11px 12px;
+}
+
+.ma .stack-16,
+.ma.stack-16 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ma .text-39,
+.ma.text-39 {
+  align-self: flex-start;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 8px 13px;
+}
+
+.ma .card-06,
+.ma.card-06 {
+  align-self: flex-start;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.ma .row-27,
+.ma.row-27 {
+  flex: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-28,
+.ma.row-28 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ma .text-40,
+.ma.text-40 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.ma .text-41,
+.ma.text-41 {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.ma .stack-17,
+.ma.stack-17 {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ma .text-42,
+.ma.text-42 {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 3px 7px;
+}
+
+.ma .row-29,
+.ma.row-29 {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.ma .stack-18,
+.ma.stack-18 {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ma .row-30,
+.ma.row-30 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  width: 100%;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.ma .button-11,
+.ma.button-11 {
+  min-height: 48px;
+  border: none;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .stack-19,
+.ma.stack-19 {
+  background: var(--paper);
+  border: 2px dashed #8E8F78;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ma .text-43,
+.ma.text-43 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ma .row-31,
+.ma.row-31 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  background: var(--paper);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ma .text-44,
+.ma.text-44 {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.ma .row-32,
+.ma.row-32 {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .row-33,
+.ma.row-33 {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  border-radius: 16px;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .text-45,
+.ma.text-45 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--green);
+}
+
+.ma .text-46,
+.ma.text-46 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.ma .button-12,
+.ma.button-12 {
+  min-height: 54px;
+  border: none;
+  border-radius: 16px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .text-47,
+.ma.text-47 {
+  font-size: 14px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ma .shape-01,
+.ma.shape-01 {
+  display: block;
+  height: 10px;
+}
+
+.ma .card-07,
+.ma.card-07 {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(38,38,31,0.1);
+  overflow: hidden;
+}
+
+.ma .text-48,
+.ma.text-48 {
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.ma .text-49,
+.ma.text-49 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.ma .stack-20,
+.ma.stack-20 {
+  flex: none;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ma .text-50,
+.ma.text-50 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.ma .stack-21,
+.ma.stack-21 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ma .row-34,
+.ma.row-34 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ma .stack-22,
+.ma.stack-22 {
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ma .row-35,
+.ma.row-35 {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .text-51,
+.ma.text-51 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.ma .text-52,
+.ma.text-52 {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.ma .text-53,
+.ma.text-53 {
+  background: #F6E3CC;
+  border: 2px solid #C2602A;
+  border-radius: 18px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.ma .card-08,
+.ma.card-08 {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background: #B9B9A0;
+}
+
+.ma .button-13,
+.ma.button-13 {
+  flex: none;
+  align-self: stretch;
+  min-height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .unknown-mark,
+.ma.unknown-mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 2px dashed #8E8F78;
+  background: #DCDAC8;
+  box-sizing: border-box;
+}
+
+.ma .legend-note,
+.ma.legend-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.ma .legend-swatch,
+.ma.legend-swatch {
+  width: 26px;
+  height: 16px;
+  border-radius: 5px;
+}
+
+.ma .borough-legend,
+.ma.borough-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ma .borough-tile,
+.ma.borough-tile {
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: clamp(10px, 1.1cqw, 14px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ma .borough-grid,
+.ma.borough-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.ma .borough-preview,
+.ma.borough-preview {
+  min-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ma .borough-card,
+.ma.borough-card {
+  width: min(620px, 100%);
+  max-height: 100%;
+  background: rgba(242,243,220,0.96);
+  border-radius: 30px;
+  padding: 22px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 20px 50px rgba(20,35,15,0.25);
+}
+
+.ma .fill-area,
+.ma.fill-area {
+  position: absolute;
+  inset: 0;
+}
+
+.ma .mode-button,
+.ma.mode-button {
+  min-height: 46px;
+  min-width: 52px;
+  border: none;
+  border-radius: 14px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ma .mode-switch,
+.ma.mode-switch {
+  display: flex;
+  gap: 4px;
+  border-radius: 18px;
+  padding: 4px;
+}
+
+.ma .map-shell,
+.ma.map-shell {
+  container-type: inline-size;
+  container-name: app;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+/* Keep the current simple design; later rules intentionally override earlier ones. */
+
+/* 9. Simplified presentation overrides */
+.ma {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  font-family: Arial, sans-serif;
+  background-color: var(--cream);
+}
+
+.ma-stage {
+  grid-area: 1 / 1;
+  min-height: 0;
+}
+
+/* Three reliable header columns, keeping the mode switch centred. */
+.ma-top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.ma-top > .ma-glass {
+  justify-self: center;
+}
+
+.ma-top > .ma-about {
+  justify-self: end;
+}
+
+.ma-logo,
+.ma-about,
+.ma-glass {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  box-shadow: none;
+}
+
+.ma-panel {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.ma-paneltab,
+.ma-iconbtn,
+.ma-outline,
+.ma-chip,
+.ma-searchbox,
+.ma-sugg,
+.ma-tilecard,
+.ma-tilecard button {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.ma button {
+  font-family: Arial, sans-serif;
+}
+
+.ma-tilewrap {
+  background: transparent;
+}
+
+/* Background of the London borough chooser: no fake illustrated map. */
+.ma-enter {
+  background-color: #e8ebd2;
+}
+
+/* Explain honestly what is known when a Mapper confirms a place. */
+.map-location-notice {
+  margin: 0;
+  padding: 14px;
+  border-left: 3px solid var(--terracotta);
+  background: var(--light-sand);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Map dragging and zooming are handled by the map library. */
+/* Preserve visible keyboard focus and clear pressed states. */
+.ma button:focus-visible,
+.ma a:focus-visible,
+.ma input:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+
+@container app (max-width: 760px) {
+  .ma-top {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .ma-panel {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .ma-logo {
+    justify-self: start;
+  }
+
+}
+
+.skip-to-map {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 50;
+  padding: 10px 15px;
+  background: var(--ink);
+  color: white;
+}
+
+.skip-to-map:focus {
+  top: 6px;
+}
+
+/* Map is the single Grid cell below the floating navigation. */
+.ma.map-shell {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  font-family: Arial, sans-serif;
+}
+
+/* The brand only takes the space it needs; the Visitor/Mapper switch stays centred. */
+.ma-top > .ma-logo {
+  justify-self: start;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* W3Schools: https://www.w3schools.com/css/css3_variables.asp (the --jf-* tokens) */
+/* W3Schools: https://www.w3schools.com/css/css3_flexbox.asp */
+/* W3Schools: https://www.w3schools.com/css/css_grid.asp */
+/* W3Schools: https://www.w3schools.com/css/css_pseudo_classes.asp (:hover, :focus-visible) */
+/* W3Schools: https://www.w3schools.com/css/css_outline.asp */
+/* 10. One continuous journey (Find → Understand → Go → Contribute), added Nov 2026.
+   Additive rules only: earlier sections are unchanged. Plain Flexbox/Grid, no animation. */
+/* Tokens for this section only (Hallmark gate 48: colours and fonts go through :root). */
+:root {
+  --jf-white: #FCFCF7;
+  --jf-red: #A62020;
+  --jf-red-ink: #7A1616;
+  --jf-red-soft: #FBEDEA;
+  --jf-red-edge: #E2B9B0;
+  --jf-green-hover: #24562F;
+  --jf-navy-soft: #E9ECF3;
+  --jf-field-edge: #8E8F78;
+  --jf-shadow: rgba(38,38,31,.35);
+  --jf-backdrop: rgba(20,24,16,.45);
+  --jf-font: Arial, sans-serif;
+}
+
+/* The header keeps the group's original three columns: logo, Visitor/Mapper switch, actions. */
+.ma-topactions {
+  justify-self: end;
+  display: flex;
+  gap: 8px;
+}
+
+.ma-report {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--jf-red-ink) !important;
+  cursor: pointer;
+}
+
+/* The main action on a place: large, full width, high contrast. */
+
+.ma .jf-linkbtn {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* Directions panel */
+.jf-ends {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.jf-ends li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.jf-dot,
+.lm-endpoint {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 14px var(--jf-font);
+  color: var(--jf-white);
+  border: 3px solid var(--jf-white);
+  box-sizing: border-box;
+}
+
+.jf-dot-a,
+.lm-endpoint-start {
+  background: var(--navy);
+}
+
+.jf-dot-b,
+.lm-endpoint-end {
+  background: var(--green);
+}
+
+.lm-endpoint {
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 2px 6px var(--jf-shadow);
+}
+
+.jf-start {
+  margin: 0;
+  padding: 12px;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.jf-start legend {
+  padding: 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.jf-startbtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ma .jf-choice {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  background: var(--jf-navy-soft);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.jf-label {
+  font-size: 15px;
+}
+
+.jf-searchbox input {
+  width: 100%;
+}
+
+.jf-modes {
+  display: flex;
+  gap: 8px;
+}
+
+.jf-status {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.jf-error {
+  padding: 12px 12px;
+  border: 2px solid var(--jf-red);
+  border-radius: 8px;
+  background: var(--jf-red-soft);
+}
+
+.jf-error p {
+  margin: 0 0 8px;
+}
+
+.jf-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.jf-barriers h2 {
+  margin: 0;
+  font-size: 18px;
+  text-wrap: balance;
+}
+
+.jf-barriers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.jf-barriers p {
+  margin: 0;
+}
+
+.ma .jf-barrier {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 12px;
+  border: 1px solid var(--jf-red-edge);
+  border-radius: 8px;
+  background: var(--jf-red-soft);
+  text-align: left;
+  cursor: pointer;
+}
+
+.jf-warn {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--jf-red);
+  color: var(--jf-white);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma .jf-report {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--jf-red);
+  border-radius: 8px;
+  background: var(--jf-white);
+  color: var(--jf-red-ink);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Choosing a point on the map */
+.jf-pickhint {
+  position: absolute;
+  left: 50%;
+  top: 84px;
+  z-index: 9;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 40px);
+  padding: 12px 12px 12px 16px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--jf-white);
+  font-size: 16px;
+}
+
+.ma .jf-pickhint button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 2px solid var(--jf-white);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--jf-white);
+  cursor: pointer;
+}
+
+/* Report a problem and report details dialogs (outside the template, so not under .ma) */
+.br-dialog {
+  width: min(480px, calc(100% - 24px));
+  max-height: calc(100vh - 24px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--jf-font);
+}
+
+.br-dialog::backdrop {
+  background: var(--jf-backdrop);
+}
+
+.br-form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.br-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.br-top h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.br-x {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.br-where {
+  margin: 0;
+  padding: 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.br-where legend,
+.br-label {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.br-loc {
+  margin: 4px 0 8px;
+}
+
+.br-missing {
+  color: var(--jf-red-ink);
+}
+
+.br-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.br-btn {
+  min-height: 46px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: 600 15px var(--jf-font);
+  cursor: pointer;
+}
+
+.br-primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.br-form select,
+.br-form textarea,
+.br-form input[type="file"] {
+  font: 16px var(--jf-font);
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid var(--jf-field-edge);
+  border-radius: 6px;
+  background: var(--jf-white);
+}
+
+.br-file-picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid var(--jf-field-edge);
+  border-radius: 6px;
+  background: var(--jf-white);
+  font: 16px var(--jf-font);
+}
+
+.br-file-button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+}
+
+#br-photo-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.br-file-picker input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.br-file-picker:focus-within {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.br-note {
+  margin: 0;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.br-status {
+  margin: 0;
+  font-weight: 600;
+  color: var(--jf-red-ink);
+}
+
+.bd-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.br-dialog button:focus-visible,
+.br-dialog select:focus-visible,
+.br-dialog textarea:focus-visible,
+.br-dialog input:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+@container app (max-width: 760px) {
+  .ma-report span {
+    display: none;
+  }
+
+  .ma-report {
+    padding: 0 12px;
+  }
+
+  .jf-pickhint {
+    top: 76px;
+  }
+}
+
+/* ===== 11. Borough tiles: keep the whole card inside its frame (added 13 Nov 2026) =====
+   Fixes an original layout bug: the tiles are square and only follow the card's width, so on a
+   window shorter than about 1000px the bottom row, the legend and the data note spilled out of
+   the card. The original rules above are unchanged; these two rules are added after them.*/
+.ma-tilewrap .borough-grid {
+  max-width: max(260px, calc((100vh - 430px) * 8 / 7 + 49px));
+  width: 100%;
+  margin-left: auto;  /* centre the smaller grid in the card */
+  margin-right: auto;
+}
+
+/* 1b. The card follows the smaller grid, so it is not left half empty, but never gets
+       narrower than 530px, so the heading stays on one line (the Mapper heading needs 486px
+       plus 44px padding). On tall windows it stays at the original 620px. */
+.ma .borough-card,
+.ma.borough-card {
+  width: min(620px, 100%, max(530px, calc((100vh - 430px) * 8 / 7 + 93px)));
+}
+
+/* 2. If it still does not fit (a very short window or a phone), scroll inside the card
+      instead of drawing outside it. */
+.ma-tilewrap .borough-card {
+  overflow-y: auto;
+}
+
+/*3. Wide windows (1200px and up): the side space was empty, so the card uses two columns.*/ 
+@media (min-width: 1200px) {
+  .ma .borough-card,
+  .ma.borough-card {
+    display: grid;
+    grid-template-columns: auto 240px;
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 32px;
+    row-gap: 12px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .ma-tilewrap .borough-heading,
+  .ma-tilewrap .borough-preview {
+    grid-column: 1 / 3;
+  }
+
+  .ma-tilewrap .borough-grid {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    width: min(640px, calc((100vh - 340px) * 8 / 7 + 49px), calc(100vw - 780px));
+    max-width: none;
+    margin: 0;
+  }
+
+  /* The legend in the narrow right column: one row of colour swatches, the low label under
+     its left end, the high label under its right end, then "Not enough data". */
+  .ma-tilewrap .borough-legend {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 6px;
+  }
+
+  .ma-tilewrap .borough-legend .legend-swatch {
+    grid-row: 1;
+    width: auto;
+  }
+
+  .ma-tilewrap .borough-legend > span:first-child {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    justify-self: start;
+  }
+
+  /* the high label: the plain span that is not the first one, a swatch or the note */
+  .ma-tilewrap .borough-legend > span:not(.legend-swatch):not(.legend-note):not(:first-child) {
+    grid-row: 2;
+    grid-column: 4 / 6;
+    justify-self: end;
+  }
+
+  .ma-tilewrap .borough-legend > .legend-note {
+    grid-row: 3;
+    grid-column: 1 / 6;
+    margin-left: 0;
+  }
+
+  .ma-tilewrap .borough-data-note {
+    grid-column: 2;
+    grid-row: 4;
+    align-self: start;
+    margin: 0;
+  }
+}
