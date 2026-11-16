@@ -88,7 +88,7 @@ Access London prioritises wheelchair users and people who cannot manage steps. C
 
 *Table 1: The six questions behind our design.*
 
-Map-first interfaces and equal-area borough grids informed our storyboard (Figures 1–2). The prototype established a cream background, large controls and two distinct modes: green for visitors and terracotta for contributors (Figure 3). This separation makes browsing and answering recognisable without leaving the map.
+Map-first references informed our storyboard (Figures 1–2). The prototype distinguished green Visitor and terracotta Mapper modes against a cream background (Figure 3).
 
 ![Figure 1](img/fig1-moodboard.jpg)
 
@@ -102,7 +102,7 @@ Map-first interfaces and equal-area borough grids informed our storyboard (Figur
 
 *Figure 3: High-fidelity prototype with sample data.*
 
-The final layout places search, filters and results beside a full-screen map, with navigation and reporting above it. Accessibility design priorities included visible focus, labelled controls and non-colour cues. We aimed for 44-pixel touch targets, consistent with WCAG's enhanced target-size guidance; this is a design target, not a claim of full WCAG conformance (W3C, 2023). Three testers completed navigation, information-finding and contribution tasks (Table 2).
+Search and filters sit beside the map. Visible focus, labels, non-colour cues and 44-pixel target sizes guided accessibility design without establishing full WCAG conformance (W3C, 2023). Table 2 summarises three testers' feedback.
 
 | Task | Main feedback | Design response |
 |---|---|---|
@@ -112,7 +112,7 @@ The final layout places search, filters and results beside a full-screen map, wi
 
 *Table 2: Feedback from three testers and the resulting design changes.*
 
-Namita led the visual specifications, prototypes and iterative reviews. Most front-end code was generated with Claude from these specifications; AI assistance is acknowledged separately from the team's design decisions.
+Namita led design specifications, prototypes and reviews; Claude generated most front-end code from these specifications.
 
 #### 2.1.2 Interactive Map and Data Visualisation
 
@@ -122,11 +122,11 @@ The initial Hackney prototype used uniform dots over a detailed Leaflet basemap 
 
 *Figure 4: The first build on real data: Hackney only, in 2D (left) and 3D (right).*
 
-Two views serve different purposes. Equal-area tiles compare all 33 boroughs without privileging larger areas: Visitor mode shows accessibility scores, withholding them when coverage is insufficient, while Mapper mode highlights missing information. The geographic map clusters places at city scale and reveals individual pins as users zoom in (Figure 6).
+Equal-area tiles compare 33 boroughs: Visitor mode shows scores where coverage permits, while Mapper mode highlights gaps. Geographic clusters separate into individual pins as users zoom in (Figure 6).
 
 Pin icons identify place categories. Green indicates yes, grey indicates no or partial access, and dashed uncoloured symbols indicate unknown information. Wheelmap provided a precedent for communicating accessibility through map symbols (Mobasheri, Deister and Dieterich, 2017). Keeping unknown distinct from inaccessible is essential because approximately 87% of source records lack usable wheelchair information.
 
-Hover cards summarise access information; selecting a place opens entrance, toilet and lift details (Figure 5). Search and combined filters connect these summaries to practical decisions. Mapper mode uses terracotta symbols for gaps and distinguishes contributions awaiting agreement from confirmed answers, linking the visualisation to the database confirmation rule.
+Hover cards summarise access; selection opens entrance, toilet and lift details (Figure 5). Filters support discovery, while Mapper symbols distinguish gaps, provisional answers and confirmed contributions.
 
 ![Figure 5](img/fig5-final-place.jpg)
 
@@ -138,49 +138,43 @@ Hover cards summarise access information; selecting a place opens entrance, toil
 
 #### 2.1.3 User Interaction and Reporting Features
 
-Section 1.1 explained why access information needs correcting by its users, and a tester asked for a reporting option (Table 2). Access London has two reporting paths, built differently.
+Access London separates street barriers from corrections to place information. "Report a problem" opens from the header, a place card or a route; place cards prefill their coordinates. The native `<dialog>` provides modal focus management (MDN, n.d.), while an `aria-live` status line communicates validation errors.
 
-The first, "Report a problem", covers street barriers and opens from the header, a place card or a planned route through `openReport()` in `map-ui.js`; a place card passes its coordinates, so the location is already filled in (Figure 7). The form is a native `<dialog>` controlled by `barrier-report.js`; `showModal()` keeps keyboard focus inside it without a library (MDN, n.d.), and validation messages go to an `aria-live` status line while focus moves to the control concerned. A report needs a location and at least one of a type, a note or a photo. The location comes from geolocation or a map click, which has no keyboard equivalent. `compress()` redraws an optional photo at no more than 1,100 pixels, and a test image carrying an EXIF GPS tag reached the server without it. `submit()` sends `{lon, lat, type, note, photo}` as JSON to `POST /api/barriers` (Figure 8), and the report stays `pending` until a reviewer approves it.
+Reports require a location and at least one type, note or photo. Geolocation or map selection supplies coordinates; map selection lacks a keyboard equivalent. Photos are redrawn at a maximum of 1,100 pixels before JSON submission to `POST /api/barriers`. Reports remain pending until authorised approval (Figures 7–8). Server validation repeats the combined content rule because browser checks can be bypassed (OWASP, n.d.); empty reports now return HTTP 400.
 
 ![Figure 7: Report a problem interface](figures/figure-7-report-interface.png)
 
-*Figure 7: The actual Report a problem dialogue before a location is selected, showing location controls, report type, optional photograph and submission controls.*
+*Figure 7: Reporting dialogue with location, type, optional photograph and submission controls.*
 
 ![Figure 8: Reporting data flow](figures/figure-8-reporting-data-flow.png)
 
-*Figure 8: The barrier-reporting flow through front-end and Express validation to MySQL. Submissions remain pending and become public only after authorised approval.*
+*Figure 8: Validated reports enter MySQL as pending; only approved reports become public.*
 
-Originally the server did not enforce the second condition: `routes/barriers.js` checked each field separately, so a request sent without the form returned 201 and stored an empty row. Client-side checks can always be bypassed (OWASP, n.d.), so the route now repeats the combined rule and returns 400, which a regression test confirms.
-
-The second path, "Something was different" on a place card, had a more serious fault. `sendReport()` converted three of its five options into Mapper answers. "Closed" and "Something else" had no mapping, so no request was sent, yet the thank-you screen still appeared; Mapper mode's "It has closed" button behaved the same way. A confirmation with no stored record undermines the trust that crowd-sourced data depends on. We added a `place_flags` table and a `POST /api/place-flags` route, and both handlers now wait for a 201 response, showing an error and staying on the same step if the request fails; a retry sends only what is missing. The wording was corrected too: a flag's confirmation now says it is saved for the team, and only the three answer options still mention confirmation by others. In the browser check each option produced one stored flag and a blocked request produced no thank-you.
-
-Flags have no review page, are not de-duplicated per person and change nothing on the map, and "Something else" has no text field. Other points are risks rather than observed failures: moderation depends on one shared reviewer key, photos may show faces, approved reports never expire, and "Use my location" publishes the reporter's position at full precision once approved.
+Previously, "Closed", "Something else" and Mapper's "It has closed" displayed confirmation without saving records. The new `POST /api/place-flags` endpoint stores them separately from street barriers. Confirmation now follows HTTP 201; failed requests retain the current step, and retries after partial success send only missing flags. Flags do not alter the public map, have no review action or per-person de-duplication, and "Something else" lacks a text field. Shared reviewer credentials, identifiable photographs and reports without expiry remain limitations.
 
 #### 2.1.4 Front-end Integration and Testing
 
-`server.js` runs one Express process that mounts the API routers under `/api` and serves `front-end/` from the same origin, so pages call relative URLs and need no CORS configuration. A report follows the whole path (Figure 8): the browser posts JSON, the router validates it and inserts a row, and the 201 response closes the dialog and shows a confirmation. The write paths differ in reliability: `answers.js` queues Mapper answers in `localStorage` and resends them when the connection returns, whereas a failed barrier report or place flag is not queued.
+Express serves pages and `/api` routes from one origin. A successful report passes server validation, enters MySQL and returns HTTP 201 before the dialogue closes. Mapper answers have a localStorage retry queue; barrier reports and place flags do not.
 
-Integration mostly happened outside pull requests: #1 was merged into `main` on 6 November, #2 and #3 never reached it, and later files were committed directly. With no review step or automated check where one person's work met another's, these faults were found only in testing.
+Initial AI-assisted testing with Claude was independently rerun with Codex on Windows, Node 24.15.0, MySQL and Chrome 156. The team confirmed identical final results on the Raspberry Pi/MariaDB deployment (Table 3). Browser checks used simulated geolocation and locally supplied map resources. These automated checks are distinct from user testing.
 
-The initial checks were written and run on 16 November with Claude in an isolated environment with a disposable database (Node 22, MariaDB 10.11, headless Chrome 153). On the same date, the final patch was independently rerun with Codex on Windows using Node 24.15.0, a separate MySQL84 test database and headless Chrome 156. The local browser harness used simulated geolocation and locally served MapLibre resources with external requests blocked. The team subsequently repeated the checks against the application deployed on the Raspberry Pi and confirmed the same final results shown in Table 3. These automated checks are separate from the user testing described in Section 2.1.1. The 28 original static tests match patterns in source text and passed while every fault was present. We therefore added API tests that fail on the unfixed code, and a scripted browser check.
+| Test suite | Earlier result | Final result |
+|---|---|---|
+| Static | 28/28 | 37/37 |
+| API | 6/6 | 6/6 |
+| Reporting regression | 1/5 | 5/5 |
+| Report endpoints | 18/19 | 19/19 |
+| Browser | 20/24 | 37/37 |
 
-| Level | Command | Before fixes (earlier run) | Final patch (local and Raspberry Pi reruns) |
-|---|---|---|---|
-| Static tests | `npm run test:static` | 28 of 28 | 37 of 37 (9 new) |
-| API tests | `npm test` | 6 of 6 | 6 of 6 |
-| Reporting regression tests (new) | `npm run test:reports` | 1 of 5 | 5 of 5 |
-| Report API check | `report-api-check.mjs` | 18 of 19 | 19 of 19 |
-| Browser check | `report-form-check.mjs` | 20 of 24 | 37 of 37 |
-
-*Table 3: Earlier pre-fix results and final-patch results reproduced locally and confirmed by the team on the Raspberry Pi deployment. The pre-fix results were not independently repeated.*
+*Table 3: Final results reproduced locally and confirmed on Raspberry Pi; earlier results were not independently repeated.*
 
 ![Figure 9: Final integration testing evidence](figures/figure-9-integration-testing-evidence.png)
 
-*Figure 9: Final automated test results, reproduced locally and confirmed by the team against the Raspberry Pi deployment. All listed checks met their expectations.*
+*Figure 9: Final automated test results and team-confirmed Raspberry Pi results.*
 
-Three faults in the earlier implementation were investigated through browser testing. Pressing Escape while choosing a point on the map left the form closed and, at the next opening, empty. Event logging showed why: the `keydown` listener in `map-ui.js` reopened the dialog during the key event, and Chrome then applied Escape's default action to it. This mainly affected keyboard users, since the on-screen Cancel button worked. The listener now calls `preventDefault()`, and the form reopens with the typed note intact. Second, the confirmation was requested for 5.2 seconds, but `toast()` accepted no duration and removed it after 2.6. As the dialog has already closed, that message is the user's only evidence that the report was stored. `toast()` now takes an optional duration, and the message was measured at 5.2 seconds. Third, a network failure showed the browser's own "Failed to fetch"; `submit()` now catches that case and shows a plain message, keeping the form and its input.
+Source-pattern tests passed despite runtime faults, motivating API regression and browser checks. Three browser fixes were verified: cancelling Escape's default action preserved the reopened form, allowing a duration parameter kept confirmation visible for 5.2 seconds, and handling network failures retained input with a clear error. Backend checks covered persistence, moderation, photo access and rate limiting.
 
-The local rerun verified the final patch against MySQL, including report persistence, moderation and public visibility; the team also confirmed the same test results on the Raspberry Pi deployment using MariaDB. These results do not establish behaviour on a phone, with a real camera or with a screen reader. The new API tests need a running server and database, so they do not yet run on each pull request.
+Direct integration without consistent pull-request checks delayed discovery. The suites still require a running server and database and are not automated on every pull request. Real phones, cameras and screen readers remain outside the demonstrated test coverage.
 
 ## 3 Back-end Development
 
