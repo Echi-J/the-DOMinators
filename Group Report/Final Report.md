@@ -75,7 +75,7 @@ Access London combines Visitor and Mapper modes within a map-based interface. Vi
 
 #### 2.1.1 UI/UX Design and Page Layout
 
-**Who we design for.** Access London is for disabled people and people with access needs, mainly wheelchair users and anyone who cannot manage steps, including people with a pushchair or an injury. 13.2% of Londoners are disabled, from 10.7% in the City of London to 16.2% in Islington (Trust for London, 2023). Access information decides whether many go out at all: 91% look for it before visiting somewhere new, and 58% avoid a venue that has not published it (Euan's Guide, 2022). We turned this research into six questions a disabled person asks before a trip (Table 1), and used them to decide what each screen must answer. The site covers five kinds of everyday place where knowing about the entrance and the toilet decides whether a trip happens: food and drink, parks, museums and galleries, shops, and public toilets.
+Access London prioritises wheelchair users and people who cannot manage steps. Census-based figures indicate that 13.2% of Londoners are disabled (Trust for London, 2023). In Euan's Guide's 2022 survey, 91% of respondents sought access information before visiting somewhere new and 58% avoided venues without it (Euan's Guide, 2022). We translated these concerns into six design questions (Table 1), focusing on food and drink, parks, cultural venues, shops and toilets.
 
 | Question | How Access London answers it |
 |---|---|
@@ -88,7 +88,7 @@ Access London combines Visitor and Mapper modes within a map-based interface. Vi
 
 *Table 1: The six questions behind our design.*
 
-**References and storyboard.** Story maps such as La Gata Perduda and the interactive map for The Alienist put picture pins on a quiet base map, so the places carry the story (Figure 1). Grid maps such as Meldingen Openbare Ruimte showed how equal tiles let areas be compared fairly, which became our borough tile map, and GolfX showed a map-first phone layout with a sliding panel. Our first sketch (Figure 2, left) was one page: filters, a map and a list of results. The second split the site into two modes, switched in the header: Visitor in green and Mapper in orange. A high-fidelity prototype with sample data (Figure 3) then fixed the visual language before real data was connected: a cream base map, pins in three states, and cards with large touch targets.
+Map-first interfaces and equal-area borough grids informed our storyboard (Figures 1–2). The prototype established a cream background, large controls and two distinct modes: green for visitors and terracotta for contributors (Figure 3). This separation makes browsing and answering recognisable without leaving the map.
 
 ![Figure 1](img/fig1-moodboard.jpg)
 
@@ -102,37 +102,31 @@ Access London combines Visitor and Mapper modes within a map-based interface. Vi
 
 *Figure 3: High-fidelity prototype with sample data.*
 
-**Page layout.** The map fills the screen and everything else floats over it (Figure 5). A header holds the logo, the Visitor/Mapper switch, "Report a problem" and About. A panel on the left holds search, the need and place filters, and the results, and it collapses for a map-only view. Zoom, 3D and "Use my location" sit on the right. Visitor mode uses greens on cream; Mapper mode turns the whole interface terracotta and orange, so it is always clear which task the user is doing. We used one typeface (Outfit), rounded floating cards with soft shadows, and one icon set for kinds of place and access features.
+The final layout places search, filters and results beside a full-screen map, with navigation and reporting above it. Accessibility design priorities included visible focus, labelled controls and non-colour cues. We aimed for 44-pixel touch targets, consistent with WCAG's enhanced target-size guidance; this is a design target, not a claim of full WCAG conformance (W3C, 2023). Three testers completed navigation, information-finding and contribution tasks (Table 2).
 
-**Accessibility of the interface.** A site about access has to be accessible itself. Following WCAG 2.2 (W3C, 2023), touch targets are at least 44 pixels, keyboard focus is visible, every icon has a text label, every control has a name for screen readers, and colour is never used alone: unknown places are dashed as well as uncoloured.
-
-**User testing.** Three people tested the site with three tasks based on the user research (Table 2).
-
-| Task | Question | What happened |
+| Task | Main feedback | Design response |
 |---|---|---|
-| Trying all the keys and navigation on the entire website. Flow and experience of the website | 1, 2, 3 | User found the navigation to be smooth, visual language also good but suggested icons could help identify types, more legibility, smoother transition. |
-| Check whether a museum has an accessible toilet | 4 | Typing a museum name showed info about the accessibility requirements. Suggested to add a report/ help option. |
-| Add what you know about a place you have been to | Mapper | Found the questionnaire idea pretty easy and effortless. After answering the questions, it was not immediately updated because it requires 2 people to verify/ add information to that one place. |
+| Navigate the website | Navigation was smooth; icons and legibility needed improvement | Clearer icons, larger controls and revised cards |
+| Find a museum's accessible toilet information | Information was discoverable; a reporting option was requested | Added a prominent reporting entry |
+| Contribute accessibility answers | Questionnaire was straightforward; confirmation was not immediate | Explain the two-person confirmation rule |
 
-*Table 2: User-testing tasks and results.*
+*Table 2: Feedback from three testers and the resulting design changes.*
 
-From these results we changed the buttons, navigation, legibility, icon sizes and place cards. Pins now carry an icon for each kind of place, and the final site has a "Report a problem" button. The Mapper result shows the cost of the two-agree rule, so the card tells contributors that one more answer will confirm theirs.
-
-Namita led the visual and interaction design: she wrote specifications for each screen from the sketches and prototype, reviewed every version, and listed the bugs and changes for the next. Most of the front-end code was generated with Claude (Anthropic) from these specifications, as recorded in our AI-use log.
+Namita led the visual specifications, prototypes and iterative reviews. Most front-end code was generated with Claude from these specifications; AI assistance is acknowledged separately from the team's design decisions.
 
 #### 2.1.2 Interactive Map and Data Visualisation
 
-**From the first build to the final map.** The first build on real data (Figure 4) covered Hackney only. Every place was the same small dot, and the detailed base map competed with the data. For the final map we moved from Leaflet's fixed image tiles to MapLibre with OpenStreetMap vector tiles, so we could restyle every layer in our own calm colours and add 3D buildings.
+The initial Hackney prototype used uniform dots over a detailed Leaflet basemap (Figure 4). We moved to MapLibre vector rendering to control the visual hierarchy and add 3D buildings.
 
 ![Figure 4](img/fig4-first-build.jpg)
 
 *Figure 4: The first build on real data: Hackney only, in 2D (left) and 3D (right).*
 
-**Two maps.** The first map shows London's 33 boroughs as equal tiles, so a small borough counts as much as a large one. In Visitor mode a darker tile means a higher score, and a dashed tile means too few places have been checked for a fair score. In Mapper mode a darker tile means more information is missing. On the geographic map, places are grouped into numbered clusters at city scale and split into pins as the user zooms in (Figure 6, left), so 74,500 places stay readable.
+Two views serve different purposes. Equal-area tiles compare all 33 boroughs without privileging larger areas: Visitor mode shows accessibility scores, withholding them when coverage is insufficient, while Mapper mode highlights missing information. The geographic map clusters places at city scale and reveals individual pins as users zoom in (Figure 6).
 
-**Pins.** A pin's icon shows the kind of place and its colour the answer: green for yes, grey for no or partly, and dashed for not known, a code similar to Wheelmap's (Mobasheri et al., 2017). Missing information looks missing, never like "no": about 87% of places have no wheelchair tag, and drawing them grey would tell users that most of London is closed to them. In Mapper mode the gaps become dashed terracotta pins, a place with one answer turns light orange, and a confirmed place turns green (Figure 6, right). Pins float above a soft shadow and grow when pointed at.
+Pin icons identify place categories. Green indicates yes, grey indicates no or partial access, and dashed uncoloured symbols indicate unknown information. Wheelmap provided a precedent for communicating accessibility through map symbols (Mobasheri, Deister and Dieterich, 2017). Keeping unknown distinct from inaccessible is essential because approximately 87% of source records lack usable wheelchair information.
 
-**Cards and lists.** Pointing at a pin opens a hover card with the name, the walking time from the user and the access answers, which replaced a separate legend (Figure 5). Clicking opens the place card, which leads with the answers that decide a trip: step-free way in, accessible toilet and lift, in words as well as colour. The panel lists the places in view, sorted by walking time, and the need and place filters can be combined.
+Hover cards summarise access information; selecting a place opens entrance, toilet and lift details (Figure 5). Search and combined filters connect these summaries to practical decisions. Mapper mode uses terracotta symbols for gaps and distinguishes contributions awaiting agreement from confirmed answers, linking the visualisation to the database confirmation rule.
 
 ![Figure 5](img/fig5-final-place.jpg)
 
@@ -191,9 +185,9 @@ The local rerun verified the final patch against MySQL, including report persist
 ## 3 Back-end Development
 
 ### 3.1 Data preparation and processing
-Access London’s core place data came from a Greater London OpenStreetMap (OSM) snapshot dated 18 October 2026. We chose OSM because it provides locations, categories and accessibility tags within the same dataset. After cleaning, we retained 74,500 objects across London’s 33 local authority areas, covering food and drink venues, shops, parks, cultural venues and toilets. Borough boundaries from London Datastore were used to assign each object to an area.
+Access London’s core place data came from a Greater London OpenStreetMap (OSM) snapshot dated 18 October 2026. We chose OSM because it provides locations, categories and accessibility tags within the same dataset. After cleaning, we retained 74,500 objects across London’s 33 local authority areas, covering food and drink venues, shops, parks, cultural venues and toilets. Borough boundaries from London Datastore (Greater London Authority, n.d.) were used to assign each object to an area.
 
-Station information came from Transport for London’s (TfL) London Rail Accessibility Data (LRAD), which describes stations’ usual step-free access arrangements. We matched station coordinates using previously downloaded StopPoint API data and imported 466 records with coordinates into the database. These support the nearby-station information in the place details panel. They are static records and do not reflect live lift disruptions.
+Station information came from Transport for London’s (TfL) London Rail Accessibility Data (LRAD; Transport for London, n.d.), which describes stations’ usual step-free access arrangements. We matched station coordinates using previously downloaded StopPoint API data and imported 466 records with coordinates into the database. These support the nearby-station information in the place details panel. They are static records and do not reflect live lift disruptions.
 
 We used Python to exclude objects explicitly marked as private or prohibited access, inactive objects, records without usable geometry, and objects that could not be assigned to the London study area. We also standardised names and postcodes and converted coordinates to longitude and latitude for the web map. In the core dataset, 64,972 objects, approximately 87.2%, had missing or unclassifiable wheelchair-access tags. We retained these as unknown, because missing information does not mean that a place is inaccessible.
 
@@ -223,7 +217,9 @@ There were three principles behind the data. Firstly, we used real places(suppli
 
 During the development, What led us to use a database was the fixed JSON file cannot really update and store users responses to the User Map. Previously the page read its survey results directly from that fake data file. We therefore stored the data in MySQL and use Node.js (Express) server connects it to the front end through an API, so the map will update as soon as the answers arrive.
 
-The database contains five tables in total. The boroughs table, places table and stations table hold the base data that imported from the OpenStreetMap. We created the obstacle table and answers table to store the user’s barrier reports and the answers about one place. If the same person answers the 3 questions again, their existing row will be updated rather than create a new row. Because we want to make sure that the answers to one place is only can be confirmed when two people both agree.
+The final database contains six tables. `places` stores OSM place records; `boroughs` stores administrative boundaries and borough-level indicators; and `stations` stores TfL accessibility records. `answers` stores the three Mapper responses, while `barrier_reports` stores geolocated street reports and optional photographs. The final migration adds `place_flags` for reports that a venue has closed or that something else has changed.
+
+A unique key on place and browser-derived person identifier updates an existing Mapper response rather than counting repeat submissions twice. Place flags are stored separately from street barriers and do not change public map information. The API checks that their place exists, but `place_flags` has no database foreign key to `places`. Its protected reading endpoint supports team follow-up; there is no approve/reject action for these flags yet.
 
 Additionally, a place’s answer is only shown “confirmed” when at least two different people give the same answer and nobody disagrees. We wrote this rule in the database itself, as three SQL views that each build on the one before:
 ·         View One splits every answers into one row per question and drops “not sure”.
@@ -243,7 +239,7 @@ Our website was deployed on the Raspberry Pi and connected to MariaDB that alrea
 
 ## 5 Findings
 
-Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021) and the average deprivation score (IMD 2025) (Figure 10).
+Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021, TS038; Office for National Statistics, n.d.) and the average deprivation score (IMD 2025; Ministry of Housing, Communities and Local Government, 2025) (Figure 10).
 
 ![Figure 10: Missing wheelchair information by borough, against the disability rate and deprivation](img/fig8-findings.jpg)
 
@@ -276,18 +272,36 @@ Access London shows what is known about getting into 74,500 places in London, ma
 - **Use obstacle reports in routing.** Improve the route planner so it can use current obstacle reports to suggest routes that avoid reported barriers, rather than only listing them.
 
 ## Bibliography
+
+Euan's Guide (2022) *The Euan's Guide Access Survey 2022*. Available at: https://www.euansguide.com/media/11191572/2022-euansguideaccesssurvey.pdf (Accessed: 16 November 2026).
+
 Ferreira, A.F., Akasaka, Y., Pinheiro, M.G. de O. and Chang, S.K.J. (2020) ‘Information as the first attribute of accessibility: A method for assessing the information provided by urban rail systems to tourists with reduced mobility’, Sustainability, 12(23), 10185. Available at: https://doi.org/10.3390/su122310185.
 
-Greater London Authority (2026) Housing for disabled Londoners: An analysis of secondary data. Housing Research Note 12. Available at: London Datastore (Accessed: 15 November 2026).
-Johnson, E., Pathania, A., Pennick, K., Stewart, M., Stickland, C. and Vogelmann, E. (2023) Are we there yet? Barriers to transport for disabled people in 2023. Transport for All. Available at: Full report (Accessed: 15 November 2026).
+Greater London Authority (2026) Housing for disabled Londoners: An analysis of secondary data. Housing Research Note 12. Available at: https://data.london.gov.uk/housing/research-notes/hrn-12-2026-housing-for-disabled-londoners-an-analysis-of-secondary-data/ (Accessed: 15 November 2026).
 
-OpenStreetMap contributors (n.d.) Key:wheelchair. Available at: OpenStreetMap Wiki (Accessed: 15 November 2026).
+Greater London Authority (n.d.) *London boroughs*. London Datastore. Available at: https://data.london.gov.uk/dataset/london-boroughs-e55pw (Accessed: 16 November 2026).
 
-Sozialhelden (n.d.) About Wheelmap. Available at: Wheelmap (Accessed: 15 November 2026).
+Johnson, E., Pathania, A., Pennick, K., Stewart, M., Stickland, C. and Vogelmann, E. (2023) Are we there yet? Barriers to transport for disabled people in 2023. Transport for All. Available at: https://www.transportforall.org.uk/blog/2023/12/05/are-we-there-yet-barriers-to-transport-for-disabled-people-in-2023/ (Accessed: 15 November 2026).
+
+MDN (n.d.) *`<dialog>`: The Dialog element*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog (Accessed: 16 November 2026).
+
+Ministry of Housing, Communities and Local Government (2025) *English indices of deprivation 2025*. Available at: https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025 (Accessed: 16 November 2026).
+
+Mobasheri, A., Deister, J. and Dieterich, H. (2017) ‘Wheelmap: the wheelchair accessibility crowdsourcing platform’, *Open Geospatial Data, Software and Standards*, 2, article 27. Available at: https://doi.org/10.1186/s40965-017-0040-5 (Accessed: 16 November 2026).
+
+Office for National Statistics (n.d.) *Disability: Census 2021, dataset TS038, version 3*. Available at: https://www.ons.gov.uk/datasets/TS038/editions/2021/versions/3 (Accessed: 16 November 2026).
+
+OpenStreetMap contributors (n.d.) Key:wheelchair. Available at: https://wiki.openstreetmap.org/wiki/Key:wheelchair (Accessed: 15 November 2026).
 
 OWASP (n.d.) *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 16 November 2026).
 
-MDN (n.d.) *`<dialog>`: The Dialog element*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog (Accessed: 16 November 2026).
+Sozialhelden (n.d.) About Wheelmap. Available at: https://wheelmap.org/ (Accessed: 15 November 2026).
+
+Transport for London (n.d.) *Step Free Data Specification for lrad-v2*. Available at: https://content.tfl.gov.uk/step-free-data-specification-for-lrad-v2.pdf (Accessed: 16 November 2026).
+
+Trust for London (2023) *Census 2021 deep dive: disability and deprivation in London*. Available at: https://trustforlondon.org.uk/news/census-2021-deep-dive-disability-and-deprivation-in-london/ (Accessed: 16 November 2026).
+
+W3C (2023) *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: https://www.w3.org/TR/WCAG22/ (Accessed: 16 November 2026).
 
 ## Declaration of Authorship
 We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
