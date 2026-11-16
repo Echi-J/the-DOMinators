@@ -128,7 +128,7 @@ Pin icons identify place categories. Green indicates yes, grey indicates no or p
 
 Hover cards summarise access; selection opens entrance, toilet and lift details (Figure 5). Filters support discovery, while Mapper symbols distinguish gaps, provisional answers and confirmed contributions.
 
-![Figure 5](img/fig5-final-place.jpg)
+<p align="center"><img src="img/fig5-final-place.jpg" alt="Figure 5" width="70%"></p>
 
 *Figure 5: The final map in 3D, with the hover card for a shop and the list of nearby places.*
 
@@ -142,7 +142,7 @@ Access London separates street barriers from corrections to place information. "
 
 Reports require a location and at least one type, note or photo. Geolocation or map selection supplies coordinates; map selection lacks a keyboard equivalent. Photos are redrawn at a maximum of 1,100 pixels before JSON submission to `POST /api/barriers`. Reports remain pending until authorised approval (Figures 7–8). Server validation repeats the combined content rule because browser checks can be bypassed (OWASP, n.d.); empty reports now return HTTP 400.
 
-![Figure 7: Report a problem interface](figures/figure-7-report-interface.png)
+<p align="center"><img src="figures/figure-7-report-interface.png" alt="Figure 7: Report a problem interface" width="40%"></p>
 
 *Figure 7: Reporting dialogue with location, type, optional photograph and submission controls.*
 
@@ -235,7 +235,7 @@ Our website was deployed on the Raspberry Pi and connected to MariaDB that alrea
 
 Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021, TS038; Office for National Statistics, n.d.) and the average deprivation score (IMD 2025; Ministry of Housing, Communities and Local Government, 2025) (Figure 10).
 
-![Figure 10: Missing wheelchair information by borough, against the disability rate and deprivation](img/fig8-findings.jpg)
+<p align="center"><img src="img/fig8-findings.jpg" alt="Figure 10: Missing wheelchair information by borough, against the disability rate and deprivation" width="75%"></p>
 
 *Figure 10: Missing wheelchair information by borough, against the disability rate (left) and deprivation (right). Each dot is one of the 33 boroughs.*
 
