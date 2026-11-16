@@ -40,9 +40,9 @@ A dashed ring always means **not known**. The site never shows "not known" as "n
 - **Place card** with a checklist, confirmations, directions, save and share
 - **Mapper flow**: confirm the place, then up to three questions, one per screen, with "Not sure" always allowed
 - **Two people must agree** before a crowd answer counts towards the map and the score
-- **Reports and suggested places**, reviewed before they change anything
-- **About page** with the scoring method, a gaps chart, data sources and limits
-- **Contact form** and an accessibility statement
+- **Step-free journey planner** with TfL station access data and server-side routing
+- **Barrier reports** with location and optional photo, reviewed before they appear on the map
+- **About page** with the scoring method, data sources, limits, contact details and an accessibility statement
 - Works on phone and desktop, with a keyboard alone, with screen readers and with reduced motion
 
 ## Built with
@@ -50,7 +50,7 @@ A dashed ring always means **not known**. The site never shows "not known" as "n
 | Layer | Tools |
 |---|---|
 | Map | [MapLibre GL JS](https://maplibre.org) with vector tiles from [OpenFreeMap](https://openfreemap.org), styled in [Maputnik](https://maplibre.org/maputnik/) |
-| Charts | [Apache ECharts](https://echarts.apache.org) |
+| Routing | [openrouteservice](https://openrouteservice.org) (server-side, key kept in `.env`) |
 | Website | HTML, CSS and JavaScript, [Outfit](https://fonts.google.com/specimen/Outfit) typeface |
 | API | [Node.js](https://nodejs.org) and [Express](https://expressjs.com) |
 | Database | [MySQL](https://www.mysql.com) |
@@ -61,21 +61,19 @@ A dashed ring always means **not known**. The site never shows "not known" as "n
 
 ```mermaid
 flowchart LR
-  OSM[OpenStreetMap<br/>Overpass API] --> PY[Python pipeline<br/>clean, assign borough]
-  LDS[London Datastore<br/>borough boundaries] --> PY
-  ONS[ONS Census 2021<br/>TS038 disability] --> PY
-  IOD[IoD 2025<br/>deprivation] --> PY
-  PY --> DB[(MySQL)]
-  DB <--> API[Node + Express<br/>REST API]
-  API <--> WEB[Website<br/>MapLibre GL JS]
+  PY[Python pipeline<br/>OSM, boundaries, Census, IoD, TfL] --> SEED[Website/seed/<br/>GeoJSON, JSON, CSV]
+  SEED --> IMP[database/import.js]
+  IMP --> DB[(MySQL / MariaDB)]
+  DB <--> API[Node + Express<br/>back-end/]
+  API <--> WEB[front-end/<br/>MapLibre GL JS]
+  ORS[openrouteservice] <--> API
   TILES[OpenFreeMap<br/>vector tiles] --> WEB
 ```
 
-1. **Collect:** one Overpass query fetches London places and their `wheelchair` and `toilets:wheelchair` tags. It runs at most once a day and the result is saved; the website never calls Overpass directly.
-2. **Clean:** Python reprojects borough boundaries from British National Grid (EPSG:27700) to WGS84 (EPSG:4326) and assigns each place to a borough.
-3. **Store:** MySQL holds places, their access values, crowd answers, reports and messages.
-4. **Serve:** an Express API returns JSON and GeoJSON.
-5. **Show:** MapLibre draws OpenFreeMap vector tiles restyled to our palette, with our GeoJSON layers on top.
+1. **Collect and clean:** the group's Python pipeline fetched OpenStreetMap places, borough boundaries, Census 2021 and IoD 2025 figures and TfL station data, and saved the cleaned output in `Website/seed/`. The pipeline scripts are not part of this repository.
+2. **Store:** `database/schema.sql` creates the tables and views, and `database/import.js` loads `seed/` into MySQL. `database/migrate.js` adds the barrier reports table without touching existing data.
+3. **Serve:** `back-end/server.js` (Express 5) serves the JSON/GeoJSON API under `/api` and the static pages in `front-end/`.
+4. **Show:** MapLibre draws OpenFreeMap vector tiles restyled to our palette, with our GeoJSON layers on top.
 
 **Scoring**, per borough, from the step-free entrance answer:
 
@@ -92,85 +90,54 @@ Under 15% coverage the borough shows "too few answers to score" instead of a num
 
 | Tool | Version |
 |---|---|
-| Node.js | 22 LTS or later |
+| Node.js | 22.13 or later |
 | Express | 5.x |
 | mysql2 (Node driver) | 3.x |
-| MapLibre GL JS | 5.x |
-| Python | 3.11 or later |
-| GeoPandas / Shapely | 1.x / 2.x |
-| MySQL | 8.4 LTS (MariaDB 10.6+ also works) |
-| Docker (optional) | Docker Engine 24+ with Compose v2 |
+| MapLibre GL JS | 5.x (loaded from a CDN) |
+| MySQL | 8.x (MariaDB 10.6+ also works) |
 
-No paid services and no API keys are needed to run the site.
+An [openrouteservice](https://openrouteservice.org) key is only needed for the journey planner's routing.
 
-### Option A: run locally
+### Run locally
 
 ```bash
-git clone https://github.com/<your-org>/access-london.git
-cd access-london
-cp .env.example .env              # set DB_PASSWORD and SESSION_SALT
+git clone https://github.com/Echi-J/the-DOMinators.git
+cd the-DOMinators/Website
+npm ci
+cp .env.example .env              # your own local DB_* values, ORS_API_KEY, REVIEW_KEY
 
-# 1. database
-mysql -u root -p < database/schema.sql
+# new, empty database only: import.js drops and recreates the core tables
+npm run db:setup
+npm run db:migrate
 
-# 2. data
-cd data-pipeline
-pip install -r requirements.txt
-python load_boundaries.py --file london_boroughs.geojson
-python fetch_osm.py               # one request to Overpass; please don't loop it
-python load_context.py            # Census TS038 and IoD 2025 CSVs
-python seed_synthetic.py --seed 42 && mysql -u root -p access_london < seed.sql   # optional sample data
-cd ..
-
-# 3. API and website
-cd api && npm install && npm run dev      # http://localhost:3000/api
-cd ../web && npm install && npm run dev   # http://localhost:5173
+npm start                         # http://localhost:3000
 ```
 
-### Option B: run with Docker
+Never run `npm run db:setup` against the live Raspberry Pi database or any populated database. See `Website/PI_DEPLOY_GUIDE.md` for deployment checks.
 
-```yaml
-# docker-compose.yml
-services:
-  db:
-    image: mysql:8.4
-    environment:
-      MYSQL_DATABASE: access_london
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-    volumes:
-      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
-      - db-data:/var/lib/mysql
-  api:
-    build: ./api
-    env_file: .env
-    environment:
-      DB_HOST: db
-    depends_on: [db]
-    ports: ["3000:3000"]
-  web:
-    build: ./web
-    depends_on: [api]
-    ports: ["8080:80"]
-volumes:
-  db-data:
-```
+### Tests
 
 ```bash
-cp .env.example .env
-docker compose up --build         # website on http://localhost:8080
+npm run test:structure            # front-end structure and journey helpers, no database needed
+node --test test/unified-journey.test.js
+npm test                          # API tests: needs a running server and a disposable test database
 ```
 
 ### Project structure
 
 ```
-access-london/
-├── data-pipeline/     # Overpass query, loaders, sample-data generator
-├── database/          # schema.sql: tables and views
-├── api/               # Node + Express REST API
-├── web/               # home, map, about and contact pages
-├── docs/              # screenshots for this README
-├── docker-compose.yml
-├── .env.example
+the-DOMinators/
+├── Website/
+│   ├── front-end/      # HTML pages, css/, js/, img/
+│   ├── back-end/       # server.js, db.js, routes/
+│   ├── database/       # schema.sql, import.js, migrate.js, migrations/
+│   ├── data/           # published borough, place, TfL and venue evidence files
+│   ├── seed/           # database import inputs and simulated surveys
+│   ├── test/           # node:test test files
+│   ├── .env.example
+│   └── package.json
+├── Group Report/       # final report, drafts and figures
+├── docs/               # screenshots for this README
 └── LICENSE
 ```
 
@@ -178,14 +145,20 @@ access-london/
 
 | Method | Endpoint | Returns or does |
 |---|---|---|
+| GET | `/api/health` | Database status and row counts |
 | GET | `/api/boroughs` | All boroughs with score, coverage and confidence |
-| GET | `/api/boroughs/:code/places?needs=ent,toilet&cat=food` | Places as GeoJSON, filtered by needs and type |
-| GET | `/api/places/:id` | One place with its access checklist and confirmations |
-| GET | `/api/stats/gaps` | Coverage against disability share for every borough |
-| POST | `/api/answers` | A mapper's answer to one question |
-| POST | `/api/reports` | "Something was different" on a place |
-| POST | `/api/suggestions` | A place missing from the map |
-| POST | `/api/contact` | A contact form message |
+| GET | `/api/boundaries`, `/api/boundaries/:code` | Borough outlines as GeoJSON |
+| GET | `/api/places?borough=` | Places in a borough as GeoJSON |
+| GET | `/api/places/details?borough=` | Place details for a borough |
+| GET | `/api/places/overview`, `/api/places/viewport` | London-wide and map-view place layers |
+| GET | `/api/places/detail`, `/api/places/locate` | One place and where it is |
+| GET | `/api/search-index`, `/api/postcode` | Place search and postcode lookup |
+| GET | `/api/stations` | TfL stations with step-free information |
+| GET / POST | `/api/answers` | Read answers, or send a mapper's answers |
+| GET | `/api/journey/status`, `/api/journey/search` | Routing availability and location search |
+| POST | `/api/journey/route` | A route from openrouteservice |
+| GET / POST | `/api/barriers` | Approved barrier reports, or send a new one |
+| GET / POST | `/api/review/barriers` | Moderation, needs `X-Review-Key` |
 
 POST endpoints validate input on the server and are rate-limited.
 
@@ -195,11 +168,11 @@ The module allows made-up data for parts that can't exist yet, so we only make u
 
 | Real | Synthetic in the demo |
 |---|---|
-| Places and wheelchair tags (OpenStreetMap) | Mapper answers |
-| Borough boundaries | Reports and suggested places |
-| Census and deprivation figures | Contact messages |
+| Places and wheelchair tags (OpenStreetMap) | Mapper answers (`seed/simulated_surveys.csv`) |
+| Borough boundaries | |
+| Census and deprivation figures | |
 
-Every synthetic row has `is_synthetic = TRUE` and is labelled "sample" on the site, so it can be removed in one step when real answers arrive.
+Every simulated answer has `is_simulated = TRUE` and is labelled "sample" on the site, so it can be removed in one step when real answers arrive.
 
 ## Accessibility and privacy
 
@@ -210,8 +183,8 @@ Every synthetic row has `is_synthetic = TRUE` and is labelled "sample" on the si
   - tap targets are 44px or more
   - moving content can be paused
   - colour is never the only signal
-- No accounts and no names. A random browser cookie, hashed on the server, only stops the same person answering a question twice.
-- An email is asked for only on the contact form. It's optional and deleted after 90 days.
+- No accounts and no names. A random browser ID, hashed on the server, only stops the same person answering a question twice.
+- Barrier reports and their photos stay hidden until reviewed.
 
 ## Limits
 
