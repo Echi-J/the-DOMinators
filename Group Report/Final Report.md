@@ -138,7 +138,7 @@ The initial checks were written and run on 16 November with Claude in an isolate
 
 ![Figure 9: Final integration testing evidence](figures/figure-9-integration-testing-evidence.png)
 
-*Figure 9: Independently rerun automated checks of the final patched Express/MySQL application on 16 November 2026. All listed checks met their expectations; the figure states the environment and scope limitations.*
+*Figure 9: Independently rerun automated checks of the final patched Express/MySQL application on 16 November 2026. All listed checks met their expectations.*
 
 Three faults in the earlier implementation were investigated through browser testing. Pressing Escape while choosing a point on the map left the form closed and, at the next opening, empty. Event logging showed why: the `keydown` listener in `map-ui.js` reopened the dialog during the key event, and Chrome then applied Escape's default action to it. This mainly affected keyboard users, since the on-screen Cancel button worked. The listener now calls `preventDefault()`, and the form reopens with the typed note intact. Second, the confirmation was requested for 5.2 seconds, but `toast()` accepted no duration and removed it after 2.6. As the dialog has already closed, that message is the user's only evidence that the report was stored. `toast()` now takes an optional duration, and the message was measured at 5.2 seconds. Third, a network failure showed the browser's own "Failed to fetch"; `submit()` now catches that case and shows a plain message, keeping the form and its input.
 
