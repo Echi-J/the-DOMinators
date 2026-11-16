@@ -169,9 +169,10 @@ So the answer to our question is no: missing information is not concentrated whe
 - **Scope.** The site covers five kinds of everyday place. GP surgeries, pharmacies, hospitals and the needs of blind, Deaf and neurodivergent visitors are not included.
 - **No real answers yet.** The Mapper rule was tested with 1,392 simulated answers, labelled on the site. No real answers had been collected by submission, so borough scores still rest mainly on OpenStreetMap tags.
 - **Trust.** Without sign-in, one person using two devices can confirm an answer alone. The two-agree rule catches honest mistakes, not deliberate ones.
-- **Routes.** Wheelchair routes depend on kerb and surface data in OpenStreetMap, which is often missing, so a suggested route may still contain barriers.
-- **Testing.** Only three people tested the site, recruited informally, so the results show usability problems rather than whether the site meets disabled users' needs.
-- **Findings.** The comparison uses 33 boroughs, which may hide patterns at neighbourhood level.
+- **Routes.** The current route planner lists reported obstacles, but does not change the route to avoid them.
+- **Approval delays.** Obstacle reports and photos only appear on the map after a reviewer approves them. This helps keep inappropriate or false content off the map, but delays information that users may need immediately.
+- **Outdated reports.** The database does not update automatically when an obstacle is cleared. So outdated obstacles can remain on the map.
+
 
 ## 7 Conclusion and future work
 
@@ -179,10 +180,10 @@ Access London shows what is known about getting into 74,500 places in London, ma
 
 - **Test with disabled people.** Our three testers improved navigation and legibility. The next round should be with wheelchair users and organisations such as Transport for All.
 - **Cover more of the trip:** essential services such as GP surgeries and pharmacies, bus stops and National Rail stations, live TfL lift status, and kerb heights along routes.
-- **Serve more people:** tactile paving, hearing loops and quiet times for blind, Deaf and neurodivergent visitors.
 - **Make answers harder to fake.** The two-agree rule catches honest mistakes, but one person on two devices can still confirm an answer. Sign-in, and photos of entrances checked by a reviewer as barrier reports already are, would make it stronger.
-- **Show how recent each answer is,** and ask Mappers to re-check old ones.
 - **Test the findings at neighbourhood level,** not only by borough.
+- **Keep obstacle reports current.** Let nearby users confirm whether an obstacle is still there, so reports can be checked and outdated ones removed from the map without relying only on reviewers.
+- **Use obstacle reports in routing.** Improve the route planner so it can use current obstacle reports to suggest routes that avoid reported barriers, rather than only listing them.
 
 ## Bibliography
 Ferreira, A.F., Akasaka, Y., Pinheiro, M.G. de O. and Chang, S.K.J. (2020) ‘Information as the first attribute of accessibility: A method for assessing the information provided by urban rail systems to tourists with reduced mobility’, Sustainability, 12(23), 10185. Available at: https://doi.org/10.3390/su122310185.
