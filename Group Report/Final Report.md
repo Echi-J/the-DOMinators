@@ -146,7 +146,7 @@ Reports require a location and at least one type, note or photo. Geolocation or 
 
 *Figure 7: Reporting dialogue with location, type, optional photograph and submission controls.*
 
-![Figure 8: Reporting data flow](figures/figure-8-reporting-data-flow.png)
+<p align="center"><img src="figures/figure-8-reporting-data-flow.png" alt="Figure 8: Reporting data flow" width="70%"></p>
 
 *Figure 8: Validated reports enter MySQL as pending; only approved reports become public.*
 
