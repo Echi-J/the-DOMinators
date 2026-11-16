@@ -1,0 +1,22 @@
+Access London — dataset and third-party attribution notes (source attribution notes)
+
+The GitHub Website/data/ folder contains borough, place, TfL and attribution files.
+The database import code may also require the separate Website/seed/ folder,
+which should be uploaded before claiming the repository is fully reproducible.
+
+The original uploaded data-licence note referred to seed/manifest.json,
+seed/tfl/attribution.json and public/vendor/leaflet/ files that are NOT in
+this ZIP. Therefore, do not claim those supporting attribution/verification
+files are included in the documentation-only upload. Confirm data origin, relevant licence conditions and
+required notices with your team's original datasets before final submission.
+
+Possible upstream sources described in the project's supplied notes:
+OpenStreetMap: © OpenStreetMap contributors; ODbL 1.0
+https://www.openstreetmap.org/copyright
+Transport for London: TfL Open Data terms
+https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service
+Additional borough/disability/IMD sources: consult data/attribution.json and team source notes
+
+This file is not an independent verification of licence compliance.
+Map library/CDN licence notices should be checked against actual dependencies
+referenced by the HTML before distribution.

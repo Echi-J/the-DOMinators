@@ -1,0 +1,23 @@
+{
+  "name": "access-london",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Access London: accessible journey planning, community barrier reports and place accessibility information.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "db:setup": "node --env-file=.env database/import.js",
+    "start": "node --env-file=.env back-end/server.js",
+    "test": "node --env-file=.env --test test/api.test.js",
+    "db:migrate": "node --env-file=.env database/migrate.js",
+    "test:journey": "node --test test/journey.test.js",
+    "test:structure": "node --test test/frontend-structure.test.js test/journey.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "mysql2": "^3.15.0"
+  }
+}
