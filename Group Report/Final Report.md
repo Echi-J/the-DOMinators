@@ -1,10 +1,52 @@
-# 1 Introduction
+# Access London
 
-## 1.1 Background
+## Final Group Report
+
+**Module:** UCL CASA0017 — Web Architecture
+
+**Team:** the-DOMinators
+
+**Website:** [Access London on PiCloud](http://10.129.111.36:3000/) (UCL network access required)
+
+**Repository:** [Echi-J/the-DOMinators](https://github.com/Echi-J/the-DOMinators)
+
+## Table of Contents
+
+- [1 Introduction](#1-introduction)
+  - [1.1 Background](#11-background)
+  - [1.2 Motivation](#12-motivation)
+  - [1.3 Aims and Objectives](#13-aims-and-objectives)
+  - [1.4 Project Overview](#14-project-overview)
+- [2 Front-end Development](#2-front-end-development)
+  - [2.1 Front-end Development](#21-front-end-development)
+    - [2.1.1 UI/UX Design and Page Layout](#211-uiux-design-and-page-layout)
+    - [2.1.2 Interactive Map and Data Visualisation](#212-interactive-map-and-data-visualisation)
+    - [2.1.3 User Interaction and Reporting Features](#213-user-interaction-and-reporting-features)
+    - [2.1.4 Front-end Integration and Testing](#214-front-end-integration-and-testing)
+- [3 Back-end Development](#3-back-end-development)
+  - [3.1 Data preparation and processing](#31-data-preparation-and-processing)
+  - [3.2 Connecting the source data to the database](#32-connecting-the-source-data-to-the-database)
+  - [3.3. Backend testing and validation](#33-backend-testing-and-validation)
+- [4 Simulated Data and the database](#4-simulated-data-and-the-database)
+  - [4.1 Simulated survey data](#41-simulated-survey-data)
+  - [4.2 From a static file to a database](#42-from-a-static-file-to-a-database)
+  - [4.3 Sending and reading answers](#43-sending-and-reading-answers)
+  - [4.4 Deployment](#44-deployment)
+- [5 Findings](#5-findings)
+- [6 Limitations](#6-limitations)
+- [7 Conclusion and future work](#7-conclusion-and-future-work)
+- [Bibliography](#bibliography)
+- [Declaration of Authorship](#declaration-of-authorship)
+
+---
+
+## 1 Introduction
+
+### 1.1 Background
 
 According to the 2021 Census, approximately 1.16 million London residents were disabled (Greater London Authority, 2026). For wheelchair users and people with reduced mobility, planning a visit may require information about entrances, toilets and conditions along the route. However, Transport for All found that 46% of disabled respondents in England experienced difficulty finding information in advance for walking or wheeling journeys (Johnson et al., 2023, p. 28). Research examining 212 urban rail systems worldwide also identified unclear or insufficient accessibility information, particularly about station surroundings and transfers (Ferreira et al., 2020). These findings highlight the importance of information that helps people assess both their destination and the journey, while recognising that accessibility needs vary between individuals.
 
-## 1.2 Motivation
+### 1.2 Motivation
 
 Access London developed from the team's interest in making accessibility information easier to explore and contribute to. The project focuses on wheelchair users and people with reduced mobility in London, while allowing other residents and visitors to share observations. Existing platforms such as Wheelmap demonstrate how users can find places and contribute wheelchair accessibility ratings through a map interface (Sozialhelden, n.d.).
 
@@ -12,7 +54,7 @@ During data preparation, the team found that many places in the selected OpenStr
 
 The team therefore developed two connected functions: helping visitors explore available information and enabling contributors to fill gaps or flag discrepancies. A borough overview places individual records in a wider context by showing recorded accessibility alongside data coverage. Suggested routes and street barrier reporting extend the focus beyond destinations to conditions encountered along a journey. Together, these choices connect information use with opportunities to improve it.
 
-## 1.3 Aims and Objectives
+### 1.3 Aims and Objectives
 
 The primary aim of Access London is to develop a web application that supports informed travel decisions for wheelchair users and people with reduced mobility in London. The objectives are:
 
@@ -23,13 +65,15 @@ The primary aim of Access London is to develop a web application that supports i
 
 These objectives guide the platform towards supporting individual decisions while making the limitations of the available evidence visible.
 
-## 1.4 Project Overview
+### 1.4 Project Overview
 
 Access London combines Visitor and Mapper modes within a map-based interface. Visitor mode supports place searches, accessibility filters and route suggestions. Mapper mode provides a short questionnaire for contributing missing accessibility information. Users can also report street barriers and discrepancies in place records. A complementary borough view summarises recorded wheelchair accessibility, withholding scores where coverage is insufficient. The application connects these interactions to stored place records and user submissions. Route suggestions and borough scores are presented with qualifications about data coverage and conditions on the ground.
 
-## 2.1 Front-end Development
+## 2 Front-end Development
 
-### 2.1.1 UI/UX Design and Page Layout
+### 2.1 Front-end Development
+
+#### 2.1.1 UI/UX Design and Page Layout
 
 **Who we design for.** Access London is for disabled people and people with access needs, mainly wheelchair users and anyone who cannot manage steps, including people with a pushchair or an injury. 13.2% of Londoners are disabled, from 10.7% in the City of London to 16.2% in Islington (Trust for London, 2023). Access information decides whether many go out at all: 91% look for it before visiting somewhere new, and 58% avoid a venue that has not published it (Euan's Guide, 2022). We turned this research into six questions a disabled person asks before a trip (Table 1), and used them to decide what each screen must answer. The site covers five kinds of everyday place where knowing about the entrance and the toilet decides whether a trip happens: food and drink, parks, museums and galleries, shops, and public toilets.
 
@@ -76,7 +120,7 @@ From these results we changed the buttons, navigation, legibility, icon sizes an
 
 Namita led the visual and interaction design: she wrote specifications for each screen from the sketches and prototype, reviewed every version, and listed the bugs and changes for the next. Most of the front-end code was generated with Claude (Anthropic) from these specifications, as recorded in our AI-use log.
 
-### 2.1.2 Interactive Map and Data Visualisation
+#### 2.1.2 Interactive Map and Data Visualisation
 
 **From the first build to the final map.** The first build on real data (Figure 4) covered Hackney only. Every place was the same small dot, and the detailed base map competed with the data. For the final map we moved from Leaflet's fixed image tiles to MapLibre with OpenStreetMap vector tiles, so we could restyle every layer in our own calm colours and add 3D buildings.
 
@@ -98,7 +142,7 @@ Namita led the visual and interaction design: she wrote specifications for each 
 
 *Figure 6: Left: London at city scale, with places grouped into clusters. Right: Mapper mode, with a gap being answered and a confirmed place in green.*
 
-### 2.1.3 User Interaction and Reporting Features
+#### 2.1.3 User Interaction and Reporting Features
 
 Section 1.1 explained why access information needs correcting by its users, and a tester asked for a reporting option (Table 2). Access London has two reporting paths, built differently.
 
@@ -118,7 +162,7 @@ The second path, "Something was different" on a place card, had a more serious f
 
 Flags have no review page, are not de-duplicated per person and change nothing on the map, and "Something else" has no text field. Other points are risks rather than observed failures: moderation depends on one shared reviewer key, photos may show faces, approved reports never expire, and "Use my location" publishes the reporter's position at full precision once approved.
 
-### 2.1.4 Front-end Integration and Testing
+#### 2.1.4 Front-end Integration and Testing
 
 `server.js` runs one Express process that mounts the API routers under `/api` and serves `front-end/` from the same origin, so pages call relative URLs and need no CORS configuration. A report follows the whole path (Figure 8): the browser posts JSON, the router validates it and inserts a row, and the 201 response closes the dialog and shows a confirmation. The write paths differ in reliability: `answers.js` queues Mapper answers in `localStorage` and resends them when the connection returns, whereas a failed barrier report or place flag is not queued.
 

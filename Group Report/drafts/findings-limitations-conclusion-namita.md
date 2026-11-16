@@ -2,7 +2,7 @@
 
 Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021) and the average deprivation score (IMD 2025) (Figure 8).
 
-![Figure 8: Missing wheelchair information by borough, against the disability rate and deprivation](img/fig8-findings.jpg)
+![Figure 8: Missing wheelchair information by borough, against the disability rate and deprivation](../img/fig8-findings.jpg)
 
 *Figure 8: Missing wheelchair information by borough, against the disability rate (left) and deprivation (right). Each dot is one of the 33 boroughs.*
 
