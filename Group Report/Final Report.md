@@ -124,9 +124,9 @@ Flags have no review page, are not de-duplicated per person and change nothing o
 
 Integration mostly happened outside pull requests: #1 was merged into `main` on 6 November, #2 and #3 never reached it, and later files were committed directly. With no review step or automated check where one person's work met another's, these faults were found only in testing.
 
-The initial checks were written and run on 16 November with Claude in an isolated environment with a disposable database (Node 22, MariaDB 10.11, headless Chrome 153). On the same date, the final patch was independently rerun with Codex on Windows using Node 24.15.0, a separate MySQL84 test database and headless Chrome 156. The browser harness used simulated geolocation and locally served MapLibre resources with external requests blocked. These were AI-assisted automated checks, not manual testing by the team. The 28 original static tests match patterns in source text and passed while every fault was present. We therefore added API tests that fail on the unfixed code, and a scripted browser check.
+The initial checks were written and run on 16 November with Claude in an isolated environment with a disposable database (Node 22, MariaDB 10.11, headless Chrome 153). On the same date, the final patch was independently rerun with Codex on Windows using Node 24.15.0, a separate MySQL84 test database and headless Chrome 156. The local browser harness used simulated geolocation and locally served MapLibre resources with external requests blocked. The team subsequently repeated the checks against the application deployed on the Raspberry Pi and confirmed the same final results shown in Table 3. These automated checks are separate from the user testing described in Section 2.1.1. The 28 original static tests match patterns in source text and passed while every fault was present. We therefore added API tests that fail on the unfixed code, and a scripted browser check.
 
-| Level | Command | Before fixes (earlier run) | Final patch (independent rerun) |
+| Level | Command | Before fixes (earlier run) | Final patch (local and Raspberry Pi reruns) |
 |---|---|---|---|
 | Static tests | `npm run test:static` | 28 of 28 | 37 of 37 (9 new) |
 | API tests | `npm test` | 6 of 6 | 6 of 6 |
@@ -134,15 +134,15 @@ The initial checks were written and run on 16 November with Claude in an isolate
 | Report API check | `report-api-check.mjs` | 18 of 19 | 19 of 19 |
 | Browser check | `report-form-check.mjs` | 20 of 24 | 37 of 37 |
 
-*Table 3: Earlier pre-fix results reported in the supplied draft and independently rerun final-patch results on 16 November 2026. The pre-fix results were not independently repeated.*
+*Table 3: Earlier pre-fix results and final-patch results reproduced locally and confirmed by the team on the Raspberry Pi deployment. The pre-fix results were not independently repeated.*
 
 ![Figure 9: Final integration testing evidence](figures/figure-9-integration-testing-evidence.png)
 
-*Figure 9: Independently rerun automated checks of the final patched Express/MySQL application on 16 November 2026. All listed checks met their expectations.*
+*Figure 9: Final automated test results, reproduced locally and confirmed by the team against the Raspberry Pi deployment. All listed checks met their expectations.*
 
 Three faults in the earlier implementation were investigated through browser testing. Pressing Escape while choosing a point on the map left the form closed and, at the next opening, empty. Event logging showed why: the `keydown` listener in `map-ui.js` reopened the dialog during the key event, and Chrome then applied Escape's default action to it. This mainly affected keyboard users, since the on-screen Cancel button worked. The listener now calls `preventDefault()`, and the form reopens with the typed note intact. Second, the confirmation was requested for 5.2 seconds, but `toast()` accepted no duration and removed it after 2.6. As the dialog has already closed, that message is the user's only evidence that the report was stored. `toast()` now takes an optional duration, and the message was measured at 5.2 seconds. Third, a network failure showed the browser's own "Failed to fetch"; `submit()` now catches that case and shows a plain message, keeping the form and its input.
 
-The independent rerun verified the final patch against MySQL, including report persistence, moderation and public visibility. It did not establish behaviour on a phone, with a real camera or screen reader, or on the Raspberry Pi deployment. The new API tests need a running server and database, so they do not yet run on each pull request.
+The local rerun verified the final patch against MySQL, including report persistence, moderation and public visibility; the team also confirmed the same test results on the Raspberry Pi deployment using MariaDB. These results do not establish behaviour on a phone, with a real camera or with a screen reader. The new API tests need a running server and database, so they do not yet run on each pull request.
 
 ## 3 Back-end Development
 
