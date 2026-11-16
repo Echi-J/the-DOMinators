@@ -98,6 +98,40 @@ Namita led the visual and interaction design: she wrote specifications for each 
 
 *Figure 6: Left: London at city scale, with places grouped into clusters. Right: Mapper mode, with a gap being answered and a confirmed place in green.*
 
+### 2.1.3 User Interaction and Reporting Features
+
+Section 1.1 explained why access information needs correcting by its users, and a tester asked for a reporting option (Table 2). Access London has two reporting paths, built differently.
+
+The first, "Report a problem", covers street barriers and opens from the header, a place card or a planned route through `openReport()` in `map-ui.js`; a place card passes its coordinates, so the location is already filled in (Figure 7). The form is a native `<dialog>` controlled by `barrier-report.js`; `showModal()` keeps keyboard focus inside it without a library (MDN, n.d.), and validation messages go to an `aria-live` status line while focus moves to the control concerned. A report needs a location and at least one of a type, a note or a photo. The location comes from geolocation or a map click, which has no keyboard equivalent. `compress()` redraws an optional photo at no more than 1,100 pixels, and a test image carrying an EXIF GPS tag reached the server without it. `submit()` sends `{lon, lat, type, note, photo}` as JSON to `POST /api/barriers` (Figure 8), and the report stays `pending` until a reviewer approves it.
+
+Originally the server did not enforce the second condition: `routes/barriers.js` checked each field separately, so a request sent without the form returned 201 and stored an empty row. Client-side checks can always be bypassed (OWASP, n.d.), so the route now repeats the combined rule and returns 400, which a regression test confirms.
+
+The second path, "Something was different" on a place card, had a more serious fault. `sendReport()` converted three of its five options into Mapper answers. "Closed" and "Something else" had no mapping, so no request was sent, yet the thank-you screen still appeared; Mapper mode's "It has closed" button behaved the same way. A confirmation with no stored record undermines the trust that crowd-sourced data depends on. We added a `place_flags` table and a `POST /api/place-flags` route, and both handlers now wait for a 201 response, showing an error and staying on the same step if the request fails; a retry sends only what is missing. The wording was corrected too: a flag's confirmation now says it is saved for the team, and only the three answer options still mention confirmation by others. In the browser check each option produced one stored flag and a blocked request produced no thank-you.
+
+Flags have no review page, are not de-duplicated per person and change nothing on the map, and "Something else" has no text field. Other points are risks rather than observed failures: moderation depends on one shared reviewer key, photos may show faces, approved reports never expire, and "Use my location" publishes the reporter's position at full precision once approved.
+
+### 2.1.4 Front-end Integration and Testing
+
+`server.js` runs one Express process that mounts the API routers under `/api` and serves `front-end/` from the same origin, so pages call relative URLs and need no CORS configuration. A report follows the whole path (Figure 8): the browser posts JSON, the router validates it and inserts a row, and the 201 response closes the dialog and shows a confirmation. The write paths differ in reliability: `answers.js` queues Mapper answers in `localStorage` and resends them when the connection returns, whereas a failed barrier report or place flag is not queued.
+
+Integration mostly happened outside pull requests: #1 was merged into `main` on 6 November, #2 and #3 never reached it, and later files were committed directly. With no review step or automated check where one person's work met another's, these faults were found only in testing.
+
+The initial checks were written and run on 16 November with Claude in an isolated environment with a disposable database (Node 22, MariaDB 10.11, headless Chrome 153). On the same date, the final patch was independently rerun with Codex on Windows using Node 24.15.0, a separate MySQL84 test database and headless Chrome 156. The browser harness used simulated geolocation and locally served MapLibre resources with external requests blocked. These were AI-assisted automated checks, not manual testing by the team. The 28 original static tests match patterns in source text and passed while every fault was present. We therefore added API tests that fail on the unfixed code, and a scripted browser check.
+
+| Level | Command | Before fixes (earlier run) | Final patch (independent rerun) |
+|---|---|---|---|
+| Static tests | `npm run test:static` | 28 of 28 | 37 of 37 (9 new) |
+| API tests | `npm test` | 6 of 6 | 6 of 6 |
+| Reporting regression tests (new) | `npm run test:reports` | 1 of 5 | 5 of 5 |
+| Report API check | `report-api-check.mjs` | 18 of 19 | 19 of 19 |
+| Browser check | `report-form-check.mjs` | 20 of 24 | 37 of 37 |
+
+*Table 3: Earlier pre-fix results reported in the supplied draft and independently rerun final-patch results on 16 November 2026. The pre-fix results were not independently repeated.*
+
+Three faults were visible only in the browser (Figure 9). Pressing Escape while choosing a point on the map left the form closed and, at the next opening, empty. Event logging showed why: the `keydown` listener in `map-ui.js` reopened the dialog during the key event, and Chrome then applied Escape's default action to it. This mainly affected keyboard users, since the on-screen Cancel button worked. The listener now calls `preventDefault()`, and the form reopens with the typed note intact. Second, the confirmation was requested for 5.2 seconds, but `toast()` accepted no duration and removed it after 2.6. As the dialog has already closed, that message is the user's only evidence that the report was stored. `toast()` now takes an optional duration, and the message was measured at 5.2 seconds. Third, a network failure showed the browser's own "Failed to fetch"; `submit()` now catches that case and shows a plain message, keeping the form and its input.
+
+The independent rerun verified the final patch against MySQL, including report persistence, moderation and public visibility. It did not establish behaviour on a phone, with a real camera or screen reader, or on the Raspberry Pi deployment. The new API tests need a running server and database, so they do not yet run on each pull request.
+
 ## 3 Back-end Development
 
 ### 3.1 Data preparation and processing
@@ -153,11 +187,11 @@ Our website was deployed on the Raspberry Pi and connected to MariaDB that alrea
 
 ## 5 Findings
 
-Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021) and the average deprivation score (IMD 2025) (Figure 8).
+Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021) and the average deprivation score (IMD 2025) (Figure 10).
 
-![Figure 8: Missing wheelchair information by borough, against the disability rate and deprivation](img/fig8-findings.jpg)
+![Figure 10: Missing wheelchair information by borough, against the disability rate and deprivation](img/fig8-findings.jpg)
 
-*Figure 8: Missing wheelchair information by borough, against the disability rate (left) and deprivation (right). Each dot is one of the 33 boroughs.*
+*Figure 10: Missing wheelchair information by borough, against the disability rate (left) and deprivation (right). Each dot is one of the 33 boroughs.*
 
 Neither relationship is strong: r = 0.12 for the disability rate and r = 0.10 for deprivation. Islington has London's highest disability rate (16.2%) but an average gap (89.4% unknown). The clearer pattern is geographic. The largest gaps are in outer London, led by Bexley (99.6% unknown), Redbridge (97.9%) and Havering (97.5%), while central London has the most information: Westminster 71.9% and the City of London 59.7%.
 
@@ -196,6 +230,8 @@ OpenStreetMap contributors (n.d.) Key:wheelchair. Available at: OpenStreetMap Wi
 Sozialhelden (n.d.) About Wheelmap. Available at: Wheelmap (Accessed: 15 November 2026).
 
 OWASP (n.d.) *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 16 November 2026).
+
+MDN (n.d.) *`<dialog>`: The Dialog element*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog (Accessed: 16 November 2026).
 
 ## Declaration of Authorship
 We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
