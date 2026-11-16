@@ -209,22 +209,22 @@ There were three principles behind the data. Firstly, we used real places(suppli
 
 ### 4.2 From a static file to a database
 
-During the development, What led us to use a database was the fixed JSON file cannot really update and store users responses to the User Map. Previously the page read its survey results directly from that fake data file. We therefore stored the data in MySQL and use Node.js (Express) server connects it to the front end through an API, so the map will update as soon as the answers arrive.
+What led us to use a database was the fixed JSON file cannot really update and store users responses to the User Map. Previously the page read its survey results directly from that fake data file. We therefore stored the data in MySQL and use Node.js (Express) server connects it to the front end through an API, so the map will update as soon as the answers arrive.
 
-The final database contains six tables. `places` stores OSM place records; `boroughs` stores administrative boundaries and borough-level indicators; and `stations` stores TfL accessibility records. `answers` stores the three Mapper responses, while `barrier_reports` stores geolocated street reports and optional photographs. The final migration adds `place_flags` for reports that a venue has closed or that something else has changed.
-
-A unique key on place and browser-derived person identifier updates an existing Mapper response rather than counting repeat submissions twice. Place flags are stored separately from street barriers and do not change public map information. The API checks that their place exists, but `place_flags` has no database foreign key to `places`. Its protected reading endpoint supports team follow-up; there is no approve/reject action for these flags yet.
+The database contains five tables in total. The boroughs table, places table and stations table hold the base data that imported from the OpenStreetMap. We created the obstacle table and answers table to store the user’s barrier reports and the answers about one place. If the same person answers the 3 questions again, their existing row will be updated rather than create a new row. Because we want to make sure that the answers to one place is only can be confirmed when two people both agree.
 
 Additionally, a place’s answer is only shown “confirmed” when at least two different people give the same answer and nobody disagrees. We wrote this rule in the database itself, as three SQL views that each build on the one before:
 ·         View One splits every answers into one row per question and drops “not sure”.
 ·         View Two uses GROUP BY to count how many people gave each answer.
 ·         View Three uses HAVING to keep a question only when everyone who answered gave the same answer and at least two people gave it.
 
+
 ### 4.3 Sending and reading answers
 
 Answers are sent to the server with POST /api/answers. The server checks that the place exists and that the answer is valid, and limits how often one connection can submit. In our website, the users are not required to log in for submitting answers. Instead, their browser creates a random id so we can tell different people apart.
 
 The page reads the results back with GET /api/answers every 20 seconds, so answers confirmed by other people will appear on the Map automatically.
+
 
 ### 4.4 Deployment
 
