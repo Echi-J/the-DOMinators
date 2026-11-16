@@ -98,9 +98,9 @@ Namita led the visual and interaction design: she wrote specifications for each 
 
 *Figure 6: Left: London at city scale, with places grouped into clusters. Right: Mapper mode, with a gap being answered and a confirmed place in green.*
 
-## 3.1 Back-end Development
+## 3 Back-end Development
 
-### 3.1.1 Data preparation and processing
+### 3.1 Data preparation and processing
 Access London’s core place data came from a Greater London OpenStreetMap (OSM) snapshot dated 18 October 2026. We chose OSM because it provides locations, categories and accessibility tags within the same dataset. After cleaning, we retained 74,500 objects across London’s 33 local authority areas, covering food and drink venues, shops, parks, cultural venues and toilets. Borough boundaries from London Datastore were used to assign each object to an area.
 
 Station information came from Transport for London’s (TfL) London Rail Accessibility Data (LRAD), which describes stations’ usual step-free access arrangements. We matched station coordinates using previously downloaded StopPoint API data and imported 466 records with coordinates into the database. These support the nearby-station information in the place details panel. They are static records and do not reflect live lift disruptions.
@@ -109,27 +109,27 @@ We used Python to exclude objects explicitly marked as private or prohibited acc
 
 Duplicate checks considered names, categories and distances. Suspected duplicates were flagged rather than automatically merged, since nearby objects may represent different parts of the same site. The cleaned files retained original names and source information so that records could be traced back to their sources.
 
-### 3.1.2. Connecting the source data to the database
+### 3.2 Connecting the source data to the database
 The cleaned JSON and GeoJSON files were used to populate the places, boroughs and stations tables. The website queries the database through a Node.js and Express API, with official borough codes linking places to their areas. Queries use a mysql2/promise connection pool and parameterised SQL. Database connection settings are read from environment variables on the server.
 
 The map loads places within the area currently in view and supports filters for category, step-free entrance and accessible toilet. The main map queries and name search exclude records whose names were generated solely from a category and OSM identifier, leaving 69,891 objects available through these queries. The viewport endpoint returns up to 10,000 records per request and prompts users to zoom in when this limit is exceeded. These figures describe data objects and query coverage, rather than a verified count of distinct venues.
 
 For entrance information, Mapper answers that meet the confirmation rule take priority. Where no confirmed answer is available, the page uses the OSM wheelchair-access tag. This provides a general indication of access but does not establish whether a particular entrance is step-free. Source records and user answers are stored separately, allowing the displayed information to change while preserving the original place records. The simulated responses, confirmation rule and deployment process are discussed in the following sections.
  
-### 3.1.3. Backend testing and validation
+### 3.3. Backend testing and validation
 Validation focused on whether data could be queried and saved correctly. Local checks compared imported record counts with the source files. The project includes API tests for invalid answers, repeated submissions from the same browser identifier, the confirmation rule, and map filtering and viewport limits.
 
 Using a separate local MySQL database, we compared API responses with stored records to check persistence and public visibility. A test Mapper submission remained stored after refreshing the page. After applying the required database migration, a road-barrier report was saved as pending and excluded from public queries. It became publicly visible after approval. These checks examined the full process from submitting information to storing it and making it available to other users.
  
-## 3.2 Simulated Data and the database
+## 4 Simulated Data and the database
 
-### 3.2.1 Simulated survey data
+### 4.1 Simulated survey data
 
 We had no actual user data before the website launch, so our test material was a set of 1,392 simulated responses. We used those data for testing the function of the Mapper and confirming its rules. This work began with the six selected places in Hackney with 200 responses. We then extended it to six more boroughs after the first simulated data successfully stored in the database and changed the frontend of the Viewer Map.
 
 There were three principles behind the data. Firstly, we used real places(supplied by OpenStreetMap). Secondly, we only make fake answers to places with no accessibility information. Because we did not want to replace any real information. Thirdly, the responses should resemble answers from real people. The responses were generated by our Python script, with some people answering “not sure” and others disagreeing. Each simulated response was marked with an “is_simulated” tag in the database. We used this to make all the simulated data with different style in the front end design.
 
-### 3.2.2 From a static file to a database
+### 4.2 From a static file to a database
 
 During the development, What led us to use a database was the fixed JSON file cannot really update and store users responses to the User Map. Previously the page read its survey results directly from that fake data file. We therefore stored the data in MySQL and use Node.js (Express) server connects it to the front end through an API, so the map will update as soon as the answers arrive.
 
@@ -140,18 +140,18 @@ Additionally, a place’s answer is only shown “confirmed” when at least two
 ·         View Two uses GROUP BY to count how many people gave each answer.
 ·         View Three uses HAVING to keep a question only when everyone who answered gave the same answer and at least two people gave it.
 
-### 3.2.3 Sending and reading answers
+### 4.3 Sending and reading answers
 
 Answers are sent to the server with POST /api/answers. The server checks that the place exists and that the answer is valid, and limits how often one connection can submit. In our website, the users are not required to log in for submitting answers. Instead, their browser creates a random id so we can tell different people apart.
 
 The page reads the results back with GET /api/answers every 20 seconds, so answers confirmed by other people will appear on the Map automatically.
 
-### 3.2.4 Deployment
+### 4.4 Deployment
 
 Our website was deployed on the Raspberry Pi and connected to MariaDB that already built on the Pi Cloud(we used MySQL8 during the development stage). However, the Pi was on the university's internal network, so it was only reachable through the university's Wi-Fi. To let people open it outside the university, we set up Cloudflare Tunnel on the Pi, which gave us a public address for our website.
 
 
-## 6 Findings
+## 5 Findings
 
 Of the 74,500 places, 64,972 (87.2%) have no wheelchair information in OpenStreetMap. To answer our research question, we compared for each of the 33 boroughs the share of places with no wheelchair information against the share of residents who are disabled (Census 2021) and the average deprivation score (IMD 2025) (Figure 8).
 
@@ -163,7 +163,7 @@ Neither relationship is strong: r = 0.12 for the disability rate and r = 0.10 fo
 
 So the answer to our question is no: missing information is not concentrated where more disabled people live. It is concentrated away from the centre, which suggests it follows where OpenStreetMap contributors are active rather than where the need is. That still matters, because Bexley and Havering have disability rates (14.6% and 14.7%) above London's 13.2%. It is also why Mapper mode shows gaps by borough: it sends contributors to where answers are missing most. With 33 boroughs this is a broad comparison; gaps may still follow deprivation at neighbourhood level, which we did not test.
 
-## 7 Limitations
+## 6 Limitations
 
 - **Coverage.** 87.2% of places have no wheelchair information, so most pins can only say "not known". The places come from a single OpenStreetMap snapshot (18 October 2026). Their tags were never checked on site, and a place may have changed since it was mapped.
 - **Scope.** The site covers five kinds of everyday place. GP surgeries, pharmacies, hospitals and the needs of blind, Deaf and neurodivergent visitors are not included.
@@ -173,7 +173,7 @@ So the answer to our question is no: missing information is not concentrated whe
 - **Testing.** Only three people tested the site, recruited informally, so the results show usability problems rather than whether the site meets disabled users' needs.
 - **Findings.** The comparison uses 33 boroughs, which may hide patterns at neighbourhood level.
 
-## 8 Conclusion and future work
+## 7 Conclusion and future work
 
 Access London shows what is known about getting into 74,500 places in London, makes the 87% that is unknown visible, and gives anyone a quick way to fill a gap, with a two-agree rule in the database deciding when an answer is shown. Our findings show that the gaps follow geography more than need: they are largest in outer London, not where disabled Londoners are most concentrated. With more time we would:
 
