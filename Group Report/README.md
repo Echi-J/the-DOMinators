@@ -36,3 +36,11 @@ Johnson, E., Pathania, A., Pennick, K., Stewart, M., Stickland, C. and Vogelmann
 OpenStreetMap contributors (n.d.) Key:wheelchair. Available at: OpenStreetMap Wiki (Accessed: 15 November 2026).
 
 Sozialhelden (n.d.) About Wheelmap. Available at: Wheelmap (Accessed: 15 November 2026).
+
+## Declaration of Authorship
+We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+
+Digitally Sign with Your name Here
+Mengjiao Zhao
+
+ASSESSMENT DATE 16/11
