@@ -219,18 +219,6 @@ Every synthetic row has `is_synthetic = TRUE` and is labelled "sample" on the si
 - Fewer answers in a borough can mean fewer mappers, not fewer accessible places.
 - Lift and Changing Places information is rare in OpenStreetMap, so many places show it as not known.
 
-## Team and contact
-
-| Name | Role | GitHub |
-|---|---|---|
-| Aubree | | |
-| Mengjiao | | |
-| Namita | | |
-| Xinrui | | |
-| Zhaoji | | |
-
-Want to contribute or found a problem? [Open an issue](../../issues) or contact the team at _team email_.
-
 ## Licence and credits
 
 - Code: [MIT Licence](LICENSE).
