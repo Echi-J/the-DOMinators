@@ -165,6 +165,8 @@ OpenStreetMap contributors (n.d.) Key:wheelchair. Available at: OpenStreetMap Wi
 
 Sozialhelden (n.d.) About Wheelmap. Available at: Wheelmap (Accessed: 15 November 2026).
 
+OWASP (n.d.) *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series. Available at: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (Accessed: 16 November 2026).
+
 ## Declaration of Authorship
 We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
