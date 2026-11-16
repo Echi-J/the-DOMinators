@@ -200,8 +200,9 @@ OWASP (n.d.) *Input Validation Cheat Sheet*. OWASP Cheat Sheet Series. Available
 ## Declaration of Authorship
 We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
-Digitally Sign with Your name Here
+Digitally Sign with Your name Here:
 Mengjiao Zhao
 Aubree Dai
 Xinrui Li
+Zhaoji Huang
 ASSESSMENT DATE 16/11
