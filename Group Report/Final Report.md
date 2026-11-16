@@ -62,6 +62,7 @@ The primary aim of Access London is to develop a web application that supports i
 2. To provide suggested walking and wheelchair routes, alongside information about reported street barriers.
 3. To enable users to contribute observations about step-free entrances, accessible toilets and lifts, and flag discrepancies in existing records.
 4. To communicate missing information and uneven data coverage through place records and a borough overview.
+5. To test whether missing accessibility information is concentrated where disabled Londoners live, by comparing data coverage with borough disability and deprivation rates.
 
 These objectives guide the platform towards supporting individual decisions while making the limitations of the available evidence visible.
 
@@ -311,6 +312,7 @@ ASSESSMENT DATE 16/11
 This assessment falls under Category 3 of UCL's framework for generative AI in assessment: AI tools have an integral role. We used them as follows.
 Claude (Anthropic): front-end code for the map, pins, place cards, home and About pages, generated from design specifications and reviewed; Node scripts that prepare map data; editing of report sections 2, 6 and 7; checking figures in the report against the data.
 Chatgpt (OpenAi):  Back-end code assistance for the database and synthetic data. 
+Codex (OpenAI): rerunning the automated test suites (Section 2.1.4).
 
 Every AI output was read, tested and edited by the group before use. The research question, design decisions, data choices and final text are our own, and we take responsibility for them.
 
