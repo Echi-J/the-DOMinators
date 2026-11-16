@@ -98,7 +98,29 @@ Namita led the visual and interaction design: she wrote specifications for each 
 
 *Figure 6: Left: London at city scale, with places grouped into clusters. Right: Mapper mode, with a gap being answered and a confirmed place in green.*
 
+## 3.1 Back-end Development
 
+### 3.1.1 Data preparation and processing
+Access London’s core place data came from a Greater London OpenStreetMap (OSM) snapshot dated 18 October 2026. We chose OSM because it provides locations, categories and accessibility tags within the same dataset. After cleaning, we retained 74,500 objects across London’s 33 local authority areas, covering food and drink venues, shops, parks, cultural venues and toilets. Borough boundaries from London Datastore were used to assign each object to an area.
+
+Station information came from Transport for London’s (TfL) London Rail Accessibility Data (LRAD), which describes stations’ usual step-free access arrangements. We matched station coordinates using previously downloaded StopPoint API data and imported 466 records with coordinates into the database. These support the nearby-station information in the place details panel. They are static records and do not reflect live lift disruptions.
+
+We used Python to exclude objects explicitly marked as private or prohibited access, inactive objects, records without usable geometry, and objects that could not be assigned to the London study area. We also standardised names and postcodes and converted coordinates to longitude and latitude for the web map. In the core dataset, 64,972 objects, approximately 87.2%, had missing or unclassifiable wheelchair-access tags. We retained these as unknown, because missing information does not mean that a place is inaccessible.
+
+Duplicate checks considered names, categories and distances. Suspected duplicates were flagged rather than automatically merged, since nearby objects may represent different parts of the same site. The cleaned files retained original names and source information so that records could be traced back to their sources.
+
+### 3.1.2. Connecting the source data to the database
+The cleaned JSON and GeoJSON files were used to populate the places, boroughs and stations tables. The website queries the database through a Node.js and Express API, with official borough codes linking places to their areas. Queries use a mysql2/promise connection pool and parameterised SQL. Database connection settings are read from environment variables on the server.
+
+The map loads places within the area currently in view and supports filters for category, step-free entrance and accessible toilet. The main map queries and name search exclude records whose names were generated solely from a category and OSM identifier, leaving 69,891 objects available through these queries. The viewport endpoint returns up to 10,000 records per request and prompts users to zoom in when this limit is exceeded. These figures describe data objects and query coverage, rather than a verified count of distinct venues.
+
+For entrance information, Mapper answers that meet the confirmation rule take priority. Where no confirmed answer is available, the page uses the OSM wheelchair-access tag. This provides a general indication of access but does not establish whether a particular entrance is step-free. Source records and user answers are stored separately, allowing the displayed information to change while preserving the original place records. The simulated responses, confirmation rule and deployment process are discussed in the following sections.
+ 
+### 3.1.3. Backend testing and validation
+Validation focused on whether data could be queried and saved correctly. Local checks compared imported record counts with the source files. The project includes API tests for invalid answers, repeated submissions from the same browser identifier, the confirmation rule, and map filtering and viewport limits.
+
+Using a separate local MySQL database, we compared API responses with stored records to check persistence and public visibility. A test Mapper submission remained stored after refreshing the page. After applying the required database migration, a road-barrier report was saved as pending and excluded from public queries. It became publicly visible after approval. These checks examined the full process from submitting information to storing it and making it available to other users.
+ 
 
 ## 6 Findings
 
@@ -149,5 +171,5 @@ We, ALL AUTHORS NAME HERE, confirm that the work presented in this assessment is
 Digitally Sign with Your name Here
 Mengjiao Zhao
 Aubree Dai
-
+Xinrui Li
 ASSESSMENT DATE 16/11
