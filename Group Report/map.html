@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Access London — Accessible places and local knowledge</title>
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore step-free entrances, accessible toilets and lift information across London, and help fill gaps in local accessibility data.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="css/map.css">
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script src="js/map-look.js"></script>
+<script src="js/london-map.js"></script>
+<script src="js/answers-config.js"></script>
+<script src="js/answers.js"></script>
+<script src="js/london-data.js"></script>
+<script src="js/journey-geometry.js"></script>
+<script src="js/barrier-report.js"></script>
+<script src="js/dc-runtime.js"></script>
+</head>
+<body>
+<a class="skip-to-map" href="#ma-panel">Skip to place search</a>
+<template id="dc-template">
+<div class="ma map-shell" style="background: {{bg}};">
+
+<header class="ma-top" style="background: {{topFade}};">
+<a class="ma-logo" href="map.html" onClick="{{goHome}}" aria-label="Access London, back to the full London map"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40"><rect width="40" height="40" rx="13" style="fill: {{accent}}"></rect><path d="M20 7.5c-5.8 0-10.5 4.5-10.5 10.2 0 7.4 10.5 15.3 10.5 15.3s10.5-7.9 10.5-15.3C30.5 12 25.8 7.5 20 7.5z" fill="#F2F3DC"></path><path d="M16.2 23v-6.2a3.8 3.8 0 0 1 7.6 0V23z" style="fill: {{accent}}"></path><path d="M13.5 23h13" stroke="#26261F" stroke-width="1.8" stroke-linecap="round"></path></svg><b>Access</b><small>London</small></a>
+<div class="ma-glass mode-switch" role="group" aria-label="Use the map as" >
+<sc-for list="{{modes}}" as="m">
+<button type="button" onClick="{{m.pick}}" aria-pressed="{{m.pressed}}" aria-label="{{m.label}}" style="background: {{m.bg}}; color: {{m.fg}};" class="mode-button">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg><span class="ma-switchlabel">{{m.label}}</span>
+</button>
+</sc-for>
+</div>
+<div class="ma-topactions">
+<button type="button" class="ma-report ma-glass" onClick="{{openReport}}" aria-label="Report a problem: a street barrier or blocked route"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"></path><path d="M12 10v5M12 18v.01"></path></svg><span>Report a problem</span></button>
+<a class="ma-about ma-glass" href="about.html" aria-label="About Access London"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg><span class="ma-switchlabel">About</span></a>
+</div>
+</header>
+
+<main class="{{stageClass}}">
+
+<!-- The real map. It always stays the first thing in <main>, and data-dc-preserve tells the
+     page renderer to leave it alone, so MapLibre keeps its canvas between redraws. -->
+<div style="visibility: {{mapVis}};" class="fill-area"><div id="lm" data-dc-preserve class="fill-area"></div></div>
+
+<sc-if value="{{isCity}}">
+<div class="ma-enter fill-area" >
+<!-- Optional data view: borough tiles zoom to areas in the unrestricted map. -->
+
+<div class="ma-tilewrap">
+<div class="ma-tilecard borough-card" >
+<h2 class="borough-heading">{{boroughHeading}}</h2>
+<div aria-live="polite" class="borough-preview">{{hoverText}}</div>
+<div class="borough-grid">
+<sc-for list="{{tiles}}" as="t">
+<sc-if value="{{t.isTile}}">
+<button type="button" onClick="{{t.pick}}" onMouseEnter="{{t.enter}}" onMouseLeave="{{t.leave}}" onFocus="{{t.enter}}" onBlur="{{t.leave}}" aria-label="{{t.label}}" title="{{t.label}}" style="border: {{t.border}}; background: {{t.bg}}; color: {{t.fg}};" class="borough-tile">{{t.code}}</button>
+</sc-if>
+<sc-if value="{{t.isEmpty}}"><span aria-hidden="true"></span></sc-if>
+</sc-for>
+</div>
+<div class="ma-tilelegend borough-legend" >
+<span>{{legendLow}}</span>
+<sc-for list="{{legend}}" as="lg"><span style="background: {{lg}};" class="legend-swatch"></span></sc-for>
+<span>{{legendHigh}}</span>
+<sc-if value="{{isVisit}}"><span class="legend-note"><span class="unknown-mark"></span>Not enough data</span></sc-if>
+</div>
+<p class="borough-data-note">{{boroughDataNote}}</p>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isArea}}">
+<div class="ma-ctrl">
+<button type="button" class="ma-iconbtn" onClick="{{zoomIn}}" aria-label="Zoom in"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></button>
+<button type="button" class="ma-iconbtn" onClick="{{zoomOut}}" aria-label="Zoom out"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"></path></svg></button>
+<button type="button" class="ma-iconbtn" onClick="{{toggle3d}}" aria-pressed="{{threeDPressed}}" aria-label="3D view: tilt the map and raise the buildings" title="3D view"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12L4 7.5"></path></svg></button>
+<button type="button" class="ma-iconbtn" onClick="{{locate}}" aria-label="Go to where I am"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#233A6B" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></button>
+</div>
+
+</sc-if>
+
+<sc-if value="{{hasPickHint}}">
+<div class="jf-pickhint" role="status"><span>{{pickHint}}</span><button type="button" onClick="{{cancelPick}}">Cancel</button></div>
+</sc-if>
+
+<button type="button" class="ma-paneltab" onClick="{{togglePanel}}" aria-controls="ma-panel" aria-expanded="{{panelExpanded}}" aria-label="{{panelTabLabel}}" title="{{panelTabLabel}}" style="background: {{panelBg}};"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="{{panelTabIcon}}"></path></svg></button>
+
+<aside id="ma-panel" class="{{panelClass}}" aria-label="{{panelLabel}}" style="background: {{panelBg}};">
+<button type="button" class="ma-handle button-13" onClick="{{toggleSheet}}" aria-label="{{sheetLabel}}" aria-expanded="{{sheetOpen}}" ><span class="card-08"></span></button>
+
+<sc-if value="{{hasFatal}}">
+<div role="alert" class="text-53"><b class="text-52">The map can’t start</b>{{fatal}}</div>
+</sc-if>
+<sc-if value="{{loading}}">
+<p role="status" class="text-43">{{loadingText}}</p>
+</sc-if>
+
+
+<sc-if value="{{pCity}}">
+<div class="stack-05">
+<button type="button" onClick="{{closeCity}}" class="button-04">Back to the London map</button>
+<h1 style="color: {{accentText}};" class="text-51">{{cityTitle}}</h1>
+<p class="city-intro">{{cityIntro}}</p>
+<div class="ma-search">
+<label class="ma-searchbox"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B4C3D" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<span class="ma-sr">{{searchLabel}}</span>
+<input type="search" value="{{q}}" onInput="{{onSearch}}" onKeyDown="{{onSearchKey}}" placeholder="{{searchHint}}" autocomplete="off" aria-describedby="ma-search-help">
+</label>
+<span id="ma-search-help" class="ma-sr">Matches appear below as you type. Press Enter to go to the first one.</span>
+<sc-if value="{{hasSuggest}}">
+<ul class="ma-suggest" aria-label="Matches">
+<sc-for list="{{suggest}}" as="m"><li><button type="button" class="ma-sugg" onClick="{{m.pick}}"><span class="ma-sugg-icon" style="background: {{m.bg}}; border: {{m.border}};"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{m.fg}}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg></span><span class="ma-sugg-text"><b>{{m.name}}</b><span>{{m.where}}</span></span></button></li></sc-for>
+</ul>
+</sc-if>
+<sc-if value="{{noSuggest}}"><p class="ma-nores">{{noSuggestText}}</p></sc-if>
+</div>
+<button type="button" onClick="{{useLocation}}" style="background: {{ctaBg}}; color: {{ctaFg}};" class="row-35">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg><span style="color: {{ctaFg}};">Use my location</span></button>
+<p class="text-46">{{cityHint}}</p>
+<section class="city-help-card" aria-label="How to contribute">
+<h2>{{cityHelpTitle}}</h2>
+<p>{{cityHelpText}}</p>
+</section>
+<p class="ma-foot">Something wrong, or an idea? <a href="about.html#contact">Contact us</a></p>
+</div>
+</sc-if>
+
+
+<sc-if value="{{pVList}}">
+<div class="stack-05">
+<div class="row-15">
+<h1 class="text-45">{{areaName}}</h1>
+<button type="button" onClick="{{toCity}}" aria-label="Explore borough data" style="border: 2px solid {{line}};" class="row-14"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"></path></svg>Boroughs</button>
+</div>
+<div class="ma-search">
+<label class="ma-searchbox"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4B4C3D" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<span class="ma-sr">{{searchLabel}}</span>
+<input type="search" value="{{q}}" onInput="{{onSearch}}" onKeyDown="{{onSearchKey}}" placeholder="{{searchHint}}" autocomplete="off" aria-describedby="ma-search-help">
+</label>
+<span id="ma-search-help" class="ma-sr">Matches appear below as you type. Press Enter to go to the first one.</span>
+<sc-if value="{{hasSuggest}}">
+<ul class="ma-suggest" aria-label="Matches">
+<sc-for list="{{suggest}}" as="m"><li><button type="button" class="ma-sugg" onClick="{{m.pick}}"><span class="ma-sugg-icon" style="background: {{m.bg}}; border: {{m.border}};"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{m.fg}}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="{{m.icon}}"></path></svg></span><span class="ma-sugg-text"><b>{{m.name}}</b><span>{{m.where}}</span></span></button></li></sc-for>
+</ul>
+</sc-if>
+<sc-if value="{{noSuggest}}"><p class="ma-nores">{{noSuggestText}}</p></sc-if>
+</div>
+<div class="stack-11">
+<span class="text-19">Accessibility</span>
+<div class="grid-01">
+<sc-for list="{{needs}}" as="n">
+<button type="button" onClick="{{n.toggle}}" aria-pressed="{{n.pressed}}" style="border: {{n.border}}; background: {{n.bg}};" class="row-33">
+<span style="background: {{n.iconBg}};" class="row-32"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{n.iconFg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{n.icon}}"></path></svg></span>{{n.label}}</button>
+</sc-for>
+</div>
+</div>
+<div class="stack-11">
+<span class="text-19">Places</span>
+<div role="group" aria-label="Place categories" class="row-13">
+<sc-for list="{{cats}}" as="c"><button type="button" class="ma-chip" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}" style="border: {{c.border}}; background: {{c.bg}};"><sc-if value="{{c.icon}}"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="{{c.fg}}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="{{c.icon}}"></path></svg></sc-if><span style="color: {{c.fg}};">{{c.label}}</span></button></sc-for>
+</div>
+</div>
+<sc-if value="{{askLocation}}">
+<button type="button" onClick="{{locate}}" style="border: 2px solid {{line}};" class="row-31"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#233A6B" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>Use my location</button>
+</sc-if>
+<p aria-live="polite" class="text-43">{{countText}}</p>
+<sc-if value="{{noMatch}}">
+<div class="stack-19">
+<span class="text-19">No confirmed matches here.</span>
+<span class="text-12">Try another area or remove a filter.</span>
+<button type="button" onClick="{{dropNeed}}" class="button-11"><span class="text-11">{{dropText}}</span></button>
+</div>
+</sc-if>
+<div class="stack-11">
+<sc-for list="{{results}}" as="r">
+<button type="button" onClick="{{r.open}}" onMouseEnter="{{r.enter}}" onMouseLeave="{{r.leave}}" aria-label="{{r.aria}}" style="background: {{r.bg}}; opacity: {{r.op}};" class="row-30">
+<span style="background: {{r.pinBg}}; border: {{r.pinBorder}};" class="row-09"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{r.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{r.icon}}"></path></svg></span>
+<span class="stack-18"><span class="text-19">{{r.name}}</span><span class="row-29"><sc-for list="{{r.marks}}" as="m"><span style="background: {{m.bg}}; color: {{m.fg}}; border: {{m.border}};" class="text-42">{{m.text}}</span></sc-for></span></span>
+<sc-if value="{{r.hasMin}}"><span class="stack-17"><span class="text-03">{{r.min}}</span><span class="text-41">min</span></span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{moreText}}"><p class="text-40">{{moreText}}</p></sc-if>
+</div>
+</sc-if>
+
+
+<sc-if value="{{pVPlace}}">
+<div class="stack-03">
+<div class="row-28">
+<span style="background: {{pl.pinBg}}; border: {{pl.pinBorder}};" class="row-27"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{pl.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{pl.icon}}"></path></svg></span>
+<div class="stack-10"><h1 class="text-13">{{pl.name}}</h1><span class="text-12">{{pl.meta}}</span></div>
+<button type="button" class="ma-outline card-06" onClick="{{backToList}}" aria-label="Close this place" title="Close" ><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<span style="background: {{pl.vBg}}; color: {{pl.vFg}}; border: {{pl.vBorder}};" class="text-39">{{pl.verdict}}</span>
+<div class="stack-16">
+<sc-for list="{{pl.rows}}" as="row">
+<div style="background: {{row.bg}};" class="row-26">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4B4C3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{row.icon}}"></path></svg>
+<span class="stack-15"><span class="text-38">{{row.label}}</span><sc-if value="{{row.mine}}"><span class="text-37">You need this</span></sc-if></span>
+<span style="color: {{row.fg}};" class="row-25"><span aria-hidden="true" style="background: {{row.dot}}; border: {{row.dotBorder}};" class="row-24">{{row.mark}}</span>{{row.value}}</span>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{pl.note}}"><p class="text-36">{{pl.note}}</p></sc-if>
+<sc-for list="{{pl.facts}}" as="f"><span class="text-35">{{f}}</span></sc-for>
+<sc-if value="{{pl.web}}"><a href="{{pl.web}}" target="_blank" rel="noopener" class="text-29">Their website: check before you go</a></sc-if>
+<sc-if value="{{pl.confirm}}"><span class="text-02">{{pl.confirm}}</span></sc-if>
+<div class="row-23">
+<button type="button" onClick="{{act.dir}}" class="row-22"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F2F3DC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"></path></svg><span class="text-11">Get directions</span></button>
+<button type="button" class="ma-outline" onClick="{{act.save}}" aria-pressed="{{act.saved}}" aria-label="{{act.saveLabel}}" title="{{act.saveLabel}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" stroke="{{act.saveStroke}}" stroke-width="2.2" stroke-linejoin="round" style="fill: {{act.saveFill}}"><path d="M6 3h12v18l-6-4.5L6 21z"></path></svg></button>
+<button type="button" class="ma-outline" onClick="{{act.share}}" aria-label="Share a link to this place" title="Share"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7.5 7.5L12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path></svg></button>
+</div>
+<sc-if value="{{pl.hasGap}}">
+<button type="button" onClick="{{fillGap}}" class="row-01">
+<span class="row-21"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></span>
+<span class="stack-06"><b class="text-27">Been here?</b><span class="text-05">Fill in what’s missing</span></span></button>
+</sc-if>
+<div style="border-top: 1px solid {{line}};" class="stack-14">
+<span class="text-16">Been here? Was this right?</span>
+<div class="grid-01">
+<button type="button" onClick="{{confirmRight}}" class="button-10">Yes, it was</button>
+<button type="button" onClick="{{startReport}}" class="button-10">Something was different</button>
+</div>
+</div>
+<button type="button" class="jf-linkbtn" onClick="{{reportHere}}">Report a street barrier near here</button>
+</div>
+</sc-if>
+
+
+<sc-if value="{{pVRoute}}">
+<div class="stack-03 jf-route">
+<button type="button" onClick="{{backToPlace}}" class="row-07"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{rt.destName}}</button>
+<h1 class="text-26">Directions</h1>
+<ol class="jf-ends" aria-label="Route">
+<li><span class="jf-dot jf-dot-a" aria-hidden="true">A</span><span class="stack-06"><span class="text-02">From</span><b>{{rt.fromName}}</b></span></li>
+<li><span class="jf-dot jf-dot-b" aria-hidden="true">B</span><span class="stack-06"><span class="text-02">To</span><b>{{rt.destName}}</b><span class="text-02">{{rt.destMeta}}</span></span></li>
+</ol>
+
+<sc-if value="{{rt.askStart}}">
+<fieldset class="jf-start">
+<legend>Where are you starting from?</legend>
+<div class="jf-startbtns">
+<button type="button" class="jf-choice" onClick="{{rt.useGps}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>Use my location</button>
+<button type="button" class="jf-choice" onClick="{{rt.pickOnMap}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"></path><path d="M12 10h.01"></path></svg>Choose on map</button>
+</div>
+<label class="jf-label" for="jf-from">Or search a street, place or postcode</label>
+<div class="ma-searchbox jf-searchbox"><input id="jf-from" type="search" value="{{rt.fromText}}" onInput="{{rt.onFromInput}}" onKeyDown="{{rt.onFromKey}}" placeholder="e.g. E20 1EJ or Stratford station" autocomplete="off" aria-describedby="jf-from-msg"></div>
+<p id="jf-from-msg" class="text-02" aria-live="polite">{{rt.fromMsg}}</p>
+<sc-if value="{{rt.hasResults}}">
+<ul class="ma-suggest" aria-label="Starting point matches">
+<sc-for list="{{rt.results}}" as="r"><li><button type="button" class="ma-sugg" onClick="{{r.pick}}"><span class="ma-sugg-text"><b>{{r.name}}</b><span>{{r.where}}</span></span></button></li></sc-for>
+</ul>
+</sc-if>
+</fieldset>
+</sc-if>
+
+<sc-if value="{{rt.hasStart}}">
+<button type="button" class="jf-linkbtn" onClick="{{rt.changeStart}}">Change starting point</button>
+</sc-if>
+
+<div role="group" aria-label="Travel mode" class="jf-modes">
+<sc-for list="{{rt.modes}}" as="m"><button type="button" class="ma-chip" aria-pressed="{{m.pressed}}" onClick="{{m.pick}}" style="background: {{m.bg}}; border: {{m.border}};"><span style="color: {{m.fg}};">{{m.label}}</span></button></sc-for>
+</div>
+
+<p class="jf-status" role="status" aria-live="polite">{{rt.status}}</p>
+<sc-if value="{{rt.hasError}}">
+<div class="jf-error" role="alert"><p>{{rt.error}}</p><sc-if value="{{rt.canRetry}}"><button type="button" class="button-10" onClick="{{rt.retry}}">Try again</button></sc-if></div>
+</sc-if>
+
+<sc-if value="{{rt.hasRoute}}">
+<div class="jf-summary"><span class="text-32">{{rt.time}}</span><span class="text-27">{{rt.distance}} · {{rt.modeText}}</span><span class="text-31">Suggested route from mapping data. Check conditions on the day.</span></div>
+<section class="jf-barriers" aria-labelledby="jf-barriers-title">
+<h2 id="jf-barriers-title">Reported barriers on this route</h2>
+<p class="text-12">{{rt.nearText}}</p>
+<sc-for list="{{rt.near}}" as="b">
+<button type="button" class="jf-barrier" onClick="{{b.open}}"><span class="jf-warn" aria-hidden="true">!</span><span class="stack-06"><b>{{b.name}}</b><span class="text-02">{{b.when}}</span></span></button>
+</sc-for>
+</section>
+</sc-if>
+
+<button type="button" class="jf-report" onClick="{{rt.report}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"></path><path d="M12 10v5M12 18v.01"></path></svg>Report a problem on this route</button>
+
+<button type="button" class="jf-linkbtn" onClick="{{rt.goOptions}}">Public transport and other options</button>
+</div>
+</sc-if>
+
+
+<sc-if value="{{pVGo}}">
+<div class="stack-03">
+<button type="button" onClick="{{backToPlace}}" class="row-07"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{pl.name}}</button>
+<h1 class="text-26">Getting there</h1>
+<span style="background: {{pl.vBg}}; color: {{pl.vFg}}; border: {{pl.vBorder}};" class="text-34">{{pl.verdict}}</span>
+<div style="background: {{go.heroBg}}; color: {{go.heroFg}};" class="stack-13">
+<span class="text-33">From where you are</span>
+<sc-if value="{{go.hasDistance}}"><span class="text-32">{{go.km}}</span><span class="text-27">{{go.line}}</span><span class="text-31">Straight line plus a margin, not the real route.</span></sc-if>
+<sc-if value="{{go.noDistance}}"><span class="text-27">{{go.why}}</span>
+<button type="button" onClick="{{go.locate}}" class="button-09"><span class="text-30">Share my location</span></button>
+<span class="text-17">Your location stays on your device.</span></sc-if>
+</div>
+<a href="{{go.google}}" target="_blank" rel="noopener" class="row-20">Directions in Google Maps</a>
+<a href="https://tfl.gov.uk/plan-a-journey/" target="_blank" rel="noopener" class="text-29">Plan a step-free journey with TfL</a>
+<div style="border-top: 1px solid {{line}};" class="stack-12">
+<span class="text-19">Step-free stations nearby</span>
+<sc-if value="{{go.warn}}"><p class="text-28">{{go.warn}}</p></sc-if>
+<sc-for list="{{go.stations}}" as="s">
+<div style="background: {{cardBg}};" class="row-19">
+<span class="row-18">{{s.letter}}</span>
+<span class="stack-06"><b class="text-27">{{s.name}}</b><span class="text-05">{{s.lines}}</span><span class="text-05">{{s.dist}}</span></span>
+</div>
+</sc-for>
+</div>
+<p class="text-04">Station lifts can be out of order. Check TfL on the day. Station information is TfL’s usual layout, not live.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{pVReport}}">
+<div class="stack-05">
+<button type="button" onClick="{{backToPlace}}" class="row-07"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>{{pl.name}}</button>
+<h1 class="text-26">What was different?</h1>
+<p class="text-25">Pick everything that applies.</p>
+<div class="row-17">
+<sc-for list="{{reportChips}}" as="c"><button type="button" onClick="{{c.toggle}}" aria-pressed="{{c.pressed}}" style="border: {{c.border}}; background: {{c.bg}};" class="button-08">{{c.label}}</button></sc-for>
+</div>
+<button type="button" onClick="{{sendReport}}" aria-disabled="{{reportDisabled}}" style="background: {{reportBg}};" class="button-07">Send</button>
+<sc-if value="{{reportErr}}"><p role="alert" class="text-24">Pick at least one thing that was different.</p></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{pVReported}}">
+<div role="status" class="stack-03">
+<span class="row-16"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F2F3DC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h1 class="text-23">Thanks. We’ll ask others to check.</h1>
+<p class="text-08">{{pl.name}} will show a warning until someone confirms the change.</p>
+<p class="text-04">{{savedNote}}</p>
+<button type="button" onClick="{{backToList}}" class="button-06"><span class="text-11">Back to places</span></button>
+</div>
+</sc-if>
+
+
+<sc-if value="{{pMList}}">
+<div class="stack-05">
+<div class="row-15">
+<span class="text-14">{{areaName}}</span>
+<button type="button" onClick="{{toCity}}" aria-label="Explore borough data" style="border: 2px solid {{line}};" class="row-14"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"></path></svg>Boroughs</button>
+</div>
+<h1 class="text-22">Which of these have you been to?</h1>
+<div class="row-13">
+<span class="text-21">3 questions</span>
+<span class="text-21">About 30 seconds</span>
+<span class="text-21">No sign-up</span>
+</div>
+<sc-if value="{{askLocation}}">
+<button type="button" onClick="{{locate}}" style="border: 2px solid {{line}};" class="row-12"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#233A6B" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>Use my location</button>
+</sc-if>
+<p aria-live="polite" class="text-20">{{gapCount}}</p>
+<sc-if value="{{showOverviewNote}}"><p class="text-05">Zoom in or search for places you have visited. Map circles show numbers of places, not confirmed access information.</p></sc-if>
+<p class="row-11"><span aria-hidden="true" style="background: {{liveDot}};" class="card-05"></span>{{liveText}}</p>
+<div class="stack-11">
+<sc-for list="{{gaps}}" as="g">
+<button type="button" onClick="{{g.start}}" onMouseEnter="{{g.enter}}" onMouseLeave="{{g.leave}}" aria-label="{{g.aria}}" style="background: {{g.bg}};" class="row-10">
+<span style="background: {{g.pinBg}}; border: {{g.pinBorder}};" class="row-09"><svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{g.pinFg}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{g.icon}}"></path></svg></span>
+<span class="stack-10"><span class="text-19">{{g.name}}</span><span class="text-02">{{g.addr}}</span></span>
+<span class="stack-09"><span style="color: {{g.ctaFg}};" class="text-18">{{g.cta}}</span><span class="text-17">{{g.dist}}</span></span>
+</button>
+</sc-for>
+</div>
+<div class="stack-08">
+<span class="text-16">How an answer becomes trusted</span>
+<div class="row-08">
+<span class="stack-07"><span class="card-04"></span>Unknown</span>
+<span aria-hidden="true" class="text-15">›</span>
+<span class="stack-07"><span class="card-03"></span>1 answer</span>
+<span aria-hidden="true" class="text-15">›</span>
+<span class="stack-07"><span class="card-02"></span>2 agree</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pMConfirm}}">
+<div class="stack-03">
+<button type="button" onClick="{{backToGaps}}" class="row-07"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>All places</button>
+<span class="text-14">Is this the place you went to?</span>
+<p class="map-location-notice">Check the name and address below against the place you visited. The map pin is an approximate location.</p>
+<div class="stack-06"><h1 class="text-13">{{cur.name}}</h1><span class="text-12">{{cur.addr}}</span></div>
+<button type="button" onClick="{{confirmPlace}}" class="button-05"><span class="text-11">Yes, that’s it</span></button>
+<button type="button" onClick="{{backToGaps}}" class="button-04">No, go back</button>
+<button type="button" onClick="{{flagClosed}}" class="button-03">It has closed</button>
+</div>
+</sc-if>
+
+<sc-if value="{{pMQ}}">
+<div class="stack-05">
+<div class="row-06">
+<button type="button" onClick="{{qBack}}" aria-label="Back" class="row-05"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div role="progressbar" aria-label="Question progress" aria-valuemin="1" aria-valuemax="{{qTotal}}" aria-valuenow="{{qNum}}" class="row-04"><sc-for list="{{segs}}" as="s"><span style="background: {{s}};" class="card-01"></span></sc-for></div>
+</div>
+<span class="text-10">{{cur.name}}, question {{qNum}} of {{qTotal}}</span>
+<span class="row-03"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#26261F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{qIcon}}"></path></svg></span>
+<h1 class="text-09">{{qText}}</h1>
+<p class="text-08">{{qHint}}</p>
+<div class="stack-04">
+<sc-for list="{{opts}}" as="o"><button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="border: {{o.border}}; background: {{o.bg}};" class="button-02"><span style="color: {{o.fg}};">{{o.label}}</span></button></sc-for>
+</div>
+</div>
+</sc-if>
+
+<!-- Review before submitting anything to the database -->
+<sc-if value="{{pMReview}}">
+<div class="stack-05">
+  <h1 class="text-22">Review your answers</h1>
+  <p class="text-08">{{reviewPlace}}</p>
+  <p class="text-08">Please check your answers before sharing them.</p>
+  <div class="stack-04">
+    <sc-for list="{{reviewRows}}" as="r">
+      <div style="background:#FBF6EC; border:2px solid #E3D3BC; border-radius:14px; padding:14px;">
+        <p style="font-weight:600; margin:0 0 8px;">{{r.question}}</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
+          <strong>{{r.answer}}</strong>
+          <button type="button" onClick="{{r.edit}}" style="padding:8px 12px; border:2px solid #B9A88C; border-radius:10px; background:transparent; cursor:pointer;">Edit</button>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <button type="button" onClick="{{reviewSubmit}}" class="button-05"><span class="text-11">Submit answers</span></button>
+  <button type="button" onClick="{{reviewEdit}}" class="button-04">Review questions again</button>
+  <button type="button" onClick="{{reviewCancel}}" class="button-03">Cancel without submitting</button>
+</div>
+</sc-if>
+
+<sc-if value="{{pMDone}}">
+<div role="status" class="stack-03">
+<span class="row-02"><svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F2F3DC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h1 class="text-07">You just helped someone get in.</h1>
+<div class="grid-01">
+<div class="stack-02"><span class="text-06">{{doneCount}}</span><span class="text-05">{{doneLabel}}</span></div>
+<div class="stack-02"><span class="text-06">{{doneBig}}</span><span class="text-05">{{doneSmall}}</span></div>
+</div>
+<p class="text-04">{{savedNote}}</p>
+<sc-if value="{{hasNext}}">
+<button type="button" onClick="{{startNext}}" class="row-01">
+<span class="stack-01"><span class="text-02">Next nearest</span><span class="text-03">{{next.name}}</span><span class="text-02">{{next.addr}}</span></span>
+<span class="text-01">Answer</span></button>
+</sc-if>
+<button type="button" onClick="{{backToGaps}}" class="button-01">I’m done for now</button>
+</div>
+</sc-if>
+</aside>
+
+<sc-if value="{{hasToast}}">
+<div role="status" class="overlay-01">{{toast}}</div>
+</sc-if>
+</main>
+</div>
+</template>
+<div id="dc-root"></div>
+
+<!-- Report a problem: one short form, reachable from the header, a place, or a route.
+     Native <dialog> keeps focus inside it and closes with Escape. -->
+
+
+
+<dialog id="br-dialog" class="br-dialog" aria-labelledby="br-title">
+<form id="br-form" class="br-form" novalidate>
+<div class="br-top"><h2 id="br-title">Report a problem</h2><button type="button" class="br-x" id="br-close" aria-label="Close report form">×</button></div>
+<p id="br-context" class="br-note" hidden></p>
+<fieldset class="br-where">
+<legend>1. Where is the problem?</legend>
+<p id="br-location" class="br-loc br-missing">No location yet.</p>
+<div class="br-row"><button type="button" id="br-gps" class="br-btn">Use my location</button><button type="button" id="br-pick" class="br-btn">Choose on map</button></div>
+</fieldset>
+<label for="br-type" class="br-label">2. What is the problem?</label>
+<select id="br-type"><option value="unspecified">Not sure / choose later</option><option value="blocked_pavement">Blocked pavement</option><option value="uneven_surface">Uneven surface</option><option value="step_or_kerb">Step or high kerb</option><option value="narrow_passage">Narrow passage</option><option value="other">Other</option></select>
+<label for="br-photo" class="br-label">3. Add a photo (optional)</label>
+<div class="br-file-picker">
+<span class="br-file-button" aria-hidden="true">Choose file</span>
+<span id="br-photo-name" aria-live="polite">No file chosen</span>
+<input id="br-photo" type="file" accept="image/*" capture="environment" aria-describedby="br-photo-name br-photo-state">
+</div>
+<p id="br-photo-state" class="br-note">Optional. Avoid showing faces or number plates.</p>
+<label for="br-note" class="br-label">Anything else? (optional)</label>
+<textarea id="br-note" maxlength="400" rows="2" placeholder="e.g. Scaffolding blocks the pavement on the left side"></textarea>
+<p class="br-note">No account needed. Reports are checked by a reviewer before they appear on the map.</p>
+<p id="br-status" class="br-status" role="status" aria-live="polite"></p>
+<div class="br-row"><button type="submit" id="br-submit" class="br-btn br-primary">Send report</button><button type="button" id="br-cancel" class="br-btn">Cancel</button></div>
+</form>
+</dialog>
+
+<dialog id="bd-dialog" class="br-dialog" aria-labelledby="bd-title">
+<div class="br-form">
+<div class="br-top"><h2 id="bd-title">Reported problem</h2><button type="button" class="br-x" id="bd-close" aria-label="Close report details">×</button></div>
+<div id="bd-body" class="bd-body"></div>
+<button type="button" id="bd-done" class="br-btn">Back to the map</button>
+</div>
+</dialog>
+<noscript>Access London needs JavaScript to show the map.</noscript>
+<script src="js/map-ui.js"></script>
+</body>
+</html>

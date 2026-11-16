@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  
+  
+  
+  
+  
+  
+  
+  
+<title>About Access London</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&amp;display=swap">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.page { max-width: 760px; margin: 0 auto; padding: 24px 24px 0; }
+h1 { font-size: clamp(42px, 6vw, 72px); line-height: 0.98; letter-spacing: -0.04em; color: var(--green); margin: 24px 0 18px; font-weight: 600; }
+.lead { font-size: 21px; line-height: 1.45; color: var(--quiet); margin: 0 0 40px; }
+h2 { font-size: 30px; letter-spacing: -0.025em; line-height: 1.1; margin: 56px 0 14px; scroll-margin-top: 90px; }
+p, li { color: var(--ink); }
+.key { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+.key li { display: flex; align-items: center; gap: 14px; background: var(--paper); border-radius: 16px; padding: 12px 14px; }
+.key i { flex: none; width: 30px; height: 30px; border-radius: 50%; box-sizing: border-box; box-shadow: 0 3px 8px rgba(20,35,15,0.2); }
+.formula { background: var(--ink); color: var(--cream); border-radius: 20px; padding: 18px 22px; font-size: 18px; line-height: 1.6; }
+.formula b { color: #C2D69E; }
+.sources { padding: 0; list-style: none; display: grid; gap: 10px; }
+.sources li { background: var(--paper); border-radius: 16px; padding: 14px 16px; }
+.sources b { display: block; }
+.team { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.team li { background: var(--green-soft); border-radius: 12px; padding: 8px 12px; }
+.contact { background: #F6E3CC; border-radius: 24px; padding: 24px; display: grid; gap: 14px; margin-top: 14px; }
+.contact a.btn { justify-self: start; }
+.small { font-size: 15px; color: var(--quiet); }
+</style>
+</head>
+<body data-mode="visit">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="logo pill" href="map.html" aria-label="Access London, home"><img src="img/logo.svg" width="40" height="40" alt=""><b>Access</b><small>London</small></a>
+  <a class="btn btn-dark" href="map.html" style="min-height: 48px; font-size: 16px; padding: 0 18px;">Open the map</a>
+</header>
+
+<main id="main" class="page">
+  <h1>Why we made Access London</h1>
+  <p class="lead">13.2% of Londoners are disabled under the Equality Act (Census 2021). Before going somewhere new, many of them need to know one thing first: can I get in? Most maps can’t say. We wanted to show what is known, and be honest about what isn’t.</p>
+
+  <h2>What the pins mean</h2>
+  <ul class="key">
+    <li><i style="background: #2F6B3C; border: 3px solid #fff;"></i><span><b>Green:</b> has a step-free way in (or everything you asked for)</span></li>
+    <li><i style="background: #fff; border: 3px dashed #4B4C3D;"></i><span><b>Dashed:</b> nobody has checked yet. Not known never means “no”.</span></li>
+    <li><i style="background: #7D7866; border: 3px solid #fff;"></i><span><b>Grey:</b> no step-free way in, or only partly</span></li>
+    <li><i style="background: #F2C994; border: 3px dashed #B4562A;"></i><span><b>Light orange, in Mapper mode:</b> one person has answered. One more matching answer and it shows for everyone.</span></li>
+    <li><i style="background: #E8873A; border: 3px solid #fff;"></i><span><b>Orange, in Mapper mode:</b> you’ve answered for this place.</span></li>
+  </ul>
+
+  <h2>How a borough’s score works</h2>
+  <p>On the London view, each borough’s score only counts the places that have been checked on OpenStreetMap:</p>
+  <p class="formula">(places marked <b>yes</b> × 1 + <b>partly</b> × ½ + <b>no</b> × 0) ÷ places checked × 100</p>
+  <p>A borough only gets a score when enough of its places have been checked. Today that’s 9 of the 33. The rest say “too few places checked”, because a score based on a handful of places would mislead.</p>
+
+  <h2>Where the information comes from</h2>
+  <ul class="sources">
+    <li><b>OpenStreetMap places</b>69,891 named cafés, restaurants, pubs, parks, museums, galleries, libraries, shops and toilets across all 33 boroughs, from a snapshot taken on 18 October 2026. Their wheelchair and toilet tags are what the pins show. About three in four have no wheelchair tag.</li>
+    <li><b>TfL stations</b>466 stations with TfL’s usual step-free layout. This isn’t live: lifts can be out of order, so check TfL on the day.</li>
+    <li><b>London borough boundaries</b>33 areas, used to draw each borough and to find which one you’re in.</li>
+    <li><b>Mappers</b>People who have been to a place answer three questions, with no sign-up. An answer shows for everyone once two people give the same one and nobody disagrees. It can’t stop someone set on faking answers, so each place says how many people checked it and when.</li>
+    <li><b>Our own surveys</b>42 places in seven boroughs (Hackney, Brent, Kensington and Chelsea, Islington, Newham, Greenwich and Westminster) show answers from our survey design, stored in our MySQL database like any other answer. These answers are simulated test data, and the map says so.</li>
+    <li><b>Basemap</b>Streets, parks and water from OpenFreeMap, drawn with MapLibre.</li>
+  </ul>
+
+  <h2>What we can’t tell you yet</h2>
+  <ul>
+    <li>Lifts inside buildings and Changing Places toilets: OpenStreetMap rarely records them, so most places say “not known”.</li>
+    <li>Real routes. Directions show straight-line distances and hand you to Google Maps or TfL for the route itself.</li>
+    <li>Whether a place has changed since it was mapped.</li>
+  </ul>
+
+  <h2>Who made it</h2>
+  <p>The DOMinators, for UCL CASA0017 Web Architecture:</p>
+  <ul class="team"><li>Mengjiao Zhao</li><li>Xinrui Li</li><li>Aubree</li><li>Namita Senthil Kumaran</li><li>Zhaoji Huang</li></ul>
+  <p class="small">Built with help from Claude (AI), recorded in our AI-use log. Map data © OpenStreetMap contributors.</p>
+
+  <h2 id="contact">Contact us</h2>
+  <div class="contact">
+    <p style="margin: 0;"><b>Something wrong about a place?</b> Open it on the map and press “Something was different”. That’s the quickest way to fix it.</p>
+    <p style="margin: 0;"><b>About the website itself</b>, or an idea: tell us on GitHub.</p>
+    <a class="btn btn-dark" href="https://github.com/Echi-J/the-DOMinators/issues" target="_blank" rel="noopener">Write to us on GitHub</a>
+  </div>
+</main>
+
+<footer class="foot wrap">
+  <span>Made by The DOMinators · UCL CASA0017 Web Architecture</span>
+  <nav aria-label="Footer"><a href="map.html">Home</a><a href="map.html">Map</a><a href="#contact">Contact us</a></nav>
+</footer>
+</body>
+</html>
